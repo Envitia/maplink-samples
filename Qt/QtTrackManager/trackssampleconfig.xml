@@ -1,0 +1,89 @@
+<Configurations>
+	<SymbolSets>
+		<DefaultSymbolSet key="SimpleClasses"/>
+
+		<SymbolSet key="AllBlobs">
+			<Types>
+				<Type key="*">1</Type>
+			</Types>
+			<Hostilities>
+				<Hostility key="Friend">0x00ffffff</Hostility>
+				<Hostility key="AssumedFriend">0x00ffffff</Hostility>
+				<Hostility key="Pending">0xffff00ff</Hostility>
+				<Hostility key="Unknown">0xffff00ff</Hostility>
+				<Hostility key="Neutral">0x33ff99ff</Hostility> 
+				<Hostility key="Suspect">0xff6666ff</Hostility>
+				<Hostility key="Hostile">0xff6666ff</Hostility>
+				<Hostility key="Joker">0xff6666ff</Hostility>
+				<Hostility key="Faker">0xff6666ff</Hostility>
+				<Hostility key="Default">0x00000000</Hostility>
+			</Hostilities>
+			<Sizes_Pixels>
+				<Size key="*">50</Size>
+			</Sizes_Pixels>
+		</SymbolSet>
+
+		<SymbolSet key="SimpleClasses">
+			<Types>
+				<Type key="AirTracks">2</Type>
+				<Type key="LandTracks">3</Type>
+				<Type key="SurfaceTracks">4</Type>
+				<Type key="Sub-SurfaceTracks">5</Type>
+			</Types>
+			<Hostilities>
+				<Hostility key="Friend">0x00ffffff</Hostility>
+				<Hostility key="AssumedFriend">0x00ffffff</Hostility>
+				<Hostility key="Pending">0xffff00ff</Hostility>
+				<Hostility key="Unknown">0xffff00ff</Hostility>
+				<Hostility key="Neutral">0x33ff99ff</Hostility> 
+				<Hostility key="Suspect">0xff6666ff</Hostility>
+				<Hostility key="Hostile">0xff6666ff</Hostility>
+				<Hostility key="Joker">0xff6666ff</Hostility>
+				<Hostility key="Faker">0xff6666ff</Hostility>
+				<Hostility key="Default">0x00000000</Hostility>
+			</Hostilities>
+			<Sizes_Pixels>
+				<Size key="AirTracks">25</Size>
+				<Size key="*">50</Size>
+			</Sizes_Pixels>
+		</SymbolSet>
+
+		<SymbolSet key="SimpleClasses2">
+			<Types>
+				<Type key="AirTracks">11</Type>
+				<Type key="LandTracks">12</Type>
+				<Type key="SurfaceTracks">13</Type>
+				<Type key="Sub-SurfaceTracks">14</Type>
+			</Types>
+			<Hostilities>
+				<Hostility key="Friend">0x00ffffff</Hostility>
+				<Hostility key="AssumedFriend">0x00ffffff</Hostility>
+				<Hostility key="Pending">0xffff00ff</Hostility>
+				<Hostility key="Unknown">0xffff00ff</Hostility>
+				<Hostility key="Neutral">0x33ff99ff</Hostility> 
+				<Hostility key="Suspect">0xff6666ff</Hostility>
+				<Hostility key="Hostile">0xff6666ff</Hostility>
+				<Hostility key="Joker">0xff6666ff</Hostility>
+				<Hostility key="Faker">0xff6666ff</Hostility>
+				<Hostility key="Default">0x00000000</Hostility>
+			</Hostilities>
+			<Sizes_Pixels>
+				<Size key="AirTracks">70</Size>
+				<Size key="*">130</Size>
+			</Sizes_Pixels>
+		</SymbolSet>
+	</SymbolSets>
+
+	<Tracks>
+		<Track id="0" Hostility="Friend" Type="AirTracks" lat="51.48" lon="-5.0" latOffset="0.0" lonOffset="1.0"/>
+		<Track id="1" Hostility="AssumedFriend" Type="LandTracks" lat="51.48" lon="-4.0" latOffset="0.0" lonOffset="2.0"/>
+		<Track id="2" Hostility="Pending" Type="Sub-SurfaceTracks" lat="51.48" lon="-3.0" latOffset="3.0" lonOffset="0.0"/>
+		<Track id="3" Hostility="Unknown" Type="SurfaceTracks" lat="51.48" lon="-2.0" latOffset="2.0" lonOffset="2.0"/>
+		<Track id="4" Hostility="Neutral" Type="AirTracks" lat="51.48" lon="-1.0" latOffset="1.0" lonOffset="1.0"/>
+		<Track id="5" Hostility="Suspect" Type="Sub-SurfaceTracks" lat="51.48" lon="0.0" latOffset="0.0" lonOffset="-1.0"/>
+		<Track id="6" Hostility="Hostile" Type="LandTracks" lat="51.48" lon="1.0" latOffset="0.0" lonOffset="-2.0"/>
+		<Track id="7" Hostility="Joker" Type="SurfaceTracks" lat="51.48" lon="2.0" latOffset="-3.0" lonOffset="0.0"/>
+		<Track id="8" Hostility="Faker" Type="AirTracks" lat="51.48" lon="3.0" latOffset="-2.0" lonOffset="-2.0"/>
+		<Track id="9" Hostility="Default" Type="Sub-SurfaceTracks" lat="51.48" lon="4.0" latOffset="-1.0" lonOffset="-1.0"/>
+	</Tracks>
+</Configurations>

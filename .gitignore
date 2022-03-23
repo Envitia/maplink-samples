@@ -1,0 +1,7 @@
+qmake.*
+.qmake*
+*.vcxproj*
+moc_*.cpp
+qrc_*.cpp
+.vs/
+x86_64/
