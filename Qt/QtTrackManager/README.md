@@ -1,12 +1,17 @@
-# maplink-samples
+
+# Envitia MapLink Pro Tracks SDK Sample
 [![API reference](https://img.shields.io/badge/MapLink%20Pro%20API%20Documentation-84bd00)](https://www.envitia.com/technologies/products/maplink-pro/userguide/index.html) [![Blog](https://img.shields.io/badge/Envitia%20Blog-1F2A44)](https://www.envitia.com/category/the-envitia-blog/) 
 
 ## Introduction
 
-This repository contains sample code demonstrating the usage of Envitia's MapLink Pro SDKs.
+This sample code demonstrates usage of Envitia's MapLink Pro Tracks SDK. The sample is built upon Qt.
 
 ## Resources
-[Envitia MapLink Pro API Documentation](https://www.envitia.com/technologies/products/maplink-pro/userguide/index.html)
+- [Envitia MapLink Pro API Documentation](https://www.envitia.com/technologies/products/maplink-pro/userguide/index.html)
+- [Tracks SDK Developer Guide](https://www.envitia.com/technologies/products/maplink-pro/userguide/trackmanagerdeveloperguide_page.html)
+- [Tracks SDK API Documentation](https://www.envitia.com/technologies/products/maplink-pro/userguide/group__apigroup__track__manager.html)
+- [Qt](https://www.qt.io/)
+
 ## Contributing
 Everyone is welcome to contribute to this repository.
 ## Try Envitia MapLink Pro
@@ -26,6 +31,6 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 
-A copy of the license is available in the repository's [LICENSE](LICENSE) file.
+A copy of the license is available in the repository's [LICENSE](../../LICENSE) file.
 ##
 [![Envitia MapLink Pro](https://www.envitia.com/technologies/products/maplink-pro/userguide/maplinkpro.png)](http://maplinkpro.com/)
