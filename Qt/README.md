@@ -33,4 +33,4 @@ limitations under the License.
 
 A copy of the license is available in the repository's [LICENSE](LICENSE) file.
 ##
-[![Envitia MapLink Pro](https://www.envitia.com/technologies/products/maplink-pro/userguide/maplinkpro.png)](http://maplinkpro.com/)
+[![Envitia MapLink Pro](https://user-images.githubusercontent.com/60386764/159908069-b33f1ba7-6ad9-45d0-a872-dfd38dc40c91.png)](http://maplinkpro.com/)
