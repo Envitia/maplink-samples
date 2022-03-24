@@ -6,6 +6,19 @@
 ## Introduction
 
 This sample code demonstrates usage of Envitia's MapLink Pro Tracks SDK. The sample is built using Qt.
+[Read our blog post that describes how to code using the Tracks SDK.](https://www.envitia.com/2022/03/24/using-maplink-pro-to-track-dynamic-objects-in-real-time/)
+
+## The Envitia MapLink Pro Tracks SDK
+The challenge often encountered by teams developing embedded mapping applications is to have the ability to track many 1000’s of dynamic objects from various sensors in real-time.
+
+This is a requirement common to most types of operational type applications whether being C4ISR, GPS tracking of emergency vehicles being used by first responders, displaying the location of UAVs and IoT applications using input from many types of dynamic and static sensors.
+
+Envitia's MapLink Pro Tracks SDK provides the ability to quickly and easily visualise your moving objects or sensor feeds, with real-time location and attribute update. You can display breadcrumbs to show where your tracked objects have been or are projected to go in the future, with a playback feature so that the tracks can be recorded and replayed. You can configure the map to follow your tracked object and even re-project your map in real-time to ensure that the mapping information is as accurate as possible, wherever your objects take you in the world.
+
+The Tracks SDK is available for C++ and C# developers and is available on Windows and Linux operating systems.
+
+## Try Envitia MapLink Pro
+[Get an evaluation copy of MapLink Pro](mailto:info@envitia.com?subject=I%20want%20to%20evaluate%20MapLink%20Pro%20please)
 
 ## Resources
 - [Envitia MapLink Pro API Documentation](https://www.envitia.com/technologies/products/maplink-pro/userguide/index.html)
@@ -33,8 +46,7 @@ Requires Qmake.
 
 ## Contributing
 Everyone is welcome to contribute to this repository.
-## Try Envitia MapLink Pro
-[Get an evaluation copy of MapLink Pro](mailto:info@envitia.com?subject=I%20want%20to%20evaluate%20MapLink%20Pro%20please)
+
 ## Licensing
 Copyright 2022 Envitia Ltd
 
