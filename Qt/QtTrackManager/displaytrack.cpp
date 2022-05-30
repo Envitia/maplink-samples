@@ -21,6 +21,24 @@ limitations under the License.
 #include "tslrenderingattributes.h"
 
 TSLTrackPointSymbol* DisplayTrack::m_templateSelectionSymbol = nullptr;
+TSLAPP6AHelper* DisplayTrack::m_militarySymbolHelper = nullptr;
+
+TSLAPP6AHelper* DisplayTrack::getMilitarySymbolHelper()
+{
+  if (m_militarySymbolHelper == nullptr)
+  {
+    // Load app6a config. Alternative configs available for app6 (unfilled) and mil-std-2525
+    std::string config(TSLUtilityFunctions::getMapLinkHome());
+    config.append("/config/app6aConfig.csv"); // the default config file
+    m_militarySymbolHelper = new TSLAPP6AHelper(config.c_str());
+    if (!m_militarySymbolHelper->valid())
+    {
+      throw std::exception("invalid app6 symbol config");
+    }
+  }
+
+  return m_militarySymbolHelper;
+}
 
 DisplayTrack::DisplayTrack(TSLTrackDisplayManager*  trackManager)
   : m_track(nullptr)
@@ -42,18 +60,25 @@ void DisplayTrack::removeDisplayTrack()
 
 void DisplayTrack::addEntityToPointSymbol(TSLTrackPointSymbol * symbol, int symbolIDVal, int colour, uint32_t size)
 {
-  TSLSymbol* sym = TSLSymbol::create(0, 0, 0);
-  TSLRenderingAttributes attribs;
-  attribs.m_symbolStyle = symbolIDVal;
-  attribs.m_symbolColour = colour;
-  attribs.m_symbolSizeFactor = size;
-  attribs.m_symbolSizeFactorUnits = TSLDimensionUnitsPixels;
-  attribs.m_symbolOpacity = 32767;
-  attribs.m_symbolScalable = TSLRasterSymbolScalableEnabled;
-  attribs.m_symbolRotatable = TSLSymbolRotationDisabled;
-  sym->setRendering(attribs);
-  symbol->addSymbolEntity(sym, false);
-  sym->destroy();
+  // Hard coded app6a symbol. (i.e. completely ignore the application's config for now!)
+  // See dev guide section 12.7 for explanation.
+
+  const char fighterId[] = "1.x.2.1.1.2";
+  TSLAPP6ASymbol theSymbol;
+  if (!getMilitarySymbolHelper()->getSymbolFromID(fighterId, theSymbol))
+  {
+    return;
+  }
+    
+  theSymbol.hostility(TSLAPP6ASymbol::HostilityHostile);
+  theSymbol.designation("ABC123");
+  theSymbol.heightType(TSLDimensionUnitsPixels);
+  theSymbol.height(100);
+  theSymbol.x(400000000); // TMCs
+  theSymbol.y(0);
+
+  TSLEntitySet* es = getMilitarySymbolHelper()->getSymbolAsEntitySet(&theSymbol);
+  symbol->addSymbolEntity(es, true);
 }
 
 void DisplayTrack::createDefaultSelectionSymbol()

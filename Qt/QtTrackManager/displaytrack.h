@@ -29,6 +29,8 @@ struct TrackInformation;
 class DisplayTrack
 {
 public:
+  static TSLAPP6AHelper* getMilitarySymbolHelper();
+
   DisplayTrack(TSLTrackDisplayManager*  trackManager);
 
   //! clone symbol template, create a display track or update existing track, and add the track to the track manager.
@@ -64,6 +66,8 @@ private:
 
   //! default selection symbol template to be re-used for all symbols.
   static TSLTrackPointSymbol* m_templateSelectionSymbol;
+
+  static TSLAPP6AHelper* m_militarySymbolHelper;
 };
 
 #endif // DISPLAYTRACKS_H
