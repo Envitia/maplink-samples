@@ -74,7 +74,7 @@ void DisplayTrack::addEntityToPointSymbol(TSLTrackPointSymbol * symbol, int symb
   theSymbol.designation("ABC123");
   theSymbol.heightType(TSLDimensionUnitsPixels);
   theSymbol.height(100);
-  theSymbol.x(400000000); // TMCs
+  theSymbol.x(0); // TMCs
   theSymbol.y(0);
 
   TSLEntitySet* es = getMilitarySymbolHelper()->getSymbolAsEntitySet(&theSymbol);
