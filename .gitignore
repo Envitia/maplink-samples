@@ -3,5 +3,8 @@ qmake.*
 *.vcxproj*
 moc_*.cpp
 qrc_*.cpp
+moc_*.h
+qrc_*.h
+*.cbt
 .vs/
 x86_64/
