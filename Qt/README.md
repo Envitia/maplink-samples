@@ -8,6 +8,7 @@ This folder contains sample code demonstrating the usage of Envitia's MapLink Pr
 
 ## Samples
 - [QtTrackManager](./QtTrackManager): Demonstrates usage of Envitia's MapLink Pro Tracks SDK.
+- [qpixmapexample](./qpixmapexample): Demonstrates how to draw a MapLink Map into an off-screen QPixmap without the use of the deprecated QPixmap.handle() method.
 
 ## Resources
 - [Envitia MapLink Pro API Documentation](https://www.envitia.com/technologies/products/maplink-pro/userguide/index.html)
