@@ -1,11 +1,23 @@
-
-
 # Envitia MapLink QPixmap Sample
 [![API reference](https://img.shields.io/badge/MapLink%20Pro%20API%20Documentation-84bd00)](https://www.envitia.com/technologies/products/maplink-pro/userguide/index.html) [![Blog](https://img.shields.io/badge/Envitia%20Blog-1F2A44)](https://www.envitia.com/category/the-envitia-blog/) 
 
 ## Introduction
 
 This sample code demonstrates how to draw MapLink maps into off-screen QPixmaps before drawing the pixmap to screen.
+
+## The Important Bit of Code
+The important lines of code can be found in the DrawToPixmap method in [main.cpp](https://github.com/Envitia/maplink-samples/blob/main/Qt/qpixmapexample/main.cpp).
+
+    // Create a bitmap in memory - this will be dependent on your operating system
+    ...
+    // Tell the drawing surface to draw to the bitmap.    
+    drawingSurface->drawToHDC((TSLDeviceContext)displayDc, bottomLeft.first, bottomLeft.second, topRight.first, topRight.second, false);
+    // Get the bits of the bitmap - this will be dependent on your operating system
+    ...
+    // Load the bitmap bits into a QImage...
+    QImage image(lpBits, cr.width(), cr.height(), QImage::Format_RGB32);
+    // ... which we then load into the pixmap.
+    pixmap = QPixmap::fromImage(image);
 
 ## Try Envitia MapLink Pro
 [Get an evaluation copy of MapLink Pro](mailto:info@envitia.com?subject=I%20want%20to%20evaluate%20MapLink%20Pro%20please)
