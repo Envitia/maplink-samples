@@ -1,0 +1,221 @@
+<ui version="4.0" >
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow" >
+  <property name="geometry" >
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>784</width>
+    <height>598</height>
+   </rect>
+  </property>
+  <property name="windowTitle" >
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralWidget" >
+   <widget class="MapLinkWidget" native="1" name="mapLinkWidget" >
+    <property name="geometry" >
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>0</width>
+      <height>0</height>
+     </rect>
+    </property>
+    <property name="sizePolicy" >
+     <sizepolicy>
+      <hsizetype>0</hsizetype>
+      <vsizetype>0</vsizetype>
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menuBar" >
+   <property name="geometry" >
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>784</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile" >
+    <property name="title" >
+     <string>&amp;File</string>
+    </property>
+    <addaction name="action_Open" />
+    <addaction name="actionAbout" />
+   </widget>
+   <widget class="QMenu" name="menuTools" >
+    <property name="title" >
+     <string>Tools</string>
+    </property>
+    <widget class="QMenu" name="menuSaved_Views" >
+     <property name="title" >
+      <string>Saved Views</string>
+     </property>
+     <addaction name="actionSet_View_1" />
+     <addaction name="actionSet_View_2" />
+     <addaction name="actionSet_View_3" />
+     <addaction name="separator" />
+     <addaction name="actionReset" />
+    </widget>
+    <addaction name="menuSaved_Views" />
+   </widget>
+   <addaction name="menuFile" />
+   <addaction name="menuTools" />
+  </widget>
+  <widget class="QToolBar" name="mainToolBar" >
+   <property name="orientation" >
+    <enum>Qt::Horizontal</enum>
+   </property>
+   <attribute name="toolBarArea" >
+    <number>4</number>
+   </attribute>
+  </widget>
+  <widget class="QStatusBar" name="statusBar" />
+  <action name="action_Open" >
+   <property name="text" >
+    <string>&amp;Open</string>
+   </property>
+   <property name="shortcutContext" >
+    <enum>Qt::WidgetShortcut</enum>
+   </property>
+  </action>
+  <action name="actionAbout" >
+   <property name="text" >
+    <string>About</string>
+   </property>
+  </action>
+  <action name="actionSet_View_1" >
+   <property name="text" >
+    <string>Set View 1</string>
+   </property>
+  </action>
+  <action name="actionSet_View_2" >
+   <property name="text" >
+    <string>Set View 2</string>
+   </property>
+  </action>
+  <action name="actionSet_View_3" >
+   <property name="text" >
+    <string>Set View 3</string>
+   </property>
+  </action>
+  <action name="actionReset" >
+   <property name="text" >
+    <string>Reset</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11" />
+ <customwidgets>
+  <customwidget>
+   <class>MapLinkWidget</class>
+   <extends>QWidget</extends>
+   <header>maplinkwidget.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>action_Open</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>open()</slot>
+   <hints>
+    <hint type="sourcelabel" >
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel" >
+     <x>299</x>
+     <y>199</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionAbout</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>about()</slot>
+   <hints>
+    <hint type="sourcelabel" >
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel" >
+     <x>300</x>
+     <y>201</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionReset</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>resetViews()</slot>
+   <hints>
+    <hint type="sourcelabel" >
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel" >
+     <x>300</x>
+     <y>201</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionSet_View_1</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>setViewOne()</slot>
+   <hints>
+    <hint type="sourcelabel" >
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel" >
+     <x>300</x>
+     <y>201</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionSet_View_2</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>setViewTwo()</slot>
+   <hints>
+    <hint type="sourcelabel" >
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel" >
+     <x>300</x>
+     <y>201</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionSet_View_3</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>setViewThree()</slot>
+   <hints>
+    <hint type="sourcelabel" >
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel" >
+     <x>300</x>
+     <y>201</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

@@ -1,0 +1,11 @@
+<RCC>
+    <qresource prefix="/Icons" >
+        <file>icons/eyepoint.png</file>
+        <file>icons/maplink.png</file>
+        <file>icons/open.png</file>
+        <file>icons/reset.png</file>
+        <file>icons/world.png</file>
+        <file>icons/zoomin.png</file>
+        <file>icons/zoomout.png</file>
+    </qresource>
+</RCC>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ServiceWizard</class>
+ <widget class="QWizard" name="ServiceWizard">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>300</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Wizard</string>
+  </property>
+  <widget class="ActionTypeWizardPage" name="initialActionPage">
+   <attribute name="pageId">
+    <string notr="true">0</string>
+   </attribute>
+  </widget>
+  <widget class="AddWMTSServicePage" name="addWMTSServicePage">
+   <attribute name="pageId">
+    <string notr="true">2</string>
+   </attribute>
+  </widget>
+  <widget class="AddWMSServicePage" name="addWMSServicePage">
+   <attribute name="pageId">
+    <string notr="true">1</string>
+   </attribute>
+  </widget>
+  <widget class="SelectLayersPage" name="selectLayersPage">
+   <attribute name="pageId">
+    <string notr="true">3</string>
+   </attribute>
+  </widget>
+  <widget class="SelectCoordSysPage" name="selectCoordSysPage">
+   <attribute name="pageId">
+    <string notr="true">4</string>
+   </attribute>
+  </widget>
+  <widget class="DimensionsPage" name="dimensionsPage">
+   <attribute name="pageId">
+    <string notr="true">5</string>
+   </attribute>
+  </widget>
+  <widget class="WMSServiceOptions" name="wmsServiceOptionsPage">
+   <attribute name="pageId">
+    <string notr="true">6</string>
+   </attribute>
+  </widget>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>AddWMSServicePage</class>
+   <extends>QWizardPage</extends>
+   <header>addwmsservicepage.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>SelectLayersPage</class>
+   <extends>QWizardPage</extends>
+   <header>selectlayerspage.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>SelectCoordSysPage</class>
+   <extends>QWizardPage</extends>
+   <header>selectcoordsyspage.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>DimensionsPage</class>
+   <extends>QWizardPage</extends>
+   <header>dimensionspage.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>ActionTypeWizardPage</class>
+   <extends>QWizardPage</extends>
+   <header>actiontypepage.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>WMSServiceOptions</class>
+   <extends>QWizardPage</extends>
+   <header>wmsserviceoptionspage.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>AddWMTSServicePage</class>
+   <extends>QWizardPage</extends>
+   <header>addwmtsservicepage.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

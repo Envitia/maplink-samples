@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>DataSetCreationFailedPage</class>
+ <widget class="QWizardPage" name="DataSetCreationFailedPage">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>300</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>WizardPage</string>
+  </property>
+  <property name="title">
+   <string>Data Set Creation Failed</string>
+  </property>
+  <property name="subTitle">
+   <string/>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QLabel" name="errorLogLabel">
+     <property name="text">
+      <string>No data sets could be created for the provided data path. The contents of the MapLink error stack may contain more information about this failure.
+The most likely reason for failure is an unsupported data type, or failure to provide a valid coordinate system or extent for the data.</string>
+     </property>
+     <property name="wordWrap">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QTextEdit" name="errorLogTextEdit">
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

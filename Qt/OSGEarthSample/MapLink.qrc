@@ -1,0 +1,6 @@
+<RCC>
+  <qresource prefix="images">
+    <file>images/file_open.png</file>
+    <file>images/envitia.png</file>
+  </qresource>
+</RCC>

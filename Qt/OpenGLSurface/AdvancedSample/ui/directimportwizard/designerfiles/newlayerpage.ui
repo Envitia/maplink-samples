@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>NewLayerPage</class>
+ <widget class="QWizardPage" name="NewLayerPage">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>436</width>
+    <height>352</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>WizardPage</string>
+  </property>
+  <property name="title">
+   <string>Create a Direct Import Layer</string>
+  </property>
+  <property name="subTitle">
+   <string>The sample's direct import layer has not yet been created. Please verify the following settings to continue.</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout_2">
+   <item>
+    <widget class="QWidget" name="widget" native="true">
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <widget class="QWidget" name="layerNameLayout" native="true">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout">
+         <item>
+          <widget class="QLabel" name="layerNameLabel">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="text">
+            <string>Layer Name: </string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="layerNameLineEdit">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="text">
+            <string>DirectImport</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="memCacheSizeLayout">
+        <item>
+         <widget class="QLabel" name="memCacheSizeLabel">
+          <property name="text">
+           <string>In-memory cache limit</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QSpinBox" name="memCacheSizeSpinBox">
+          <property name="readOnly">
+           <bool>false</bool>
+          </property>
+          <property name="minimum">
+           <number>1</number>
+          </property>
+          <property name="maximum">
+           <number>65536</number>
+          </property>
+          <property name="value">
+           <number>1024</number>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QComboBox" name="memCacheSizeComboBox">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="currentIndex">
+           <number>1</number>
+          </property>
+          <item>
+           <property name="text">
+            <string>KB</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>MB</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>GB</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="numProcessingThreadsLayout">
+        <item>
+         <widget class="QLabel" name="numProcessingThreadsLabel">
+          <property name="text">
+           <string>Number of Processing Threads</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QSpinBox" name="numProcessingThreadsSpinBox">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="suffix">
+           <string/>
+          </property>
+          <property name="minimum">
+           <number>1</number>
+          </property>
+          <property name="maximum">
+           <number>32</number>
+          </property>
+          <property name="value">
+           <number>4</number>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <widget class="QCheckBox" name="csysUseMapCheckBox">
+        <property name="text">
+         <string>Use coordinate system from Map DataLayer</string>
+        </property>
+        <property name="checked">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <layout class="QFormLayout" name="csysSettingsLayout">
+        <property name="fieldGrowthPolicy">
+         <enum>QFormLayout::AllNonFixedFieldsGrow</enum>
+        </property>
+        <item row="0" column="1">
+         <widget class="QLineEdit" name="csysIDLineEdit">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QLabel" name="csysTMCPerMULabel">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="text">
+           <string>TMCs Per Map Unit </string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QLineEdit" name="csysTMCPerMULineEdit">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="0">
+         <widget class="QLabel" name="csysIDLabel">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="text">
+           <string>EPSG ID or Name</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QVBoxLayout" name="onDiskCacheSettingsLayout">
+        <item>
+         <widget class="QCheckBox" name="onDiskCacheFlushOnExitCheckBox">
+          <property name="enabled">
+           <bool>true</bool>
+          </property>
+          <property name="text">
+           <string>Delete on-disk cache on exit</string>
+          </property>
+          <property name="checked">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="onDiskCacheSizeLayout">
+          <item>
+           <widget class="QLabel" name="onDiskCacheSizeLabel">
+            <property name="enabled">
+             <bool>true</bool>
+            </property>
+            <property name="text">
+             <string>On-disk cache limit</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QSpinBox" name="onDiskCacheSizeSpinBox">
+            <property name="enabled">
+             <bool>true</bool>
+            </property>
+            <property name="minimum">
+             <number>0</number>
+            </property>
+            <property name="maximum">
+             <number>65536</number>
+            </property>
+            <property name="value">
+             <number>0</number>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QComboBox" name="onDiskCacheSizeComboBox">
+            <property name="enabled">
+             <bool>true</bool>
+            </property>
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="currentIndex">
+             <number>2</number>
+            </property>
+            <item>
+             <property name="text">
+              <string>KB</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>MB</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>GB</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="onDiskCacheDirLayout">
+          <item>
+           <widget class="QLineEdit" name="onDiskCacheDirLineEdit">
+            <property name="enabled">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="onDiskCacheDirBrowseButton">
+            <property name="enabled">
+             <bool>true</bool>
+            </property>
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="text">
+             <string>Browse</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <tabstops>
+  <tabstop>layerNameLineEdit</tabstop>
+  <tabstop>memCacheSizeSpinBox</tabstop>
+  <tabstop>memCacheSizeComboBox</tabstop>
+  <tabstop>csysUseMapCheckBox</tabstop>
+  <tabstop>csysIDLineEdit</tabstop>
+  <tabstop>csysTMCPerMULineEdit</tabstop>
+  <tabstop>onDiskCacheFlushOnExitCheckBox</tabstop>
+  <tabstop>onDiskCacheSizeSpinBox</tabstop>
+  <tabstop>onDiskCacheSizeComboBox</tabstop>
+  <tabstop>onDiskCacheDirLineEdit</tabstop>
+  <tabstop>onDiskCacheDirBrowseButton</tabstop>
+ </tabstops>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>csysUseMapCheckBox</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>csysIDLabel</receiver>
+   <slot>setDisabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>307</x>
+     <y>158</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>124</x>
+     <y>179</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>csysUseMapCheckBox</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>csysIDLineEdit</receiver>
+   <slot>setDisabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>307</x>
+     <y>158</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>416</x>
+     <y>187</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>csysUseMapCheckBox</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>csysTMCPerMULabel</receiver>
+   <slot>setDisabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>307</x>
+     <y>158</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>78</x>
+     <y>207</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>csysUseMapCheckBox</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>csysTMCPerMULineEdit</receiver>
+   <slot>setDisabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>307</x>
+     <y>158</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>416</x>
+     <y>215</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
