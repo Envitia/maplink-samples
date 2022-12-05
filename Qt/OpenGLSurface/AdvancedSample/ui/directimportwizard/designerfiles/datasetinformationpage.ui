@@ -1,0 +1,732 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>DataSetInformationPage</class>
+ <widget class="QWizardPage" name="DataSetInformationPage">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>508</width>
+    <height>514</height>
+   </rect>
+  </property>
+  <property name="focusPolicy">
+   <enum>Qt::TabFocus</enum>
+  </property>
+  <property name="windowTitle">
+   <string>WizardPage</string>
+  </property>
+  <property name="title">
+   <string>Data Set Information</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <layout class="QHBoxLayout" name="dataSetSelectionLayout">
+     <item>
+      <widget class="QLabel" name="dataSetSelectionLabel">
+       <property name="text">
+        <string>Selected Data Set</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QSpinBox" name="dataSetSelectionSpinBox">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="readOnly">
+        <bool>false</bool>
+       </property>
+       <property name="maximum">
+        <number>0</number>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="dataSetSelectionOfNLabel">
+       <property name="text">
+        <string>of 0</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QCheckBox" name="dataSetLoadCheckBox">
+     <property name="text">
+      <string>Load this data set</string>
+     </property>
+     <property name="checked">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QCheckBox" name="dataSetAutoScaleBandCheckBox">
+     <property name="text">
+      <string>Select scale band based on data set scale</string>
+     </property>
+     <property name="checked">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QComboBox" name="dataSetScaleBandComboBox">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="dataSetSLDLayout">
+     <item>
+      <widget class="QLineEdit" name="dataSetSLDLineEdit">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="dataSetSLDPushButton">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+       <property name="text">
+        <string>Browse</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QTabWidget" name="dataSetInfoTabWidget">
+     <property name="currentIndex">
+      <number>1</number>
+     </property>
+     <widget class="QWidget" name="dataSetInfoCommonSettingsTab">
+      <attribute name="title">
+       <string>Common Settings</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout_3">
+       <property name="leftMargin">
+        <number>9</number>
+       </property>
+       <property name="topMargin">
+        <number>9</number>
+       </property>
+       <property name="rightMargin">
+        <number>9</number>
+       </property>
+       <property name="bottomMargin">
+        <number>9</number>
+       </property>
+       <item>
+        <layout class="QGridLayout" name="dataSetInfoLayout">
+         <property name="horizontalSpacing">
+          <number>20</number>
+         </property>
+         <item row="3" column="1">
+          <widget class="QLabel" name="dataSetInfoTypeValueLabel">
+           <property name="text">
+            <string/>
+           </property>
+           <property name="wordWrap">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="QLabel" name="dataSetInfoCSNameValueLabel">
+           <property name="text">
+            <string/>
+           </property>
+           <property name="wordWrap">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="0">
+          <widget class="QLabel" name="dataSetInfoExtentLabel">
+           <property name="text">
+            <string>Extent</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <widget class="QLabel" name="dataSetInfoCSNameLabel">
+           <property name="text">
+            <string>Data Coordinate System</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QLabel" name="dataSetInfoNameValueLabel">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="wordWrap">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="0">
+          <widget class="QLabel" name="dataSetInfoTypeLabel">
+           <property name="text">
+            <string>Data Type</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="0">
+          <widget class="QLabel" name="dataSetInfoNameLabel">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="text">
+            <string>Name</string>
+           </property>
+          </widget>
+         </item>
+         <item row="5" column="1">
+          <widget class="QLabel" name="dataSetInfoScaleValueLabel">
+           <property name="text">
+            <string/>
+           </property>
+           <property name="wordWrap">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item row="5" column="0">
+          <widget class="QLabel" name="dataSetInfoScaleLabel">
+           <property name="text">
+            <string>Scale</string>
+           </property>
+          </widget>
+         </item>
+         <item row="6" column="0">
+          <widget class="QLabel" name="dataSetInfoDriverNameLabel">
+           <property name="text">
+            <string>Direct Import Driver</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="1">
+          <widget class="QLabel" name="dataSetInfoExtentValueLabel">
+           <property name="text">
+            <string/>
+           </property>
+           <property name="wordWrap">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="0">
+          <widget class="QLabel" name="dataSetInfoIsOverviewLabel">
+           <property name="text">
+            <string>Overview data set?</string>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="1">
+          <widget class="QLabel" name="dataSetInfoIsOverviewValueLabel">
+           <property name="text">
+            <string/>
+           </property>
+           <property name="wordWrap">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item row="6" column="1">
+          <widget class="QLabel" name="dataSetInfoDriverNameValueLabel">
+           <property name="text">
+            <string/>
+           </property>
+           <property name="wordWrap">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item row="7" column="0">
+          <widget class="QLabel" name="dataSetInfoDriverDescLabel">
+           <property name="text">
+            <string>Driver Description</string>
+           </property>
+          </widget>
+         </item>
+         <item row="7" column="1">
+          <widget class="QLabel" name="dataSetInfoDriverDescValueLabel">
+           <property name="text">
+            <string/>
+           </property>
+           <property name="wordWrap">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="dataSetInfoRasterSettingsTab">
+      <attribute name="title">
+       <string>Raster Settings</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout_4">
+       <property name="spacing">
+        <number>0</number>
+       </property>
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <item>
+        <widget class="QScrollArea" name="scrollArea">
+         <property name="verticalScrollBarPolicy">
+          <enum>Qt::ScrollBarAlwaysOn</enum>
+         </property>
+         <property name="horizontalScrollBarPolicy">
+          <enum>Qt::ScrollBarAlwaysOff</enum>
+         </property>
+         <property name="widgetResizable">
+          <bool>true</bool>
+         </property>
+         <widget class="QWidget" name="scrollAreaWidgetContents_2">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>-121</y>
+            <width>470</width>
+            <height>446</height>
+           </rect>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_2">
+           <property name="spacing">
+            <number>0</number>
+           </property>
+           <property name="leftMargin">
+            <number>0</number>
+           </property>
+           <property name="topMargin">
+            <number>0</number>
+           </property>
+           <property name="rightMargin">
+            <number>0</number>
+           </property>
+           <property name="bottomMargin">
+            <number>0</number>
+           </property>
+           <item>
+            <layout class="QGridLayout" name="dataSetInfoRasterSettingsLayout">
+             <property name="verticalSpacing">
+              <number>9</number>
+             </property>
+             <item row="14" column="0">
+              <widget class="QComboBox" name="dataSetInfoRasterMinMaxChannelSelectComboBox"/>
+             </item>
+             <item row="12" column="1">
+              <widget class="QSpinBox" name="dataSetInfoRasterPyramidGenerationMaxLevelsValueSpinBox"/>
+             </item>
+             <item row="14" column="1">
+              <layout class="QHBoxLayout" name="dataSetInfoRasterMinMaxValueLayout">
+               <item>
+                <widget class="QDoubleSpinBox" name="dataSetInfoRasterMinValueSpinBox">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="prefix">
+                  <string>Min: </string>
+                 </property>
+                 <property name="minimum">
+                  <double>-99999999.000000000000000</double>
+                 </property>
+                 <property name="maximum">
+                  <double>99999999.000000000000000</double>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QDoubleSpinBox" name="dataSetInfoRasterMaxValueSpinBox">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="prefix">
+                  <string>Max: </string>
+                 </property>
+                 <property name="minimum">
+                  <double>-99999999.000000000000000</double>
+                 </property>
+                 <property name="maximum">
+                  <double>99999999.000000000000000</double>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+             <item row="3" column="0">
+              <widget class="QLabel" name="dataSetInfoRasterBrightnessLabel">
+               <property name="text">
+                <string>Brightness Adjustment</string>
+               </property>
+              </widget>
+             </item>
+             <item row="8" column="1">
+              <layout class="QHBoxLayout" name="dataSetInfoRasterMaskGenerationFileNameLayout">
+               <property name="sizeConstraint">
+                <enum>QLayout::SetDefaultConstraint</enum>
+               </property>
+               <item>
+                <widget class="QLineEdit" name="dataSetInfoRasterMaskGenerationFileNameValueLineEdit">
+                 <property name="enabled">
+                  <bool>false</bool>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QPushButton" name="dataSetInfoRasterMaskGenerationFileNameValuePushButton">
+                 <property name="enabled">
+                  <bool>false</bool>
+                 </property>
+                 <property name="text">
+                  <string>Browse</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+             <item row="5" column="1">
+              <widget class="QSpinBox" name="dataSetInfoRasterGammaValueSpinBox">
+               <property name="maximum">
+                <number>1000</number>
+               </property>
+               <property name="value">
+                <number>100</number>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="0">
+              <widget class="QLabel" name="dataSetInfoRasterSizeLabel">
+               <property name="text">
+                <string>Size in Pixels</string>
+               </property>
+              </widget>
+             </item>
+             <item row="4" column="1">
+              <widget class="QSpinBox" name="dataSetInfoRasterContrastValueSpinBox">
+               <property name="minimum">
+                <number>-1000</number>
+               </property>
+               <property name="maximum">
+                <number>1000</number>
+               </property>
+              </widget>
+             </item>
+             <item row="6" column="1">
+              <widget class="QComboBox" name="dataSetInfoRasterMaskGenerationModeValueComboBox">
+               <property name="currentIndex">
+                <number>0</number>
+               </property>
+               <item>
+                <property name="text">
+                 <string>None (Use source Mask/Alpha)</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>Replace matching pixels</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>Replace matching pixels at edges</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>Load from File</string>
+                </property>
+               </item>
+              </widget>
+             </item>
+             <item row="4" column="0">
+              <widget class="QLabel" name="dataSetInfoRasterContrastLabel">
+               <property name="text">
+                <string>Contrast Adjustment</string>
+               </property>
+              </widget>
+             </item>
+             <item row="6" column="0">
+              <widget class="QLabel" name="dataSetInfoRasterMaskGenerationModeLabel">
+               <property name="text">
+                <string>Mask Generation Mode</string>
+               </property>
+              </widget>
+             </item>
+             <item row="5" column="0">
+              <widget class="QLabel" name="dataSetInfoRasterGammaLabel">
+               <property name="text">
+                <string>Gamma Adjustment</string>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="1">
+              <widget class="QLabel" name="dataSetInfoRasterSizeValueLabel">
+               <property name="text">
+                <string/>
+               </property>
+              </widget>
+             </item>
+             <item row="3" column="1">
+              <widget class="QSpinBox" name="dataSetInfoRasterBrightnessValueSpinBox">
+               <property name="minimum">
+                <number>-1000</number>
+               </property>
+               <property name="maximum">
+                <number>1000</number>
+               </property>
+              </widget>
+             </item>
+             <item row="9" column="1">
+              <widget class="QComboBox" name="dataSetInfoRasterPyramidGenerationModeValueComboBox">
+               <item>
+                <property name="text">
+                 <string>Disabled - Perform tiling only</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>Enabled - Generate raster pyramids</string>
+                </property>
+               </item>
+              </widget>
+             </item>
+             <item row="7" column="1">
+              <layout class="QHBoxLayout" name="dataSetInfoRasterMaskGenerationColourLayout">
+               <item>
+                <widget class="QLabel" name="dataSetInfoRasterMaskGenerationColourValueLabel">
+                 <property name="enabled">
+                  <bool>false</bool>
+                 </property>
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="text">
+                  <string/>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QPushButton" name="dataSetInfoRasterMaskGenerationColourValuePushButton">
+                 <property name="enabled">
+                  <bool>false</bool>
+                 </property>
+                 <property name="text">
+                  <string>Choose</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+             <item row="8" column="0">
+              <widget class="QLabel" name="dataSetInfoRasterMaskGenerationFileNameLabel">
+               <property name="enabled">
+                <bool>false</bool>
+               </property>
+               <property name="text">
+                <string>Mask File</string>
+               </property>
+              </widget>
+             </item>
+             <item row="9" column="0">
+              <widget class="QLabel" name="dataSetInfoRasterPyramidGenerationModeLabel">
+               <property name="text">
+                <string>Pyramid Generation</string>
+               </property>
+              </widget>
+             </item>
+             <item row="7" column="0">
+              <widget class="QLabel" name="dataSetInfoRasterMaskGenerationColourLabel">
+               <property name="enabled">
+                <bool>false</bool>
+               </property>
+               <property name="text">
+                <string>Mask Colour to Replace</string>
+               </property>
+              </widget>
+             </item>
+             <item row="10" column="0">
+              <widget class="QLabel" name="dataSetInfoRasterPyramidInterpolationLabel">
+               <property name="text">
+                <string>Pyramid Interpolation</string>
+               </property>
+              </widget>
+             </item>
+             <item row="10" column="1">
+              <widget class="QComboBox" name="dataSetInfoRasterPyramidInterpolationValueComboBox">
+               <item>
+                <property name="text">
+                 <string>None</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>Average</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>Bilinear</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>Nearest Neighbour</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>Padding</string>
+                </property>
+               </item>
+              </widget>
+             </item>
+             <item row="11" column="0">
+              <widget class="QLabel" name="dataSetInfoRasterMaxTileSizeLabel">
+               <property name="text">
+                <string>Maximum Tile Size</string>
+               </property>
+              </widget>
+             </item>
+             <item row="12" column="0">
+              <widget class="QLabel" name="dataSetInfoRasterPyramidGenerationMaxLevels">
+               <property name="text">
+                <string>Max Pyramid Levels</string>
+               </property>
+              </widget>
+             </item>
+             <item row="11" column="1">
+              <widget class="QSpinBox" name="dataSetInfoRasterMaxTileSizeValueSpinBox">
+               <property name="minimum">
+                <number>16</number>
+               </property>
+               <property name="maximum">
+                <number>8192</number>
+               </property>
+               <property name="value">
+                <number>2048</number>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="0">
+              <widget class="QLabel" name="dataSetInfoRasterNumChannelsLabel">
+               <property name="text">
+                <string>Number of Channels</string>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="1">
+              <widget class="QLabel" name="dataSetInfoRasterNumChannelsValueLabel">
+               <property name="text">
+                <string/>
+               </property>
+              </widget>
+             </item>
+             <item row="13" column="1">
+              <widget class="QComboBox" name="dataSetInfoRasterNormaliseValueComboBox">
+               <item>
+                <property name="text">
+                 <string>Disabled</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>Product Dependent</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>Enabled</string>
+                </property>
+               </item>
+              </widget>
+             </item>
+             <item row="13" column="0">
+              <widget class="QLabel" name="dataSetInfoRasterNormaliseLabel">
+               <property name="text">
+                <string>Normalisation mode</string>
+               </property>
+              </widget>
+             </item>
+             <item row="2" column="0">
+              <widget class="QLabel" name="dataSetInfoRasterChannelFormatLabel">
+               <property name="text">
+                <string>Channel Format</string>
+               </property>
+              </widget>
+             </item>
+             <item row="2" column="1">
+              <widget class="QLabel" name="dataSetInfoRasterChannelFormatValueLabel">
+               <property name="text">
+                <string/>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <tabstops>
+  <tabstop>dataSetSelectionSpinBox</tabstop>
+  <tabstop>dataSetLoadCheckBox</tabstop>
+  <tabstop>dataSetAutoScaleBandCheckBox</tabstop>
+  <tabstop>dataSetScaleBandComboBox</tabstop>
+  <tabstop>dataSetSLDLineEdit</tabstop>
+  <tabstop>dataSetSLDPushButton</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>

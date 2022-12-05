@@ -1,0 +1,303 @@
+<ui version="4.0" >
+ <class>Simple3DInteraction</class>
+ <widget class="QMainWindow" name="Simple3DInteraction" >
+  <property name="geometry" >
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>756</width>
+    <height>569</height>
+   </rect>
+  </property>
+  <property name="windowTitle" >
+   <string>Simple 3D Interaction Sample</string>
+  </property>
+  <property name="windowIcon" >
+   <iconset resource="icons.qrc" >:/Icons/icons/maplink.png</iconset>
+  </property>
+  <widget class="QWidget" name="centralWidget" >
+   <layout class="QGridLayout" >
+    <property name="margin" >
+     <number>0</number>
+    </property>
+    <property name="spacing" >
+     <number>0</number>
+    </property>
+    <item row="0" column="0" >
+     <widget class="QFrame" name="frame" >
+      <property name="sizePolicy" >
+       <sizepolicy>
+        <hsizetype>7</hsizetype>
+        <vsizetype>7</vsizetype>
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="frameShape" >
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow" >
+       <enum>QFrame::Sunken</enum>
+      </property>
+      <layout class="QGridLayout" >
+       <property name="margin" >
+        <number>0</number>
+       </property>
+       <property name="spacing" >
+        <number>0</number>
+       </property>
+       <item row="0" column="0" >
+        <widget class="MapLinkWidget" native="1" name="mapLinkWidget" >
+         <property name="sizePolicy" >
+          <sizepolicy>
+           <hsizetype>7</hsizetype>
+           <vsizetype>7</vsizetype>
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar" >
+   <property name="geometry" >
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>756</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile" >
+    <property name="title" >
+     <string>File</string>
+    </property>
+    <addaction name="actionOpen_Map" />
+    <addaction name="actionOpen_Terrain" />
+    <addaction name="separator" />
+    <addaction name="actionExit" />
+   </widget>
+   <widget class="QMenu" name="menuTools" >
+    <property name="title" >
+     <string>Tools</string>
+    </property>
+    <addaction name="actionExaggerate_Terrain" />
+    <addaction name="actionWireframe" />
+    <addaction name="separator" />
+    <addaction name="actionLimit_Camera" />
+   </widget>
+   <addaction name="menuFile" />
+   <addaction name="menuTools" />
+  </widget>
+  <widget class="QStatusBar" name="statusbar" />
+  <widget class="QToolBar" name="toolBar" >
+   <property name="toolTip" >
+    <string/>
+   </property>
+   <property name="statusTip" >
+    <string/>
+   </property>
+   <property name="orientation" >
+    <enum>Qt::Horizontal</enum>
+   </property>
+   <property name="iconSize" >
+    <size>
+     <width>24</width>
+     <height>24</height>
+    </size>
+   </property>
+   <attribute name="toolBarArea" >
+    <number>4</number>
+   </attribute>
+   <addaction name="actionOpen_Map" />
+   <addaction name="separator" />
+   <addaction name="actionZoomIn" />
+   <addaction name="actionZoomOut" />
+   <addaction name="actionResetView" />
+   <addaction name="separator" />
+   <addaction name="actionActivateEyePointMode" />
+   <addaction name="actionActivateWorldMode" />
+  </widget>
+  <action name="actionOpen_Map" >
+   <property name="icon" >
+    <iconset resource="icons.qrc" >:/Icons/icons/open.png</iconset>
+   </property>
+   <property name="text" >
+    <string>Open Map</string>
+   </property>
+   <property name="statusTip" >
+    <string>Load a map</string>
+   </property>
+  </action>
+  <action name="actionOpen_Terrain" >
+   <property name="text" >
+    <string>Open Terrain</string>
+   </property>
+   <property name="statusTip" >
+    <string>Load a Terrain Database</string>
+   </property>
+  </action>
+  <action name="actionExit" >
+   <property name="text" >
+    <string>Exit</string>
+   </property>
+  </action>
+  <action name="actionExaggerate_Terrain" >
+   <property name="checkable" >
+    <bool>true</bool>
+   </property>
+   <property name="text" >
+    <string>Exaggerate Terrain</string>
+   </property>
+   <property name="statusTip" >
+    <string>Toggles exaggeration of terrain features</string>
+   </property>
+   <property name="shortcut" >
+    <string>E</string>
+   </property>
+  </action>
+  <action name="actionWireframe" >
+   <property name="checkable" >
+    <bool>true</bool>
+   </property>
+   <property name="text" >
+    <string>Wireframe</string>
+   </property>
+   <property name="iconText" >
+    <string>Wireframe mode</string>
+   </property>
+   <property name="toolTip" >
+    <string>Wireframe mode</string>
+   </property>
+   <property name="statusTip" >
+    <string>Toggles wireframe rendering</string>
+   </property>
+   <property name="shortcut" >
+    <string>W</string>
+   </property>
+  </action>
+  <action name="actionLimit_Camera" >
+   <property name="checkable" >
+    <bool>true</bool>
+   </property>
+   <property name="text" >
+    <string>Limit Camera</string>
+   </property>
+   <property name="statusTip" >
+    <string>Prevents the camera moving below the surface of the earth</string>
+   </property>
+   <property name="shortcut" >
+    <string>L</string>
+   </property>
+  </action>
+  <action name="actionZoomIn" >
+   <property name="icon" >
+    <iconset resource="icons.qrc" >:/Icons/icons/zoomin.png</iconset>
+   </property>
+   <property name="text" >
+    <string>Zoom In</string>
+   </property>
+   <property name="iconText" >
+    <string>Zoom In</string>
+   </property>
+   <property name="toolTip" >
+    <string>Zoom In</string>
+   </property>
+   <property name="statusTip" >
+    <string>Zoom In</string>
+   </property>
+  </action>
+  <action name="actionZoomOut" >
+   <property name="icon" >
+    <iconset resource="icons.qrc" >:/Icons/icons/zoomout.png</iconset>
+   </property>
+   <property name="text" >
+    <string>Zoom Out</string>
+   </property>
+   <property name="iconText" >
+    <string>Zoom Out</string>
+   </property>
+   <property name="toolTip" >
+    <string>Zoom Out</string>
+   </property>
+   <property name="statusTip" >
+    <string>Zoom Out</string>
+   </property>
+  </action>
+  <action name="actionResetView" >
+   <property name="icon" >
+    <iconset resource="icons.qrc" >:/Icons/icons/reset.png</iconset>
+   </property>
+   <property name="text" >
+    <string>Reset View</string>
+   </property>
+   <property name="iconText" >
+    <string>Reset View</string>
+   </property>
+   <property name="toolTip" >
+    <string>Resets the viewpoint to the default position</string>
+   </property>
+   <property name="statusTip" >
+    <string>Resets the viewpoint to the default position</string>
+   </property>
+   <property name="shortcut" >
+    <string/>
+   </property>
+  </action>
+  <action name="actionActivateEyePointMode" >
+   <property name="checkable" >
+    <bool>true</bool>
+   </property>
+   <property name="checked" >
+    <bool>true</bool>
+   </property>
+   <property name="icon" >
+    <iconset resource="icons.qrc" >:/Icons/icons/eyepoint.png</iconset>
+   </property>
+   <property name="text" >
+    <string>actionActivateEyePointMode</string>
+   </property>
+   <property name="iconText" >
+    <string>Eyepoint interaction mode</string>
+   </property>
+   <property name="toolTip" >
+    <string>Eyepoint interaction mode</string>
+   </property>
+   <property name="statusTip" >
+    <string/>
+   </property>
+  </action>
+  <action name="actionActivateWorldMode" >
+   <property name="checkable" >
+    <bool>true</bool>
+   </property>
+   <property name="icon" >
+    <iconset resource="icons.qrc" >:/Icons/icons/world.png</iconset>
+   </property>
+   <property name="text" >
+    <string>actionActivateWorldMode</string>
+   </property>
+   <property name="iconText" >
+    <string>Trackball world interaction mode</string>
+   </property>
+   <property name="toolTip" >
+    <string>Trackball world interaction mode</string>
+   </property>
+  </action>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>MapLinkWidget</class>
+   <extends>QWidget</extends>
+   <header>maplinkwidget.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="icons.qrc" />
+ </resources>
+ <connections/>
+</ui>

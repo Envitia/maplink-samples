@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>datasetcreationoptionspage</class>
+ <widget class="QWizardPage" name="datasetcreationoptionspage">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>519</width>
+    <height>369</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>WizardPage</string>
+  </property>
+  <property name="title">
+   <string>Data Set Creation Options</string>
+  </property>
+  <property name="subTitle">
+   <string/>
+  </property>
+  <layout class="QVBoxLayout" name="datasetcreationOptionsPagelayout">
+   <item>
+    <layout class="QHBoxLayout" name="dataPathLayout">
+     <property name="sizeConstraint">
+      <enum>QLayout::SetDefaultConstraint</enum>
+     </property>
+     <item>
+      <widget class="QLabel" name="dataPathLabel">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="text">
+        <string>Data Path</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="dataPathLineEdit">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QCheckBox" name="optionsIncludeOverviewsCheckBox">
+     <property name="text">
+      <string>Read/Create raster overview data sets</string>
+     </property>
+     <property name="checked">
+       <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <spacer name="verticalSpacer">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>40</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+  </layout>
+ </widget>
+ <tabstops>
+  <tabstop>dataPathLineEdit</tabstop>
+  <tabstop>optionsIncludeOverviewsCheckBox</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>

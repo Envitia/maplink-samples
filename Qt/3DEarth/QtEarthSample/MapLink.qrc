@@ -1,0 +1,24 @@
+<RCC>
+    <qresource prefix="/">
+        <file>images/envitia.png</file>
+        <file>images/MapLink.png</file>
+        <file>images/reset.png</file>
+        <file>images/file_open.png</file>
+        <file>images/grab.png</file>
+        <file>images/pan.png</file>
+        <file>images/zoom.png</file>
+        <file>images/zoomin_once.png</file>
+        <file>images/zoomout_once.png</file>
+        <file>images/Delete.png</file>
+        <file>images/Delete_Point.png</file>
+        <file>images/Polygon.png</file>
+        <file>images/Polygon_ex.png</file>
+        <file>images/Polyline.png</file>
+        <file>images/Polyline_ex.png</file>
+        <file>images/Text.png</file>
+        <file>images/Trackball.png</file>
+        <file>images/select.png</file>
+        <file>images/symbol.png</file>
+        <file>images/doublearrowtool.png</file>
+    </qresource>
+</RCC>

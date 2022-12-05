@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1040</width>
+    <height>752</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Envitia OGC WMS/WMTS Viewer</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="../images.qrc">
+    <normaloff>:/icons/images/envita_logo.png</normaloff>:/icons/images/envita_logo.png</iconset>
+  </property>
+  <property name="autoFillBackground">
+   <bool>false</bool>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout_2">
+    <property name="spacing">
+     <number>0</number>
+    </property>
+    <property name="leftMargin">
+     <number>0</number>
+    </property>
+    <property name="topMargin">
+     <number>0</number>
+    </property>
+    <property name="rightMargin">
+     <number>0</number>
+    </property>
+    <property name="bottomMargin">
+     <number>0</number>
+    </property>
+    <item>
+     <widget class="QFrame" name="frame">
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Sunken</enum>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <item>
+        <widget class="DrawingSurfaceInteractions" name="maplinkSurface" native="true"/>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1040</width>
+     <height>18</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuService">
+    <property name="title">
+     <string>Service</string>
+    </property>
+    <addaction name="actionAddService"/>
+    <addaction name="separator"/>
+    <addaction name="actionOptions"/>
+    <addaction name="separator"/>
+    <addaction name="actionExit"/>
+   </widget>
+   <widget class="QMenu" name="menuView">
+    <property name="title">
+     <string>View</string>
+    </property>
+    <addaction name="actionZoomIn"/>
+    <addaction name="actionZoomOut"/>
+    <addaction name="actionResetView"/>
+    <addaction name="separator"/>
+    <addaction name="actionZoomMode"/>
+    <addaction name="actionPanMode"/>
+    <addaction name="actionGrabMode"/>
+    <addaction name="separator"/>
+    <addaction name="actionService_List"/>
+   </widget>
+   <widget class="QMenu" name="menuHelp">
+    <property name="title">
+     <string>Help</string>
+    </property>
+    <addaction name="actionAbout"/>
+    <addaction name="actionHelp"/>
+   </widget>
+   <addaction name="menuService"/>
+   <addaction name="menuView"/>
+   <addaction name="menuHelp"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar">
+   <property name="sizeGripEnabled">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionAddService"/>
+   <addaction name="separator"/>
+   <addaction name="actionZoomIn"/>
+   <addaction name="actionZoomOut"/>
+   <addaction name="actionResetView"/>
+   <addaction name="separator"/>
+   <addaction name="actionZoomMode"/>
+   <addaction name="actionPanMode"/>
+   <addaction name="actionGrabMode"/>
+  </widget>
+  <widget class="QDockWidget" name="layerListDock">
+   <property name="minimumSize">
+    <size>
+     <width>233</width>
+     <height>169</height>
+    </size>
+   </property>
+   <property name="windowIcon">
+    <iconset resource="../images.qrc">
+     <normaloff>:/icons/images/envita_logo.png</normaloff>:/icons/images/envita_logo.png</iconset>
+   </property>
+   <property name="floating">
+    <bool>false</bool>
+   </property>
+   <property name="features">
+    <set>QDockWidget::AllDockWidgetFeatures</set>
+   </property>
+   <property name="windowTitle">
+    <string>Services</string>
+   </property>
+   <attribute name="dockWidgetArea">
+    <number>1</number>
+   </attribute>
+   <widget class="QWidget" name="dockWidgetContents_2">
+    <layout class="QGridLayout" name="gridLayout">
+     <item row="1" column="0" colspan="2">
+      <widget class="QPushButton" name="zoomToButton">
+       <property name="text">
+        <string>Zoom To Selection</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="0" colspan="2">
+      <widget class="ServiceTreeView" name="loadedServicesTree">
+       <property name="lineWidth">
+        <number>2</number>
+       </property>
+       <property name="dragEnabled">
+        <bool>true</bool>
+       </property>
+       <property name="dragDropOverwriteMode">
+        <bool>false</bool>
+       </property>
+       <property name="dragDropMode">
+        <enum>QAbstractItemView::InternalMove</enum>
+       </property>
+       <property name="defaultDropAction">
+        <enum>Qt::MoveAction</enum>
+       </property>
+       <property name="uniformRowHeights">
+        <bool>true</bool>
+       </property>
+       <attribute name="headerVisible">
+        <bool>false</bool>
+       </attribute>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <action name="actionAddService">
+   <property name="icon">
+    <iconset resource="../images.qrc">
+     <normaloff>:/toolbar/images/server_add.png</normaloff>:/toolbar/images/server_add.png</iconset>
+   </property>
+   <property name="text">
+    <string>Add Service</string>
+   </property>
+   <property name="toolTip">
+    <string>Add a new service</string>
+   </property>
+  </action>
+  <action name="actionZoomIn">
+   <property name="icon">
+    <iconset resource="../images.qrc">
+     <normaloff>:/toolbar/images/zoomin_once.png</normaloff>:/toolbar/images/zoomin_once.png</iconset>
+   </property>
+   <property name="text">
+    <string>Zoom In</string>
+   </property>
+   <property name="toolTip">
+    <string>Zoom In</string>
+   </property>
+  </action>
+  <action name="actionZoomOut">
+   <property name="icon">
+    <iconset resource="../images.qrc">
+     <normaloff>:/toolbar/images/zoomout_once.png</normaloff>:/toolbar/images/zoomout_once.png</iconset>
+   </property>
+   <property name="text">
+    <string>Zoom Out</string>
+   </property>
+   <property name="toolTip">
+    <string>Zoom Out</string>
+   </property>
+  </action>
+  <action name="actionResetView">
+   <property name="icon">
+    <iconset resource="../images.qrc">
+     <normaloff>:/toolbar/images/reset.png</normaloff>:/toolbar/images/reset.png</iconset>
+   </property>
+   <property name="text">
+    <string>Reset View</string>
+   </property>
+   <property name="toolTip">
+    <string>Reset the view to cover all loaded services</string>
+   </property>
+  </action>
+  <action name="actionZoomMode">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../images.qrc">
+     <normaloff>:/toolbar/images/zoom.png</normaloff>:/toolbar/images/zoom.png</iconset>
+   </property>
+   <property name="text">
+    <string>Zoom Mode</string>
+   </property>
+   <property name="toolTip">
+    <string>Zoom to area</string>
+   </property>
+  </action>
+  <action name="actionPanMode">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../images.qrc">
+     <normaloff>:/toolbar/images/pan.png</normaloff>:/toolbar/images/pan.png</iconset>
+   </property>
+   <property name="text">
+    <string>Pan Mode</string>
+   </property>
+   <property name="toolTip">
+    <string>Pan to point</string>
+   </property>
+  </action>
+  <action name="actionGrabMode">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../images.qrc">
+     <normaloff>:/toolbar/images/grab.png</normaloff>:/toolbar/images/grab.png</iconset>
+   </property>
+   <property name="text">
+    <string>Grab Mode</string>
+   </property>
+   <property name="toolTip">
+    <string>Grab and drag the map</string>
+   </property>
+  </action>
+  <action name="actionAbout">
+   <property name="text">
+    <string>About</string>
+   </property>
+  </action>
+  <action name="actionExit">
+   <property name="text">
+    <string>Exit</string>
+   </property>
+  </action>
+  <action name="actionService_List">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Show Service List</string>
+   </property>
+  </action>
+  <action name="actionOptions">
+   <property name="text">
+    <string>Options</string>
+   </property>
+  </action>
+  <action name="actionHelp">
+   <property name="text">
+    <string>Help</string>
+   </property>
+  </action>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>DrawingSurfaceInteractions</class>
+   <extends>QWidget</extends>
+   <header>drawingsurfaceinteractions.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>ServiceTreeView</class>
+   <extends>QTreeView</extends>
+   <header>servicetreeview.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="../images.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>actionService_List</sender>
+   <signal>triggered(bool)</signal>
+   <receiver>layerListDock</receiver>
+   <slot>setVisible(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>136</x>
+     <y>411</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>layerListDock</sender>
+   <signal>visibilityChanged(bool)</signal>
+   <receiver>actionService_List</receiver>
+   <slot>setChecked(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>136</x>
+     <y>411</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
