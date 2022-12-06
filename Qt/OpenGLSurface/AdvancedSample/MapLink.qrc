@@ -1,0 +1,38 @@
+<RCC>
+  <qresource prefix="/">
+    <file>images/envitia.png</file>
+    <file>images/arc.png</file>
+    <file>images/ellipse.png</file>
+    <file>images/geoarc.png</file>
+    <file>images/geoellipse.png</file>
+    <file>images/earth_location.png</file>
+    <file>images/earth_lock.png</file>
+    <file>images/font.png</file>
+    <file>images/geofont.png</file>
+    <file>images/geopolygon.png</file>
+    <file>images/geopolyline.png</file>
+    <file>images/georastersymbol.png</file>
+    <file>images/geovectorsymbol.png</file>
+    <file>images/rastersymbol.png</file>
+    <file>images/vectorsymbol.png</file>
+    <file>images/polygon.png</file>
+    <file>images/polyline.png</file>
+    <file>images/file_open_kml.png</file>
+    <file>images/MapLink.png</file>
+    <file>images/reset.png</file>
+    <file>images/file_open.png</file>
+    <file>images/grab.png</file>
+    <file>images/pan.png</file>
+    <file>images/zoom.png</file>
+    <file>images/zoomin_once.png</file>
+    <file>images/breakpoint_add.png</file>
+    <file>images/breakpoint_find.png</file>
+    <file>images/breakpoint_selection.png</file>
+    <file>images/breakpoint_up.png</file>
+    <file>images/envita_logo.png</file>
+    <file>images/media_pause.png</file>
+    <file>images/media_play.png</file>
+    <file>images/northup.png</file>
+    <file>images/zoomout_once.png</file>
+  </qresource>
+</RCC>

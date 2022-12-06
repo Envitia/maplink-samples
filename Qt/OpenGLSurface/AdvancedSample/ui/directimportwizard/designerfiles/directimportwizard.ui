@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>DirectImportWizard</class>
+ <widget class="QWizard" name="DirectImportWizard">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>600</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>345</width>
+    <height>485</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Wizard</string>
+  </property>
+  <property name="wizardStyle">
+   <enum>QWizard::NStyles</enum>
+  </property>
+  <property name="titleFormat">
+   <enum>Qt::AutoText</enum>
+  </property>
+  <property name="subTitleFormat">
+   <enum>Qt::AutoText</enum>
+  </property>
+  <widget class="NewLayerPage" name="newLayerPage"/>
+  <widget class="ScaleBandsPage" name="scaleBandsPage"/>
+  <widget class="DataSetCreationOptionsPage" name="dataSetCreationOptionsPage"/>
+  <widget class="DataSetCreationFailedPage" name="dataSetCreationFailedPage"/>
+  <widget class="DataSetInformationPage" name="dataSetInformationPage"/>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>NewLayerPage</class>
+   <extends>QWizardPage</extends>
+   <header>ui/directimportwizard/newlayerpage.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>ScaleBandsPage</class>
+   <extends>QWizardPage</extends>
+   <header>ui/directimportwizard/scalebandspage.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>DataSetCreationOptionsPage</class>
+   <extends>QWizardPage</extends>
+   <header>ui/directimportwizard/datasetcreationoptionspage.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>DataSetCreationFailedPage</class>
+   <extends>QWizardPage</extends>
+   <header>ui/directimportwizard/datasetcreationfailedpage.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>DataSetInformationPage</class>
+   <extends>QWizardPage</extends>
+   <header>ui/directimportwizard/datasetinformationpage.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

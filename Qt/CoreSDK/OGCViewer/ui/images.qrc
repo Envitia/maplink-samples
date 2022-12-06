@@ -1,0 +1,21 @@
+<RCC>
+  <qresource prefix="toolbar">
+    <file>images/server_add.png</file>
+    <file>images/grab.png</file>
+    <file>images/pan.png</file>
+    <file>images/reset.png</file>
+    <file>images/zoom.png</file>
+    <file>images/zoomin_once.png</file>
+    <file>images/zoomout_once.png</file>
+    <file>images/file_open.png</file>
+  </qresource>
+  <qresource prefix="icons">
+    <file>images/envitia.png</file>
+    <file>images/server.png</file>
+    <file>images/envita_logo.png</file>
+    <file>images/layers.png</file>
+  </qresource>
+  <qresource prefix="animations">
+    <file>images/splash_loader.gif</file>
+  </qresource>
+</RCC>
