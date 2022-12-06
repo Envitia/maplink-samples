@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>actionTypePage</class>
+ <widget class="QWizardPage" name="actionTypePage">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>528</width>
+    <height>365</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>WizardPage</string>
+  </property>
+  <property name="title">
+   <string>Select a service type</string>
+  </property>
+  <attribute name="pageId">
+   <string notr="true">0</string>
+  </attribute>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <property name="leftMargin">
+    <number>30</number>
+   </property>
+   <item>
+    <widget class="QRadioButton" name="addWMSButton">
+     <property name="toolTip">
+      <string>Adds a Web Map Service to the current view.</string>
+     </property>
+     <property name="text">
+      <string>Add a WMS service</string>
+     </property>
+     <property name="checked">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QRadioButton" name="addWMTSButton">
+     <property name="toolTip">
+      <string>Adds a Web Map Tiling Service to the current view.</string>
+     </property>
+     <property name="text">
+      <string>Add a WMTS service</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

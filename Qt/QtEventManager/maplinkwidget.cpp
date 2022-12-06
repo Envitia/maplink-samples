@@ -1,0 +1,464 @@
+/****************************************************************************
+                Copyright (c) 2008-2017 by Envitia Group PLC.
+****************************************************************************/
+
+#include "maplinkwidget.h"
+#ifndef WIN32
+# include <QX11Info>
+#endif
+
+#include <iostream>
+#include <QApplication>
+#include <QDesktopWidget>
+#include <QMessageBox>
+
+using namespace std;
+
+MapLinkWidget::MapLinkWidget(QWidget *parent)//, Qt::WFlags flags)
+  : QWidget(parent)
+  , m_application(new Application(parent))
+  , m_initialized(false)
+{
+  //! This is required for Qt4 to stop the back ground being drawn and Qt
+  //! Double buffering. You also need to override paintEngine().
+  //
+  //! Ref:
+  //! http://lists.trolltech.com/qt-interest/2006-02/thread00004-0.html
+  //
+  setAttribute(Qt::WA_NoBackground, true);
+  setAttribute(Qt::WA_NoSystemBackground, true);
+  //! Possible issue with this for Qt4.1.0 and newer versions.
+  //
+  //! See:
+  //!   http://www.trolltech.com/developer/task-tracker/index_html?id=106922&method=entry
+  //!   http://lists.trolltech.com/qt-interest/2006-05/thread00316-0.html
+  //
+  //! Talk to Trolltech support about getting a fix if this proves to be a problem
+  //
+  //! NOTE: I am not seeing this problem, probably because I'm doing things slightly
+  //!       differently from the example.
+  setAttribute(Qt::WA_PaintOnScreen);
+  setAttribute(Qt::WA_OpaquePaintEvent);
+  setAttribute(Qt::WA_NativeWindow);
+
+  //! set the focus policy so we can get keyboard events
+  setFocusPolicy(Qt::WheelFocus);
+
+  //! Set the mouse tracking in the designer.
+  setMouseTracking(true);
+
+  create();
+}
+
+
+MapLinkWidget::~MapLinkWidget()
+{
+  //! Clean up
+  delete m_application;
+}
+
+//! ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//! Map to load.
+//! ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+void MapLinkWidget::loadMap(const char *filename)
+{
+  if (m_application)
+  {
+    m_application->loadMap(filename); //! Load the map/file
+    m_application->resetView();//! Reset the view to show the entire extent of the new map/file
+    update(); //! Cause a redraw so the new map/file can be seen
+  }
+}
+
+bool MapLinkWidget::close()
+{
+  bool result = QWidget::close();
+  delete m_application;
+  m_application = NULL;
+  return result;
+}
+
+void MapLinkWidget::create()
+{
+  if (!m_application)
+  {
+    m_application = new Application(parentWidget());
+  }
+#ifndef WIN32
+  //! The method to access the widget's native X11 resources differs depending on the version of Qt being used.
+# if QT_VERSION < 0x50000
+  QX11Info x11info = this->x11Info();
+  Display *display = x11info.display();
+  int screenNum = x11info.screen();
+  Visual *visual = (Visual *)x11info.visual();
+  Qt::HANDLE colourmap = x11info.colormap();
+  Qt::HANDLE drawable = handle();
+  Screen *screen = ScreenOfDisplay(display, screenNum);
+# elif QT_VERSION >= 0x50100
+  //! Qt 5.1 or later
+  Display *display = QX11Info::display();
+  QDesktopWidget *desktop = QApplication::desktop();
+  int screenNum = desktop->screenNumber(this);
+  Screen *screen = ScreenOfDisplay(display, screenNum);
+  Visual *visual = DefaultVisual(display, screenNum);
+  Colormap colourmap = DefaultColormap(display, screenNum);
+  WId drawable = winId();
+# else
+#  error "This sample does not currently support building with Qt 5.0.
+# endif
+
+  //! pass to the application as we will need for the Drawing Surface
+  m_application->drawingInfo(drawable, display, screen, colourmap, visual);
+#else
+  //! Attaching to the window is much more efficent.
+  WId hWnd = winId();
+  m_application->drawingInfo(hWnd);
+#endif
+  m_application->resize(width(), height());
+  m_application->create();
+}
+
+void MapLinkWidget::paintEvent(QPaintEvent *rect)
+{
+  if (m_application == NULL)
+    create();
+
+  //! Redraw the MapLink drawing surface
+  m_application->redraw();
+
+  m_initialized = true;
+
+  //! When using the X11/GDI drawing surfaces with Qt5
+  //! the application can reach a state where the MapLinkWidget
+  //! has received an update event but the MainWindow has not.
+  //! If the MapLinkWidget has been double buffered by Qt
+  //! this means the map update will not take effect until the
+  //! next event is received by the widget (key/mouse press).
+  //! Emit a signal to notify any classes that the map display
+  //! has been redrawn.
+  //
+  //! This must not be done if the map is being rendered continuously
+  //! using Qt or on a regular interval with a timer.
+  emit mapDrawn();
+}
+
+//! ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//! resize - informs the drawing surface of any change in size of the window
+//! Relys on the ResizeAction to maintain the view of the map sensibly
+//! ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+void MapLinkWidget::resizeEvent(QResizeEvent *event)
+{
+  QWidget::resizeEvent(event);
+  if (m_application)
+  {
+    m_application->resize(width(), height());
+    if (!m_initialized)
+    {
+      m_application->resetView();
+    }
+  }
+}
+
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// Mouse & Keyboard handling
+//
+// We only update the display if MapLink tells us too.
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+void MapLinkWidget::mouseMoveEvent(QMouseEvent *event)
+{
+  Qt::KeyboardModifiers modifiers = event->modifiers();
+  bool shiftPressed = (modifiers & Qt::ShiftModifier);
+  bool controlPressed = (modifiers & Qt::ControlModifier);
+
+  //! The MapLink application class doesn't use Qt - convert the mouse button types
+  //! to the MapLink types
+  TSLButtonType button = TSLButtonNone;
+  Qt::MouseButton buttonQt = event->button();
+  switch (buttonQt)
+  {
+  case Qt::LeftButton:
+    button = TSLButtonLeft;
+    break;
+
+  case Qt::MidButton:
+    button = TSLButtonCentre;
+    break;
+
+  case Qt::RightButton:
+    button = TSLButtonRight;
+    break;
+
+  default:
+    break;
+  }
+
+  //! Forward the event onto the application
+  if (m_application->mouseMoveEvent(button, shiftPressed, controlPressed, event->x(), event->y()))
+  {
+    update(); //! We were asked to redraw the display
+  }
+}
+
+void MapLinkWidget::mousePressEvent(QMouseEvent *event)
+{
+  Qt::KeyboardModifiers modifiers = event->modifiers();
+  bool shiftPressed = (modifiers & Qt::ShiftModifier);
+  bool controlPressed = (modifiers & Qt::ControlModifier);
+  int x = event->x();
+  int y = event->y();
+  Qt::MouseButton button = event->button();
+
+  //! Forward the event onto the application
+  bool redraw = false;
+  switch (button)
+  {
+  case Qt::LeftButton:
+    redraw = m_application->OnLButtonDown(shiftPressed, controlPressed, x, y);
+    break;
+
+  case Qt::MidButton:
+    redraw = m_application->OnMButtonDown(shiftPressed, controlPressed, x, y);
+    break;
+
+  case Qt::RightButton:
+    redraw = m_application->OnRButtonDown(shiftPressed, controlPressed, x, y);
+    break;
+
+  default:
+    break;
+  }
+
+  if (redraw)
+  {
+    update(); //! We were asked to redraw the display
+  }
+}
+
+void MapLinkWidget::mouseReleaseEvent(QMouseEvent *event)
+{
+  Qt::KeyboardModifiers modifiers = event->modifiers();
+  bool shiftPressed = (modifiers & Qt::ShiftModifier);
+  bool controlPressed = (modifiers & Qt::ControlModifier);
+  int x = event->x();
+  int y = event->y();
+  Qt::MouseButton button = event->button();
+
+  //! Forward the event onto the application
+  bool redraw = false;
+  switch (button)
+  {
+  case Qt::LeftButton:
+    redraw = m_application->OnLButtonUp(shiftPressed, controlPressed, x, y);
+    break;
+
+  case Qt::MidButton:
+    redraw = m_application->OnMButtonUp(shiftPressed, controlPressed, x, y);
+    break;
+
+  case Qt::RightButton:
+    redraw = m_application->OnRButtonUp(shiftPressed, controlPressed, x, y);
+    break;
+
+  default:
+    break;
+  }
+  if (redraw)
+  {
+    update(); //! We were asked to redraw the display
+  }
+}
+
+void MapLinkWidget::wheelEvent(QWheelEvent *event)
+{
+  Qt::KeyboardModifiers modifiers = event->modifiers();
+  bool shiftPressed = (modifiers & Qt::ShiftModifier);
+  bool controlPressed = (modifiers & Qt::ControlModifier);
+  int x = event->x();
+  int y = event->y();
+
+  //! Forward the event onto the application
+  if (m_application->OnMouseWheel(shiftPressed, controlPressed, event->delta(), x, y))
+  {
+    update(); //! We were asked to redraw the display
+  }
+}
+
+void MapLinkWidget::keyPressEvent(QKeyEvent *event)
+{
+  Qt::KeyboardModifiers modifiers = event->modifiers();
+  bool shiftPressed = (modifiers & Qt::ShiftModifier);
+  bool controlPressed = (modifiers & Qt::ControlModifier);
+
+  //! Forward the event onto the application
+  if (m_application->OnKeyPress(shiftPressed, controlPressed, event->key()))
+  {
+    update(); //! We were asked to redraw the display
+  }
+}
+
+void MapLinkWidget::keyReleaseEvent(QKeyEvent *)
+{
+  //! ignore
+}
+
+
+
+///////////////////////////////////////////
+//! Events forwarded from the main window. These are all forwarded on to
+//! the appliction, and we will issue a redraw request if the application asks
+//! us to.
+void MapLinkWidget::resetView()
+{
+  m_application->resetView();
+  update(); //! The viewing extent has changed, so a redraw is always required
+}
+
+void MapLinkWidget::zoomInOnce()
+{
+  if (m_application->zoomIn())
+  {
+    //! We were asked to redraw the display
+    update();
+  }
+}
+
+void MapLinkWidget::zoomOutOnce()
+{
+  if (m_application->zoomOut())
+  {
+    //! We were asked to redraw the display
+    update();
+  }
+}
+
+void MapLinkWidget::activatePanMode()
+{
+  //! Tell the application to activate the pan interaction mode
+  m_application->activatePanMode();
+  //! Clear all history points if not in tracks mode.
+  ClientManager* client = m_application->getClientManager();
+  if (client)
+  {
+    client->clearHistoryPoints();
+  }
+}
+
+void MapLinkWidget::activateGrabMode()
+{
+  //! Tell the application to activate the grab interaction mode
+  m_application->activateGrabMode();
+  //! Clear all history points if not in tracks mode.
+  ClientManager* client = m_application->getClientManager();
+  if (client)
+  {
+    client->clearHistoryPoints();
+  }
+}
+
+void MapLinkWidget::activateZoomMode()
+{
+  //! Tell the application to activate the zoom interaction mode
+  m_application->activateZoomMode();
+  //! Clear all history points if not in tracks mode.
+  ClientManager* client = m_application->getClientManager();
+  if (client)
+  {
+    client->clearHistoryPoints();
+  }
+}
+
+void MapLinkWidget::activateTracksMode()
+{
+  //! Tell the application to activate the zoom interaction mode
+  m_application->activateTracksMode();
+}
+
+//! set the call back to update the GUI for reseting interaction modes.
+void MapLinkWidget::ResetInteractionModesCallBack(resetInteractionModesCallBack func)
+{
+  m_application->ResetInteractionModesCallBack(func);
+}
+///////////////////////////////////////////////////////////////////////////
+//! Tracks
+///////////////////////////////////////////////////////////////////////////
+//! set client connection Thread
+void MapLinkWidget::setClientConnectionThread(ClientConnectionThread *_clientConnectionThread)
+{
+  ClientManager* client = m_application->getClientManager();
+  if (client)
+  {
+    client->setClientConnectionThread(_clientConnectionThread);
+  }
+}
+
+//! set the record tracks history and set The maximum period to store historic Track data for. 
+//!
+//! Data older than (currentTime - historicDataExpiry) will be deleted.
+void MapLinkWidget::setRecordTracks(bool recordTracksHistory, int historicDataExpiryTime)
+{
+  ClientManager* client = m_application->getClientManager();
+  if (client)
+  {
+    client->setRecordTracks(recordTracksHistory, historicDataExpiryTime);
+  }
+}
+
+//! get current time when recording history.
+int MapLinkWidget::getCurrentTime()
+{
+  ClientManager* client = m_application->getClientManager();
+  if (client)
+  {
+    return client->getCurrentTime();
+  }
+}
+
+//! Set the display time for the manager.
+void MapLinkWidget::displayTime(int time)
+{
+  ClientManager* client = m_application->getClientManager();
+  if (client)
+  {
+    client->displayTime(time);
+  }
+}
+
+//! redraw the drawing surface.
+bool MapLinkWidget::redrawSurface()
+{
+  ClientManager* client = m_application->getClientManager();
+  if (client)
+  {
+    return client->redrawSurface();
+  }
+}
+
+//! handles tracks updated slot sent by the thread
+void MapLinkWidget::onTracksUpdated(std::vector<std::pair<string, string>> &metadatPairs)
+{
+  ClientManager* client = m_application->getClientManager();
+  if (client)
+  {
+    client->onTracksUpdated(metadatPairs);
+  }
+}
+
+//! handles tracks updated slot sent by the thread
+bool MapLinkWidget::onTrackedItemUpdated(std::vector<std::pair<string, string>> &metadatPairs)
+{
+  ClientManager* client = m_application->getClientManager();
+  if (client)
+  {
+    return client->onTrackedItemUpdated(metadatPairs);
+  }
+}
+
+//! handles errors updated slot sent by the thread
+void MapLinkWidget::onErrorsUpdated()
+{
+  ClientManager* client = m_application->getClientManager();
+  if (client)
+  {
+    client->onErrorsUpdated();
+  }
+}
