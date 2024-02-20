@@ -6,8 +6,8 @@
 trigger: none
 
 # is this really needed?
-#pool:
-#  name: MapLinkPool
+pool:
+  name: Default
 
 steps:
 - script: echo Hello, world!
