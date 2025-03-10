@@ -41,4 +41,4 @@ You should have received a copy of the GNU Lesser General Public License along w
 
 A copy of the license is available in the repository's [LICENSE](LICENSE) file.
 ##
-[![Envitia MapLink Pro](https://envitia.github.io/maplink-docs/img/MapLink%20Pro%2011%20Logo%20New%20V1.1.png){ width=400px }](https://www.envitia.com/for-developers/maplink-pro/)
+[![Envitia MapLink Pro](https://envitia.github.io/maplink-docs/img/MapLink%20Pro%2011%20Logo%20New%20V1.1.png)](https://www.envitia.com/for-developers/maplink-pro/)
