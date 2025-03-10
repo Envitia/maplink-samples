@@ -1,0 +1,113 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <UseWindowsForms>True</UseWindowsForms>
+    <ApplicationIcon>envitia.ico</ApplicationIcon>
+    <Platforms>AnyCPU;x64</Platforms>
+    <Title>$(AssemblyName)</Title>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Maps\raster\**" />
+    <EmbeddedResource Remove="Maps\raster\**" />
+    <None Remove="Maps\raster\**" />
+    <Page Remove="Maps\raster\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+	<None Remove="img\max.png" />
+    <None Remove="img\drop-down.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DrawingSurfacePanel\DrawingSurfacePanel.csproj" />
+    <ProjectReference Include="..\WpfMaths\WpfMaths.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="img\min-bottom.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+  
+  <ItemGroup>
+    <Resource Include="img\drop-down.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+  
+  <ItemGroup>
+    <Resource Include="img\dock-horz.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="img\max.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Properties\Settings.Designer.cs">
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+	<None Update="CrossSectionColours.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="img\cropped-envitia_emb_transparentbg-192x192.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="img\squares.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="MapLayers.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Maps\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Extended.Wpf.Toolkit" Version="4.6.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Envitia.MapLink.DDO64">
+      <HintPath>..\..\..\..\..\..\..\apps\Envitia\MapLink Pro\11.0\bin64\Envitia.MapLink.DDO64.dll</HintPath>
+    </Reference>
+    <Reference Include="Envitia.MapLink.DirectImport64">
+      <HintPath>..\..\..\..\..\..\..\apps\Envitia\MapLink Pro\11.0\bin64\Envitia.MapLink.DirectImport64.dll</HintPath>
+    </Reference>
+    <Reference Include="Envitia.MapLink.InteractionModes64">
+      <HintPath>..\..\..\..\..\..\..\apps\Envitia\MapLink Pro\11.0\bin64\Envitia.MapLink.InteractionModes64.dll</HintPath>
+    </Reference>
+    <Reference Include="Envitia.MapLink.NativeHelpers">
+      <HintPath>..\..\..\..\..\..\..\apps\Envitia\MapLink Pro\11.0\bin64\Envitia.MapLink.NativeHelpers.dll</HintPath>
+    </Reference>
+    <Reference Include="Envitia.MapLink.OpenGLSurface64">
+      <HintPath>..\..\..\..\..\..\..\apps\Envitia\MapLink Pro\11.0\bin64\Envitia.MapLink.OpenGLSurface64.dll</HintPath>
+    </Reference>
+    <Reference Include="Envitia.MapLink.TrackManager64">
+      <HintPath>..\..\..\..\..\..\..\apps\Envitia\MapLink Pro\11.0\bin64\Envitia.MapLink.TrackManager64.dll</HintPath>
+    </Reference>
+    <Reference Include="Envitia.MapLink64">
+      <HintPath>..\..\..\..\..\..\..\apps\Envitia\MapLink Pro\11.0\bin64\Envitia.MapLink64.dll</HintPath>
+    </Reference>
+    <Reference Include="Envitia.MapLinkEx64">
+      <HintPath>..\..\..\..\..\..\..\apps\Envitia\MapLink Pro\11.0\bin64\Envitia.MapLinkEx64.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

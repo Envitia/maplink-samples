@@ -1,0 +1,21 @@
+TMSDTL 105
+Contours
+1
+-894784853 -749228898 894784853 749228898 
+0 56982.8 
+1 0 0 
+9
+50331649;Contours.cmems_mod_glo_phy_my_0_083deg_static_1737022604796_nc;
+50331650;Contours.ne_50m_admin_0_countries;
+50331651;Contours.ne_50m_populated_places;
+50331652;Contours.ne_50m_urban_areas;
+50331653;Contours.50m_geography_marine_polys;
+50331654;Contours.50m_lakes;
+50331655;Contours.50m_ocean;
+50331656;Contours.50m_playas;
+50331657;Contours.50m_rivers_lake_centerlines;
+TMSTLD 100
+NULL
+0
+REGDTL 103
+Contours 30331691 22703907 tmf

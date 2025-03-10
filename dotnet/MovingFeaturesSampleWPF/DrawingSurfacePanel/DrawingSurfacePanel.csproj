@@ -1,0 +1,139 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <ProjectType>Local</ProjectType>
+    <AssemblyKeyContainerName />
+    <AssemblyName>MapViewerPanel</AssemblyName>
+    <AssemblyOriginatorKeyFile />
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <StartupObject />
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <UseWindowsForms>true</UseWindowsForms>
+    <UseWPF>false</UseWPF>
+    <ImportWindowsDesktopTargets>true</ImportWindowsDesktopTargets>
+    <Platforms>AnyCPU;x64</Platforms>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <BaseAddress>285212672</BaseAddress>
+    <FileAlignment>4096</FileAlignment>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <BaseAddress>285212672</BaseAddress>
+    <FileAlignment>4096</FileAlignment>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <BaseAddress>285212672</BaseAddress>
+    <FileAlignment>4096</FileAlignment>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <BaseAddress>285212672</BaseAddress>
+    <FileAlignment>4096</FileAlignment>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RunPostBuildEvent>Always</RunPostBuildEvent>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Update="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Update="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Update="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+  </ItemGroup>
+  <Choose>
+    <When Condition=" '$(Platform)' == 'x86' " />
+    <When Condition=" '$(Platform)' == 'x64' ">
+      <ItemGroup>
+        <Reference Include="Envitia.MapLink.InteractionModes64">
+          <SpecificVersion>False</SpecificVersion>
+          <Private>True</Private>
+          <HintPath>$(MAPL_PATH)\Envitia.MapLink.InteractionModes64.dll</HintPath>
+        </Reference>
+        <Reference Include="Envitia.MapLink64">
+          <SpecificVersion>False</SpecificVersion>
+          <Private>True</Private>
+          <HintPath>$(MAPL_PATH)\Envitia.MapLink64.dll</HintPath>
+        </Reference>
+      </ItemGroup>
+    </When>
+  </Choose>
+  <ItemGroup>
+    <Compile Update="MapViewerPanel.cs" />
+  </ItemGroup>
+  <Choose>
+    <When Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+      <PropertyGroup>
+        <PostBuildEvent>
+          copy "$(TargetPath)" "$(ProjectDir)..\..\..\..\..\..\..\bin\"
+        </PostBuildEvent>
+      </PropertyGroup>
+    </When>
+    <When Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+      <PropertyGroup>
+        <PostBuildEvent>
+          copy "$(TargetPath)" "$(ProjectDir)..\..\..\..\..\..\..\bin\"
+        </PostBuildEvent>
+      </PropertyGroup>
+    </When>
+    <When Condition=" '$(Configuration)|$(Platform)' == 'Release|x64' ">
+      <PropertyGroup>
+        <PostBuildEvent>
+          copy "$(TargetPath)" "$(ProjectDir)..\..\..\..\..\..\..\bin64\"
+        </PostBuildEvent>
+      </PropertyGroup>
+    </When>
+    <When Condition=" '$(Configuration)|$(Platform)' == 'Debug|x64' ">
+      <PropertyGroup>
+        <PostBuildEvent>
+          copy "$(TargetPath)" "$(ProjectDir)..\..\..\..\..\..\..\bin64\"
+        </PostBuildEvent>
+      </PropertyGroup>
+    </When>
+  </Choose>
+  <PropertyGroup>
+    <AssemblyTitle>Envitia MapLink Pro Drawing Surface Panel</AssemblyTitle>
+    <Description>Provides a WPF-friendly interface to a Windows Forms panel containing a MapLink Drawing Surface</Description>
+    <Company>Envitia Group PLC.</Company>
+    <Copyright>Copyright © 1998-2023 Envitia Group PLC. All rights reserved.</Copyright>
+    <AssemblyVersion>11.0.2.0</AssemblyVersion>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <PostBuildEvent>
+        </PostBuildEvent>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="System.Configuration.ConfigurationManager" Version="8.0.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Envitia.MapLink.DDO64">
+      <HintPath>..\..\..\..\..\..\..\apps\Envitia\MapLink Pro\11.0\bin64\Envitia.MapLink.DDO64.dll</HintPath>
+    </Reference>
+    <Reference Include="Envitia.MapLink.InteractionModes64">
+      <HintPath>..\..\..\..\..\..\..\apps\Envitia\MapLink Pro\11.0\bin64\Envitia.MapLink.InteractionModes64.dll</HintPath>
+    </Reference>
+    <Reference Include="Envitia.MapLink.NativeHelpers">
+      <HintPath>..\..\..\..\..\..\..\apps\Envitia\MapLink Pro\11.0\bin64\Envitia.MapLink.NativeHelpers.dll</HintPath>
+    </Reference>
+    <Reference Include="Envitia.MapLink.OpenGLSurface64">
+      <HintPath>..\..\..\..\..\..\..\apps\Envitia\MapLink Pro\11.0\bin64\Envitia.MapLink.OpenGLSurface64.dll</HintPath>
+    </Reference>
+    <Reference Include="Envitia.MapLink64">
+      <HintPath>..\..\..\..\..\..\..\apps\Envitia\MapLink Pro\11.0\bin64\Envitia.MapLink64.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+</Project>
