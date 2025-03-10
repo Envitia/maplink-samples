@@ -8,18 +8,25 @@ This sample demonstrates 3 concepts:
 - Creation of moving features using the Envitia.MapLink.DDO .NET SDK. See [MovingFeaturesSample/ddo](MovingFeaturesSample/ddo/DdoLayer.cs) 
 - Embedding of a Windows.Forms panel inside a WPF application, to allow a MapLink drawing surface to draw into a WPF application. See [MovingFeaturesSample/overlaycontrols/OverlayControl.cs](MovingFeaturesSample/overlaycontrols/OverlayControl.cs)
 
+## Application Instructions
 The WPF application starts with a map showing the Western Seaboard of North America.
 
+Pressing the Layers button causes a drop down menu to appear. Enable the DDO layer by selecting the "Orange DDO" option, and select the Tracks layer with the "Blue Tracks" option. These options cause moving tracks to be displayed on the map, using either the Tracks SDK or the DDO SDK.
+
+## Using MapLink Pro in a WPF Application
 The MapLink Map is drawn into a Windows Forms panel that is embedded within a WPF app.
-MapLink does not yet have a WPF-native drawing surface, so we need to wrap the Windows.Forms drawing surface in a WindowsFormHost.
+
+MapLink does not yet have a WPF-native drawing surface, so we need to wrap a Windows.Forms drawing surface in a WindowsFormHost.
 This approach, however, means that we cannot simply overlay WPF controls on the drawing surface, due to the "airspace issue": https://learn.microsoft.com/en-us/dotnet/desktop/wpf/advanced/technology-regions-overview?view=netframeworkdesktop-4.8
 We solve this with the insertion of the OverlayControl, a solution devised by Saurabh Singh (https://www.codeproject.com/Tips/5326355/Airspace-Solution).
 OverlayControl is a wrapper control where you can provide content to render on top of a WinformHost.
 This container injects another WPF window (OverlayWindow) into the region supplying its own content.
-The extended HwndHost is used to glue WPF window into OverlayControl.
-You can see this is working by the buttons that are drawn on top of the map - this would not be possible if the airspace issue had no tbeen worked around.
+The extended HwndHost is used to glue the WPF window into OverlayControl.
+You can see this is working by the buttons that are drawn on top of the map - this would not be possible if the airspace issue had not been worked around.
 
-Pressing the Layers button causes a drop down menu to appear. Enable the DDO layer by selecting the "Orange DDO" option, and select the Tracks layer with the "Blue Tracks" option. These options cause moving tracks to be displayed on the map, using either the Tracks SDK or the DDO SDK.
+The drawing surface is coupled with a [Windows Forms panel](DrawingSurfacePanel/MapViewerPanel.cs). This panel is wrapped in a WindowsFormHost to be displayed in the WPF application.
+
+
 
 ## Envitia MapLink Pro
 Envitia’s software technology for mission system developers, enabling them to create high performance geospatial intelligence, situational awareness and map-based systems. Feature rich and proven in demanding operational systems, Envitia’s MapLink Pro provides system integrators and OEMs with the application control and flexibility they need while minimising delivery time and cost.
