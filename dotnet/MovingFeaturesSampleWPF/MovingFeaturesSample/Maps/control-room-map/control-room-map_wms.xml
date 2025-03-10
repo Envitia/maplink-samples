@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BasicMapConfiguration xsi:schemaLocation="http://www.envitia.com/schemas/maplinkwms/basicmapplugin  http://www.envitia.com/schemas/maplinkwms/basicmapplugin/1.0/BasicMapConfiguration.xsd" xmlns="http://www.envitia.com/schemas/maplinkwms/basicmapplugin" xmlns:wms="http://www.opengis.net/wms" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink">
+<wms:Name>control-room-map.map</wms:Name>
+<wms:Title>control-room-map.map</wms:Title>
+<wms:Abstract>control-room-map.map</wms:Abstract>
+<wms:BoundingBox CRS="EPSG:3395" minx="-14471533.8031" miny="2024351.42567" maxx="-6901808.42918" maxy="8362698.5485" />
+<wms:EX_GeographicBoundingBox>
+<westBoundLongitude>-130</westBoundLongitude>
+<eastBoundLongitude>-62</eastBoundLongitude>
+<southBoundLatitude>18</southBoundLatitude>
+<northBoundLatitude>60</northBoundLatitude>
+</wms:EX_GeographicBoundingBox>
+<ImplementedFeaturesList>
+<ImplementedFeature>Reference</ImplementedFeature>
+<ImplementedFeature>Rasters</ImplementedFeature>
+<ImplementedFeature>Natural Earth 50M </ImplementedFeature>
+<ImplementedFeature>Contours</ImplementedFeature>
+</ImplementedFeaturesList>
+</BasicMapConfiguration>
