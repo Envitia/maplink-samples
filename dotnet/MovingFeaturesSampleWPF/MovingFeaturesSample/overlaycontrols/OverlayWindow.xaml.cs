@@ -2,7 +2,7 @@
 
 using System;
 
-namespace ContourApp
+namespace MovingFeaturesSample
 {
     /// <summary>
     /// Interaction logic for Window1.xaml

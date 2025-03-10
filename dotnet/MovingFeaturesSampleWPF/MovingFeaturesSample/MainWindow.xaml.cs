@@ -1,11 +1,11 @@
-﻿using ContourApp.MapLayers;
+﻿using MovingFeaturesSample.MapLayers;
 using System;
 using System.Linq;
 using System.Threading;
 using System.Windows;
 using System.Windows.Controls;
 
-namespace ContourApp
+namespace MovingFeaturesSample
 {
   /// <summary>
   /// Interaction logic for MainWindow.xaml

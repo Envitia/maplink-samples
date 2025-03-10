@@ -2,7 +2,7 @@
 using System.Runtime.InteropServices;
 using System.Windows.Interop;
 
-namespace ContourApp
+namespace MovingFeaturesSample
 {
   public class HwndHostEx : HwndHost
   {

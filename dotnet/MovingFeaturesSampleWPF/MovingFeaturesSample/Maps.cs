@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Linq;
 
-namespace ContourApp
+namespace MovingFeaturesSample
 {
   /// <summary>
   /// Map management.
@@ -66,7 +66,7 @@ namespace ContourApp
       var ddoNodes = mapLayersNode.SelectNodes("DdoLayer");
       foreach (System.Xml.XmlNode node in ddoNodes)
       {
-        var mapLayer = new MapLayers.DdoLayer()
+        var mapLayer = new ddo.DdoLayer()
         {
           Property = node.SelectSingleNode("Property").InnerText,
         };
@@ -79,7 +79,7 @@ namespace ContourApp
       var trackNodes = mapLayersNode.SelectNodes("TracksLayer");
       foreach (System.Xml.XmlNode node in trackNodes)
       {
-        var mapLayer = new MapLayers.TracksLayer
+        var mapLayer = new Tracks.TracksLayer
         {
           Property = node.SelectSingleNode("Property").InnerText,
         };

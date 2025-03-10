@@ -1,7 +1,7 @@
 using Envitia.MapLink;
 using System;
 
-namespace ContourApp.MapLayers
+namespace MovingFeaturesSample.MapLayers
 {
   public class DynamicObject : Envitia.MapLink.DDO.TSLNDynamicDataObject
   {

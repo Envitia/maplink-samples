@@ -2,7 +2,7 @@
 using System.Windows.Interop;
 using System.Windows.Controls;
 
-namespace ContourApp
+namespace MovingFeaturesSample
 {
   /// <summary>
   /// MapLink does not yet have a WPF-native drawing surface, so we need to wrap the Windows.Forms drawing surface in a WindowsFormHost.

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Drawing;
 
-namespace ContourApp.Tracks
+namespace MovingFeaturesSample.Tracks
 {
   public class Track
   {

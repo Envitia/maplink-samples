@@ -9,9 +9,9 @@ using System.Windows.Media.Imaging;
 using System.Windows.Media;
 using System.ComponentModel;
 using Xceed.Wpf.Toolkit;
-using ContourApp.MapLayers;
+using MovingFeaturesSample.MapLayers;
 
-namespace ContourApp
+namespace MovingFeaturesSample
 {
   public enum MapLayerProperty
   {
