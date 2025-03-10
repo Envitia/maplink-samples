@@ -4,9 +4,9 @@
 ## Introduction
 
 This sample demonstrates 3 concepts:
-- Creation of moving features using the Envitia.MapLink.Tracks .NET SDK. See [MovingFeaturesSample/Tracks](MovingFeaturesSampleWPF/MovingFeaturesSample/Tracks/TracksLayer.cs)
-- Creation of moving features using the Envitia.MapLink.DDO .NET SDK. See [MovingFeaturesSample/ddo](MovingFeaturesSampleWPF/MovingFeaturesSample/ddo/DdoLayer.cs) 
-- Embedding of a Windows.Forms panel inside a WPF application, to allow a MapLink drawing surface to draw into a WPF application. See [MovingFeaturesSample/overlaycontrols/OverlayControl.cs](MovingFeaturesSampleWPF/MovingFeaturesSample/overlaycontrols/OverlayControl.cs)
+- Creation of moving features using the Envitia.MapLink.Tracks .NET SDK. See [MovingFeaturesSample/Tracks](MovingFeaturesSample/Tracks/TracksLayer.cs)
+- Creation of moving features using the Envitia.MapLink.DDO .NET SDK. See [MovingFeaturesSample/ddo](MovingFeaturesSample/ddo/DdoLayer.cs) 
+- Embedding of a Windows.Forms panel inside a WPF application, to allow a MapLink drawing surface to draw into a WPF application. See [MovingFeaturesSample/overlaycontrols/OverlayControl.cs](MovingFeaturesSample/overlaycontrols/OverlayControl.cs)
 
 The WPF application starts with a map showing the Western Seaboard of North America.
 
