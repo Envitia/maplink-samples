@@ -1,6 +1,6 @@
 ﻿using System.Windows;
 
-namespace ContourApp
+namespace MovingFeaturesSample
 {
   internal class LayerProperty
   {

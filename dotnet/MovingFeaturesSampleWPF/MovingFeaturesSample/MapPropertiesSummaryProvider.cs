@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ContourApp
+namespace MovingFeaturesSample
 {
   /// <summary>
   /// Provides a text summary of the properties at a map location, for display in a tooltip

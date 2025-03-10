@@ -1,6 +1,6 @@
 using System;
 
-namespace ContourApp.MapLayers
+namespace MovingFeaturesSample.MapLayers
 {
   public class DisplayObject : Envitia.MapLink.DDO.TSLNDisplayObject
   {

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ContourApp.MapLayers
+namespace MovingFeaturesSample.MapLayers
 {
   /// <summary>
   /// Base class for all map layer visualisations.
