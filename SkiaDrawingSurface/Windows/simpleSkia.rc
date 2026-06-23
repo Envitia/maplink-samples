@@ -65,8 +65,8 @@ LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_UK
 //
 
 VS_VERSION_INFO VERSIONINFO
- FILEVERSION 11,2,7,0
- PRODUCTVERSION 11,2,7,0
+ FILEVERSION 11,3,1,0
+ PRODUCTVERSION 11,3,1,0
  FILEFLAGSMASK 0x17L
 #ifdef _DEBUG
  FILEFLAGS 0x1L
@@ -82,13 +82,13 @@ BEGIN
         BLOCK "080904b0"
         BEGIN
             VALUE "CompanyName", "Envitia Group PLC"
-            VALUE "FileDescription", "Envitia Simple Sample 11.2"
-            VALUE "FileVersion", "11.2.7.0"
+            VALUE "FileDescription", "Envitia Simple Sample 11.3"
+            VALUE "FileVersion", "11.3.1.0"
             VALUE "InternalName", "simple"
-            VALUE "LegalCopyright", "Copyright © 1998-2026 Envitia Group PLC. All rights reserved."
+            VALUE "LegalCopyright", "Copyright Â© 1998-2026 Envitia Group PLC. All rights reserved."
             VALUE "OriginalFilename", "simple.exe"
             VALUE "ProductName", "Simple Sample"
-            VALUE "ProductVersion", "11.2.7.0"
+            VALUE "ProductVersion", "11.3.1.0"
         END
     END
     BLOCK "VarFileInfo"
