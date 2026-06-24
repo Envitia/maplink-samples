@@ -1,0 +1,23 @@
+# *****************************************************************************
+#		Copyright (c) 2002-2026 by Envitia Group PLC.
+# =============================================================================
+# PROJECT      : BUILD
+# AUTHOR(s)    : DBLD
+# =============================================================================
+# DESCRIPTION :  Platform specific build config
+# *****************************************************************************	
+
+MAPLINK_ADDITIONAL_LIBS = -L/usr/local/$(MAPL_LIB_DIR) -L/usr/X11R6/$(MAPL_LIB_DIR)
+
+OPT_DBG = -O2
+
+CCEXEC=gcc -Wno-long-long
+CCXXEXEC=g++ -Wno-long-long
+
+CCFLAGS=-c $(OPT_DBG) -pthread -I/usr/X11R6/include -DMOTIF
+
+CCXXFLAGS=-c $(OPT_DBG) -pthread -I/usr/X11R6/include -DMOTIF
+
+RANLIB=: [no ranlib]
+
+
