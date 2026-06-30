@@ -14,7 +14,7 @@ The control is available from a new `Envitia.MapLink.TSLNSkiaDrawingSurfaceAvalo
 
 ### Usage Model
 
-The control can be declared directly in AXAML, similar to standard WPF controls:
+The control can be declared directly in AXAML, similar to standard controls:
 
 ```
 <maplink:TSLNSkiaDrawingSurfaceAvaloniaControl x:Name="MapControl"
