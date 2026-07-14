@@ -1,0 +1,11 @@
+{
+  "profiles": {
+    "WPFControlSample": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "MAPL_HOME": "c:\\src\\maplink\\",
+        "PATH": "c:\\src\\maplink\\bin64"
+      }
+    }
+  }
+}

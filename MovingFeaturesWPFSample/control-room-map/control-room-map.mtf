@@ -1,0 +1,85 @@
+
+[FILE FORMAT]
+VERSION=4
+
+[SOURCES]
+SOURCE=-2,"EPSG:6.1"
+SOURCE=-1,""
+
+[ELLIPSOIDS]
+
+[ELLIPSOID ALIASES]
+
+[REFERENCE MERIDIANS]
+
+[FUNDAMENTAL POINTS]
+
+[DATUMS]
+
+[DATUM TRANSFORMATION TYPES]
+ID=-1,NAME="Geocentric Translation"
+ID=-2,NAME="Position Vector Transformation"
+ID=-3,NAME="Coordinate Frame Rotation"
+ID=-4,NAME="Geographical Offset"
+ID=-5,NAME="Concatenated"
+
+[DATUM TRANSFORMATIONS]
+
+[PROJECTION TYPES]
+ID=-1,NAME="Cassini",FAMILY="Cylindrical"
+ID=-2,NAME="Cylindrical Equal-Area",FAMILY="Cylindrical"
+ID=-3,NAME="Equidistant Cylindrical",FAMILY="Cylindrical"
+ID=-4,NAME="Mercator",FAMILY="Cylindrical"
+ID=-5,NAME="Miller Cylindrical",FAMILY="Cylindrical"
+ID=-6,NAME="Oblique Cylindrical Equal-Area (Central line)",FAMILY="Cylindrical"
+ID=-7,NAME="Oblique Cylindrical Equal-Area (Central point)",FAMILY="Cylindrical"
+ID=-8,NAME="Oblique Mercator (Central line)",FAMILY="Cylindrical"
+ID=-9,NAME="Oblique Mercator (Central point)",FAMILY="Cylindrical"
+ID=-10,NAME="Transverse Cylindrical Equal-Area",FAMILY="Cylindrical"
+ID=-11,NAME="Transverse Mercator",FAMILY="Cylindrical"
+ID=-12,NAME="Eckert IV",FAMILY="Pseudocylindrical"
+ID=-13,NAME="Eckert VI",FAMILY="Pseudocylindrical"
+ID=-14,NAME="Mollweide",FAMILY="Pseudocylindrical"
+ID=-15,NAME="Sinusoidal",FAMILY="Pseudocylindrical"
+ID=-16,NAME="Albers Equal-Area Conic",FAMILY="Conic"
+ID=-17,NAME="Equidistant Conic",FAMILY="Conic"
+ID=-18,NAME="Lambert Conformal Conic (2 standard parallels)",FAMILY="Conic"
+ID=-19,NAME="Polyconic",FAMILY="Polyconic"
+ID=-20,NAME="van der Grinten I",FAMILY="Polyconic"
+ID=-21,NAME="Bonne",FAMILY="Pseudoconic"
+ID=-22,NAME="Azimuthal Equidistant",FAMILY="Azimuthal"
+ID=-23,NAME="Gnomonic",FAMILY="Azimuthal"
+ID=-24,NAME="Lambert Azimuthal Equal-Area",FAMILY="Azimuthal"
+ID=-25,NAME="Orthographic",FAMILY="Azimuthal"
+ID=-26,NAME="Stereographic",FAMILY="Azimuthal"
+ID=-27,NAME="Lambert Conformal Conic (1 standard parallel)",FAMILY="Conic"
+ID=-28,NAME="Lambert Conformal Conic (Belgian)",FAMILY="Conic"
+ID=-29,NAME="Gauss Conform",FAMILY="Cylindrical"
+ID=-34,NAME="Dynamic ARC",FAMILY="Cylindrical"
+ID=-35,NAME="Hotine Oblique Mercator",FAMILY="Cylindrical"
+ID=-36,NAME="Spherical Mercator",FAMILY="Cylindrical"
+ID=-37,NAME="Transverse Mercator JHS",FAMILY="Cylindrical"
+
+[PROJECTIONS]
+ID=4,NAME="Editable Dynamic ARC (Greenwich)",TYPE=-34,FALSE_EASTING=0,FALSE_NORTHING=0,AREA="",GROUP1="",GROUP2="",COMMENT="An editable Dynamic ARC projection centred on Greenwich",EPSG_ID=,SOURCE=-1,"",LONGITUDE=0
+ID=5,NAME="Editable Dynamic ARC (Greenwich)",TYPE=-34,FALSE_EASTING=0,FALSE_NORTHING=0,AREA="",GROUP1="",GROUP2="",COMMENT="An editable Dynamic ARC projection centred on Greenwich",EPSG_ID=,SOURCE=-1,"",LONGITUDE=0
+ID=6,NAME="Editable Dynamic ARC (Greenwich)",TYPE=-34,FALSE_EASTING=0,FALSE_NORTHING=0,AREA="",GROUP1="",GROUP2="",COMMENT="An editable Dynamic ARC projection centred on Greenwich",EPSG_ID=,SOURCE=-1,"",LONGITUDE=0
+ID=7,NAME="Editable Dynamic ARC (Greenwich)",TYPE=-34,FALSE_EASTING=0,FALSE_NORTHING=0,AREA="",GROUP1="",GROUP2="",COMMENT="An editable Dynamic ARC projection centred on Greenwich",EPSG_ID=,SOURCE=-1,"",LONGITUDE=0
+ID=8,NAME="Editable Dynamic ARC (Greenwich)",TYPE=-34,FALSE_EASTING=0,FALSE_NORTHING=0,AREA="",GROUP1="",GROUP2="",COMMENT="An editable Dynamic ARC projection centred on Greenwich",EPSG_ID=,SOURCE=-1,"",LONGITUDE=0
+ID=9,NAME="Editable Dynamic ARC (Greenwich)",TYPE=-34,FALSE_EASTING=0,FALSE_NORTHING=0,AREA="",GROUP1="",GROUP2="",COMMENT="An editable Dynamic ARC projection centred on Greenwich",EPSG_ID=,SOURCE=-1,"",LONGITUDE=0
+ID=10,NAME="Editable Dynamic ARC (Greenwich)",TYPE=-34,FALSE_EASTING=0,FALSE_NORTHING=0,AREA="",GROUP1="",GROUP2="",COMMENT="An editable Dynamic ARC projection centred on Greenwich",EPSG_ID=,SOURCE=-1,"",LONGITUDE=0
+ID=11,NAME="Editable Dynamic ARC (Greenwich)",TYPE=-34,FALSE_EASTING=0,FALSE_NORTHING=0,AREA="",GROUP1="",GROUP2="",COMMENT="An editable Dynamic ARC projection centred on Greenwich",EPSG_ID=,SOURCE=-1,"",LONGITUDE=0
+ID=12,NAME="Editable Dynamic ARC (Greenwich)",TYPE=-34,FALSE_EASTING=0,FALSE_NORTHING=0,AREA="",GROUP1="",GROUP2="",COMMENT="An editable Dynamic ARC projection centred on Greenwich",EPSG_ID=,SOURCE=-1,"",LONGITUDE=0
+ID=13,NAME="Editable Dynamic ARC (Greenwich)",TYPE=-34,FALSE_EASTING=0,FALSE_NORTHING=0,AREA="",GROUP1="",GROUP2="",COMMENT="An editable Dynamic ARC projection centred on Greenwich",EPSG_ID=,SOURCE=-1,"",LONGITUDE=0
+ID=14,NAME="Editable Dynamic ARC (Greenwich)",TYPE=-34,FALSE_EASTING=0,FALSE_NORTHING=0,AREA="",GROUP1="",GROUP2="",COMMENT="An editable Dynamic ARC projection centred on Greenwich",EPSG_ID=,SOURCE=-1,"",LONGITUDE=0
+ID=15,NAME="Editable Dynamic ARC (Greenwich)",TYPE=-34,FALSE_EASTING=0,FALSE_NORTHING=0,AREA="",GROUP1="",GROUP2="",COMMENT="An editable Dynamic ARC projection centred on Greenwich",EPSG_ID=,SOURCE=-1,"",LONGITUDE=0
+ID=16,NAME="Editable Dynamic ARC (Greenwich)",TYPE=-34,FALSE_EASTING=0,FALSE_NORTHING=0,AREA="",GROUP1="",GROUP2="",COMMENT="An editable Dynamic ARC projection centred on Greenwich",EPSG_ID=,SOURCE=-1,"",LONGITUDE=0
+ID=17,NAME="Editable Dynamic ARC (Greenwich)",TYPE=-34,FALSE_EASTING=0,FALSE_NORTHING=0,AREA="",GROUP1="",GROUP2="",COMMENT="An editable Dynamic ARC projection centred on Greenwich",EPSG_ID=,SOURCE=-1,"",LONGITUDE=0
+
+[COORDINATE SYSTEMS]
+ID=1,NAME="Default Map Coordinate System",DATUM=-224,PROJECTION=,AREA="",GROUP1="",GROUP2="",COMMENT="An editable coordinate system for the map",EPSG_ID=,EPSG_NAME=,SOURCE=-1,""
+ID=2,NAME="Default Dataset Coordinate System",DATUM=-224,PROJECTION=,AREA="",GROUP1="",GROUP2="",COMMENT="An editable coordinate system for datasets",EPSG_ID=,EPSG_NAME=,SOURCE=-1,""
+ID=3,NAME="Default Run-time Projection Coordinate System",DATUM=-224,PROJECTION=,AREA="",GROUP1="",GROUP2="",COMMENT="An editable coordinate system for run-time projected maps",EPSG_ID=,EPSG_NAME=,SOURCE=-1,""
+ID=100000,NAME="Dynamic ARC Grid (Linear scale) Coordinate System",DATUM=-224,PROJECTION=,AREA="",GROUP1="",GROUP2="",COMMENT="An editable Dynamic ARC Grid coordinate system for the map",EPSG_ID=,EPSG_NAME=,SOURCE=-1,"",SX=111319.4908,SY=110945.9355
+ID=100001,NAME="Default Dynamic ARC Grid (Projected) Coordinate System",DATUM=-224,PROJECTION=4,AREA="",GROUP1="",GROUP2="",COMMENT="An editable Dynamic ARC Grid coordinate system for the map",EPSG_ID=,EPSG_NAME=,SOURCE=-1,""
+ID=100002,NAME="Real-time Re-Projection Coordinate System",DATUM=-224,PROJECTION=,AREA="",GROUP1="",GROUP2="",COMMENT="An editable coordinate system for real-time re-projection: Scaled latitude/longitude based on WGS84.",EPSG_ID=,EPSG_NAME=,SOURCE=-1,""

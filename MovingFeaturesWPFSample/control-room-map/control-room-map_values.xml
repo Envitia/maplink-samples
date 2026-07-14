@@ -1,0 +1,28 @@
+<codes>
+  <code key="%TITLE%"  value="control-room-map.map" />
+  <code key="%ABSTRACT%"  value="control-room-map.map" />
+  <code key="%GENERATION_TIME%"  value="2025-01-20T14:22:20Z" />
+  <code key="%CRS_EPSG_ID%"  value="3395" />
+  <code key="%CRS_EPSG_NAME%"  value="WGS 84 / World Mercator" />
+  <code key="%CRS_MAPLINK_NAME%"  value="WGS 84 / World Mercator" />
+  <code key="%CRS_BBOX_LEFT%"  value="-14471533.8031" />
+  <code key="%CRS_BBOX_BOTTOM%"  value="2024351.42567" />
+  <code key="%CRS_BBOX_RIGHT%"  value="-6901808.42918" />
+  <code key="%CRS_BBOX_TOP%"  value="8362698.5485" />
+  <code key="%WGS84_BBOX_LEFT%"  value="-130" />
+  <code key="%WGS84_BBOX_BOTTOM%"  value="18" />
+  <code key="%WGS84_BBOX_RIGHT%"  value="-62" />
+  <code key="%WGS84_BBOX_TOP%"  value="60" />
+  <code key="%SOFTWARE%"  value="MapLink Pro Studio" />
+  <code key="%SOFTWARE_VERSION%"  value="10.2.9.0" />
+  <code key="%FORMAT%"  value="MapLink Pro Map" />
+  <code key="%FORMATCODE%"  value="map" />
+  <code key="%GUID_1%"  value="26e2cd13-52f4-4d26-86ba-cde0f9c2b12a" />
+  <code key="%GUID_2%"  value="c1e7bc10-21af-4a33-85ba-bbdee23cde2d" />
+  <code key="%GUID_3%"  value="7f8dc5ec-6955-4d82-b724-c7f3cb6ca77a" />
+  <code key="%OUTPUT_MAP%"  value="C:\map-data\bathy\california\control-room-map\control-room-map.map" />
+  <code key="%FEATURE%"  value="Reference" />
+  <code key="%FEATURE%"  value="Rasters" />
+  <code key="%FEATURE%"  value="Natural Earth 50M " />
+  <code key="%FEATURE%"  value="Contours" />
+</codes>

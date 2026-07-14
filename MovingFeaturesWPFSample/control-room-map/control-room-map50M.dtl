@@ -1,0 +1,26 @@
+TMSDTL 105
+50M
+1
+-894784853 -749228898 894784853 749228898 
+0 1.72448e+06 
+1 0 0 
+14
+67108891;Natural Earth 50M .50m_geography_marine_polys.0,000000000;
+67108892;Natural Earth 50M .50m_geography_marine_polys.1,000000000;
+67108893;Natural Earth 50M .50m_geography_marine_polys.2,000000000;
+67108894;Natural Earth 50M .50m_geography_marine_polys.3,000000000;
+67108895;Natural Earth 50M .50m_geography_marine_polys.4,000000000;
+67108918;Natural Earth 50M .ne_50m_admin_0_countries.01: under 30324;
+67108919;Natural Earth 50M .ne_50m_admin_0_countries.02: from 30324 to 160267;
+67108920;Natural Earth 50M .ne_50m_admin_0_countries.03: from 160267 to 772298;
+67108921;Natural Earth 50M .ne_50m_admin_0_countries.04: from 772298 to 3441790;
+67108922;Natural Earth 50M .ne_50m_admin_0_countries.05: from 3441790 to 6057263;
+67108923;Natural Earth 50M .ne_50m_admin_0_countries.06: from 6057263 to 10211904;
+67108924;Natural Earth 50M .ne_50m_admin_0_countries.07: from 10211904 to 21324791;
+67108925;Natural Earth 50M .ne_50m_admin_0_countries.08: from 21324791 to 45700395;
+67108926;Natural Earth 50M .ne_50m_admin_0_countries.09: 45700395 and above;
+TMSTLD 100
+NULL
+0
+REGDTL 103
+50M 1789569707 1498457797 tmf
