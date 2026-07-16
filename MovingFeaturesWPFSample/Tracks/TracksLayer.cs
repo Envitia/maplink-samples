@@ -9,6 +9,8 @@ namespace MovingFeaturesWPFSample.Tracks
   {
     private Envitia.MapLink.TSLN2DDrawingSurface? DrawingSurface { get; set; }
 
+    private Action? RequestRender { get; set; }
+
     private Envitia.MapLink.TrackManager.TSLNTrackDisplayManager TrackDisplayManager { get; } = Envitia.MapLink.TrackManager.TSLNTrackDisplayManager.create();
 
     private System.Collections.Generic.List<Track> Tracks { get; } = new System.Collections.Generic.List<Tracks.Track>();
@@ -28,12 +30,13 @@ namespace MovingFeaturesWPFSample.Tracks
     /// <param name="surface"></param>
     /// <param name="visible"></param>
     /// <exception cref="Exception"></exception>
-    public void Start(Envitia.MapLink.TSLN2DDrawingSurface? surface)
+    public void Start(Envitia.MapLink.TSLN2DDrawingSurface? surface, Action? requestRender = null)
     {
       ArgumentNullException.ThrowIfNull(surface);
 
       DrawingSurface = surface;
-      if (TrackDisplayManager.addDrawingSurface(surface, Identifier()) < 0)
+      RequestRender = requestRender;
+      if (TrackDisplayManager.addDrawingSurface(surface, Identifier()) == -1)
       {
         if (Envitia.MapLink.TSLNErrorStack.lastError(out int errorCode, out string errorMessage))
         {
@@ -123,7 +126,7 @@ namespace MovingFeaturesWPFSample.Tracks
 
       // Update every 100 ms. Play with this number to see how it performs. Again, track management should be done on a background thread.
       DispatcherTimer.Tick += new EventHandler(DispatcherTimer_Tick);
-      DispatcherTimer.Interval = TimeSpan.FromMilliseconds(100);
+      DispatcherTimer.Interval = TimeSpan.FromMilliseconds(500);
       DispatcherTimer.Start();
     }
 
@@ -166,7 +169,7 @@ namespace MovingFeaturesWPFSample.Tracks
       // Do the bulk move.
       TrackDisplayManager.moveTracks(trackIds, lats, lons);
 
-      DrawingSurface.redraw();
+      RequestRender?.Invoke();
     }
   }
 }

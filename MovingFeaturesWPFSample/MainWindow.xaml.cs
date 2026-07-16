@@ -67,7 +67,7 @@ public partial class MainWindow : Window
 
     try
     {
-      tracksLayer.Start(MapControl.DrawingSurface);
+      tracksLayer.Start(MapControl.DrawingSurface, () => MapControl.RequestRender());
     }
     catch (Exception ex)
     {
