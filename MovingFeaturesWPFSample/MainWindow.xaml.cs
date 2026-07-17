@@ -81,8 +81,8 @@ public partial class MainWindow : Window
 
     try
     {
-      ddoLayer.Start(MapControl.DrawingSurface);
-    }
+      ddoLayer.Start(MapControl.DrawingSurface, () => MapControl.RequestRender());
+        }
     catch (Exception ex)
     {
       MessageBox.Show($"Error configuring tracks layer: {ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);

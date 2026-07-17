@@ -13,6 +13,8 @@ namespace MovingFeaturesWPFSample.ddo
     private Envitia.MapLink.TSLN2DDrawingSurface? DrawingSurface { get; set; }
     public static DispatcherTimer DispatcherTimer { get; } = new DispatcherTimer(DispatcherPriority.Render);
 
+    private Action? RequestRender { get; set; }
+
     public string Identifier()
     {
       return "DdoLayer";
@@ -24,11 +26,25 @@ namespace MovingFeaturesWPFSample.ddo
     /// <param name="surface"></param>
     /// <param name="visible"></param>
     /// <exception cref="Exception"></exception>
-    public void Start(Envitia.MapLink.TSLN2DDrawingSurface surface)
+    public void Start(Envitia.MapLink.TSLN2DDrawingSurface surface, Action? requestRender = null)
     {
       ArgumentNullException.ThrowIfNull(surface);
 
       DrawingSurface = surface;
+      RequestRender = requestRender;
+
+      if (surface.addDataLayer(DataLayer, "DDOLayer") == false)
+      {
+          if (Envitia.MapLink.TSLNErrorStack.lastError(out int errorCode, out string errorMessage))
+          {
+              throw new Exception($"Failed to add ddo layer \n{errorCode}: {errorMessage}");
+          }
+          else
+          {
+              throw new Exception("Failed to add ddo layer");
+          }
+      }
+
 
       surface.setDataLayerProps(Identifier(), Envitia.MapLink.TSLNPropertyEnum.TSLNPropertyVisible, 1);
       surface.setDataLayerProps(Identifier(), Envitia.MapLink.TSLNPropertyEnum.TSLNPropertyDetect, 1);
@@ -128,8 +144,8 @@ namespace MovingFeaturesWPFSample.ddo
       }
 
       DataLayer.notifyChanged(true);
-      DrawingSurface?.redraw();
-    }
+      RequestRender?.Invoke();
+        }
 
     public Envitia.MapLink.TSLNDataLayer GetDataLayer()
     {
