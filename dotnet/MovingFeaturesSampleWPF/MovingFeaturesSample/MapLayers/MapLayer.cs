@@ -5,7 +5,7 @@ namespace MovingFeaturesSample.MapLayers
   /// <summary>
   /// Base class for all map layer visualisations.
   /// </summary>
-  public abstract class MapLayer : DrawingSurfacePanel.IMapLayer
+  public abstract class MapLayer
   {
     public string Property { get; set; } = "";
     public string DataLocation { get; set; } = "";
@@ -33,27 +33,18 @@ namespace MovingFeaturesSample.MapLayers
     /// </summary>
     /// <param name="surface">The surface that the layer has been added to.</param>
     /// <param name="visible">The layer visibility in the surface.</param>
-    public abstract void ConfigureMapLayer(Envitia.MapLink.TSLN2DDrawingSurface surface, bool visible);
+    public abstract void ConfigureMapLayer(Envitia.MapLink.TSLNDrawingSurface surface, bool visible);
 
-    void DrawingSurfacePanel.IMapLayer.ConfigureMapLayer(Envitia.MapLink.TSLNDrawingSurface surface)
+    public void ConfigureMapLayer(Envitia.MapLink.TSLNDrawingSurface surface)
     {
       bool got = surface.getDataLayerProps(Identifier(), Envitia.MapLink.TSLNPropertyEnum.TSLNPropertyVisible, out int visible);
       ConfigureMapLayer(surface, got && visible != 0);
     }
 
-    Envitia.MapLink.TSLNDataLayer DrawingSurfacePanel.IMapLayer.GetDataLayer()
-    {
-      return GetDataLayer();
-    }
 
     public virtual System.Collections.Generic.List<DrawingSurfacePanel.IUiHandler> GetUiHandlers(Envitia.MapLink.TSLNDrawingSurface drawingSurface)
     {
       return null;
-    }
-
-    string DrawingSurfacePanel.IMapLayer.Identifier()
-    {
-      return Identifier();
     }
   }
 }

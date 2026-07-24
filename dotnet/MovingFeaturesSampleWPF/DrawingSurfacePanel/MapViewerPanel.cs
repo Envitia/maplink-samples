@@ -1,4 +1,5 @@
 using System;
+using System.ComponentModel;
 using System.Linq;
 
 namespace DrawingSurfacePanel
@@ -54,9 +55,9 @@ namespace DrawingSurfacePanel
 
     public System.Collections.Generic.List<IUiHandler> UiHandlers { get; } = new System.Collections.Generic.List<IUiHandler>();
 
-    
+    [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
     public DrawingSurfaceClass DrawingSurface { get; set; }
-    
+
     //Variables to hold if the control/shift button are currently pressed
     private bool ControlButtonDown { get; set; } = false;
     private bool ShiftButtonDown { get; set; } = false;
@@ -65,8 +66,10 @@ namespace DrawingSurfacePanel
     System.Windows.Forms.ContextMenuStrip PanelContextMenu { get; set; } = null;
     public System.Windows.Forms.ToolTip ToolTip { get; } = new System.Windows.Forms.ToolTip();
 
+    [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
     public TooltipTextProvider TooltipTextProvider { get; set; }
 
+    [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
     public bool DarkMode { get; set; } = true;
     #endregion
 

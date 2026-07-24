@@ -6,6 +6,7 @@
         xmlns:local="clr-namespace:MovingFeaturesSample"
         mc:Ignorable="d"
         xmlns:mmv="clr-namespace:DrawingSurfacePanel;assembly=MapViewerPanel"
+        xmlns:ctrl="clr-namespace:Envitia.MapLink.TSLNSkiaDrawingSurfaceControl;assembly=Envitia.MapLink.TSLNSkiaDrawingSurfaceWPFControl"
         Title="MapLink Pro Moving Features .NET WPF Sample" WindowState="Maximized">
   <Grid>
     <!-- 
@@ -17,11 +18,18 @@
     This container injects another WPF window into the region supplying its own content. OverlayWindow is the one being injected. 
     Extended HwndHost is used to glue WPF window into OverlayContainer."
     -->
-    <WindowsFormsHost Name="MainMap">
+    <!-- WindowsFormsHost Name="MainMap">
       <WindowsFormsHost.Child>
         <mmv:MapViewerPanel />
       </WindowsFormsHost.Child>
-    </WindowsFormsHost>
+    </WindowsFormsHost -->
+
+    <!-- Drawing Surface with button overlay -->
+    <ctrl:TSLNSkiaDrawingSurfaceWPFControl x:Name="MapControl" 
+                                MinWidth="100"
+                                MinHeight="100"
+                                BaseMap ="%CD%..\..\..\Maps\control-room-map\control-room-map.map" 
+                                />
 
     <local:OverlayControl x:Name="OverlayContainer" >
       <Grid>

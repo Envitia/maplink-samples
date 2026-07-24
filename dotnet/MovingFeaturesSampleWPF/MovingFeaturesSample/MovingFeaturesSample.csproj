@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-    <TargetFramework>net8.0-windows</TargetFramework>
+    <TargetFramework>net10.0-windows7.0</TargetFramework>
     <UseWPF>true</UseWPF>
     <UseWindowsForms>True</UseWindowsForms>
     <ApplicationIcon>envitia.ico</ApplicationIcon>
@@ -23,7 +23,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\DrawingSurfacePanel\DrawingSurfacePanel.csproj" />
     <ProjectReference Include="..\WpfMaths\WpfMaths.csproj" />
   </ItemGroup>
 
@@ -85,28 +84,31 @@
 
   <ItemGroup>
     <Reference Include="Envitia.MapLink.DDO64">
-      <HintPath>..\..\..\..\..\..\..\apps\Envitia\MapLink Pro\11.0\bin64\Envitia.MapLink.DDO64.dll</HintPath>
+      <HintPath>..\..\..\..\..\apps\Envitia\MapLink Pro\11.3\bin64\Envitia.MapLink.DDO64.dll</HintPath>
     </Reference>
     <Reference Include="Envitia.MapLink.DirectImport64">
-      <HintPath>..\..\..\..\..\..\..\apps\Envitia\MapLink Pro\11.0\bin64\Envitia.MapLink.DirectImport64.dll</HintPath>
+      <HintPath>..\..\..\..\..\apps\Envitia\MapLink Pro\11.3\bin64\Envitia.MapLink.DirectImport64.dll</HintPath>
     </Reference>
     <Reference Include="Envitia.MapLink.InteractionModes64">
-      <HintPath>..\..\..\..\..\..\..\apps\Envitia\MapLink Pro\11.0\bin64\Envitia.MapLink.InteractionModes64.dll</HintPath>
+      <HintPath>..\..\..\..\..\apps\Envitia\MapLink Pro\11.3\bin64\Envitia.MapLink.InteractionModes64.dll</HintPath>
     </Reference>
     <Reference Include="Envitia.MapLink.NativeHelpers">
-      <HintPath>..\..\..\..\..\..\..\apps\Envitia\MapLink Pro\11.0\bin64\Envitia.MapLink.NativeHelpers.dll</HintPath>
+      <HintPath>..\..\..\..\..\apps\Envitia\MapLink Pro\11.3\bin64\Envitia.MapLink.NativeHelpers.dll</HintPath>
     </Reference>
     <Reference Include="Envitia.MapLink.OpenGLSurface64">
-      <HintPath>..\..\..\..\..\..\..\apps\Envitia\MapLink Pro\11.0\bin64\Envitia.MapLink.OpenGLSurface64.dll</HintPath>
+      <HintPath>..\..\..\..\..\apps\Envitia\MapLink Pro\11.3\bin64\Envitia.MapLink.OpenGLSurface64.dll</HintPath>
     </Reference>
     <Reference Include="Envitia.MapLink.TrackManager64">
-      <HintPath>..\..\..\..\..\..\..\apps\Envitia\MapLink Pro\11.0\bin64\Envitia.MapLink.TrackManager64.dll</HintPath>
+      <HintPath>..\..\..\..\..\apps\Envitia\MapLink Pro\11.3\bin64\Envitia.MapLink.TrackManager64.dll</HintPath>
+    </Reference>
+    <Reference Include="Envitia.MapLink.TSLNSkiaDrawingSurfaceWPFControl">
+      <HintPath>..\..\..\..\..\apps\Envitia\MapLink Pro\11.3\bin64\Envitia.MapLink.TSLNSkiaDrawingSurfaceWPFControl.dll</HintPath>
     </Reference>
     <Reference Include="Envitia.MapLink64">
-      <HintPath>..\..\..\..\..\..\..\apps\Envitia\MapLink Pro\11.0\bin64\Envitia.MapLink64.dll</HintPath>
+      <HintPath>..\..\..\..\..\apps\Envitia\MapLink Pro\11.3\bin64\Envitia.MapLink64.dll</HintPath>
     </Reference>
     <Reference Include="Envitia.MapLinkEx64">
-      <HintPath>..\..\..\..\..\..\..\apps\Envitia\MapLink Pro\11.0\bin64\Envitia.MapLinkEx64.dll</HintPath>
+      <HintPath>..\..\..\..\..\apps\Envitia\MapLink Pro\11.3\bin64\Envitia.MapLinkEx64.dll</HintPath>
     </Reference>
   </ItemGroup>
 
