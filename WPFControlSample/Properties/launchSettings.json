@@ -2,7 +2,10 @@
   "profiles": {
     "WPFControlSample": {
       "commandName": "Project",
-      "workingDirectory": "C:\\apps\\Envitia\\MapLink Pro\\11.3\\bin64"
+      "environmentVariables": {
+        "MAPL_HOME": "$(MAPL_PATH)..\\",
+        "PATH": "$(MAPL_PATH)"
+      }
     }
   }
 }
