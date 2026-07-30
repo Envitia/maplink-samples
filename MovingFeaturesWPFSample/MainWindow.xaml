@@ -2,6 +2,7 @@
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:ctrl="clr-namespace:Envitia.MapLink.TSLNSkiaDrawingSurfaceControl;assembly=Envitia.MapLink.TSLNSkiaDrawingSurfaceWPFControl"
+        xmlns:local="clr-namespace:MovingFeaturesWPFSample"
         Title="WPF Control Sample" Height="600" Width="900">
 
   <Grid>
@@ -15,7 +16,7 @@
       <ctrl:TSLNSkiaDrawingSurfaceWPFControl x:Name="MapControl" 
                                           MinWidth="100"
                                           MinHeight="100"
-                                          BaseMap ="C:\apps\Envitia\MapLink Pro\11.3\Maps\NaturalEarthBasic\NaturalEarthBasic.map" 
+                                          BaseMap ="{local:MaplPathExtension '..\\Maps\\NaturalEarthBasic\\NaturalEarthBasic.map'}" 
                                           />
 
       <!-- Countdown Timer Overlay -->
@@ -28,6 +29,14 @@
                  VerticalAlignment="Center"
                  Visibility="Collapsed"
                  Opacity="0.8"/>
+
+            <StackPanel x:Name="Legend"
+                 Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Bottom" >
+                <TextBlock Text="Legend: " FontWeight="Bold" Margin="3"/>
+                <TextBlock x:Name="TrackLegend" Text="Track" FontWeight="Bold" Margin="3" Foreground="DodgerBlue"/>
+                <TextBlock Text="|" Margin="3"/>
+                <TextBlock x:Name="DDOLegend" Text="DDO" FontWeight="Bold" Margin="3" Foreground="OrangeRed"/>
+             </StackPanel>
     </Grid>
 
     <!-- Control Panel -->

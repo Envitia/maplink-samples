@@ -10,33 +10,28 @@
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <Optimize>True</Optimize>
-  </PropertyGroup>
-
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <Optimize>False</Optimize>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Optimize>True</Optimize>
+  </PropertyGroup>
+
   <ItemGroup>
-    <Reference Include="Envitia.MapLink.DDO64d">
-      <HintPath>..\..\MapLink\bin64\Envitia.MapLink.DDO64d.dll</HintPath>
-      <Private></Private>
+    <Reference Include="Envitia.MapLink.DDO64">
+      <HintPath>$(MAPL_PATH)\Envitia.MapLink.DDO64.dll</HintPath>
     </Reference>
     <Reference Include="Envitia.MapLink.NativeHelpers">
-      <HintPath>..\..\MapLink\bin64\Envitia.MapLink.NativeHelpers.dll</HintPath>
-      <Private></Private>
+      <HintPath>$(MAPL_PATH)\Envitia.MapLink.NativeHelpers.dll</HintPath>
     </Reference>
     <Reference Include="Envitia.MapLink.TrackManager64">
-      <HintPath>..\..\MapLink\bin64\Envitia.MapLink.TrackManager64.dll</HintPath>
-      <Private></Private>
+      <HintPath>$(MAPL_PATH)\Envitia.MapLink.TrackManager64.dll</HintPath>
     </Reference>
     <Reference Include="Envitia.MapLink.TSLNSkiaDrawingSurfaceWPFControl">
-      <HintPath>..\..\MapLink\bin64\Envitia.MapLink.TSLNSkiaDrawingSurfaceWPFControl.dll</HintPath>
-      <Private></Private>
+      <HintPath>$(MAPL_PATH)\Envitia.MapLink.TSLNSkiaDrawingSurfaceWPFControl.dll</HintPath>
     </Reference>
     <Reference Include="Envitia.MapLink64">
-      <HintPath>..\..\MapLink\bin64\Envitia.MapLink64.dll</HintPath>
-      <Private></Private>
+      <HintPath>$(MAPL_PATH)\Envitia.MapLink64.dll</HintPath>
     </Reference>
   </ItemGroup>
 
