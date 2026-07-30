@@ -1,5 +1,4 @@
 # The MapLink Pro Moving Features WPF Sample
-[![MapLink Pro Developer Site](https://img.shields.io/badge/MapLink%20Pro%20Developer%20Site-84bd00)]([https://www.envitia.com/technologies/products/maplink-pro/userguide/index.html](https://envitia.github.io/maplink-docs/))
 
 ## Introduction
 
