@@ -1,0 +1,11 @@
+{
+  "profiles": {
+    "WPFControlSample": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "MAPL_HOME": "$(MAPL_PATH)..\\",
+        "PATH": "$(MAPL_PATH)"
+      }
+    }
+  }
+}
