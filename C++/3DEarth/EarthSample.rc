@@ -1,0 +1,523 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#ifndef APSTUDIO_INVOKED
+#include "targetver.h"
+#endif
+#include "afxres.h"
+#include "verrsrc.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (United States) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\EarthSample.ico"
+
+IDR_EarthSampleTYPE     ICON                    "res\\EarthSampleDoc.ico"
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&Open...\tCtrl+O",            ID_FILE_OPEN
+        MENUITEM SEPARATOR
+        MENUITEM "Recent File",                 ID_FILE_MRU_FILE1, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       ID_APP_EXIT
+    END
+    POPUP "&View"
+    BEGIN
+        MENUITEM "&Status Bar",                 ID_VIEW_STATUS_BAR
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&About EarthSample...",       ID_APP_ABOUT
+    END
+    MENUITEM SEPARATOR
+    MENUITEM "Screenshot",                  ID_SCREENSHOT
+    POPUP "Interaction Mode"
+    BEGIN
+        MENUITEM "Trackball View Interaction", ID_INTERACTIONMODE_TRACKBALLVIEWINTERACTION
+        MENUITEM "Select Geometry/Track",       ID_INTERACTIONMODE_SELECTGEOMETRY
+        MENUITEM "Create Polygon",              ID_GEOMETRY_POLYGON
+        MENUITEM "Create Polyline",             ID_GEOMETRY_POLYLINE
+        MENUITEM "Create Text",                 ID_GEOMETRY_TEXT
+        MENUITEM "Create Symbol",               ID_GEOMETRY_SYMBOL
+        MENUITEM "Create Extruded Polygon",     ID_INTERACTIONMODE_EXTRUDEDPOLYGON
+        MENUITEM "Create Extruded Polyline",    ID_INTERACTIONMODE_EXTRUDEDPOLYLINE
+        MENUITEM "Delete Geometry",             ID_INTERACTIONMODE_DELETEGEOMETRY
+		MENUITEM SEPARATOR
+		MENUITEM "Reset View", ID_RESETVIEW
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAINFRAME ACCELERATORS
+BEGIN
+    "N",            ID_FILE_NEW,            VIRTKEY, CONTROL
+    "O",            ID_FILE_OPEN,           VIRTKEY, CONTROL
+    "S",            ID_FILE_SAVE,           VIRTKEY, CONTROL
+    "Z",            ID_EDIT_UNDO,           VIRTKEY, CONTROL
+    "X",            ID_EDIT_CUT,            VIRTKEY, CONTROL
+    "C",            ID_EDIT_COPY,           VIRTKEY, CONTROL
+    "V",            ID_EDIT_PASTE,          VIRTKEY, CONTROL
+    VK_BACK,        ID_EDIT_UNDO,           VIRTKEY, ALT
+    VK_DELETE,      ID_EDIT_CUT,            VIRTKEY, SHIFT
+    VK_INSERT,      ID_EDIT_COPY,           VIRTKEY, CONTROL
+    VK_INSERT,      ID_EDIT_PASTE,          VIRTKEY, SHIFT
+    VK_F6,          ID_NEXT_PANE,           VIRTKEY 
+    VK_F6,          ID_PREV_PANE,           VIRTKEY, SHIFT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 277, 136
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About EarthSample"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    CONTROL         IDB_MLK_WORDMARK_S,IDC_STATIC,"Static",SS_BITMAP,65,10,145,37,WS_EX_TRANSPARENT
+    CTEXT           "Copyright © 1998 - 2020 Envitia Group PLC.  All rights reserved.",IDC_STATIC,34,52,208,11
+    DEFPUSHBUTTON   "OK",IDOK,220,115,50,14,WS_GROUP
+    LTEXT           "Please see the MapLink Pro 3rd Party License Document for a list of all libraries used.",IDC_STATIC,34,94,208,20
+    CTEXT           "Copyright © 1991-2025 LEAD Technologies, Inc. ALL RIGHTS RESERVED",IDC_STATIC,34,75,208,20,WS_DISABLED
+    CTEXT           "Portions developed using LEADTOOLS",IDC_STATIC,34,65,208,9,WS_DISABLED
+END
+
+IDD_FORMCAMPANEL DIALOGEX 0, 0, 185, 93
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD
+FONT 8, "MS Shell Dlg", 400, 0, 0x0
+BEGIN
+    LTEXT           "",IDC_TEXT_CAMINFO,7,7,171,79
+END
+
+IDD_CAMERA_TOOLS_FORMVIEW DIALOGEX 0, 0, 185, 402
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD
+FONT 8, "MS Shell Dlg", 400, 0, 0x0
+BEGIN
+    PUSHBUTTON      "up",IDC_BUTTON_CAMMOVE_UP,28,28,23,21,BS_CENTER | BS_VCENTER | BS_FLAT
+    PUSHBUTTON      "down",IDC_BUTTON_CAMMOVE_DOWN,28,67,23,21,BS_CENTER | BS_VCENTER | BS_FLAT
+    PUSHBUTTON      "^",IDC_BUTTON_CAMMOVE_FORWARD,94,38,23,21,BS_CENTER | BS_VCENTER | BS_FLAT
+    PUSHBUTTON      "<",IDC_BUTTON_CAMMOVE_LEFT,71,48,23,21,BS_CENTER | BS_VCENTER | BS_FLAT
+    PUSHBUTTON      ">",IDC_BUTTON_CAMMOVE_RIGHT,117,48,23,21,BS_CENTER | BS_VCENTER | BS_FLAT
+    PUSHBUTTON      "v",IDC_BUTTON_CAMMOVE_BACK,94,58,23,21,BS_CENTER | BS_VCENTER | BS_FLAT
+    PUSHBUTTON      "-",IDC_BUTTON_CAMROLL_DOWN,63,90,15,14,BS_CENTER | BS_VCENTER | BS_FLAT
+    EDITTEXT        IDC_EDIT_CAMROLL,80,90,52,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "+",IDC_BUTTON_CAMROLL_UP,133,90,15,14,BS_CENTER | BS_VCENTER | BS_FLAT
+    PUSHBUTTON      "-",IDC_BUTTON_CAMPOS_LAT_DOWN,51,127,15,14,BS_CENTER | BS_VCENTER | BS_FLAT
+    EDITTEXT        IDC_EDIT_CAMPOS_LAT,67,127,94,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "+",IDC_BUTTON_CAMPOS_LAT_UP,162,127,15,14,BS_CENTER | BS_VCENTER | BS_FLAT
+    PUSHBUTTON      "-",IDC_BUTTON_CAMPOS_LON_DOWN,51,144,15,14,BS_CENTER | BS_VCENTER | BS_FLAT
+    EDITTEXT        IDC_EDIT_CAMPOS_LON,67,144,94,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "+",IDC_BUTTON_CAMPOS_LON_UP,162,144,15,14,BS_CENTER | BS_VCENTER | BS_FLAT
+    PUSHBUTTON      "-",IDC_BUTTON_CAMPOS_ALT_DOWN,51,161,15,14,BS_CENTER | BS_VCENTER | BS_FLAT
+    EDITTEXT        IDC_EDIT_CAMPOS_ALT,67,161,94,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "+",IDC_BUTTON_CAMPOS_ALT_UP,162,161,15,14,BS_CENTER | BS_VCENTER | BS_FLAT
+    PUSHBUTTON      "-",IDC_BUTTON_CAMTARGET_LAT_DOWN,51,198,15,14,BS_CENTER | BS_VCENTER | BS_FLAT
+    EDITTEXT        IDC_EDIT_CAMTARGET_LAT,67,198,94,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "+",IDC_BUTTON_CAMTARGET_LAT_UP,162,198,15,14,BS_CENTER | BS_VCENTER | BS_FLAT
+    PUSHBUTTON      "-",IDC_BUTTON_CAMTARGET_LON_DOWN,51,214,15,14,BS_CENTER | BS_VCENTER | BS_FLAT
+    EDITTEXT        IDC_EDIT_CAMTARGET_LON,67,215,94,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "+",IDC_BUTTON_CAMTARGET_LON_UP,162,214,15,14,BS_CENTER | BS_VCENTER | BS_FLAT
+    PUSHBUTTON      "-",IDC_BUTTON_CAMTARGET_ALT_DOWN,51,232,15,14,BS_CENTER | BS_VCENTER | BS_FLAT
+    EDITTEXT        IDC_EDIT_CAMTARGET_ALT,67,232,94,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "+",IDC_BUTTON_CAMTARGET_ALT_UP,162,232,15,14,BS_CENTER | BS_VCENTER | BS_FLAT
+    CTEXT           "Camera Controls",IDC_STATIC,57,7,74,8,SS_CENTERIMAGE
+    GROUPBOX        "Move",IDC_STATIC,7,17,171,237
+    LTEXT           "Camera Eye Location",IDC_STATIC,11,116,68,8
+    RTEXT           "Latitude",IDC_STATIC,19,129,27,8
+    RTEXT           "Longitude",IDC_STATIC,14,146,32,8,0,WS_EX_RIGHT
+    RTEXT           "Altitude (m)",IDC_STATIC,8,163,38,8,0,WS_EX_RIGHT
+    LTEXT           "Camera Target Location",IDC_STATIC,12,187,78,8
+    RTEXT           "Latitude",IDC_STATIC,20,200,27,8
+    RTEXT           "Longitude",IDC_STATIC,14,217,32,8,0,WS_EX_RIGHT
+    RTEXT           "Altitude (m)",IDC_STATIC,8,234,38,8,0,WS_EX_RIGHT
+    RTEXT           "Roll angle",IDC_STATIC,29,93,32,8
+    RTEXT           "FOV",IDC_STATIC,32,264,14,8,0,WS_EX_RIGHT
+    PUSHBUTTON      "-",IDC_BUTTON_CAMFOV_DOWN,51,261,15,14,BS_CENTER | BS_VCENTER | BS_FLAT
+    EDITTEXT        IDC_EDIT_CAMFOV,67,261,94,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "+",IDC_BUTTON_CAMFOV_UP,162,261,15,14,BS_CENTER | BS_VCENTER | BS_FLAT
+    CTEXT           "Track Simulation Settings",IDC_STATIC,49,288,87,8,SS_CENTERIMAGE
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDFRAME,7,283,171,1
+    EDITTEXT        IDC_EDIT_NUMTRACKS,68,300,93,14,ES_AUTOHSCROLL | ES_NUMBER
+    RTEXT           "No. of Tracks",IDC_STATIC,17,302,44,8
+    PUSHBUTTON      "Start Simulation",IDC_BUTTON_STARTTRACKS,7,318,83,14,BS_CENTER | BS_VCENTER | BS_FLAT
+    PUSHBUTTON      "Remove all Tracks",IDC_BUTTON_REMOVETRACKS,95,318,83,14,BS_CENTER | BS_VCENTER | BS_FLAT
+    GROUPBOX        "Selected Track",IDC_STATIC,7,335,171,60,BS_FLAT
+    LTEXT           "Position",IDC_STATIC,35,357,26,8,0,WS_EX_RIGHT
+    LTEXT           "Speed",IDC_STATIC,40,370,21,8,0,WS_EX_RIGHT
+    CONTROL         "Follow with Camera",IDC_CHECK_FOLLOWTRACK,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,98,384,78,10
+    LTEXT           "ID",IDC_STATIC,53,346,8,8,0,WS_EX_RIGHT
+    EDITTEXT        IDC_TRACK_ID,68,345,93,12,ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER,WS_EX_STATICEDGE
+    EDITTEXT        IDC_TRACK_POS,68,357,93,12,ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER,WS_EX_STATICEDGE
+    EDITTEXT        IDC_TRACK_SPEED,68,369,93,12,ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER,WS_EX_STATICEDGE
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 11,3,3,0
+ PRODUCTVERSION 11,3,3,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x40004L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904B0"
+        BEGIN
+            VALUE "CompanyName", "Envitia Group PLC"
+            VALUE "FileDescription", "Envitia MapLink Pro Earth Sample Application 11.3"
+            VALUE "FileVersion", "11.3.3.0"
+            VALUE "InternalName", "EarthSample.exe"
+            VALUE "LegalCopyright", "Copyright © 1998-2025 Envitia Group PLC. All rights reserved."
+            VALUE "OriginalFilename", "EarthSample.exe"
+            VALUE "ProductName", "MapLink Pro Earth Sample Application"
+            VALUE "ProductVersion", "11.3.3.0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 270
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 129
+    END
+
+    IDD_FORMCAMPANEL, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 178
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 86
+    END
+
+    IDD_CAMERA_TOOLS_FORMVIEW, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 178
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 395
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// AFX_DIALOG_LAYOUT
+//
+
+IDD_FORMCAMPANEL AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_CAMERA_TOOLS_FORMVIEW AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_ABOUTBOX AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDR_MAINFRAME           "EarthSample\n\nEarthSample\n\n\nEarthSample.Document\nEarthSample.Document"
+END
+
+STRINGTABLE
+BEGIN
+    AFX_IDS_APP_TITLE       "EarthSample"
+    AFX_IDS_IDLEMESSAGE     "Ready"
+END
+
+STRINGTABLE
+BEGIN
+    ID_INDICATOR_EXT        "EXT"
+    ID_INDICATOR_CAPS       "CAP"
+    ID_INDICATOR_NUM        "NUM"
+    ID_INDICATOR_SCRL       "SCRL"
+    ID_INDICATOR_OVR        "OVR"
+    ID_INDICATOR_REC        "REC"
+END
+
+STRINGTABLE
+BEGIN
+    ID_FILE_NEW             "Create a new document\nNew"
+    ID_FILE_OPEN            "Open an existing document\nOpen"
+    ID_FILE_CLOSE           "Close the active document\nClose"
+    ID_FILE_SAVE            "Save the active document\nSave"
+    ID_FILE_SAVE_AS         "Save the active document with a new name\nSave As"
+    ID_FILE_NEW_FRAME       "Create a new frame\nNew Frame"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_CLOSE               "Close"
+END
+
+STRINGTABLE
+BEGIN
+    ID_APP_ABOUT            "Display program information, version number and copyright\nAbout"
+    ID_APP_EXIT             "Quit the application; prompts to save documents\nExit"
+END
+
+STRINGTABLE
+BEGIN
+    ID_FILE_MRU_FILE1       "Open this document"
+    ID_FILE_MRU_FILE2       "Open this document"
+    ID_FILE_MRU_FILE3       "Open this document"
+    ID_FILE_MRU_FILE4       "Open this document"
+    ID_FILE_MRU_FILE5       "Open this document"
+    ID_FILE_MRU_FILE6       "Open this document"
+    ID_FILE_MRU_FILE7       "Open this document"
+    ID_FILE_MRU_FILE8       "Open this document"
+    ID_FILE_MRU_FILE9       "Open this document"
+    ID_FILE_MRU_FILE10      "Open this document"
+    ID_FILE_MRU_FILE11      "Open this document"
+    ID_FILE_MRU_FILE12      "Open this document"
+    ID_FILE_MRU_FILE13      "Open this document"
+    ID_FILE_MRU_FILE14      "Open this document"
+    ID_FILE_MRU_FILE15      "Open this document"
+    ID_FILE_MRU_FILE16      "Open this document"
+END
+
+STRINGTABLE
+BEGIN
+    ID_NEXT_PANE            "Switch to the next window pane\nNext Pane"
+    ID_PREV_PANE            "Switch back to the previous window pane\nPrevious Pane"
+END
+
+STRINGTABLE
+BEGIN
+    ID_WINDOW_SPLIT         "Split the active window into panes\nSplit"
+END
+
+STRINGTABLE
+BEGIN
+    ID_EDIT_CLEAR           "Erase the selection\nErase"
+    ID_EDIT_CLEAR_ALL       "Erase everything\nErase All"
+    ID_EDIT_COPY            "Copy the selection and put it on the Clipboard\nCopy"
+    ID_EDIT_CUT             "Cut the selection and put it on the Clipboard\nCut"
+    ID_EDIT_FIND            "Find the specified text\nFind"
+    ID_EDIT_PASTE           "Insert Clipboard contents\nPaste"
+    ID_EDIT_REPEAT          "Repeat the last action\nRepeat"
+    ID_EDIT_REPLACE         "Replace specific text with different text\nReplace"
+    ID_EDIT_SELECT_ALL      "Select the entire document\nSelect All"
+    ID_EDIT_UNDO            "Undo the last action\nUndo"
+    ID_EDIT_REDO            "Redo the previously undone action\nRedo"
+END
+
+STRINGTABLE
+BEGIN
+    ID_VIEW_STATUS_BAR      "Show or hide the status bar\nToggle Status Bar"
+END
+
+STRINGTABLE
+BEGIN
+    AFX_IDS_SCSIZE          "Change the window size"
+    AFX_IDS_SCMOVE          "Change the window position"
+    AFX_IDS_SCMINIMIZE      "Reduce the window to an icon"
+    AFX_IDS_SCMAXIMIZE      "Enlarge the window to full size"
+    AFX_IDS_SCNEXTWINDOW    "Switch to the next document window"
+    AFX_IDS_SCPREVWINDOW    "Switch to the previous document window"
+    AFX_IDS_SCCLOSE         "Close the active window and prompts to save the documents"
+END
+
+STRINGTABLE
+BEGIN
+    AFX_IDS_SCRESTORE       "Restore the window to normal size"
+    AFX_IDS_SCTASKLIST      "Activate Task List"
+END
+
+#endif    // English (United States) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (United Kingdom) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENG)
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_UK
+#pragma code_page(1252)
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_SCREENSHOT DIALOGEX 0, 0, 310, 175
+STYLE DS_SETFONT | DS_MODALFRAME | DS_SETFOREGROUND | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_TOPMOST | WS_EX_CLIENTEDGE
+CAPTION "Screenshot View"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_SCREENSHOT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 303
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 168
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// AFX_DIALOG_LAYOUT
+//
+
+IDD_SCREENSHOT AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#ifndef APSTUDIO_INVOKED\r\n"
+    "#include ""targetver.h""\r\n"
+    "#endif\r\n"
+    "#include ""afxres.h""\r\n"
+    "#include ""verrsrc.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#include ""res\\EarthSample.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""      // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_MLK_WORDMARK_S      BITMAP                  "res\\MapLink_Pro_Wordmark_s.bmp"
+
+#endif    // English (United Kingdom) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE 9, 1
+#include "res\EarthSample.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"      // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

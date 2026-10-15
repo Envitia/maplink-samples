@@ -1,0 +1,42 @@
+﻿<Window x:Class="MapLinkProApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:mmv="clr-namespace:DrawingSurfacePanel;assembly=MapViewerPanel"
+        xmlns:local="clr-namespace:MapLinkProApp" xmlns:integration="clr-namespace:System.Windows.Forms.Integration;assembly=WindowsFormsIntegration"
+        mc:Ignorable="d"
+        Title="MapLink WPF App" Height="800" Width="1200" WindowState="Maximized">
+  <Grid>
+    
+    <!-- 
+    MapLink does not yet have a WPF-native drawing surface, so we need to wrap the Windows.Forms drawing surface in a WindowsFormHost.
+    This approach, however, means that we cannot simply overlay WPF controls on the drawing surface, due to the "airspace issue":
+    https://learn.microsoft.com/en-us/dotnet/desktop/wpf/advanced/technology-regions-overview?view=netframeworkdesktop-4.8
+    We solve this with the insertion of the OverlayControl, a solution devised  by Saurabh Singh (https://www.codeproject.com/Tips/5326355/Airspace-Solution).
+    "OverlayContainer is a wrapper control where you can provide intended content to render on top of WinformHost/Browser.
+    This container injects another WPF window into the region supplying its own content. OverlayWindow is the one being injected. 
+    Extended HwndHost is used to glue WPF window into OverlayContainer."
+    -->
+    <WindowsFormsHost Name="MainMap">
+      <WindowsFormsHost.Child>
+        <mmv:MapViewerPanel />
+      </WindowsFormsHost.Child>
+    </WindowsFormsHost>
+
+    <local:OverlayControl x:Name="OverlayContainer" >
+      <Grid>
+
+      <Grid>
+
+        <StackPanel Orientation="Vertical"  VerticalAlignment="Top" HorizontalAlignment="Center">
+          <Button Style="{StaticResource TabButton}" Name="LayersButton" Click="LayersButton_Click">Layers</Button>
+          <StackPanel x:Name="LayersPanel" Visibility="Collapsed" Orientation="Vertical" Background="WhiteSmoke">
+            <Label Content="Layers" HorizontalAlignment="Right"></Label>
+          </StackPanel>
+        </StackPanel>
+      </Grid>
+      </Grid>
+    </local:OverlayControl>
+  </Grid>
+</Window>

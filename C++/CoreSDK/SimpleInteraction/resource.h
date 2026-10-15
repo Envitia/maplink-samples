@@ -1,0 +1,56 @@
+//{{NO_DEPENDENCIES}}
+// Microsoft Visual C++ generated include file.
+// Used by SimpleInteraction.rc
+//
+#define IDD_ABOUTBOX                    100
+#define IDR_MAINFRAME                   128
+#define IDR_SimpleInteractionTYPE       129
+#define IDB_TOOLBAR_ENABLED             134
+#define IDB_TOOLBAR_DISABLED            136
+#define IDI_ICON1                       140
+#define IDB_ABOUT_BOX_IMG               146
+#define IDC_LOGO                        1000
+#define IDC_THIRDPARTY                  1001
+#define IDC_COPYRIGHT                   1002
+#define IDC_APP                         1003
+#define ID_TOOLS_ZOOMIN                 32771
+#define ID_TOOLS_ZOOMOUT                32772
+#define ID_TOOLS_RESET                  32773
+#define ID_TOOLS_ZOOM                   32777
+#define ID_TOOLS_PAN                    32778
+#define ID_TOOLS_ZOOMPAN                32779
+#define ID_TOOLS_GRAB                   32784
+#define ID_TOOLS_MAGNIFY                32785
+#define ID_TOOLS_SAVEDVIEWS             32786
+#define ID_TOOLS_VIEWSTACK              32787
+#define ID_Menu                         32788
+#define ID_SAVEDVIEWS_RESET             32789
+#define ID_SAVEDVIEWS_GOTO1             32790
+#define ID_SAVEDVIEWS_GOTO2             32791
+#define ID_SAVEDVIEWS_GOTO3             32792
+#define ID_SAVEDVIEWS_SET1              32793
+#define ID_SAVEDVIEWS_SET2              32794
+#define ID_SAVEDVIEWS_SET3              32795
+#define ID_VIEWSTACK_PREVIOUSVIEW       32797
+#define ID_VIEWSTACK_NEXTVIEW           32798
+#define ID_TOOLS_RESIZEACTION           32811
+#define ID_RESIZEACTION_MAINTAINCENTRE  32812
+#define ID_RESIZEACTION_MAINTAINTOPLEFT 32813
+#define ID_RESIZEACTION_MAINTAINTOPRIGHT 32814
+#define ID_RESIZEACTION_MAINTAINBOTTOMLEFT 32815
+#define ID_RESIZEACTION_MAINTAINBOTTOMRIGHT 32816
+#define ID_RESIZEACTION_FITMAPTOWINDOW  32817
+#define ID_RESIZEACTION_MAINTAINASPECTRATIO 32818
+#define ID_RESIZEACTION_MAINTAINVIEWPORT 32819
+
+// Next default values for new objects
+// 
+#ifdef APSTUDIO_INVOKED
+#ifndef APSTUDIO_READONLY_SYMBOLS
+#define _APS_3D_CONTROLS                     1
+#define _APS_NEXT_RESOURCE_VALUE        147
+#define _APS_NEXT_COMMAND_VALUE         32820
+#define _APS_NEXT_CONTROL_VALUE         1004
+#define _APS_NEXT_SYMED_VALUE           101
+#endif
+#endif

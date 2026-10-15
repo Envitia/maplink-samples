@@ -1,0 +1,523 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (United Kingdom) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENG)
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_UK
+#pragma code_page(1252)
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\C2PerformanceDemo.ico"
+IDR_C2PERFORMANCEDEMOTYPE ICON                    "res\\C2PerformanceDemoDoc.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDR_MAINFRAME           BITMAP                  "res\\Toolbar.bmp"
+IDB_CHECK_UNSELECTED    BITMAP                  "res\\check_un.bmp"
+IDB_CHECK_SELECTED      BITMAP                  "res\\check_se.bmp"
+IDB_CHECK_PART_SELECTED BITMAP                  "res\\check_pa.bmp"
+IDB_CHECK_EMPTY         BITMAP                  "res\\bmp00001.bmp"
+IDR_PERFORMANCE_BAR     BITMAP                  "res\\toolbar1.bmp"
+IDB_ABOUT_BOX_IMG       BITMAP                  "Res\\AboutBoxImage.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDR_MAINFRAME TOOLBAR 16, 16
+BEGIN
+    BUTTON      ID_TOOLS_ZOOM
+    BUTTON      ID_TOOLS_PAN
+    BUTTON      ID_TOOLS_GRAB
+    BUTTON      ID_TOOLS_TRACKSELECT
+    SEPARATOR
+    BUTTON      ID_TOOLS_FOLLOWSELECTED
+    BUTTON      ID_TOOLS_NORTHUP
+    BUTTON      ID_TOOLS_TRACKHEADINGUP
+    SEPARATOR
+    BUTTON      ID_TOOLS_ZOOMIN
+    BUTTON      ID_TOOLS_ZOOMOUT
+    BUTTON      ID_TOOLS_RESET
+    SEPARATOR
+    BUTTON      ID_VIEW_RANGERINGS
+    BUTTON      ID_RANGE_500KM
+    BUTTON      ID_RANGE_200KM
+    BUTTON      ID_RANGE_100KM
+    BUTTON      ID_RANGE_50KM
+    BUTTON      ID_RANGE_10KM
+    SEPARATOR
+    BUTTON      ID_APP_HELP
+    BUTTON      ID_HELP_CONTACT
+END
+
+IDR_PERFORMANCE_BAR TOOLBAR 120, 15
+BEGIN
+    BUTTON      ID_PERFORMANCE_START
+    BUTTON      ID_PERFORMANCE_STOP
+    BUTTON      ID_CUR_FR
+    BUTTON      ID_AVG_FR
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&Open...\tCtrl+O",            ID_FILE_OPEN
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       ID_APP_EXIT
+    END
+    POPUP "&View"
+    BEGIN
+        MENUITEM "&Toolbar",                    ID_VIEW_TOOLBAR, CHECKED
+        MENUITEM "&Status Bar",                 ID_VIEW_STATUS_BAR, CHECKED
+        MENUITEM SEPARATOR
+        MENUITEM "&Range Rings",                ID_VIEW_RANGERINGS, CHECKED
+        MENUITEM "Lat/Lon Grid",                ID_VIEW_LAT
+    END
+    POPUP "&Tools"
+    BEGIN
+        MENUITEM "Zoom &In",                    ID_TOOLS_ZOOMIN
+        MENUITEM "Zoom &Out",                   ID_TOOLS_ZOOMOUT
+        MENUITEM "&Reset",                      ID_TOOLS_RESET
+        MENUITEM SEPARATOR
+        MENUITEM "&Zoom",                       ID_TOOLS_ZOOM
+        MENUITEM "&Pan",                        ID_TOOLS_PAN
+        MENUITEM "&Grab",                       ID_TOOLS_GRAB
+        MENUITEM "Track &Select",               ID_TOOLS_TRACKSELECT
+        MENUITEM SEPARATOR
+        MENUITEM "&Follow Selected",            ID_TOOLS_FOLLOWSELECTED
+        MENUITEM "&North Up",                   ID_TOOLS_NORTHUP
+        MENUITEM "&Track Heading Up",           ID_TOOLS_TRACKHEADINGUP
+    END
+    POPUP "&Range"
+    BEGIN
+        MENUITEM "500 km",                      ID_RANGE_500KM
+        MENUITEM "200 km",                      ID_RANGE_200KM
+        MENUITEM "100 km",                      ID_RANGE_100KM
+        MENUITEM "50 km",                       ID_RANGE_50KM
+        MENUITEM "10 km",                       ID_RANGE_10KM
+    END
+    POPUP "&Simulation"
+    BEGIN
+        MENUITEM "Real Time",                   ID_SIMULATION_REALTIME, CHECKED
+        MENUITEM "x 2 Speed",                   ID_SIMULATION_2SPEED
+        MENUITEM "x 5 Speed",                   ID_SIMULATION_5SPEED
+        MENUITEM "x 10 Speed",                  ID_SIMULATION_10SPEED
+        MENUITEM "x 50 Speed",                  ID_SIMULATION_50SPEED
+    END
+    POPUP "S&ymbols"
+    BEGIN
+        MENUITEM "Standard",                    ID_SYMBOLS_STANDARD, CHECKED
+        MENUITEM "APP6A",                       ID_SYMBOLS_APP6A
+        MENUITEM "2525B",                       ID_SYMBOLS_2525B
+        MENUITEM SEPARATOR
+        MENUITEM "Number of Tracks",            ID_SYMBOLS_CHANGETHENUMBEROFTRACKS
+        MENUITEM SEPARATOR
+        POPUP "APP6A/2525B Annotation Level"
+        BEGIN
+            MENUITEM "None",                        ID_APP6AANNOTATIONLEVEL_NONE, CHECKED
+            MENUITEM "Low",                         ID_APP6AANNOTATIONLEVEL_LOW
+            MENUITEM "Medium",                      ID_APP6AANNOTATIONLEVEL_MEDIUM
+            MENUITEM "High",                        ID_APP6AANNOTATIONLEVEL_HIGH
+        END
+        POPUP "APP6A/2525B Rendering"
+        BEGIN
+            MENUITEM "Bitmap-based",                ID_APP6ARENDERING_BITMAP
+            MENUITEM "Entity-based",                ID_APP6ARENDERING_ENTITY
+        END
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&Contents",                   ID_APP_HELP
+        MENUITEM SEPARATOR
+        MENUITEM "&Contact Envitia",            ID_HELP_CONTACT
+        MENUITEM SEPARATOR
+        MENUITEM "&About C2PerformanceDemo...", ID_APP_ABOUT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAINFRAME ACCELERATORS
+BEGIN
+    "C",            ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
+    "N",            ID_FILE_NEW,            VIRTKEY, CONTROL, NOINVERT
+    "O",            ID_FILE_OPEN,           VIRTKEY, CONTROL, NOINVERT
+    "P",            ID_FILE_PRINT,          VIRTKEY, CONTROL, NOINVERT
+    "V",            ID_EDIT_PASTE,          VIRTKEY, CONTROL, NOINVERT
+    VK_ADD,         ID_TOOLS_ZOOMIN,        VIRTKEY, NOINVERT
+    VK_BACK,        ID_EDIT_UNDO,           VIRTKEY, ALT, NOINVERT
+    VK_DELETE,      ID_EDIT_CUT,            VIRTKEY, SHIFT, NOINVERT
+    VK_F6,          ID_NEXT_PANE,           VIRTKEY, NOINVERT
+    VK_F6,          ID_PREV_PANE,           VIRTKEY, SHIFT, NOINVERT
+    VK_INSERT,      ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
+    VK_INSERT,      ID_EDIT_PASTE,          VIRTKEY, SHIFT, NOINVERT
+    VK_SUBTRACT,    ID_TOOLS_ZOOMOUT,       VIRTKEY, NOINVERT
+    "X",            ID_EDIT_CUT,            VIRTKEY, CONTROL, NOINVERT
+    "Z",            ID_EDIT_UNDO,           VIRTKEY, CONTROL, NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 257, 90
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About C2PerformanceDemo"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    LTEXT           "C2PerformanceDemo Version 1.0",IDC_APP,7,42,212,9,SS_NOPREFIX
+    CTEXT           "Portions developed using LEADTOOLS,\nCopyright © 1991-2025 LEAD Technologies, Inc. ALL RIGHTS RESERVED",IDC_THIRDPARTY,7,65,243,17
+    DEFPUSHBUTTON   "OK",IDOK,205,7,45,14,WS_GROUP
+    CONTROL         "",IDC_LOGO,"Static",SS_OWNERDRAW,8,9,136,25
+    LTEXT           "Copyright © 1998-2026 Envitia Group PLC. All rights reserved.",IDC_COPYRIGHT,7,51,215,8
+END
+
+IDD_TRACK_INFO DIALOGEX 0, 0, 164, 211
+STYLE DS_SETFONT | WS_CHILD
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    PUSHBUTTON      "&Apply",IDC_APPLY,19,180,55,15,WS_DISABLED
+    PUSHBUTTON      "&Reset",IDC_RESET,89,180,55,15,WS_DISABLED
+    LTEXT           "Latitude :",IDC_STATIC,31,135,30,10,0,WS_EX_RIGHT
+    LTEXT           "Longitude :",IDC_STATIC,27,155,35,10,0,WS_EX_RIGHT
+    LTEXT           "",IDC_LATITUDE,66,135,80,12,0,WS_EX_STATICEDGE
+    LTEXT           "",IDC_LONGTITUDE,66,155,80,12,0,WS_EX_STATICEDGE
+    COMBOBOX        IDC_HOSTILITY_COMBO,65,115,80,52,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Hostility :",IDC_STATIC,31,115,30,10,0,WS_EX_RIGHT
+    LTEXT           "Heading :",IDC_STATIC,27,37,34,10,0,WS_EX_RIGHT
+    LTEXT           "Velocity :",IDC_STATIC,31,57,30,10,0,WS_EX_RIGHT
+    LTEXT           "Altitude :",IDC_STATIC,31,77,30,10,0,WS_EX_RIGHT
+    LTEXT           "Track Number :",IDC_STATIC,11,15,50,10,0,WS_EX_RIGHT
+    LTEXT           "",IDC_TRACK_NUMBER,66,15,40,12,0,WS_EX_STATICEDGE
+    EDITTEXT        IDC_HEADING,66,35,40,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_VELOCITY,66,55,40,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_ALTITUDE,66,75,40,12,ES_AUTOHSCROLL
+    LTEXT           "Knots",IDC_STATIC,110,57,26,11
+    LTEXT           "Feet",IDC_STATIC,110,77,26,11
+    COMBOBOX        IDC_TRACKTYPE_COMBO,65,95,80,52,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Track Type :",IDC_STATIC,10,95,51,10,0,WS_EX_RIGHT
+END
+
+IDD_NO_OF_TRACKS DIALOGEX 0, 0, 186, 47
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Set the number of tracks"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_NO_TRACKS,86,7,93,14,ES_AUTOHSCROLL | ES_NUMBER
+    DEFPUSHBUTTON   "OK",IDOK,38,26,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,96,26,50,14
+    LTEXT           "Number of tracks:",IDC_STATIC,7,9,78,9
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 11,3,3,0
+ PRODUCTVERSION 11,3,3,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "CompanyName", "Envitia Group PLC"
+            VALUE "FileDescription", "Envitia C2PerformanceDemo Sample Application 11.3"
+            VALUE "FileVersion", "11.3.3.0"
+            VALUE "InternalName", "mfc"
+            VALUE "LegalCopyright", "Copyright © 1998-2026 Envitia Group PLC. All rights reserved."
+            VALUE "OriginalFilename", "C2PerformanceDemo.EXE"
+            VALUE "ProductName", "C2PerformanceDemo Application"
+            VALUE "ProductVersion", "11.3.3.0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 250
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 82
+    END
+
+    IDD_TRACK_INFO, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 157
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 204
+    END
+
+    IDD_NO_OF_TRACKS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 40
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif\r\n"
+    "#include ""res\\C2PerformanceDemo.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#include ""afxprint.rc""       // printing/print preview resources\r\n"
+    "#endif\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Cursor
+//
+
+IDC_CURSOR_ZOOM         CURSOR                  "res\\zoom.cur"
+IDC_CURSOR_SELECT       CURSOR                  "res\\select.cur"
+IDC_CURSOR_PAN          CURSOR                  "res\\pan.cur"
+IDC_CURSOR_DRAG         CURSOR                  "res\\drag.cur"
+IDC_CURSOR_GRAB         CURSOR                  "res\\grabbing.cur"
+IDC_CURSOR_GRABBING     CURSOR                  "res\\cur_grabg.cur"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDR_MAINFRAME           "C2PerformanceDemo\n\nC2PerformanceDemo\nMapLink Maps (*.map, *.mpc)\n.map;.mpc\nC2PerformanceDemo.Document\nC2PerformanceDemo Document"
+END
+
+STRINGTABLE
+BEGIN
+    AFX_IDS_APP_TITLE       "C2PerformanceDemo"
+    AFX_IDS_IDLEMESSAGE     "Ready"
+END
+
+STRINGTABLE
+BEGIN
+    ID_INDICATOR_EXT        "EXT"
+    ID_INDICATOR_CAPS       "CAP"
+    ID_INDICATOR_NUM        "NUM"
+    ID_INDICATOR_SCRL       "SCRL"
+    ID_INDICATOR_OVR        "OVR"
+    ID_INDICATOR_REC        "REC"
+END
+
+STRINGTABLE
+BEGIN
+    ID_FILE_OPEN            "Open an existing document\nOpen"
+    ID_FILE_PAGE_SETUP      "Change the printing options\nPage Setup"
+    ID_FILE_PRINT_SETUP     "Change the printer and printing options\nPrint Setup"
+    ID_FILE_PRINT           "Print the active document\nPrint"
+    ID_FILE_PRINT_PREVIEW   "Display full pages\nPrint Preview"
+END
+
+STRINGTABLE
+BEGIN
+    ID_APP_ABOUT            "About C2 Performance Demo Application\nAbout C2 Performance Demo Application"
+    ID_APP_EXIT             "Quit the application; prompts to save documents\nExit"
+END
+
+STRINGTABLE
+BEGIN
+    ID_FILE_MRU_FILE1       "Open this document"
+    ID_FILE_MRU_FILE2       "Open this document"
+    ID_FILE_MRU_FILE3       "Open this document"
+    ID_FILE_MRU_FILE4       "Open this document"
+    ID_FILE_MRU_FILE5       "Open this document"
+    ID_FILE_MRU_FILE6       "Open this document"
+    ID_FILE_MRU_FILE7       "Open this document"
+    ID_FILE_MRU_FILE8       "Open this document"
+    ID_FILE_MRU_FILE9       "Open this document"
+    ID_FILE_MRU_FILE10      "Open this document"
+    ID_FILE_MRU_FILE11      "Open this document"
+    ID_FILE_MRU_FILE12      "Open this document"
+    ID_FILE_MRU_FILE13      "Open this document"
+    ID_FILE_MRU_FILE14      "Open this document"
+    ID_FILE_MRU_FILE15      "Open this document"
+    ID_FILE_MRU_FILE16      "Open this document"
+END
+
+STRINGTABLE
+BEGIN
+    ID_EDIT_COPY            "Copy the current view and put it on the Clipboard\nCopy"
+END
+
+STRINGTABLE
+BEGIN
+    ID_VIEW_TOOLBAR         "Show or hide the toolbar\nToggle ToolBar"
+    ID_VIEW_STATUS_BAR      "Show or hide the status bar\nToggle StatusBar"
+END
+
+STRINGTABLE
+BEGIN
+    AFX_IDS_SCSIZE          "Change the window size"
+    AFX_IDS_SCMOVE          "Change the window position"
+    AFX_IDS_SCMINIMIZE      "Reduce the window to an icon"
+    AFX_IDS_SCMAXIMIZE      "Enlarge the window to full size"
+    AFX_IDS_SCNEXTWINDOW    "Switch to the next document window"
+    AFX_IDS_SCPREVWINDOW    "Switch to the previous document window"
+    AFX_IDS_SCCLOSE         "Close the active window and prompts to save the documents"
+END
+
+STRINGTABLE
+BEGIN
+    AFX_IDS_SCRESTORE       "Restore the window to normal size"
+    AFX_IDS_SCTASKLIST      "Activate Task List"
+END
+
+STRINGTABLE
+BEGIN
+    AFX_IDS_PREVIEW_CLOSE   "Close print preview mode\nCancel Preview"
+END
+
+STRINGTABLE
+BEGIN
+    ID_TOOLS_ZOOMIN         "Zoom In\nZoom In"
+    ID_TOOLS_ZOOMOUT        "Zoom Out\nZoom Out"
+    ID_TOOLS_RESET          "View whole map\nReset"
+    ID_TOOLS_ZOOM           "Zoom\nZoom"
+    ID_TOOLS_PAN            "Pan to point\nPan"
+    ID_TOOLS_ZOOMPAN        "Combined Zoom/Pan to point\nZoom/Pan"
+END
+
+STRINGTABLE
+BEGIN
+    ID_HELP_CONTACT         "Contact Envitia\nContact Envitia"
+    ID_VIEW_RANGERINGS      "View Range Rings\nView Range Rings"
+    ID_TOOLS_TRACKSELECT    "Select a Track\nSelect a Track"
+    ID_TOOLS_FOLLOWSELECTED "Follow the Selected Track\nFollow the Selected Track"
+    ID_TOOLS_NORTHUP        "North Up\nNorth Up"
+    ID_TOOLS_TRACKHEADINGUP "Track Heading Up\nTrack Heading Up"
+    ID_RANGE_500KM          "Set Range to 500 km\nSet Range to 500 km"
+    ID_RANGE_200KM          "Set Range to 200 km\nSet Range to 200 km"
+    ID_RANGE_100KM          "Set Range to 100 km\nSet Range to 100 km"
+    ID_RANGE_50KM           "Set Range to 50 km\nSet Range to 50 km"
+    ID_RANGE_10KM           "Set Range to 10 km\nSet Range to 10 km"
+END
+
+STRINGTABLE
+BEGIN
+    ID_TOOLS_GRAB           "Use the mouse cursor to drag the map display\nGrab"
+END
+
+#endif    // English (United Kingdom) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif
+#include "res\C2PerformanceDemo.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#include "afxprint.rc"       // printing/print preview resources
+#endif
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

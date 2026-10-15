@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{899CA116-88D0-407A-B4B3-2293B3D92FF4}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ApplicationIcon>.\MapViewer.ico</ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>CSharpWinforms_InteractionOpenGL_DotNet_Sample</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>CSharpWinforms_InteractionOpenGL_DotNet_Sample</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>CSharpWinforms_InteractionOpenGL_DotNet_Sample.MapViewerForm</StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <BaseAddress>285212672</BaseAddress>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <BaseAddress>285212672</BaseAddress>
+    <Optimize>true</Optimize>
+    <DebugType>
+    </DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System.Design" />
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    </Reference>
+  </ItemGroup>
+  <Choose>
+    <When Condition=" '$(Platform)' == 'x86' ">
+      <ItemGroup>
+        <Reference Include="Envitia.MapLink.InteractionModes">
+          <SpecificVersion>False</SpecificVersion>
+          <Private>True</Private>
+          <HintPath>..\..\..\..\bin\Envitia.MapLink.InteractionModes.dll</HintPath>
+        </Reference>
+        <Reference Include="Envitia.MapLink.NativeHelpers, Version=10.0.9.0, Culture=neutral, PublicKeyToken=f6586908b95b8151, processorArchitecture=MSIL">
+          <SpecificVersion>False</SpecificVersion>
+          <Private>True</Private>
+          <HintPath>..\..\..\..\bin\Envitia.MapLink.NativeHelpers.dll</HintPath>
+        </Reference>
+        <Reference Include="Envitia.MapLink.OpenGLSurface">
+          <SpecificVersion>False</SpecificVersion>
+          <Private>True</Private>
+          <HintPath>..\..\..\..\bin\Envitia.MapLink.OpenGLSurface.dll</HintPath>
+        </Reference>
+        <Reference Include="Envitia.MapLink.OpenGLTrackHelper">
+          <SpecificVersion>False</SpecificVersion>
+          <Private>True</Private>
+          <HintPath>..\..\..\..\bin\Envitia.MapLink.OpenGLTrackHelper.dll</HintPath>
+        </Reference>
+        <Reference Include="Envitia.MapLink">
+          <SpecificVersion>False</SpecificVersion>
+          <Private>True</Private>
+          <HintPath>..\..\..\..\bin\Envitia.MapLink.dll</HintPath>
+        </Reference>
+      </ItemGroup>
+    </When>
+    <When Condition=" '$(Platform)' == 'x64' ">
+      <ItemGroup>
+        <Reference Include="Envitia.MapLink.InteractionModes64">
+          <SpecificVersion>False</SpecificVersion>
+          <Private>True</Private>
+          <HintPath>..\..\..\..\bin64\Envitia.MapLink.InteractionModes64.dll</HintPath>
+        </Reference>
+        <Reference Include="Envitia.MapLink.NativeHelpers, Version=10.0.9.0, Culture=neutral, PublicKeyToken=f6586908b95b8151, processorArchitecture=MSIL">
+          <SpecificVersion>False</SpecificVersion>
+          <Private>True</Private>
+          <HintPath>..\..\..\..\bin64\Envitia.MapLink.NativeHelpers.dll</HintPath>
+        </Reference>
+        <Reference Include="Envitia.MapLink.OpenGLSurface64">
+          <SpecificVersion>False</SpecificVersion>
+          <Private>True</Private>
+          <HintPath>..\..\..\..\bin64\Envitia.MapLink.OpenGLSurface64.dll</HintPath>
+        </Reference>
+        <Reference Include="Envitia.MapLink.OpenGLTrackHelper64">
+          <SpecificVersion>False</SpecificVersion>
+          <Private>True</Private>
+          <HintPath>..\..\..\..\bin64\Envitia.MapLink.OpenGLTrackHelper64.dll</HintPath>
+        </Reference>
+        <Reference Include="Envitia.MapLink64">
+          <SpecificVersion>False</SpecificVersion>
+          <Private>True</Private>
+          <HintPath>..\..\..\..\bin64\Envitia.MapLink64.dll</HintPath>
+        </Reference>
+      </ItemGroup>
+    </When>
+  </Choose>
+  <Choose>
+    <When Condition=" '$(Platform)' == 'x86' ">
+      <ItemGroup>
+      </ItemGroup>
+    </When>
+    <When Condition=" '$(Platform)' == 'x64' ">
+      <ItemGroup>
+      </ItemGroup>
+    </When>
+  </Choose>
+  <ItemGroup>
+    <Compile Include="AboutBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CustomInteractionModeZoomPan.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="InteractionModeRequestReceiver.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainFrame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainFrame.Designer.cs">
+      <DependentUpon>MainFrame.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MapViewerPanel.cs">
+    </Compile>
+    <EmbeddedResource Include="AboutBox.resx">
+      <DependentUpon>AboutBox.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainFrame.resx">
+      <DependentUpon>MainFrame.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

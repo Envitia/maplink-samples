@@ -1,0 +1,203 @@
+TSLSL 101
+;
+187
+T;1001;0;0;1;0;Ball.tmf
+T;1002;0;0;1;0;Ball_Pile_03.tmf
+T;1003;0;0;1;0;Ball_Pile_06.tmf
+T;1004;0;0;1;0;Ball_Pile_10.tmf
+T;1005;0;0;1;0;Circle.tmf
+T;1006;0;0;1;0;Circle_01.tmf
+T;1007;0;0;1;0;Circle_02.tmf
+T;1008;0;0;1;0;Circle_03.tmf
+T;1009;0;0;1;0;Circle_04.tmf
+T;1010;0;0;1;0;Circle_05.tmf
+T;1011;0;0;1;0;Circle_06.tmf
+T;1012;0;0;1;0;Circle_07.tmf
+T;1013;0;0;1;0;Circle_08.tmf
+T;1014;0;0;1;0;Circle_09.tmf
+T;1015;0;0;1;0;Circle_10.tmf
+T;1016;0;0;1;0;Circle_11.tmf
+T;1017;0;0;1;0;Circle_12.tmf
+T;1018;0;0;1;0;Circle_13.tmf
+T;1019;0;0;1;0;Circle_14.tmf
+T;1020;0;0;1;0;Circle_15.tmf
+T;1021;0;0;1;0;Circle_Black.tmf
+T;1022;0;0;1;0;Circle_Red.tmf
+T;1023;0;0;1;0;Circle_with_Cross.tmf
+T;1024;0;0;1;0;Dot.tmf
+T;1025;0;0;1;0;Dots_02.tmf
+T;1026;0;0;1;0;Dots_03.tmf
+T;1027;0;0;1;0;Dots_04.tmf
+T;1028;0;0;1;0;Dots_Vertical_02.tmf
+T;1029;0;0;1;0;Dots_Vertical_03.tmf
+T;1030;0;0;1;0;Ring_Red.tmf
+T;1031;0;0;1;0;Ring_with_Box.tmf
+T;1032;0;0;1;0;Ring_with_Diamond.tmf
+T;1033;0;0;1;0;Rings_Coloured.tmf
+T;1034;0;0;1;0;Rings_Empty.tmf
+T;1035;0;0;1;0;Rings_Red.tmf
+T;1036;0;0;1;0;Wheel.tmf
+T;2001;0;0;1;0;Cross_Red.tmf
+T;2002;0;0;1;0;Cross_Thin.tmf
+T;2003;0;0;1;0;Cross_Thin_Diagonal.tmf
+T;2004;0;0;1;0;Rectangle_Green.tmf
+T;2005;0;0;1;0;Square_Black.tmf
+T;2006;0;0;1;0;Square_Blue.tmf
+T;2007;0;0;1;0;Square_Green.tmf
+T;2008;0;0;1;0;Square_Red.tmf
+T;2009;0;0;1;0;Square_Yellow.tmf
+T;2010;0;0;1;0;Triangle_Blue.tmf
+T;2011;0;0;1;0;Triangle_Blue_Inverted.tmf
+T;2012;0;0;1;0;Triangle_Thin.tmf
+T;2013;0;0;1;0;Triangle_with_Dot.tmf
+T;2014;0;0;1;0;Triangle_with_Dots_01.tmf
+T;2015;0;0;1;0;Triangle_with_Dots_02.tmf
+T;2016;0;0;1;0;Triangles_01.tmf
+T;2017;0;0;1;0;Triangles_02.tmf
+T;3001;0;0;1;0;Asterisk_Thick_08.tmf
+T;3002;0;0;1;0;Asterisk_Thin_06.tmf
+T;3003;0;0;1;0;Asterisk_Thin_08.tmf
+T;3004;0;0;1;0;Burst_Red_08.tmf
+T;3005;0;0;1;0;Star_06.tmf
+T;3006;0;0;1;0;Star_Empty.tmf
+T;3007;0;0;1;0;Star_Magenta.tmf
+T;3008;0;0;1;0;Star_of_David.tmf
+T;3009;0;0;1;0;Star_Red.tmf
+T;3010;0;0;1;0;Star_Red_04.tmf
+T;3011;0;0;1;0;Star_Red_08.tmf
+T;3012;0;0;1;0;Star_Red_16.tmf
+T;3013;0;0;1;0;Star_Yellow.tmf
+T;4001;0;0;1;0;Arrow_01.tmf
+T;4002;0;0;1;0;Arrow_02.tmf
+T;4003;0;0;1;0;Arrow_03.tmf
+T;4004;0;0;1;0;Arrow_04.tmf
+T;4005;0;0;1;0;Line_Wavy_01.tmf
+T;4006;0;0;1;0;Lines_02.tmf
+T;4007;0;0;1;0;Lines_03.tmf
+T;5001;0;0;1;0;Church.tmf
+T;5002;0;0;1;0;Church_Spire.tmf
+T;5003;0;0;1;0;Church_Spire_Blue.tmf
+T;5004;0;0;1;0;Church_Tower.tmf
+T;5005;0;0;1;0;Compass.tmf
+T;5006;0;0;1;0;Hospital.tmf
+T;5007;0;0;1;0;Hospital_Thin.tmf
+T;5008;0;0;1;0;Lighthouse.tmf
+T;5009;0;0;1;0;Rock.tmf
+T;5010;0;0;1;0;Skyscraper.tmf
+T;5011;0;0;1;0;Trig_Point.tmf
+T;5012;0;0;1;0;Wind_Pump.tmf
+T;5013;0;0;1;0;Wreck.tmf
+T;6001;0;0;1;0;Aeroplane_01.tmf
+T;6002;0;0;1;0;Aeroplane_02.tmf
+T;6003;0;0;1;0;Airport.tmf
+T;6004;0;0;1;0;Anchor.tmf
+T;6005;0;0;1;0;British_Rail.tmf
+T;6006;0;0;1;0;Caravan.tmf
+T;6007;0;0;1;0;Ship.tmf
+T;6008;0;0;1;0;Underground.tmf
+T;7001;0;0;1;0;Oil_Rig.tmf
+T;7002;0;0;1;0;Power_Station.tmf
+T;8001;0;0;1;0;Fire.tmf
+T;8002;0;0;1;0;Lightning.tmf
+T;8003;0;0;1;0;Moon_Full.tmf
+T;8004;0;0;1;0;Moon_New.tmf
+T;8005;0;0;1;0;Moon_Quarter_01.tmf
+T;8006;0;0;1;0;Moon_Quarter_02.tmf
+T;8007;0;0;1;0;Moon_Quarter_03.tmf
+T;8008;0;0;1;0;Skull.tmf
+T;8010;0;0;1;0;Snowflake.tmf
+T;8011;0;0;1;0;Tree.tmf
+T;9001;0;0;1;0;Golf_Flag_01.tmf
+T;9002;0;0;1;0;Golf_Flag_02.tmf
+T;9003;0;0;1;0;Picnic.tmf
+T;9004;0;0;1;0;Youth_Hostel.tmf
+T;10001;10;0;1;0;Disabled.tmf
+T;10002;10;0;1;0;Man.tmf
+T;10003;10;0;1;0;Man_and_Woman.tmf
+T;10004;10;0;1;0;Woman.tmf
+T;11001;10;0;1;0;Key.tmf
+T;11002;10;0;1;0;Quote_01.tmf
+T;11003;10;0;1;0;Quotes_01.tmf
+T;11004;10;0;1;0;Quotes_02.tmf
+T;11005;10;0;1;0;Compass_Rose.tmf
+T;11006;10;0;1;0;North_Arrow.tmf
+T;11007;10;0;1;0;North_Arrow_45.tmf
+T;12001;0;0;1;0;Benchmark.tmf
+T;12002;0;0;1;0;Boulder.tmf
+T;12003;0;0;1;0;Boulders.tmf
+T;12004;0;0;1;0;BouldersScattered.tmf
+T;12005;0;0;1;0;BoundaryMereing.tmf
+T;12006;0;0;1;0;BoundaryPost.tmf
+T;12007;0;0;1;0;BuildingSeed.tmf
+T;12008;0;0;1;0;Cliff.tmf
+T;12009;0;0;1;0;ConiferousTree.tmf
+T;12010;0;0;1;0;ConiferousTrees.tmf
+T;12011;0;0;1;0;ConiferousTreesScattered.tmf
+T;12012;0;0;1;0;Coppice.tmf
+T;12013;0;0;1;1;FlowArrow.tmf
+T;12014;0;0;1;0;GlasshouseSeed.tmf
+T;12015;0;0;1;0;Heath.tmf
+T;12016;0;0;1;0;Marsh.tmf
+T;12017;0;0;1;0;NonConiferousTree.tmf
+T;12018;0;0;1;0;NonConiferousTrees.tmf
+T;12019;0;0;1;0;NonConiferousTreesScattered.tmf
+T;12020;0;0;1;0;Orchard.tmf
+T;12021;0;0;1;0;PointFeature.tmf
+T;12022;0;0;1;1;Pylon.tmf
+T;12023;0;0;1;0;Rocks.tmf
+T;12024;0;0;1;0;RockScattered.tmf
+T;12025;0;0;1;0;RoughGrassland.tmf
+T;12026;0;0;1;0;Scree.tmf
+T;12027;0;0;1;0;Scrub.tmf
+T;12028;0;0;1;0;Slope.tmf
+T;12029;0;0;1;0;SpotHeight.tmf
+T;12030;0;0;1;0;TriangulationPoint.tmf
+T;12031;0;0;1;0;ULC.tmf
+T;12032;0;0;1;0;Water.tmf
+R;13001;16;16;Bank.ico
+R;13002;16;16;Bridge.ico
+R;13003;16;16;Bus_Station.ico
+R;13004;16;16;Car_Park.ico
+R;13005;16;16;Company.ico
+R;13006;16;16;Department_Store.ico
+R;13007;16;16;Farm.ico
+R;13008;16;16;Golf_Course.ico
+R;13009;16;16;Government_Office.ico
+R;13010;16;16;Graveyard.ico
+R;13011;16;16;harbour.ico
+R;13012;16;16;Highrise.ico
+R;13013;16;16;Hill.ico
+R;13014;16;16;Hospital.ico
+R;13015;16;16;Hotel.ico
+R;13016;16;16;Housing.ico
+R;13017;16;16;Industrial_Area.ico
+R;13018;16;16;Kindergarten.ico
+R;13019;16;16;Lake.ico
+R;13020;16;16;Memorial.ico
+R;13021;16;16;Museum.ico
+R;13022;16;16;Primary_School.ico
+R;13023;16;16;Secondary_School.ico
+R;13024;16;16;Temple.ico
+R;13025;16;16;Toll.ico
+R;13026;16;16;Tunnel.ico
+R;13027;16;16;University.ico
+V;99000;0;0;0;1; Appears as SQUARE
+  5;-3 -3; -3 3; 3 3; 3 -3; -3 -3;
+V;99001;0;0;0;2; Appears as +
+  2;-3 0;3 0;
+  2;0 -3;0 3;
+V;99002;0;0;0;4; Appears as *
+  2;-3 -3;3 3;
+  2;3 -3;-3 3;
+  2;-3 0;3 0;
+  2;0 -3;0 3;
+V;99003;0;0;0;1; Appears as o
+  9;-1 3;1 3;3 1;3 -1;1 -3;-1 -3;-3 -1;-3 1;-1 3;
+V;99004;0;0;0;2; Appears as X
+  2;-3 -3;3 3;
+  2;3 -3;-3 3;
+V;99005;0;0;0;2; Appears as small x
+  2;-1 -1;1 1;
+  2;1 -1;-1 1;
+V;99006;0;0;0;1; Appears as .
+  2;0 0;0 1;

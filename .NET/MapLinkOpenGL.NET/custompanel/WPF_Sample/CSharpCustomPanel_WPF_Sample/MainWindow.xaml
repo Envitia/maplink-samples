@@ -1,0 +1,138 @@
+﻿<Window x:Class="CSharpCustomPanel_WPF_Sample.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CSharpCustomPanel_WPF_Sample"
+        mc:Ignorable="d"
+        xmlns:mmv="clr-namespace:DrawingSurfacePanel;assembly=MapViewerPanel"
+        Title="CSharpCustomPanel_WPF_Sample" Height="350" Width="525" Icon="ProgramIcon.ico">
+    <DockPanel>
+        <Menu DockPanel.Dock="Top">
+            <MenuItem Header="File">
+                <MenuItem Header="Open"  Click="FileOpen_Click"/>
+                <Separator />
+                <MenuItem Header="Print" Click="PrintMap_Click"/>
+                <Separator />
+                <MenuItem Header="Exit"  Click="ExitApp_Click"/>
+            </MenuItem>
+            <MenuItem Header="Edit">
+                <MenuItem Header="Copy"  Click="EditCopy_Click"/>
+            </MenuItem>
+            <MenuItem Header="Tools">
+                <MenuItem Header="Zoom In" Click="ZoomIn_Click"/>
+                <MenuItem Header="Zoom Out" Click="ZoomOut_Click"/>
+                <MenuItem Header="Reset" Click="ResetZoom_Click"/>
+                <Separator />
+                <MenuItem Header="Interaction Tools" ItemContainerStyle="{StaticResource ItemcontainerStyle}">
+                    <MenuItem Name="zoomToolBarCheck" Header="Zoom Tool" IsCheckable="True" IsChecked="True" Click="ZoomTool_Click"/>
+                    <MenuItem Name="panToolBarCheck" Header="Pan Tool" IsCheckable="True" Click="PanTool_Click"/>
+                    <MenuItem Name="grabToolBarCheck" Header="Grab Tool" IsCheckable="True" Click="GrabTool_Click"/>
+                    <MenuItem Name="zoompanToolBarCheck" Header="ZoomPan Tool" IsCheckable="True" Click="ZoomPanTool_Click"/>
+                </MenuItem>
+                <Separator />
+                <MenuItem Header="Saved Views">
+                    <MenuItem Header="Goto 1" Click="GotoView1_Click"/>
+                    <MenuItem Header="Goto 2" Click="GotoView2_Click"/>
+                    <MenuItem Header="Goto 3" Click="GotoView3_Click"/>
+                    <Separator />
+                    <MenuItem Header="Set 1" Click="SetView1_Click"/>
+                    <MenuItem Header="Set 2" Click="SetView2_Click"/>
+                    <MenuItem Header="Set 3" Click="SetView3_Click"/>
+                    <Separator />
+                    <MenuItem Header="Reset" Click="ResetViews_Click"/>
+                </MenuItem>
+                <MenuItem Header="View Stack">
+                    <MenuItem Header="Previous View" Click="PreviousView_Click"/>
+                    <MenuItem Header="Next View" Click="NextView_Click"/>
+                </MenuItem>
+            </MenuItem>
+            <MenuItem Header="Help">
+                <MenuItem Header="About"  Click="About_Click"/>
+            </MenuItem>
+        </Menu>
+        <ToolBarTray DockPanel.Dock="Top">
+            <ToolBar>
+                <Button ToolTip="{StaticResource fileOpen_ToolTip}" Click="FileOpen_Click">
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="fileOpen.png"/>
+                    </StackPanel>
+                </Button>
+                <Button ToolTip="{StaticResource printMap_ToolTip}" Click="PrintMap_Click">
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="printmap.png"/>
+                    </StackPanel>
+                </Button>
+                <Separator />
+                <Button ToolTip="{StaticResource zoomIn_ToolTip}" Click="ZoomIn_Click">
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="zoomin.png"/>
+                    </StackPanel>
+                </Button>
+                <Button ToolTip="{StaticResource zoomOut_ToolTip}" Click="ZoomOut_Click">
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="zoomout.png"/>
+                    </StackPanel>
+                </Button>
+                <Button ToolTip="{StaticResource resetZoom_ToolTip}" Click="ResetZoom_Click">
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="resetzoom.png"/>
+                    </StackPanel>
+                </Button>
+                <Separator />
+                <Button ToolTip="{StaticResource zoomTool_ToolTip}" Click="ZoomTool_Click">
+                  <Border Name="zoomtoolBorder" BorderThickness="3" BorderBrush="Transparent">
+                    <Image Source="zoomtool.png"/>
+                  </Border>
+                </Button>
+                <Button ToolTip="{StaticResource panTool_ToolTip}" Click="PanTool_Click">
+                  <Border Name="pantoolBorder" BorderThickness="3" BorderBrush="Transparent">
+                    <Image Source="pantool.png"/>
+                  </Border>
+                </Button>
+                <Button ToolTip="{StaticResource grabTool_ToolTip}" Click="GrabTool_Click">
+                  <Border Name="grabtoolBorder" BorderThickness="3" BorderBrush="Transparent">
+                    <Image Source="grabtool.png"/>
+                  </Border>
+                </Button>
+                <Button ToolTip="{StaticResource zoomPanTool_ToolTip}" Click="ZoomPanTool_Click">
+                  <Border Name="zoompantoolBorder" BorderThickness="3" BorderBrush="Transparent">
+                    <Image Source="zoompantool.png"/>
+                  </Border>
+                </Button>
+                <Separator />
+                <Button ToolTip="{StaticResource previousView_ToolTip}" Click="PreviousView_Click">
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="previousview.png"/>
+                    </StackPanel>
+                </Button>
+                <Button ToolTip="{StaticResource nextView_ToolTip}" Click="NextView_Click">
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="nextview.png"/>
+                    </StackPanel>
+                </Button>
+                <Separator />
+                <Button ToolTip="{StaticResource gotoView1_ToolTip}" Click="GotoView1_Click">
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="gotoview1.png"/>
+                    </StackPanel>
+                </Button>
+                <Button ToolTip="{StaticResource gotoView2_ToolTip}" Click="GotoView2_Click">
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="gotoview2.png"/>
+                    </StackPanel>
+                </Button>
+                <Button ToolTip="{StaticResource gotoView3_ToolTip}" Click="GotoView3_Click">
+                    <StackPanel Orientation="Horizontal">
+            <Image Source="gotoview3.png"/>
+          </StackPanel>
+                </Button>
+            </ToolBar>
+        </ToolBarTray>
+        <WindowsFormsHost Name="wfhSample3" Margin="10" >
+            <WindowsFormsHost.Child>
+                <mmv:MapViewerPanel />
+            </WindowsFormsHost.Child>
+        </WindowsFormsHost>
+    </DockPanel>
+</Window>

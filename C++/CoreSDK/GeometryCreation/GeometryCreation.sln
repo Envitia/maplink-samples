@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34714.143
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GeometryCreation", "GeometryCreation.vcxproj", "{1E60E2BD-9F11-496D-B44C-F1CB810DB486}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1E60E2BD-9F11-496D-B44C-F1CB810DB486}.Debug|x64.ActiveCfg = Debug|x64
+		{1E60E2BD-9F11-496D-B44C-F1CB810DB486}.Debug|x64.Build.0 = Debug|x64
+		{1E60E2BD-9F11-496D-B44C-F1CB810DB486}.Release|x64.ActiveCfg = Release|x64
+		{1E60E2BD-9F11-496D-B44C-F1CB810DB486}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B7AB0C34-035E-4797-88CE-8C72D6BF97FF}
+	EndGlobalSection
+EndGlobal

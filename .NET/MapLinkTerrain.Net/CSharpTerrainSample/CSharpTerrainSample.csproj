@@ -1,0 +1,182 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6AFA87D0-D099-4DF5-9124-32091540867D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CSharpTerrainSample</RootNamespace>
+    <AssemblyName>CSharpTerrainSample</AssemblyName>
+    <StartupObject>CSharpTerrainSample.Program</StartupObject>
+    <ApplicationIcon>MapViewer.ico</ApplicationIcon>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <PlatformTarget>x64</PlatformTarget>
+    <Optimize>true</Optimize>
+    <DebugType>
+    </DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <Choose>
+    <When Condition=" '$(Platform)' == 'x86' ">
+      <ItemGroup>
+        <Reference Include="Envitia.MapLink.NativeHelpers">
+          <SpecificVersion>False</SpecificVersion>
+          <HintPath>..\..\..\Bin64\Envitia.MapLink.NativeHelpers.dll</HintPath>
+          <Private>True</Private>
+        </Reference>
+        <Reference Include="Envitia.MapLink">
+          <SpecificVersion>False</SpecificVersion>
+          <HintPath>..\..\..\Bin\Envitia.MapLink.dll</HintPath>
+          <Private>True</Private>
+        </Reference>
+        <Reference Include="Envitia.MapLink.InteractionModes">
+          <SpecificVersion>False</SpecificVersion>
+          <HintPath>..\..\..\Bin\Envitia.MapLink.InteractionModes.dll</HintPath>
+          <Private>True</Private>
+        </Reference>
+        <Reference Include="Envitia.MapLink.Terrain">
+          <SpecificVersion>False</SpecificVersion>
+          <HintPath>..\..\..\Bin\Envitia.MapLink.Terrain.dll</HintPath>
+          <Private>True</Private>
+        </Reference>
+      </ItemGroup>
+    </When>
+    <When Condition=" '$(Platform)' == 'x64' ">
+      <ItemGroup>
+        <Reference Include="Envitia.MapLink.NativeHelpers">
+          <SpecificVersion>False</SpecificVersion>
+          <HintPath>..\..\..\Bin64\Envitia.MapLink.NativeHelpers.dll</HintPath>
+          <Private>True</Private>
+        </Reference>
+        <Reference Include="Envitia.MapLink64">
+          <SpecificVersion>False</SpecificVersion>
+          <HintPath>..\..\..\Bin64\Envitia.MapLink64.dll</HintPath>
+          <Private>True</Private>
+        </Reference>
+        <Reference Include="Envitia.MapLink.InteractionModes64">
+          <SpecificVersion>False</SpecificVersion>
+          <HintPath>..\..\..\Bin64\Envitia.MapLink.InteractionModes64.dll</HintPath>
+          <Private>True</Private>
+        </Reference>
+        <Reference Include="Envitia.MapLink.Terrain64">
+          <SpecificVersion>False</SpecificVersion>
+          <HintPath>..\..\..\Bin64\Envitia.MapLink.Terrain64.dll</HintPath>
+          <Private>True</Private>
+        </Reference>
+      </ItemGroup>
+    </When>
+  </Choose>
+  <ItemGroup>
+    <Compile Include="AboutBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CrossSectionPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TerrainOptions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TerrainOptions.Designer.cs">
+      <DependentUpon>TerrainOptions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MapPanel.cs">
+    </Compile>
+    <Compile Include="MRUSection.cs" />
+    <Compile Include="TerrainCrossSectionInteractionMode.cs" />
+    <Compile Include="TerrainCustomClientDataLayer.cs" />
+    <Compile Include="TerrainInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TerrainInfo.Designer.cs">
+      <DependentUpon>TerrainInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TerrainLosInteractionMode.cs" />
+    <Compile Include="TerrainOptionsSection.cs" />
+    <Compile Include="TerrainViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TerrainViewer.Designer.cs">
+      <DependentUpon>TerrainViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AboutBox.resx">
+      <DependentUpon>AboutBox.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrossSectionPanel.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>CrossSectionPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MapPanel.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MapPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TerrainInfo.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>TerrainInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TerrainOptions.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>TerrainOptions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TerrainViewer.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>TerrainViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="TerrainViewShedInteractionMode.cs" />
+    <Compile Include="ZoomPanInteractionMode.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="MapViewer.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

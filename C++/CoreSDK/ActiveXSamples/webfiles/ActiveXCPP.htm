@@ -1,0 +1,217 @@
+<HTML>
+<HEAD>
+<TITLE>Test page for ActiveXCPP Sample</TITLE>
+</HEAD>
+<STYLE>
+.clsToolbar
+{
+  position : relative;
+  width : 32;
+  height : 32;
+}
+.entry
+{
+  text-align: right;
+}
+</STYLE>
+<BODY BGCOLOR=#ffffff onload="onLoad()" onresize="onResizeBody()" scroll="no">
+<P>
+<DIV ID="controls">
+<table>
+<tr>
+<td rowspan=2>
+  <IMG CLASS="clsToolbar" alt="Click-Pan mode" ID="imgPan" SRC="pancold.gif" onClick="onClickMode('pan')" onmouseover="onMouseOver(this, 'pan')" onmouseout="onMouseOut(this, 'pan')">
+  <IMG CLASS="clsToolbar" alt="Grab-Pan mode" ID="imgGrab" SRC="grabcold.gif" onClick="onClickMode('grab')" onmouseover="onMouseOver(this, 'grab')" onmouseout="onMouseOut(this, 'grab')">
+  <IMG CLASS="clsToolbar" alt="Zoom Mode" ID="imgZoom" SRC="zoomcold.gif" onClick="onClickMode('zoom')" onmouseover="onMouseOver(this, 'zoom')" onmouseout="onMouseOut(this, 'zoom')">
+  <IMG src="separator.gif" WIDTH="8" HEIGHT="32">
+  <IMG CLASS="clsToolbar" alt="Click to zoom In" ID="imgZoomIn" SRC="zoomincold.gif" onClick="onClickZoomIn()" onDblClick="onClickZoomIn()" onmouseover="onMouseOver(this, 'zoomin')" onmouseout="onMouseOut(this, 'zoomin')">
+  <IMG CLASS="clsToolbar" alt="Click to zoom out" ID="imgZoomOut" SRC="zoomoutcold.gif" onClick="onClickZoomOut()" onDblClick="onClickZoomOut()" onmouseover="onMouseOver(this, 'zoomout')" onmouseout="onMouseOut(this, 'zoomout')">
+  <IMG CLASS="clsToolbar" alt="Click to return to whole map view" ID="imgReset" SRC="resetcold.gif" onClick="onClickReset()" onmouseover="onMouseOver(this, 'reset')" onmouseout="onMouseOut(this, 'reset')">
+  <IMG CLASS="clsToolbar" alt="Click to modify feature colours and visibilities" ID="imgFeatures" SRC="featurescold.gif" onClick="onClickFeatures()" onmouseover="onMouseOver(this, 'features')" onmouseout="onMouseOut(this, 'features')">
+  <IMG src="separator.gif" WIDTH="8" HEIGHT="32">
+  <IMG CLASS="clsToolbar" alt="Click to print this view" ID="print" SRC="printcold.gif" onClick="onClickPrint()" onmouseover="onMouseOver(this, 'print')" onmouseout="onMouseOut(this, 'print')">
+</td>
+<td rowspan=2>
+&nbsp;&nbsp&nbsp;
+</td>
+<td align=right>
+Zoom In/Out Steps
+</td>
+<td>
+	<SELECT ID="zoomPercentage" size="1" onChange="onChangeZoomPercentage()">
+          <OPTION value= "10"> 10%
+          <OPTION value= "30" SELECTED> 30%
+          <OPTION value= "50"> 50%
+          <OPTION value="100">100%
+        </SELECT>
+</td>
+</tr>
+<tr>
+<td align=right>
+Zoom To Location
+</td>
+<td>
+    	<INPUT TYPE="text" class="entry" ID="x" size="8" VALUE="384000">
+	<INPUT TYPE="text" class="entry" ID="y" size="8" VALUE="86500">
+</td>
+<td>
+Scale
+</td>
+<td>
+        <INPUT TYPE="text" class="entry" ID="scale" size="5" VALUE="500">m
+	<INPUT TYPE="button" ID="setView" VALUE="Set View" onClick="onClickSetView()">
+</td>
+</tr>
+</table>
+</DIV>
+</P>
+<P>
+<!-- the map viewer -->
+<OBJECT width="100%" height="100%" ID="ActiveXCPP" CLASSID="CLSID:2839D344-1310-11D5-BD3A-00C04FA1120D" 
+  TYPE="application/x-oleobject" CODEBASE="ActiveXCPP.dll">
+
+<!-- directory for colours etc. -->
+<PARAM NAME="serverConfigPath" VALUE="<TARGETDIR>\samples\NT\ActiveXSamples\webfiles\config\">
+
+<!-- directory where map data found -->
+<PARAM NAME="serverMapPath" VALUE="<TARGETDIR>\samples\MapForSamples\EnterpriseCompressedMap\">
+
+<!-- name of map to load -->
+<PARAM NAME="mapName" VALUE="Dorset.mpc">
+
+<!-- initial zoom percentage -->
+<PARAM NAME="zoomPercentage" VALUE="30">
+
+<!-- memory to allow for cacheing, KB -->
+<PARAM NAME="memoryCacheSize" VALUE="20000">
+
+<!-- where to cache on to hard disk -->
+<PARAM NAME="persistentCacheDirectory" VALUE="c:\MapLinkWebCache">
+
+<!-- maximum data to cache to disk, MB -->
+<PARAM NAME="persistentCacheMaxSize" VALUE="15">
+
+</OBJECT>
+</P>
+
+</BODY>
+
+<SCRIPT LANGUAGE="javascript">
+
+function onMouseOver(source, name)
+{
+  window.status = source.alt;
+
+  ++source.style.pixelLeft;
+  ++source.style.pixelTop;
+
+  // zoom, pan and grab are modal and are only highlighted once activated
+  if ( (source != imgPan) && (source != imgGrab) && (source != imgZoom ) )
+    source.src = name + "hot.gif";
+}
+
+function onMouseOut(source, name)
+{
+  window.status = '';
+
+  --source.style.pixelLeft;
+  --source.style.pixelTop;
+
+  if ( (source != imgPan) && (source != imgGrab) && (source != imgZoom ) )
+    source.src = name + "cold.gif";
+}
+
+function onClickMode(mode)
+{
+  imgPan.src = "pan" + (mode == "pan" ? "hot.gif" : "cold.gif" );
+  imgZoom.src= "zoom" + (mode == "zoom" ? "hot.gif" : "cold.gif" );
+  imgGrab.src = "grab" + (mode == "grab" ? "hot.gif" : "cold.gif" );
+
+  ActiveXCPP.interactionMode = mode;
+}
+
+function onResizeBody()
+{
+  if (typeof(ActiveXCPP) == "undefined")
+    return;
+
+  var newHeight = document.body.offsetHeight - ActiveXCPP.offsetTop - document.body.bottomMargin ;
+
+  if( newHeight < 10 )
+    newHeight = 10;
+
+  ActiveXCPP.height = newHeight;
+
+  var newWidth =  (document.body.offsetWidth - document.body.leftMargin) - document.body.rightMargin ;
+
+  if( newWidth < 10 )
+    newWidth = 10;
+
+  ActiveXCPP.width = newWidth;
+}
+
+function onLoad()
+{
+  if (typeof(ActiveXCPP) == "undefined")
+  {
+    window.alert("Error loading the mapping control.  Could not load control or one of its dependent DLLs.");
+    return;
+  }
+
+
+  onResizeBody();
+}
+
+function onClickZoomMode()
+{
+  ActiveXCPP.interactionMode = "zoom";
+}
+
+function onClickGrabMode()
+{
+  ActiveXCPP.interactionMode = "grab";
+}
+
+function onClickPanMode()
+{
+  ActiveXCPP.interactionMode = "pan";
+}
+
+function onClickZoomIn()
+{
+  ActiveXCPP.zoomIn();
+}
+
+function onClickZoomOut()
+{
+  ActiveXCPP.zoomOut();
+}
+
+function onClickReset()
+{
+  ActiveXCPP.resetView();
+}
+
+function onClickFeatures()
+{
+  var featureDialog = new ActiveXObject("FeatureRndDlgUsingAPI.FeatureRndDlgUsingAPICtrl.1");
+  var result = featureDialog.ShowDialog(ActiveXCPP.drawingSurfacePtr, ActiveXCPP.mapLayerName,0);
+}
+
+function onClickPrint()
+{
+  ActiveXCPP.print(); 
+}
+
+function onChangeZoomPercentage()
+{
+  ActiveXCPP.zoomPercentage = zoomPercentage.value;
+}
+
+function onClickSetView()
+{
+  ActiveXCPP.setView( x.value, y.value, scale.value);
+}
+
+</SCRIPT>
+</HTML>

@@ -1,0 +1,54 @@
+﻿<Window x:Class="MovingFeaturesWPFSample.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:ctrl="clr-namespace:Envitia.MapLink.TSLNSkiaDrawingSurfaceControl;assembly=Envitia.MapLink.TSLNSkiaDrawingSurfaceWPFControl"
+        xmlns:local="clr-namespace:MovingFeaturesWPFSample"
+        Title="WPF Control Sample" Height="600" Width="900">
+
+  <Grid>
+    <Grid.RowDefinitions>
+      <RowDefinition Height="*"/>
+      <RowDefinition Height="Auto"/>
+    </Grid.RowDefinitions>
+
+    <!-- Drawing Surface with button overlay -->
+    <Grid Grid.Row="0">
+      <ctrl:TSLNSkiaDrawingSurfaceWPFControl x:Name="MapControl" 
+                                          MinWidth="100"
+                                          MinHeight="100"
+                                          BaseMap ="{local:MaplPathExtension '..\\Maps\\NaturalEarthBasic\\NaturalEarthBasic.map'}" 
+                                          />
+
+      <!-- Countdown Timer Overlay -->
+      <TextBlock x:Name="CountdownText"
+                 Text="3"
+                 FontSize="120"
+                 FontWeight="Bold"
+                 Foreground="Red"
+                 HorizontalAlignment="Center"
+                 VerticalAlignment="Center"
+                 Visibility="Collapsed"
+                 Opacity="0.8"/>
+
+            <StackPanel x:Name="Legend"
+                 Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Bottom" >
+                <TextBlock Text="Legend: " FontWeight="Bold" Margin="3"/>
+                <TextBlock x:Name="TrackLegend" Text="Track" FontWeight="Bold" Margin="3" Foreground="DodgerBlue"/>
+                <TextBlock Text="|" Margin="3"/>
+                <TextBlock x:Name="DDOLegend" Text="DDO" FontWeight="Bold" Margin="3" Foreground="OrangeRed"/>
+             </StackPanel>
+    </Grid>
+
+    <!-- Control Panel -->
+    <Border Grid.Row="1" Background="#F0F0F0" BorderBrush="#CCCCCC" BorderThickness="0,1,0,0" Padding="10">
+      <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+        <Button Content="Zoom In" MinWidth="120" Margin="5" 
+                        ToolTip="Zoom in on the map" Click="ZoomIn_Click"/>
+        <Button Content="Zoom Out" MinWidth="120" Margin="5"
+                        ToolTip="Zoom out on the map" Click="ZoomOut_Click"/>
+        <Button Content="Reset" MinWidth="120" Margin="5"
+                        ToolTip="Reset the map view" Click="Reset_Click"/>
+      </StackPanel>
+    </Border>
+  </Grid>
+</Window>

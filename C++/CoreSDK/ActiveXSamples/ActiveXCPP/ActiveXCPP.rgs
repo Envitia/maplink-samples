@@ -1,0 +1,34 @@
+HKCR
+{
+	ActiveXCPP.ActiveXCPP.1 = s 'ActiveXCPP Class'
+	{
+		CLSID = s '{2839D344-1310-11D5-BD3A-00C04FA1120D}'
+	}
+	ActiveXCPP.ActiveXCPP = s 'ActiveXCPP Class'
+	{
+		CLSID = s '{2839D344-1310-11D5-BD3A-00C04FA1120D}'
+		CurVer = s 'ActiveXCPP.ActiveXCPP.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {2839D344-1310-11D5-BD3A-00C04FA1120D} = s 'ActiveXCPP Class'
+		{
+			ProgID = s 'ActiveXCPP.ActiveXCPP.1'
+			VersionIndependentProgID = s 'ActiveXCPP.ActiveXCPP'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			ForceRemove 'Control'
+			ForceRemove 'Insertable'
+			ForceRemove 'ToolboxBitmap32' = s '%MODULE%, 101'
+			'MiscStatus' = s '0'
+			{
+			    '1' = s '131473'
+			}
+			'TypeLib' = s '{18CA2572-13A7-11D5-BD3A-00C04FA1120D}'
+			'Version' = s '1.0'
+		}
+	}
+}

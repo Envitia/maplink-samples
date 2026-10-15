@@ -1,0 +1,1072 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (United States) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\S63WorkFlow.ico"
+IDR_S63WorkFlowTYPE     ICON                    "res\\S63WorkFlowDoc.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDR_MAINFRAME           BITMAP                  "res\\Toolbar.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDR_MAINFRAME TOOLBAR 24, 24
+BEGIN
+    BUTTON      ID_MEDIAINGEST_INGESTS57DATA
+    BUTTON      ID_FILE_OPEN_S57
+    BUTTON      ID_FILE_PRINT
+    SEPARATOR
+    BUTTON      ID_EDIT_COPY
+    SEPARATOR
+    BUTTON      ID_TOOLS_ZOOMIN
+    BUTTON      ID_TOOLS_ZOOMOUT
+    BUTTON      ID_TOOLS_RESET
+    BUTTON      ID_TOOLS_ZOOM_TO_DATA
+    SEPARATOR
+    BUTTON      ID_TOOLS_ZOOM
+    BUTTON      ID_TOOLS_PAN
+    BUTTON      ID_TOOLS_MAGNIFY
+    BUTTON      ID_TOOLS_GRAB
+    SEPARATOR
+    BUTTON      ID_VIEWSTACK_PREVIOUSVIEW
+    BUTTON      ID_VIEWSTACK_NEXTVIEW
+    SEPARATOR
+    BUTTON      ID_SAVEDVIEWS_GOTO1
+    BUTTON      ID_SAVEDVIEWS_GOTO2
+    BUTTON      ID_SAVEDVIEWS_GOTO3
+    SEPARATOR
+    BUTTON      ID_BOX_BUTTON
+    SEPARATOR
+    BUTTON      ID_BOX_BUTTON_SD
+    BUTTON      ID_BUTTON32863
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "Import S57 Data to Store...", ID_MEDIAINGEST_INGESTS57DATA
+        MENUITEM "Open S57 Store...",           ID_FILE_OPEN_S57
+        MENUITEM "Open S63 Store...",           ID_FILE_OPEN_S63
+        MENUITEM "&Open Base Map...\tCtrl+O",   ID_FILE_OPEN
+        MENUITEM "Remove S57 Stores",           32872
+        MENUITEM SEPARATOR
+        MENUITEM "&Print...\tCtrl+P",           ID_FILE_PRINT
+        MENUITEM "Print Pre&view",              ID_FILE_PRINT_PREVIEW
+        MENUITEM "P&rint Setup...",             ID_FILE_PRINT_SETUP
+        MENUITEM SEPARATOR
+        MENUITEM "Recent File",                 ID_FILE_MRU_FILE1
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       ID_APP_EXIT
+    END
+    POPUP "&Edit"
+    BEGIN
+        MENUITEM "&Copy\tCtrl+C",               ID_EDIT_COPY
+    END
+    POPUP "&View"
+    BEGIN
+        MENUITEM "Zoom &In",                    ID_TOOLS_ZOOMIN
+        MENUITEM "Zoom &Out",                   ID_TOOLS_ZOOMOUT
+        MENUITEM "&Reset",                      ID_TOOLS_RESET
+        MENUITEM SEPARATOR
+        MENUITEM "&Zoom",                       ID_TOOLS_ZOOM
+        MENUITEM "&Pan",                        ID_TOOLS_PAN
+        MENUITEM "&Grab",                       ID_TOOLS_GRAB
+        MENUITEM "&Magnify",                    ID_TOOLS_MAGNIFY, GRAYED
+        MENUITEM SEPARATOR
+        POPUP "Saved Views"
+        BEGIN
+            MENUITEM "Goto 1",                      ID_SAVEDVIEWS_GOTO1
+            MENUITEM "Goto 2",                      ID_SAVEDVIEWS_GOTO2
+            MENUITEM "Goto 3",                      ID_SAVEDVIEWS_GOTO3
+            MENUITEM SEPARATOR
+            MENUITEM "Set 1",                       ID_SAVEDVIEWS_SET1
+            MENUITEM "Set 2",                       ID_SAVEDVIEWS_SET2
+            MENUITEM "Set 3",                       ID_SAVEDVIEWS_SET3
+            MENUITEM SEPARATOR
+            MENUITEM "Reset",                       ID_SAVEDVIEWS_RESET
+        END
+        POPUP "View Stack"
+        BEGIN
+            MENUITEM "Previous View",               ID_VIEWSTACK_PREVIOUSVIEW
+            MENUITEM "Next View",                   ID_VIEWSTACK_NEXTVIEW
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "Default Scale Band Display",  ID_VIEW_DEFAULTSCALEBANDDISPLAY
+        MENUITEM "Ignore Scale Bands",          ID_VIEW_SCALEBANDOVER, GRAYED
+        MENUITEM "Overview Scale Band",         ID_VIEW_OVERVIEWSCALEBAND
+        MENUITEM "General Scale Band",          ID_VIEW_GENERALSCALEBAND
+        MENUITEM "Coastal Scale Band",          ID_VIEW_COASTALSCALEBAND
+        MENUITEM "Approach Scale Band",         ID_VIEW_APPROACHSCALEBAND
+        MENUITEM "Harbour Scale Band",          ID_VIEW_HARBOURSCALEBAND
+        MENUITEM "Berthing Scale Band",         ID_VIEW_BERTHINGSCALEBAND
+        MENUITEM SEPARATOR
+        MENUITEM "Show Lat/Long Grid",          ID_VIEW_SHOWLAT
+        MENUITEM "Show MGRS Grid",              ID_VIEW_SHOWMGRSGRID
+        MENUITEM SEPARATOR
+        MENUITEM "&Toolbar",                    ID_VIEW_TOOLBAR
+        MENUITEM "&Status Bar",                 ID_VIEW_STATUS_BAR
+    END
+    POPUP "Setup"
+    BEGIN
+        MENUITEM "S52 Rendering...",            ID_STATECONFIGURATION
+        MENUITEM "Configure Scale Bands...",    ID_CONFIGURE_SCALE_BANDS
+    END
+    POPUP "S63 Workflow Setup"
+    BEGIN
+        MENUITEM "S63 Configuration...",        ID_CONFIGURATION
+    END
+    POPUP "S63 Permit Generation (OEM)"
+    BEGIN
+        MENUITEM "User Permit Generation (OEM Only)...", ID_USERPERMITGENERATION
+    END
+    POPUP "S63 Certificates"
+    BEGIN
+        MENUITEM "Install SA Certificate (OEM Only)...", ID_WORKFLOW_INSTALLSACERTIFICATE
+        MENUITEM "Install Data Server Certificate...", ID_WORKFLOW_INSTALLDATASERVERCERTIFICATE
+        MENUITEM SEPARATOR
+        MENUITEM "Remove SA Certificate (OEM Only)...", ID_WORKFLOW_REMOVESACERTIFICATE
+        MENUITEM "Remove Data Server Certificate...", ID_WORKFLOW_REMOVEDATASERVERCERTIFICATE
+    END
+    POPUP "S63 Media Ingest"
+    BEGIN
+        MENUITEM "Install User Permit...",      ID_INSTALLUSERPERMIT
+        MENUITEM "Install Cell Permit...",      ID_INSTALLCELLPERMIT
+        MENUITEM SEPARATOR
+        MENUITEM "Load/Update Media...",        ID_LOADMEDIA
+        MENUITEM "Large Media Ingest...",       ID_LARGEMEDIAINGEST
+        MENUITEM SEPARATOR
+    END
+    POPUP "S63 Test Cases"
+    BEGIN
+        POPUP "Run..."
+        BEGIN
+            MENUITEM "Edition 1.1",                 ID_S63TESTCASES_RUN_EDITION_1_1
+            MENUITEM "Edition 1.2",                 ID_S63TESTCASES_RUN_EDITION_1_2
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "Setup...",                    ID_S63TESTCASES_SETUP
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "Help",                        ID_LOAD_HELP
+        MENUITEM "&About MapLink Pro ENC Viewer...", ID_APP_ABOUT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAINFRAME ACCELERATORS
+BEGIN
+    "C",            ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
+    "N",            ID_FILE_NEW,            VIRTKEY, CONTROL, NOINVERT
+    "O",            ID_FILE_OPEN,           VIRTKEY, CONTROL, NOINVERT
+    "P",            ID_FILE_PRINT,          VIRTKEY, CONTROL, NOINVERT
+    "V",            ID_EDIT_PASTE,          VIRTKEY, CONTROL, NOINVERT
+    VK_ADD,         ID_TOOLS_ZOOMIN,        VIRTKEY, NOINVERT
+    VK_BACK,        ID_EDIT_UNDO,           VIRTKEY, ALT, NOINVERT
+    VK_DELETE,      ID_EDIT_CUT,            VIRTKEY, SHIFT, NOINVERT
+    VK_F6,          ID_NEXT_PANE,           VIRTKEY, NOINVERT
+    VK_F6,          ID_PREV_PANE,           VIRTKEY, SHIFT, NOINVERT
+    VK_INSERT,      ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
+    VK_INSERT,      ID_EDIT_PASTE,          VIRTKEY, SHIFT, NOINVERT
+    VK_SUBTRACT,    ID_TOOLS_ZOOMOUT,       VIRTKEY, NOINVERT
+    "X",            ID_EDIT_CUT,            VIRTKEY, CONTROL, NOINVERT
+    "Z",            ID_EDIT_UNDO,           VIRTKEY, CONTROL, NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 257, 90
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About : MapLink Pro ENC Viewer"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    LTEXT           "MapLink Pro ENC Viewer,  Version 2.0",IDC_APP,7,42,212,9,SS_NOPREFIX
+    CTEXT           "Portions developed using LEADTOOLS,\nCopyright © 1991-2025 LEAD Technologies, Inc. ALL RIGHTS RESERVED",IDC_THIRDPARTY,7,65,243,17
+    DEFPUSHBUTTON   "OK",IDOK,205,7,45,14,WS_GROUP
+    CONTROL         "",IDC_LOGO,"Static",SS_OWNERDRAW,8,9,136,25
+    LTEXT           "Copyright © 1998-2026 Envitia Group PLC. All rights reserved.",IDC_COPYRIGHT,7,51,215,8
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 11,3,3,0
+ PRODUCTVERSION 11,3,3,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "CompanyName", "Envitia Group PLC"
+            VALUE "FileDescription", "Envitia MapLink Pro ENC Viewer 11.3"
+            VALUE "FileVersion", "11.3.3.0"
+            VALUE "InternalName", "MapLink Pro ENC Viewer"
+            VALUE "LegalCopyright", "Copyright © 1998-2026 Envitia Group PLC. All rights reserved."
+            VALUE "OriginalFilename", "S63WorkFlowSample.EXE"
+            VALUE "ProductName", "MapLink Pro ENC Viewer (S64, S63, S57, S52)"
+            VALUE "ProductVersion", "11.3.3.0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 250
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 82
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDR_MAINFRAME           "MapLink Pro ENC Viewer\n\nENC Viewer\nMapLink Maps (*.map, *.mpc)\n.map;.mpc\nS63WorkFlow.Document\nS63WorkFlow Document"
+END
+
+STRINGTABLE
+BEGIN
+    AFX_IDS_APP_TITLE       "S63WorkFlow"
+    AFX_IDS_IDLEMESSAGE     "Ready"
+END
+
+STRINGTABLE
+BEGIN
+    ID_INDICATOR_EXT        "EXT"
+    ID_INDICATOR_CAPS       "CAP"
+    ID_INDICATOR_NUM        "NUM"
+    ID_INDICATOR_SCRL       "SCRL"
+    ID_INDICATOR_OVR        "OVR"
+    ID_INDICATOR_REC        "REC"
+END
+
+STRINGTABLE
+BEGIN
+    ID_FILE_OPEN            "Load a Background map"
+    ID_FILE_PAGE_SETUP      "Change the printing options\nPage Setup"
+    ID_FILE_PRINT_SETUP     "Change the printer and printing options\nPrint Setup"
+    ID_FILE_PRINT           "Print the active document\nPrint"
+    ID_FILE_PRINT_PREVIEW   "Display full pages\nPrint Preview"
+END
+
+STRINGTABLE
+BEGIN
+    ID_APP_ABOUT            "Display program information, version number and copyright\nAbout"
+    ID_APP_EXIT             "Quit the application; prompts to save documents\nExit"
+END
+
+STRINGTABLE
+BEGIN
+    ID_FILE_MRU_FILE1       "Open this document"
+    ID_FILE_MRU_FILE2       "Open this document"
+    ID_FILE_MRU_FILE3       "Open this document"
+    ID_FILE_MRU_FILE4       "Open this document"
+    ID_FILE_MRU_FILE5       "Open this document"
+    ID_FILE_MRU_FILE6       "Open this document"
+    ID_FILE_MRU_FILE7       "Open this document"
+    ID_FILE_MRU_FILE8       "Open this document"
+    ID_FILE_MRU_FILE9       "Open this document"
+    ID_FILE_MRU_FILE10      "Open this document"
+    ID_FILE_MRU_FILE11      "Open this document"
+    ID_FILE_MRU_FILE12      "Open this document"
+    ID_FILE_MRU_FILE13      "Open this document"
+    ID_FILE_MRU_FILE14      "Open this document"
+    ID_FILE_MRU_FILE15      "Open this document"
+    ID_FILE_MRU_FILE16      "Open this document"
+END
+
+STRINGTABLE
+BEGIN
+    ID_EDIT_COPY            "Copy the current view and put it on the Clipboard\nCopy"
+END
+
+STRINGTABLE
+BEGIN
+    ID_VIEW_TOOLBAR         "Show or hide the toolbar\nToggle ToolBar"
+    ID_VIEW_STATUS_BAR      "Show or hide the status bar\nToggle StatusBar"
+END
+
+STRINGTABLE
+BEGIN
+    AFX_IDS_SCSIZE          "Change the window size"
+    AFX_IDS_SCMOVE          "Change the window position"
+    AFX_IDS_SCMINIMIZE      "Reduce the window to an icon"
+    AFX_IDS_SCMAXIMIZE      "Enlarge the window to full size"
+    AFX_IDS_SCNEXTWINDOW    "Switch to the next document window"
+    AFX_IDS_SCPREVWINDOW    "Switch to the previous document window"
+    AFX_IDS_SCCLOSE         "Close the active window and prompts to save the documents"
+END
+
+STRINGTABLE
+BEGIN
+    AFX_IDS_SCRESTORE       "Restore the window to normal size"
+    AFX_IDS_SCTASKLIST      "Activate Task List"
+END
+
+STRINGTABLE
+BEGIN
+    AFX_IDS_PREVIEW_CLOSE   "Close print preview mode\nCancel Preview"
+END
+
+STRINGTABLE
+BEGIN
+    ID_TOOLS_ZOOMIN         "Zoom In\nZoom In"
+    ID_TOOLS_ZOOMOUT        "Zoom Out\nZoom Out"
+    ID_TOOLS_RESET          "View whole map\nReset"
+    ID_TOOLS_ZOOM           "Zoom\nZoom"
+    ID_TOOLS_PAN            "Pan to point\nPan"
+    ID_TOOLS_ZOOMPAN        "Combined Zoom/Pan to point\nZoom/Pan"
+END
+
+STRINGTABLE
+BEGIN
+    ID_TOOLS_GRAB           "Grab and drag the map\nGrab"
+    ID_TOOLS_MAGNIFY        "Magnify to Area around cursor\nMagnify"
+    ID_SAVEDVIEWS_GOTO1     "Goto Saved View 1\nView 1"
+    ID_SAVEDVIEWS_GOTO2     "Goto Saved View 2\nView 2"
+    ID_SAVEDVIEWS_GOTO3     "Goto Saved View 3\nView 3"
+    ID_TOOLS_ZOOM_TO_DATA   "Zoom to the extent of the current dataset\nZoom to loaded dataset"
+    ID_VIEWSTACK_PREVIOUSVIEW 
+                            "Goto Previous View in View Stack\nPrevious View"
+    ID_VIEWSTACK_NEXTVIEW   "Goto Next View in View Stack\nNext View"
+END
+
+STRINGTABLE
+BEGIN
+    ID_CURRENT_SCALE        "The current view scale"
+END
+
+STRINGTABLE
+BEGIN
+    ID_CONFIGURE_SCALE_BANDS 
+                            "Configure the points at which the data scales are displayed at"
+    ID_MEDIAINGEST_INGESTS57DATA 
+                            "Import an S57 Catalog.031/030 file or S57 cell file (.000)\nImport an S57 Catalog.031/030 file or S57 cell file (.000)"
+    ID_FILE_OPEN_S57        "Load an S57 Data Store (use 'Import S57 Data to Store...' to create a data store)\nLoad an S57 Data Store (use 'Import' to create)"
+    ID_STATECONFIGURATION   "Configure S52 rendering - Colours, Symbology, Contour values"
+END
+
+STRINGTABLE
+BEGIN
+    ID_CONFIGURATION        "S63 Workflow setup - This is required for importing S63 data."
+    ID_FILE_OPEN_S63        "Load a pre-configured S63 dataset (see help)\nLoad a pre-configured S63 dataset (see help)"
+END
+
+STRINGTABLE
+BEGIN
+    ID_S63TESTCASES_RUN     "Run the S63 tests mandated by the S-63 specification."
+    ID_S63TESTCASES_SETUP   "Setuo the tests before running."
+END
+
+STRINGTABLE
+BEGIN
+    ID_VIEW_DEFAULTSCALEBANDDISPLAY 
+                            "Display the loaded data within the set display range (see Setup->Configure Scale Bands...)\nDisplay the loaded data within the set display range (see Setup->Configure Scale Bands...)"
+    ID_VIEW_SCALEBANDOVER   "Ignore the Scale Band display range settings\nIgnore the Scale Band display range settings"
+    ID_VIEW_OVERVIEWSCALEBAND 
+                            "Only display data which is for displaying at the Overview scale  (see Setup->Configure Scale Bands...)\nOnly display data which is for displaying at the Overview scale  (see Setup->Configure Scale Bands...)"
+    ID_VIEW_GENERALSCALEBAND 
+                            "Only display data which is for displaying at the General scale  (see Setup->Configure Scale Bands...)\nOnly display data which is for displaying at the General scale  (see Setup->Configure Scale Bands...)"
+    ID_VIEW_COASTALSCALEBAND 
+                            "Only display data which is for displaying at the Coastal scale  (see Setup->Configure Scale Bands...)\nOnly display data which is for displaying at the Coastal scale  (see Setup->Configure Scale Bands...)"
+    ID_VIEW_APPROACHSCALEBAND 
+                            "Only display data which is for displaying at the Approach scale  (see Setup->Configure Scale Bands...)\nOnly display data which is for displaying at the Approach scale  (see Setup->Configure Scale Bands...)"
+    ID_VIEW_HARBOURSCALEBAND 
+                            "Only display data which is for displaying at the Harbour scale  (see Setup->Configure Scale Bands...)\nOnly display data which is for displaying at the Harbour scale  (see Setup->Configure Scale Bands...)"
+    ID_VIEW_BERTHINGSCALEBAND 
+                            "Only display data which is for displaying at the Bearthing scale  (see Setup->Configure Scale Bands...)\nOnly display data which is for displaying at the Bearthing scale  (see Setup->Configure Scale Bands...)"
+    IDC_REMOVE_S57_STORES   "Removes all S-57 data stores\nRemoves all S-57 data stores"
+END
+
+#endif    // English (United States) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (United Kingdom) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENG)
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_UK
+#pragma code_page(1252)
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_TOOLBAR_ENABLED     BITMAP                  "Res\\Toolbar_enabled.bmp"
+IDB_TOOLBAR_DISABLED    BITMAP                  "Res\\Toolbar_disabled.bmp"
+IDB_ABOUT_BOX_IMG       BITMAP                  "Res\\AboutBoxImage.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_TEST_SETUP DIALOGEX 0, 0, 309, 174
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION
+CAPTION "Test Setup"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_DATA_LOCATION,104,45,165,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",IDC_DATA_LOCATION_BROWSE,273,45,22,14
+    CONTROL         "",IDC_EXPIRY_DATE,"SysDateTimePick32",DTS_RIGHTALIGN | WS_TABSTOP,103,126,100,15
+    DEFPUSHBUTTON   "OK",IDOK,196,154,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,252,154,50,14
+    RTEXT           "S63 Test Data Directory:",IDC_STATIC,21,47,79,8
+    RTEXT           "Data client time value:",IDC_STATIC,23,129,72,8
+    GROUPBOX        "Test Data",IDC_STATIC,7,7,295,102
+    GROUPBOX        "Test Setup Options",IDC_STATIC,7,114,295,35
+    LTEXT           "Specify the location of the IHO Test Data root folder, the configuration file directory and a test output directory respectively.",IDC_STATIC,21,20,264,18
+    EDITTEXT        IDC_CONFIGURATION_DIR,104,65,165,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",IDC_CONFIGURATION_BROWSE,273,65,22,14
+    RTEXT           "Configuration Directory:",IDC_STATIC,21,68,79,8
+    EDITTEXT        IDC_RESULTS_DIR,104,84,165,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",IDC_RESULTS_BROWSE,273,84,22,14
+    RTEXT           "Results Directory:",IDC_STATIC,21,87,79,8
+END
+
+IDD_FILE_DIALOG DIALOGEX 0, 0, 265, 63
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION
+CAPTION "Dialog"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_INPUT,65,17,156,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",ID_BROWSE,226,17,26,12
+    DEFPUSHBUTTON   "OK",IDOK,153,42,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,208,42,50,14
+    LTEXT           "SA Certificate",IDC_LABEL,7,18,53,11,0,WS_EX_RIGHT
+    GROUPBOX        "Specify File",IDC_STATIC,7,7,251,30
+END
+
+IDD_WORKFLOW_SETUP DIALOGEX 0, 0, 284, 240
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION
+CAPTION "Workflow Setup"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_UNLOCK_KEY,124,19,125,15,ES_AUTOHSCROLL
+    CONTROL         "",IDC_EXPIRY_DATE,"SysDateTimePick32",DTS_RIGHTALIGN | WS_TABSTOP,124,38,125,15
+    EDITTEXT        IDC_HARDWARE_ID,124,58,125,15,ES_AUTOHSCROLL
+    EDITTEXT        IDC_CACHE_SIZE,124,77,31,15,ES_AUTOHSCROLL
+    CONTROL         "",IDC_DISABLE_WARNINGS,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,124,99,16,10
+    EDITTEXT        IDC_LOG_FILE,54,193,189,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",ID_BROWSE,246,194,24,14
+    DEFPUSHBUTTON   "OK",IDOK,177,219,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,230,219,47,14
+    LTEXT           "S63 Runtime Unlock Key:",IDC_STATIC,33,22,80,8
+    LTEXT           "Log File:",IDC_STATIC,24,196,30,8
+    LTEXT           "Data Client Current Date:",IDC_STATIC,34,42,83,8
+    GROUPBOX        "Configuration",IDC_STATIC,7,4,270,133
+    GROUPBOX        "Logging",IDC_STATIC,7,180,270,35
+    RTEXT           "Hardware ID:",IDC_STATIC,35,61,77,8,0,WS_EX_RIGHT
+    RTEXT           "Cache Size:",IDC_STATIC,35,80,77,8,0,WS_EX_RIGHT
+    RTEXT           "Disable Permanent Warnings:",IDC_STATIC,14,100,98,8,0,WS_EX_RIGHT
+    LTEXT           "megabytes",IDC_STATIC,159,80,77,8
+    RTEXT           "Display Ingest Cell Dialog:",IDC_STATIC,14,117,98,8,0,WS_EX_RIGHT
+    CONTROL         "",IDC_DISPLAY_INGEST_DIALOG,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,124,116,16,10
+    EDITTEXT        IDC_S57_CONFIG_FILE,54,155,189,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",ID_S57_CONFIG_BROWSE,246,155,24,14
+    LTEXT           "Config File:",IDC_STATIC,14,157,37,8
+    GROUPBOX        "S-57 Configuration",IDC_STATIC,7,140,270,37
+END
+
+IDD_LOAD_MEDIA DIALOGEX 0, 0, 302, 129
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION
+CAPTION "Load Media"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_STORE_LOCATION,66,19,198,15,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",IDC_STORE_BROWSE,268,19,23,14
+    EDITTEXT        IDC_PRODUCTS_FILE,66,61,198,15,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",IDC_PRODUCTS_BROWSE,268,61,23,14
+    EDITTEXT        IDC_SERIAL_FILE,66,79,198,15,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",IDC_SERIAL_BROWSE,268,79,23,14
+    DEFPUSHBUTTON   "OK",IDOK,194,108,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,247,108,50,14
+    LTEXT           "Serial ENC File:",IDC_STATIC,13,83,50,8,0,WS_EX_RIGHT
+    GROUPBOX        "Media Selection",IDC_STATIC,6,45,291,57
+    LTEXT           "Products File:",IDC_STATIC,17,64,46,8,0,WS_EX_RIGHT
+    GROUPBOX        "Ingest Store",IDC_STATIC,6,7,291,35
+    LTEXT           "Store Location:",IDC_STATIC,13,22,50,8,0,WS_EX_RIGHT
+END
+
+IDD_INGEST_DIALOG DIALOGEX 0, 0, 250, 150
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION
+CAPTION "Would you like to ingest this cell?"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "Ingest Cell",IDOK,139,129,50,14
+    PUSHBUTTON      "Skip Cell",IDCANCEL,193,129,50,14
+    RTEXT           "Cell Name:",IDC_STATIC,7,22,65,11
+    RTEXT           "Data Server ID:",IDC_STATIC,7,37,65,11
+    GROUPBOX        "Cell Information",IDC_STATIC,7,7,235,64
+    RTEXT           "Cell Edition:",IDC_STATIC,16,51,56,11
+    RTEXT           "Cell Update:",IDC_STATIC,131,52,40,11
+    LTEXT           "",IDC_CELL_NAME,75,22,154,11
+    LTEXT           "",IDC_DATA_SERVER,75,37,154,11
+    LTEXT           "",IDC_EDITION,75,51,39,11
+    LTEXT           "",IDC_UPDATE,175,52,39,11
+    RTEXT           "Top Right X:",IDC_STATIC,7,88,65,11
+    RTEXT           "Top Right Y:",IDC_STATIC,131,88,40,11
+    LTEXT           "0.0",IDC_TR_X,75,88,47,11
+    LTEXT           "0.0",IDC_TR_Y,175,88,60,11
+    GROUPBOX        "Cell Extents",IDC_STATIC,7,74,236,48
+    RTEXT           "Bottom Left X:",IDC_STATIC,15,103,57,11
+    RTEXT           "Bottom Left Y:",IDC_STATIC,124,103,47,11
+    LTEXT           "0.0",IDC_BL_X,75,103,47,11
+    LTEXT           "0.0",IDC_BL_Y,175,103,61,11
+END
+
+IDD_USER_PERMIT DIALOGEX 0, 0, 285, 134
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION
+CAPTION "Generate User Permit"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_HW_ID,144,21,99,15,ES_AUTOHSCROLL | WS_GROUP
+    EDITTEXT        IDC_M_KEY,144,41,99,15,ES_AUTOHSCROLL | WS_GROUP
+    EDITTEXT        IDC_M_ID,144,61,99,15,ES_AUTOHSCROLL | WS_GROUP
+    EDITTEXT        IDC_SAVE_PERMIT,85,86,158,15,ES_AUTOHSCROLL | WS_GROUP
+    PUSHBUTTON      "...",IDC_BROWSE,251,86,23,14
+    DEFPUSHBUTTON   "OK",IDOK,176,112,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,229,112,50,14
+    LTEXT           "M_KEY (5 bytes long):",IDC_STATIC,58,44,72,8
+    LTEXT           "M_ID (2 bytes long):",IDC_STATIC,63,64,67,8
+    RTEXT           "Save Permit File:",IDC_STATIC,17,89,61,8
+    LTEXT           "HW_KEY (5 bytes long):",IDC_STATIC,53,24,78,8
+    GROUPBOX        "User Permit Generation",IDC_STATIC,7,7,272,100
+END
+
+IDD_LOAD_S63 DIALOGEX 0, 0, 302, 230
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION
+CAPTION "Load S63 Data"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_STORE_LOCATION,66,19,198,15,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",IDC_STORE_BROWSE,266,19,23,14
+    DEFPUSHBUTTON   "OK",IDOK,191,208,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,246,208,50,14
+    GROUPBOX        "Ingest Store",IDC_STATIC,7,7,289,35
+    LTEXT           "Store Location:",IDC_STATIC,13,22,50,8,0,WS_EX_RIGHT
+    GROUPBOX        "Additional Information",IDC_STATIC,7,48,289,156
+    EDITTEXT        IDC_CELL_PERMIT,65,64,198,15,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",IDC_PERMIT_BROWSE,265,64,23,14
+    EDITTEXT        IDC_DATA_SERVER_ID,65,84,55,15,ES_AUTOHSCROLL
+    PUSHBUTTON      "Add Cell Permit",IDC_ADD_PERMIT,151,177,60,16
+    PUSHBUTTON      "Remove Cell Permit",IDC_REMOVE_PERMIT,217,177,69,16
+    LTEXT           "Cell Permit:",IDC_STATIC,23,67,37,8,0,WS_EX_RIGHT
+    LTEXT           "Data Server:",IDC_STATIC,19,87,42,8,0,WS_EX_RIGHT
+    LISTBOX         IDC_PERMIT_LIST,14,107,128,89,LBS_SORT | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Cell Name:",IDC_STATIC,160,118,34,11
+    LTEXT           "Data Server:",IDC_STATIC,153,130,41,11
+    LTEXT           "Expiry Date:",IDC_STATIC,154,150,40,11
+    LTEXT           "-",IDC_CELL_NAME,197,118,86,11
+    LTEXT           "-",IDC_DATA_SERVER,197,130,88,11
+    LTEXT           "-",IDC_EXPIRY,196,150,89,22
+    LTEXT           "Note: This value will be overridden if a data server has been specified in the permit.",IDC_STATIC,131,84,148,17
+END
+
+IDD_LARGE_MEDIA DIALOGEX 0, 0, 299, 207
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION
+CAPTION "Open large media - MEDIA.TXT"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,185,186,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,242,186,50,14
+    GROUPBOX        "Select Media File",IDC_STATIC,7,7,285,58
+    EDITTEXT        IDC_MEDIA_FILE,59,42,198,15,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",IDC_MEDIA_BROWSE,261,42,23,14
+    LTEXT           "MEDIA.TXT:",IDC_STATIC,15,45,40,8,0,WS_EX_RIGHT
+    GROUPBOX        "Select Media Records",IDC_STATIC,7,70,285,109
+    LISTBOX         IDC_SELECTED_DATASETS,171,98,111,72,LBS_SORT | LBS_NOINTEGRALHEIGHT | WS_DISABLED | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      ">",IDC_ADD,137,114,26,17,WS_DISABLED
+    PUSHBUTTON      "<",IDC_REMOVE,137,132,26,18,WS_DISABLED
+    LISTBOX         IDC_DATASET,16,98,111,72,LBS_SORT | LBS_NOINTEGRALHEIGHT | WS_DISABLED | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Available Exchange Sets",IDC_STATIC,17,84,101,10
+    LTEXT           "Selected Exchange Sets",IDC_STATIC,171,84,101,10
+    EDITTEXT        IDC_DATA_STORE,59,21,198,15,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",IDC_STORE_BROWSE,261,21,23,14
+    LTEXT           "Data Store:",IDC_STATIC,18,24,38,8,0,WS_EX_RIGHT
+END
+
+IDD_CERTIFICATE_DIALOG DIALOGEX 0, 0, 302, 185
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION
+CAPTION "Install Certificate"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    GROUPBOX        "Select Certificate",IDC_STATIC,7,7,288,36
+    EDITTEXT        IDC_CERTIFICATE,57,20,203,15,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",IDC_CERTIFICATE_BROWSE,263,20,23,14
+    DEFPUSHBUTTON   "Install",IDOK,191,164,50,14,WS_DISABLED
+    PUSHBUTTON      "Cancel",IDCANCEL,245,164,50,14
+    GROUPBOX        "Certificate Information",IDC_STATIC,7,46,288,113
+    LTEXT           "Certificate:",IDC_STATIC,15,23,37,8,0,WS_EX_RIGHT
+    LTEXT           "Valid From:",IDC_STATIC,19,124,37,10
+    LTEXT           "Valid Until:",IDC_STATIC,21,139,34,10
+    LTEXT           "-",IDC_VALID_FROM,60,124,189,10
+    LTEXT           "-",IDC_VALID_UNTIL,60,139,187,10
+    LTEXT           "Information:",IDC_STATIC,15,63,39,10
+    LTEXT           "-",IDC_INFORMATION,59,63,200,57
+END
+
+IDD_CELLPERMIT_DIALOG DIALOGEX 0, 0, 288, 241
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION
+CAPTION "Manage Cell Permits"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_CELL_PERMIT,59,47,193,15,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",IDC_PERMIT_BROWSE,256,47,23,14
+    EDITTEXT        IDC_DATA_STORE,59,67,55,15,ES_AUTOHSCROLL
+    PUSHBUTTON      "Add Cell Permit",IDC_ADD_PERMIT,143,186,60,16
+    PUSHBUTTON      "Remove Cell Permit",IDC_REMOVE_PERMIT,210,186,69,16
+    DEFPUSHBUTTON   "OK",IDOK,181,220,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,232,220,50,14
+    GROUPBOX        "Add Cell Permit",IDC_STATIC,7,7,275,88
+    LTEXT           "Cell Permit:",IDC_STATIC,17,50,37,8,0,WS_EX_RIGHT
+    LTEXT           "Data Server:",IDC_STATIC,14,70,42,8,0,WS_EX_RIGHT
+    GROUPBOX        "Manage Cell Permits",IDC_STATIC,7,100,275,113,BS_LEFT
+    LISTBOX         IDC_PERMIT_LIST,14,114,122,89,LBS_SORT | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Cell Name:",IDC_STATIC,153,129,34,11
+    LTEXT           "Data Server:",IDC_STATIC,145,140,41,11
+    LTEXT           "Expiry Date:",IDC_STATIC,147,159,40,11
+    LTEXT           "-",IDC_CELL_NAME,189,129,86,11
+    LTEXT           "-",IDC_DATA_SERVER,189,140,88,11
+    LTEXT           "-",IDC_EXPIRY,189,159,89,20
+    LTEXT           "(Note: This value will be overridden if a data server has been specified in the permit file.)",IDC_STATIC,125,67,148,17
+    LTEXT           "Select a PERMIT.TXT file and optionally specify a data server below. Once selected, press the 'Add Cell Permit' button in the panel below.",IDC_STATIC,17,22,259,17
+END
+
+IDD_CANCELLED_CELL_DIALOG DIALOGEX 0, 0, 249, 105
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION
+CAPTION "Cancelled S57 Cell"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "Keep Cell",IDOK,138,84,50,14
+    PUSHBUTTON      "Discard Cell",IDCANCEL,192,84,50,14
+    RTEXT           "Cell Name:",IDC_STATIC,7,39,65,11
+    RTEXT           "Data Server ID:",IDC_STATIC,7,52,65,11
+    GROUPBOX        "Cell Information",IDC_STATIC,7,7,235,63
+    LTEXT           "",IDC_CELL_NAME,75,39,154,11
+    LTEXT           "",IDC_DATA_SERVER,75,52,154,11
+    LTEXT           "The following cell has been cancelled:",IDC_STATIC,14,21,121,11
+    LTEXT           "Do you wish to keep it?",IDC_STATIC,15,76,97,11
+END
+
+IDD_PROGRESS_DIALOG DIALOGEX 0, 0, 186, 111
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION
+CAPTION "S57/S63 Import Progress"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    PUSHBUTTON      "Cancel Ingest",IDCANCEL,63,89,58,14
+    CONTROL         "",IDC_CELL_PROGRESS,"msctls_progress32",WS_BORDER,15,33,149,11
+    CONTROL         "",IDC_INGEST_PROGRESS,"msctls_progress32",WS_BORDER,16,64,149,11
+    GROUPBOX        "Progress Callback",IDC_STATIC,7,7,172,79
+    LTEXT           "S57/S63 Cell Progress",IDC_STATIC,15,22,105,11
+    LTEXT           "S57/S63 Import Progress",IDC_STATIC,15,52,105,11
+END
+
+IDD_TEST_PROGRESS_DIALOG DIALOGEX 0, 0, 186, 28
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION
+CAPTION "Test Progress"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_TEST_PROGRESS,"msctls_progress32",WS_BORDER,7,7,172,14
+END
+
+IDD_SCALE_BANDS DIALOGEX 0, 0, 240, 174
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Scale band configuration"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,128,153,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,183,153,50,14
+    GROUPBOX        "Configure Scalebands",IDC_STATIC,7,7,226,143
+    EDITTEXT        IDC_OVERVIEW_LOWER,65,36,75,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_OVERVIEW_UPPER,149,36,76,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_GENERAL_LOWER,65,55,75,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_GENERAL_UPPER,149,55,76,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_COASTAL_LOWER,65,74,75,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_COASTAL_UPPER,149,74,76,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_APPROACH_LOWER,65,92,75,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_APPROACH_UPPER,149,92,76,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_HARBOUR_LOWER,65,111,75,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_HARBOUR_UPPER,149,111,76,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_BERTHING_LOWER,65,130,76,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_BERTHING_UPPER,149,130,76,12,ES_AUTOHSCROLL
+    RTEXT           "Overview:",IDC_STATIC,15,39,41,10
+    RTEXT           "General:",IDC_STATIC,15,55,40,10
+    RTEXT           "Coastal:",IDC_STATIC,17,74,38,10
+    RTEXT           "Approach:",IDC_STATIC,17,95,38,10
+    RTEXT           "Harbour:",IDC_STATIC,17,113,39,10
+    RTEXT           "Berthing:",IDC_STATIC,15,130,40,10
+    LTEXT           "Lower Threshold",IDC_STATIC,77,22,55,10
+    LTEXT           "Upper Threshold",IDC_STATIC,157,22,55,10
+    PUSHBUTTON      "Reset",ID_RESET_SCALE_BANDS,73,153,50,14
+END
+
+IDD_LOAD_S57_MEDIA DIALOGEX 0, 0, 302, 105
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION
+CAPTION "Load S57 Media"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_STORE_LOCATION,66,19,198,15,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",IDC_STORE_BROWSE,268,19,23,14
+    EDITTEXT        IDC_CATALOG_FILE,66,61,198,15,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",IDC_CATALOG_BROWSE,268,61,23,14
+    DEFPUSHBUTTON   "OK",IDOK,194,84,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,247,84,50,14
+    GROUPBOX        "Media Selection (S57 CATALOG.031/.030 or S57 cell file .000)",-1,6,45,291,36
+    LTEXT           "S57 Data File:",-1,17,64,46,8,0,WS_EX_RIGHT
+    GROUPBOX        "S57 Data Store",-1,6,7,291,35
+    LTEXT           "Store Location:",-1,13,22,50,8,0,WS_EX_RIGHT
+END
+
+IDD_LOAD_S57 DIALOGEX 0, 0, 302, 68
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION
+CAPTION "Load S57 Data"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_STORE_LOCATION,66,19,198,15,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",IDC_STORE_BROWSE,266,19,23,14
+    DEFPUSHBUTTON   "OK",IDOK,191,46,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,246,46,50,14
+    GROUPBOX        "S57 Data Store",-1,7,7,289,35
+    LTEXT           "Store Location:",-1,13,22,50,8,0,WS_EX_RIGHT
+END
+
+IDD_STATE_CONFIGURATION DIALOGEX 0, 0, 305, 287
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "S52 Rendering Configuration"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         " Simple Symbols",IDC_CHECK_SIMPLE_SYMBOLS,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,17,55,66,10
+    CONTROL         " Contour Labels",IDC_CHECK_CONTOUR_LABELS,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,17,83,66,10
+    CONTROL         " Centre Symbols",IDC_CHECK_CENTRE_SYMBOLS,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,151,84,68,10
+    EDITTEXT        IDC_EDIT_DEEP_CONTOURS,69,135,76,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_SHALLOW_CONTOURS,70,153,75,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_SAFETY_CONTOURS,213,135,76,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_SAFETY_DEPTH,213,153,76,14,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,194,266,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,248,266,50,14
+    LTEXT           "Deep Water:",IDC_STATIC_DEEP_CONTOURS,24,136,44,12
+    LTEXT           "Shallow Water:",IDC_STATIC_SHALLOW_CONTOURS,17,154,50,12
+    LTEXT           "Safety Contour:",IDC_STATIC_SAFETY_CONTOURS,158,136,52,12
+    LTEXT           "Safety Depth:",IDC_STATIC_SAFETY_DEPTH,165,155,46,12
+    GROUPBOX        "State Configuration",IDC_STATIC,7,41,291,75,0,WS_EX_TRANSPARENT
+    CONTROL         "  Enable S52 Rendering",IDC_CHECK_ENABLE_S52_RENDERING,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,18,18,105,10
+    CONTROL         " Display Text ",IDC_CHECK_DISPLAY_TEXT,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,17,97,59,10
+    CONTROL         " Display Symbols",IDC_CHECK_DISPLAY_SYMBOLS,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,151,70,69,10
+    GROUPBOX        "General",IDC_STATIC,7,6,291,28
+    CONTROL         " Simple Areas",IDC_CHECK_SIMPLE_AREAS,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,17,69,59,10
+    GROUPBOX        "Depth Contours",IDC_STATIC,7,121,291,56
+    GROUPBOX        "Display Mask",IDC_STATIC,7,181,291,36
+    CONTROL         "Display Base",IDC_DM_DISPLAY_BASE,"Button",BS_AUTORADIOBUTTON | WS_GROUP,19,198,56,10
+    CONTROL         "Standard",IDC_DM_STANDARD,"Button",BS_AUTORADIOBUTTON,87,198,45,10
+    CONTROL         "Other",IDC_DM_OTHER,"Button",BS_AUTORADIOBUTTON,157,198,35,10
+    CONTROL         "All",IDC_DM_ALL,"Button",BS_AUTORADIOBUTTON,216,198,23,10
+    GROUPBOX        "Display Colour",IDC_STATIC,7,221,291,36
+    CONTROL         "Day Display",IDC_DM_DAY_DISPLAY,"Button",BS_AUTORADIOBUTTON | WS_GROUP,20,237,53,10
+    CONTROL         "Dusk Display",IDC_DM_DUSK_DISPLAY,"Button",BS_AUTORADIOBUTTON,88,237,56,10
+    CONTROL         "Dark Display",IDC_DM_DARK_DISPLAY,"Button",BS_AUTORADIOBUTTON,156,237,55,10
+    CONTROL         "  Enable ""No Data"" stipple pattern",IDC_CHECK_ENABLE_S52_NO_DATA_PATTERN,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,152,18,138,10
+    CONTROL         " Display Text Halos",IDC_CHECK_DISPLAY_TEXT_HALOS,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,151,55,77,10
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_TEST_SETUP, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 302
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 168
+    END
+
+    IDD_FILE_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 258
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 56
+    END
+
+    IDD_WORKFLOW_SETUP, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 277
+        TOPMARGIN, 4
+        BOTTOMMARGIN, 233
+    END
+
+    IDD_LOAD_MEDIA, DIALOG
+    BEGIN
+        LEFTMARGIN, 6
+        RIGHTMARGIN, 297
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 122
+    END
+
+    IDD_INGEST_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 243
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 143
+    END
+
+    IDD_USER_PERMIT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 279
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 126
+    END
+
+    IDD_LOAD_S63, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 296
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 222
+    END
+
+    IDD_LARGE_MEDIA, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 292
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 200
+    END
+
+    IDD_CERTIFICATE_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 295
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 178
+    END
+
+    IDD_CELLPERMIT_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 282
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 234
+    END
+
+    IDD_CANCELLED_CELL_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 242
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 98
+    END
+
+    IDD_PROGRESS_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 103
+    END
+
+    IDD_TEST_PROGRESS_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 21
+    END
+
+    IDD_SCALE_BANDS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 233
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 167
+    END
+
+    IDD_LOAD_S57_MEDIA, DIALOG
+    BEGIN
+        LEFTMARGIN, 6
+        RIGHTMARGIN, 297
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 98
+    END
+
+    IDD_LOAD_S57, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 296
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 60
+    END
+
+    IDD_STATE_CONFIGURATION, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 298
+        VERTGUIDE, 17
+        VERTGUIDE, 151
+        TOPMARGIN, 6
+        BOTTOMMARGIN, 280
+        HORZGUIDE, 65
+        HORZGUIDE, 78
+        HORZGUIDE, 94
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif\r\n"
+    "#include ""res\\S63WorkFlow.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#include ""afxprint.rc""       // printing/print preview resources\r\n"
+    "#endif\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+#endif    // English (United Kingdom) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif
+#include "res\S63WorkFlow.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#include "afxprint.rc"       // printing/print preview resources
+#endif
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

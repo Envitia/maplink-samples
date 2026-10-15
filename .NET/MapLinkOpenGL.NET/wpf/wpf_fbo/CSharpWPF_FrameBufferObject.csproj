@@ -1,0 +1,194 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7E462A2C-0991-44AA-84D6-8979FB1FDB0E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CSharpWPF_FrameBufferObject</RootNamespace>
+    <AssemblyName>CSharpWPF_FrameBufferObject</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <PlatformTarget>x64</PlatformTarget>
+    <OutputPath>..\..\..\..\..\..\bin64\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <PlatformTarget>x64</PlatformTarget>
+    <OutputPath>..\..\..\..\..\..\bin64\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>ProgramIcon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <Choose>
+    <When Condition=" '$(Platform)' == 'x86' ">
+      <ItemGroup>
+        <Reference Include="Envitia.MapLink.InteractionModes">
+          <SpecificVersion>False</SpecificVersion>
+          <Private>True</Private>
+          <HintPath>..\..\..\..\..\..\bin\Envitia.MapLink.InteractionModes.dll</HintPath>
+        </Reference>
+        <Reference Include="Envitia.MapLink.NativeHelpers, Version=10.0.9.0, Culture=neutral, PublicKeyToken=f6586908b95b8151, processorArchitecture=MSIL">
+          <SpecificVersion>False</SpecificVersion>
+          <Private>True</Private>
+          <HintPath>..\..\..\..\..\..\bin\Envitia.MapLink.NativeHelpers.dll</HintPath>
+        </Reference>
+        <Reference Include="Envitia.MapLink.OpenGLSurface">
+          <SpecificVersion>False</SpecificVersion>
+          <Private>True</Private>
+          <HintPath>..\..\..\..\..\..\bin\Envitia.MapLink.OpenGLSurface.dll</HintPath>
+        </Reference>
+        <Reference Include="Envitia.MapLink.OpenGLTrackHelper">
+          <SpecificVersion>False</SpecificVersion>
+          <Private>True</Private>
+          <HintPath>..\..\..\..\..\..\bin\Envitia.MapLink.OpenGLTrackHelper.dll</HintPath>
+        </Reference>
+        <Reference Include="Envitia.MapLink">
+          <SpecificVersion>False</SpecificVersion>
+          <Private>True</Private>
+          <HintPath>..\..\..\..\..\..\bin\Envitia.MapLink.dll</HintPath>
+        </Reference>
+      </ItemGroup>
+    </When>
+    <When Condition=" '$(Platform)' == 'x64' ">
+      <ItemGroup>
+        <Reference Include="Envitia.MapLink.InteractionModes64">
+          <SpecificVersion>False</SpecificVersion>
+          <Private>True</Private>
+          <HintPath>..\..\..\..\..\..\bin64\Envitia.MapLink.InteractionModes64.dll</HintPath>
+        </Reference>
+        <Reference Include="Envitia.MapLink.NativeHelpers, Version=10.0.9.0, Culture=neutral, PublicKeyToken=f6586908b95b8151, processorArchitecture=MSIL">
+          <SpecificVersion>False</SpecificVersion>
+          <Private>True</Private>
+          <HintPath>..\..\..\..\..\..\bin64\Envitia.MapLink.NativeHelpers.dll</HintPath>
+        </Reference>
+        <Reference Include="Envitia.MapLink.OpenGLSurface64">
+          <SpecificVersion>False</SpecificVersion>
+          <Private>True</Private>
+          <HintPath>..\..\..\..\..\..\bin64\Envitia.MapLink.OpenGLSurface64.dll</HintPath>
+        </Reference>
+        <Reference Include="Envitia.MapLink.OpenGLTrackHelper64">
+          <SpecificVersion>False</SpecificVersion>
+          <Private>True</Private>
+          <HintPath>..\..\..\..\..\..\bin64\Envitia.MapLink.OpenGLTrackHelper64.dll</HintPath>
+        </Reference>
+        <Reference Include="Envitia.MapLink64">
+          <SpecificVersion>False</SpecificVersion>
+          <Private>True</Private>
+          <HintPath>..\..\..\..\..\..\bin64\Envitia.MapLink64.dll</HintPath>
+        </Reference>
+      </ItemGroup>
+    </When>
+  </Choose>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Page Include="AboutBox.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="AboutBox.xaml.cs">
+      <DependentUpon>AboutBox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CustomInteractionModeZoomPan.cs" />
+    <Compile Include="InteractionModeRequestReceiver.cs" />
+    <Compile Include="InteractionModesInterface.cs" />
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="MaplinkSurfaceInterface.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="AboutBoxImage.bmp" />
+    <Resource Include="editcopy.png" />
+    <Resource Include="fileOpen.png" />
+    <Resource Include="gotoview1.png" />
+    <Resource Include="gotoview2.png" />
+    <Resource Include="gotoview3.png" />
+    <Resource Include="grabtool.png" />
+    <Resource Include="magnifytool.png" />
+    <Resource Include="nextview.png" />
+    <Resource Include="pantool.png" />
+    <Resource Include="previousview.png" />
+    <Resource Include="printmap.png" />
+    <Resource Include="ProgramIcon.ico" />
+    <Resource Include="resetzoom.png" />
+    <Resource Include="Toolbar_enabled.bmp" />
+    <Resource Include="zoomin.png" />
+    <Resource Include="zoomout.png" />
+    <Resource Include="zoomtool.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="zoompantool.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
