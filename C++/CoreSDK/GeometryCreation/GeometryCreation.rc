@@ -1,0 +1,925 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (United States) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\GeometryCreation.ico"
+IDR_GEOMETTYPE          ICON                    "res\\GeometryCreationDoc.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDR_MAINFRAME           BITMAP                  "res\\Toolbar.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDR_MAINFRAME TOOLBAR 16, 15
+BEGIN
+    BUTTON      ID_FILE_NEW
+    BUTTON      ID_FILE_OPEN
+    BUTTON      ID_FILE_SAVE
+    SEPARATOR
+    BUTTON      ID_TOOLS_ZOOMIN
+    BUTTON      ID_TOOLS_ZOOMOUT
+    BUTTON      ID_TOOLS_RESET
+    SEPARATOR
+    BUTTON      ID_TOOLS_ZOOM
+    BUTTON      ID_TOOLS_PAN
+    BUTTON      ID_TOOLS_ZOOMPAN
+    BUTTON      ID_TOOLS_EDITPROPERTIES
+    BUTTON      ID_TOOLS_GRAB
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&New\tCtrl+N",                ID_FILE_NEW
+        MENUITEM "&Open...\tCtrl+O",            ID_FILE_OPEN
+        MENUITEM SEPARATOR
+        MENUITEM "Recent File",                 ID_FILE_MRU_FILE1, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       ID_APP_EXIT
+    END
+    POPUP "&View"
+    BEGIN
+        MENUITEM "&Toolbar",                    ID_VIEW_TOOLBAR
+        MENUITEM "&Status Bar",                 ID_VIEW_STATUS_BAR
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&About GeometryCreation...",  ID_APP_ABOUT
+    END
+END
+
+IDR_GEOMETTYPE MENU
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&New\tCtrl+N",                ID_FILE_NEW
+        MENUITEM "&Open...\tCtrl+O",            ID_FILE_OPEN
+        MENUITEM "&Close",                      ID_FILE_CLOSE
+        MENUITEM "&Save",                       ID_FILE_SAVE
+        MENUITEM "Save &As ...",                ID_FILE_SAVE_AS
+        MENUITEM SEPARATOR
+        MENUITEM "Recent File",                 ID_FILE_MRU_FILE1, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       ID_APP_EXIT
+    END
+    POPUP "&View"
+    BEGIN
+        MENUITEM "&Toolbar",                    ID_VIEW_TOOLBAR
+        MENUITEM "&Status Bar",                 ID_VIEW_STATUS_BAR
+    END
+    POPUP "&Tools"
+    BEGIN
+        MENUITEM "Zoom &In",                    ID_TOOLS_ZOOMIN
+        MENUITEM "Zoom &Out",                   ID_TOOLS_ZOOMOUT
+        MENUITEM "&Reset",                      ID_TOOLS_RESET
+        MENUITEM SEPARATOR
+        MENUITEM "&Zoom",                       ID_TOOLS_ZOOM
+        MENUITEM "&Pan",                        ID_TOOLS_PAN
+        MENUITEM "Zoo&m/Pan",                   ID_TOOLS_ZOOMPAN
+        MENUITEM "&Grab",                       ID_TOOLS_GRAB
+        MENUITEM "&Edit Properties",            ID_TOOLS_EDITPROPERTIES
+    END
+    POPUP "&Primitives"
+    BEGIN
+        MENUITEM "&Rectangle ...",              ID_PRIMITIVES_RECTANGLE
+        MENUITEM "&Polygon ...",                ID_PRIMITIVES_POLYGON
+        MENUITEM "Poly&line ...",               ID_PRIMITIVES_POLYLINE
+        MENUITEM "&Symbol ...",                 ID_PRIMITIVES_SYMBOL
+        MENUITEM "&Text ...",                   ID_PRIMITIVES_TEXT
+        MENUITEM "&Arc ...",                    ID_PRIMITIVES_ARC
+        MENUITEM "&Ellipse ...",                ID_PRIMITIVES_ELLIPSE
+    END
+    POPUP "&Window"
+    BEGIN
+        MENUITEM "&New Window",                 ID_WINDOW_NEW
+        MENUITEM "&Cascade",                    ID_WINDOW_CASCADE
+        MENUITEM "&Tile",                       ID_WINDOW_TILE_HORZ
+        MENUITEM "&Arrange Icons",              ID_WINDOW_ARRANGE
+    END
+    POPUP "Te&sts"
+    BEGIN
+        MENUITEM "&Show Entity Extents",        ID_TESTS_SHOWENTITYEXTENTS
+        MENUITEM "&Unique ID For Each Surface", ID_TESTS_UNIQUEIDFOREACHSURFACE
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&About GeometryCreation...",  ID_APP_ABOUT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAINFRAME ACCELERATORS
+BEGIN
+    "N",            ID_FILE_NEW,            VIRTKEY, CONTROL, NOINVERT
+    "O",            ID_FILE_OPEN,           VIRTKEY, CONTROL, NOINVERT
+    VK_F6,          ID_NEXT_PANE,           VIRTKEY, NOINVERT
+    VK_F6,          ID_PREV_PANE,           VIRTKEY, SHIFT, NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 257, 90
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About GeometryCreation"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    LTEXT           "GeometryCreation Version 1.0",IDC_APP,7,42,212,9,SS_NOPREFIX
+    CTEXT           "Portions developed using LEADTOOLS,\nCopyright © 1991-2025 LEAD Technologies, Inc. ALL RIGHTS RESERVED",IDC_THIRDPARTY,7,65,243,17
+    DEFPUSHBUTTON   "OK",IDOK,205,7,45,14,WS_GROUP
+    CONTROL         "",IDC_LOGO,"Static",SS_OWNERDRAW,8,9,136,25
+    LTEXT           "Copyright © 1998-2026 Envitia Group PLC. All rights reserved.",IDC_COPYRIGHT,7,51,215,8
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 11,3,3,0
+ PRODUCTVERSION 11,3,3,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "CompanyName", "Envitia Group PLC"
+            VALUE "FileDescription", "Envitia GeometryCreation Sample Application 11.3"
+            VALUE "FileVersion", "11.3.3.0"
+            VALUE "InternalName", "GeometryCreation"
+            VALUE "LegalCopyright", "Copyright © 1998-2026 Envitia Group PLC. All rights reserved."
+            VALUE "OriginalFilename", "GeometryCreation.EXE"
+            VALUE "ProductName", "GeometryCreation Sample Application"
+            VALUE "ProductVersion", "11.3.3.0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 250
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 82
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDR_MAINFRAME           "GeometryCreation\n\nGeometryCreation\nMapLink TMF Files (*.tmf)\n.tmf\nGeometryCreation.Document\nGeometryCreation Document"
+    IDR_GEOMETTYPE          "GeometryCreation\n\nGeometryCreation\nMapLink TMF Files (*.tmf)\n.tmf\nGeometryCreation.Document\nGeometryCreation Document"
+END
+
+STRINGTABLE
+BEGIN
+    AFX_IDS_APP_TITLE       "GeometryCreation"
+    AFX_IDS_IDLEMESSAGE     "Ready"
+END
+
+STRINGTABLE
+BEGIN
+    ID_INDICATOR_EXT        "EXT"
+    ID_INDICATOR_CAPS       "CAP"
+    ID_INDICATOR_NUM        "NUM"
+    ID_INDICATOR_SCRL       "SCRL"
+    ID_INDICATOR_OVR        "OVR"
+    ID_INDICATOR_REC        "REC"
+END
+
+STRINGTABLE
+BEGIN
+    ID_FILE_NEW             "Create a new document\nNew"
+    ID_FILE_OPEN            "Open an existing document\nOpen"
+    ID_FILE_CLOSE           "Close the active document\nClose"
+    ID_FILE_SAVE            "Save the active document\nSave"
+END
+
+STRINGTABLE
+BEGIN
+    ID_APP_ABOUT            "Display program information, version number and copyright\nAbout"
+    ID_APP_EXIT             "Quit the application; prompts to save documents\nExit"
+END
+
+STRINGTABLE
+BEGIN
+    ID_FILE_MRU_FILE1       "Open this document"
+    ID_FILE_MRU_FILE2       "Open this document"
+    ID_FILE_MRU_FILE3       "Open this document"
+    ID_FILE_MRU_FILE4       "Open this document"
+    ID_FILE_MRU_FILE5       "Open this document"
+    ID_FILE_MRU_FILE6       "Open this document"
+    ID_FILE_MRU_FILE7       "Open this document"
+    ID_FILE_MRU_FILE8       "Open this document"
+    ID_FILE_MRU_FILE9       "Open this document"
+    ID_FILE_MRU_FILE10      "Open this document"
+    ID_FILE_MRU_FILE11      "Open this document"
+    ID_FILE_MRU_FILE12      "Open this document"
+    ID_FILE_MRU_FILE13      "Open this document"
+    ID_FILE_MRU_FILE14      "Open this document"
+    ID_FILE_MRU_FILE15      "Open this document"
+    ID_FILE_MRU_FILE16      "Open this document"
+END
+
+STRINGTABLE
+BEGIN
+    ID_NEXT_PANE            "Switch to the next window pane\nNext Pane"
+    ID_PREV_PANE            "Switch back to the previous window pane\nPrevious Pane"
+END
+
+STRINGTABLE
+BEGIN
+    ID_WINDOW_NEW           "Open another window for the active document\nNew Window"
+    ID_WINDOW_ARRANGE       "Arrange icons at the bottom of the window\nArrange Icons"
+    ID_WINDOW_CASCADE       "Arrange windows so they overlap\nCascade Windows"
+    ID_WINDOW_TILE_HORZ     "Arrange windows as non-overlapping tiles\nTile Windows"
+    ID_WINDOW_TILE_VERT     "Arrange windows as non-overlapping tiles\nTile Windows"
+    ID_WINDOW_SPLIT         "Split the active window into panes\nSplit"
+END
+
+STRINGTABLE
+BEGIN
+    ID_VIEW_TOOLBAR         "Show or hide the toolbar\nToggle ToolBar"
+    ID_VIEW_STATUS_BAR      "Show or hide the status bar\nToggle StatusBar"
+END
+
+STRINGTABLE
+BEGIN
+    AFX_IDS_SCSIZE          "Change the window size"
+    AFX_IDS_SCMOVE          "Change the window position"
+    AFX_IDS_SCMINIMIZE      "Reduce the window to an icon"
+    AFX_IDS_SCMAXIMIZE      "Enlarge the window to full size"
+    AFX_IDS_SCNEXTWINDOW    "Switch to the next document window"
+    AFX_IDS_SCPREVWINDOW    "Switch to the previous document window"
+    AFX_IDS_SCCLOSE         "Close the active window and prompts to save the documents"
+END
+
+STRINGTABLE
+BEGIN
+    AFX_IDS_SCRESTORE       "Restore the window to normal size"
+    AFX_IDS_SCTASKLIST      "Activate Task List"
+    AFX_IDS_MDICHILD        "Activate this window"
+END
+
+STRINGTABLE
+BEGIN
+    ID_TOOLS_ZOOMIN         "Zoom In\nZoom In"
+    ID_TOOLS_ZOOMOUT        "Zoom Out\nZoom Out"
+    ID_TOOLS_RESET          "View whole tmf file\nReset"
+    ID_PRIMITIVES_RECTANGLE "Create Rectangle\nRectangle"
+    ID_TOOLS_ZOOM           "Zoom\nZoom"
+    ID_TOOLS_PAN            "Pan to point\nPan"
+    ID_TOOLS_ZOOMPAN        "Combined Zoom/Pan to point\nZoom/Pan"
+    ID_PRIMITIVES_POLYGON   "Create Polygon\nPolygon"
+    ID_PRIMITIVES_POLYLINE  "Create Polyline\nPolyline"
+    ID_PRIMITIVES_SYMBOL    "Create Symbol\nSymbol"
+    ID_PRIMITIVES_TEXT      "Create Text\nText"
+END
+
+STRINGTABLE
+BEGIN
+    ID_TOOLS_GRAB           "Grab and drag the map\nGrab"
+    ID_TOOLS_EDITPROPERTIES "Edit Properties of primitive selected\nEdit Properties"
+    ID_PRIMITIVES_ARC       "Create Arc\nArc"
+    ID_PRIMITIVES_ELLIPSE   "Create Ellipse\nEllipse"
+    ID_TESTS_SHOWENTITYEXTENTS 
+                            "Show black rectangle around all entity extents\nShow Extents"
+    ID_TESTS_UNIQUEIDFOREACHSURFACE 
+                            "Add a unique ID to each Drawing Surface - allows storage of unique extent\nUnique ID"
+END
+
+#endif    // English (United States) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (United Kingdom) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENG)
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_UK
+#pragma code_page(1252)
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_ABOUT_BOX_IMG       BITMAP                  "res\\AboutBoxImage.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_RECTANGLE_DIALOG DIALOG 0, 0, 186, 189
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Rectangle Properties"
+FONT 8, "MS Sans Serif"
+BEGIN
+    EDITTEXT        IDC_FEATURE_ID,45,8,46,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_ENTITY_ID,132,8,47,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_RENDER_LEVEL,45,24,46,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_ROTATION,133,24,46,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_TOP_RIGHT,81,47,98,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_LOWER_LEFT,45,65,90,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDGE_COLOUR,36,96,22,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDGE_STYLE,83,96,27,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDGE_THICKNESS,150,96,27,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_FILL_COLOUR,36,144,22,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_FILL_STYLE,83,144,27,14,ES_AUTOHSCROLL
+    GROUPBOX        "Fill Properties",IDC_STATIC,7,133,172,30
+    DEFPUSHBUTTON   "OK",IDOK,7,168,50,14
+    PUSHBUTTON      "Delete Prim",ID_DELETE_PRIMITIVE,69,168,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,129,168,50,14
+    RTEXT           "Feature ID",IDC_STATIC,8,11,34,8,SS_CENTERIMAGE
+    RTEXT           "Entity ID",IDC_STATIC,101,11,28,8,SS_CENTERIMAGE
+    RTEXT           "Lower Left",IDC_STATIC,7,68,34,8,SS_CENTERIMAGE
+    RTEXT           "Top Right",IDC_STATIC,45,50,32,8,SS_CENTERIMAGE
+    RTEXT           "Rotation",IDC_STATIC,101,27,28,8,SS_CENTERIMAGE
+    RTEXT           "Render Lvl",IDC_STATIC,7,27,36,8,SS_CENTERIMAGE
+    GROUPBOX        "Edge Properties",IDC_STATIC,7,85,172,45
+    RTEXT           "Colour",IDC_STATIC,11,99,21,8,SS_CENTERIMAGE
+    RTEXT           "Style",IDC_STATIC,63,99,16,8,SS_CENTERIMAGE
+    RTEXT           "Thickness",IDC_STATIC,113,99,34,8,SS_CENTERIMAGE
+    RTEXT           "Colour",IDC_STATIC,11,147,21,8,SS_CENTERIMAGE
+    RTEXT           "Style",IDC_STATIC,63,147,16,8,SS_CENTERIMAGE
+    COMBOBOX        IDC_EDGE_THICKNESS_UNITS,87,114,89,46,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    RTEXT           "Thickness Units",IDC_STATIC,19,116,66,8,SS_CENTERIMAGE
+END
+
+IDD_POLYGON_DIALOG DIALOGEX 0, 0, 186, 191
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Polygon Properties"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    EDITTEXT        IDC_FEATURE_ID,45,9,46,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_ENTITY_ID,132,9,47,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_RENDER_LEVEL,45,25,46,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_COORDINATES,45,41,134,43,ES_MULTILINE | ES_AUTOVSCROLL | ES_WANTRETURN | WS_VSCROLL
+    EDITTEXT        IDC_EDGE_COLOUR,36,97,22,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDGE_STYLE,83,97,27,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDGE_THICKNESS,150,97,27,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_FILL_COLOUR,36,145,22,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_FILL_STYLE,83,145,27,14,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,7,170,50,14
+    PUSHBUTTON      "Delete Prim",ID_DELETE_PRIMITIVE,69,170,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,129,170,50,14
+    RTEXT           "Feature ID",IDC_STATIC,8,12,34,8,SS_CENTERIMAGE
+    RTEXT           "Entity ID",IDC_STATIC,101,12,28,8,SS_CENTERIMAGE
+    RTEXT           "Render Lvl",IDC_STATIC,7,28,36,8,SS_CENTERIMAGE
+    GROUPBOX        "Edge Properties",IDC_STATIC,7,86,172,45
+    RTEXT           "Colour",IDC_STATIC,11,100,21,8,SS_CENTERIMAGE
+    RTEXT           "Style",IDC_STATIC,63,100,16,8,SS_CENTERIMAGE
+    RTEXT           "Thickness",IDC_STATIC,113,100,34,8,SS_CENTERIMAGE
+    GROUPBOX        "Fill Properties",IDC_STATIC,7,134,172,30
+    RTEXT           "Colour",IDC_STATIC,11,148,21,8,SS_CENTERIMAGE
+    RTEXT           "Style",IDC_STATIC,63,148,16,8,SS_CENTERIMAGE
+    RTEXT           "Coordinates",IDC_STATIC,6,42,38,8,SS_CENTERIMAGE
+    COMBOBOX        IDC_EDGE_THICKNESS_UNITS,86,115,89,46,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    RTEXT           "Thickness Units",IDC_STATIC,18,117,66,8,SS_CENTERIMAGE
+END
+
+IDD_POLYLINE_DIALOG DIALOGEX 0, 0, 186, 157
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Polyline Properties"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    EDITTEXT        IDC_FEATURE_ID,45,9,46,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_ENTITY_ID,132,9,47,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_RENDER_LEVEL,45,25,46,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_COORDINATES,45,41,134,43,ES_MULTILINE | ES_AUTOVSCROLL | ES_WANTRETURN | WS_VSCROLL
+    EDITTEXT        IDC_EDGE_COLOUR,36,97,22,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDGE_STYLE,83,97,27,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDGE_THICKNESS,150,97,27,14,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,7,133,50,14
+    PUSHBUTTON      "Delete Prim",ID_DELETE_PRIMITIVE,69,134,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,129,134,50,14
+    RTEXT           "Feature ID",IDC_STATIC,8,12,34,8,SS_CENTERIMAGE
+    RTEXT           "Entity ID",IDC_STATIC,101,12,28,8,SS_CENTERIMAGE
+    RTEXT           "Render Lvl",IDC_STATIC,7,28,36,8,SS_CENTERIMAGE
+    GROUPBOX        "Edge Properties",IDC_STATIC,7,86,172,45
+    RTEXT           "Colour",IDC_STATIC,11,100,21,8,SS_CENTERIMAGE
+    RTEXT           "Style",IDC_STATIC,63,100,16,8,SS_CENTERIMAGE
+    RTEXT           "Thickness",IDC_STATIC,113,100,34,8,SS_CENTERIMAGE
+    RTEXT           "Coordinates",IDC_STATIC,6,42,38,8,SS_CENTERIMAGE
+    COMBOBOX        IDC_EDGE_THICKNESS_UNITS,87,115,89,46,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    RTEXT           "Thickness Units",IDC_STATIC,19,117,66,8,SS_CENTERIMAGE
+END
+
+IDD_SYMBOL_DIALOG DIALOG 0, 0, 186, 156
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Symbol Properties"
+FONT 8, "MS Sans Serif"
+BEGIN
+    EDITTEXT        IDC_FEATURE_ID,45,8,46,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_ENTITY_ID,132,8,47,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_RENDER_LEVEL,45,24,46,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_ROTATION,132,24,47,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_POSITION,45,40,134,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_COLOUR,45,56,46,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_STYLE,132,56,47,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_MIN_SIZE,45,72,46,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_MAX_SIZE,132,72,47,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_SIZE_FACTOR,45,88,46,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_HEIGHT,132,88,47,14,ES_AUTOHSCROLL
+    CONTROL         "Fixed Size (height = pixels)",IDC_FIXED_SIZE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,120,99,10
+    DEFPUSHBUTTON   "OK",IDOK,7,135,50,14
+    PUSHBUTTON      "Delete Prim",ID_DELETE_PRIMITIVE,69,135,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,129,135,50,14
+    RTEXT           "Feature ID",IDC_STATIC,8,11,34,8,SS_CENTERIMAGE
+    RTEXT           "Entity ID",IDC_STATIC,100,11,28,8,SS_CENTERIMAGE
+    RTEXT           "Position",IDC_STATIC,16,43,26,8,SS_CENTERIMAGE
+    RTEXT           "Rotation",IDC_STATIC,100,26,28,8,SS_CENTERIMAGE
+    RTEXT           "Render Lvl",IDC_STATIC,6,27,36,8,SS_CENTERIMAGE
+    RTEXT           "Colour",IDC_STATIC,21,59,21,8,SS_CENTERIMAGE
+    RTEXT           "Style",IDC_STATIC,112,59,16,8,SS_CENTERIMAGE
+    RTEXT           "Size factor",IDC_STATIC,8,90,34,8,SS_CENTERIMAGE
+    RTEXT           "Min Size",IDC_STATIC,14,74,28,8,SS_CENTERIMAGE
+    RTEXT           "Max Size",IDC_STATIC,98,74,30,8,SS_CENTERIMAGE
+    RTEXT           "Height",IDC_STATIC,106,90,22,8,SS_CENTERIMAGE
+    COMBOBOX        IDC_ROTATABLE,109,119,70,59,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_SIZE_FACTOR_UNITS,67,104,113,46,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    RTEXT           "Size factor units",IDC_STATIC,7,107,55,8,SS_CENTERIMAGE
+END
+
+IDD_TEXT_DIALOG DIALOGEX 0, 0, 186, 271
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Text Properties"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    EDITTEXT        IDC_FEATURE_ID,45,8,46,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_ENTITY_ID,132,8,47,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_RENDER_LEVEL,45,24,46,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_ROTATION,132,24,47,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_POSITION,45,40,134,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_STRING,45,72,134,36,ES_MULTILINE | ES_AUTOVSCROLL | ES_AUTOHSCROLL | ES_WANTRETURN | WS_VSCROLL
+    EDITTEXT        IDC_COLOUR,45,111,46,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_FONT,132,111,47,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_MIN_SIZE,45,127,46,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_MAX_SIZE,132,127,47,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_SIZE_FACTOR,45,143,46,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_HEIGHT,132,143,47,14,ES_AUTOHSCROLL
+    CONTROL         "Fixed Size (height = pixels)",IDC_FIXED_SIZE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,179,99,10
+    CONTROL         "Rotatable",IDC_ROTATABLE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,190,47,10
+    COMBOBOX        IDC_HORIZONTAL_ALIGNMENT,111,178,68,74,CBS_DROPDOWN | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_VERTICAL_ALIGNMENT,111,193,68,83,CBS_DROPDOWN | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_BACKGROUND_MODE,17,215,80,53,CBS_DROPDOWN | WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_BACKGROUND_STYLE,123,215,47,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_BACKGROUND_COLOUR,39,231,36,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_BACKGROUND_EDGE_COLOUR,123,232,47,14,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,7,249,50,14
+    PUSHBUTTON      "Delete Prim",ID_DELETE_PRIMITIVE,69,249,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,129,249,50,14
+    RTEXT           "Feature ID",IDC_STATIC,8,11,34,8,SS_CENTERIMAGE
+    RTEXT           "Entity ID",IDC_STATIC,100,11,28,8,SS_CENTERIMAGE
+    RTEXT           "Position",IDC_STATIC,16,43,26,8,SS_CENTERIMAGE
+    RTEXT           "Rotation",IDC_STATIC,100,26,28,8,SS_CENTERIMAGE
+    RTEXT           "Render Lvl",IDC_STATIC,6,27,36,8,SS_CENTERIMAGE
+    RTEXT           "Colour",IDC_STATIC,21,114,21,8,SS_CENTERIMAGE
+    RTEXT           "Font",IDC_STATIC,112,114,15,8,SS_CENTERIMAGE
+    RTEXT           "Size factor",IDC_STATIC,7,145,34,8,SS_CENTERIMAGE
+    RTEXT           "Min Size",IDC_STATIC,14,129,28,8,SS_CENTERIMAGE
+    RTEXT           "Max Size",IDC_STATIC,98,129,30,8,SS_CENTERIMAGE
+    RTEXT           "Height",IDC_STATIC,106,145,22,8,SS_CENTERIMAGE
+    RTEXT           "String",IDC_STATIC,16,75,19,8,SS_CENTERIMAGE
+    RTEXT           "Colour",IDC_STATIC,15,234,21,8,SS_CENTERIMAGE
+    RTEXT           "Style",IDC_STATIC,103,219,16,8,SS_CENTERIMAGE
+    GROUPBOX        "Background ",IDC_STATIC,7,203,172,46
+    RTEXT           "Edge Colour",IDC_STATIC,81,234,40,8,SS_CENTERIMAGE
+    EDITTEXT        IDC_OFFSET,45,56,47,14,ES_AUTOHSCROLL
+    RTEXT           "Offset",IDC_STATIC,22,59,20,8,SS_CENTERIMAGE
+    COMBOBOX        IDC_OFFSET_UNITS,117,56,62,72,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    RTEXT           "Units",IDC_STATIC,90,59,24,8,SS_CENTERIMAGE
+    COMBOBOX        IDC_SIZE_FACTOR_UNITS,66,158,113,68,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    RTEXT           "Size factor units",IDC_STATIC,6,161,54,8,SS_CENTERIMAGE
+END
+
+IDD_ARC_DIALOG DIALOG 0, 0, 186, 159
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Arc Properties"
+FONT 8, "MS Sans Serif"
+BEGIN
+    EDITTEXT        IDC_FEATURE_ID,45,9,46,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_ENTITY_ID,132,9,47,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_RENDER_LEVEL,45,25,46,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_ROTATION,132,25,46,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_CENTRE,45,42,134,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_START_ANGLE,45,59,46,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_END_ANGLE,133,58,46,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_X_RADIUS,45,75,46,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_Y_RADIUS,133,74,46,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDGE_COLOUR,36,102,22,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDGE_STYLE,83,102,27,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDGE_THICKNESS,150,102,27,14,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,7,139,50,14
+    PUSHBUTTON      "Delete Prim",ID_DELETE_PRIMITIVE,69,139,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,129,139,50,14
+    RTEXT           "Feature ID",IDC_STATIC,8,12,34,8,SS_CENTERIMAGE
+    RTEXT           "Entity ID",IDC_STATIC,101,12,28,8,SS_CENTERIMAGE
+    RTEXT           "Render Lvl",IDC_STATIC,7,28,36,8,SS_CENTERIMAGE
+    GROUPBOX        "Edge Properties",IDC_STATIC,7,91,172,45
+    RTEXT           "Colour",IDC_STATIC,11,105,21,8,SS_CENTERIMAGE
+    RTEXT           "Style",IDC_STATIC,63,105,16,8,SS_CENTERIMAGE
+    RTEXT           "Thickness",IDC_STATIC,113,105,34,8,SS_CENTERIMAGE
+    RTEXT           "Centre",IDC_STATIC,21,45,22,8,SS_CENTERIMAGE
+    RTEXT           "Rotation",IDC_STATIC,101,27,28,8,SS_CENTERIMAGE
+    RTEXT           "Start Angle",IDC_STATIC,7,62,36,8,SS_CENTERIMAGE
+    RTEXT           "End Angle",IDC_STATIC,95,61,34,8,SS_CENTERIMAGE
+    RTEXT           "X Radius",IDC_STATIC,13,78,30,8,SS_CENTERIMAGE
+    RTEXT           "Y Radius",IDC_STATIC,99,77,30,8,SS_CENTERIMAGE
+    COMBOBOX        IDC_EDGE_THICKNESS_UNITS,83,118,89,46,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    RTEXT           "Thickness Units",IDC_STATIC,15,121,66,8,SS_CENTERIMAGE
+END
+
+IDD_ELLIPSE_DIALOG DIALOG 0, 0, 186, 175
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Ellipse Properties"
+FONT 8, "MS Sans Serif"
+BEGIN
+    EDITTEXT        IDC_FEATURE_ID,45,9,46,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_ENTITY_ID,132,9,47,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_RENDER_LEVEL,45,25,46,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_ROTATION,132,25,46,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_CENTRE,45,42,134,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_X_RADIUS,45,59,46,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_Y_RADIUS,133,58,46,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDGE_COLOUR,36,86,22,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDGE_STYLE,83,86,27,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDGE_THICKNESS,150,86,27,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_FILL_COLOUR,36,132,22,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_FILL_STYLE,83,132,27,14,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,7,154,50,14
+    PUSHBUTTON      "Delete Prim",ID_DELETE_PRIMITIVE,69,154,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,129,154,50,14
+    RTEXT           "Feature ID",IDC_STATIC,8,12,34,8,SS_CENTERIMAGE
+    RTEXT           "Entity ID",IDC_STATIC,101,12,28,8,SS_CENTERIMAGE
+    RTEXT           "Render Lvl",IDC_STATIC,7,28,36,8,SS_CENTERIMAGE
+    GROUPBOX        "Edge Properties",IDC_STATIC,7,75,172,45
+    RTEXT           "Colour",IDC_STATIC,11,89,21,8,SS_CENTERIMAGE
+    RTEXT           "Style",IDC_STATIC,63,89,16,8,SS_CENTERIMAGE
+    RTEXT           "Thickness",IDC_STATIC,113,89,34,8,SS_CENTERIMAGE
+    RTEXT           "Centre",IDC_STATIC,21,45,22,8,SS_CENTERIMAGE
+    RTEXT           "Rotation",IDC_STATIC,101,27,28,8,SS_CENTERIMAGE
+    RTEXT           "X Radius",IDC_STATIC,13,62,30,8,SS_CENTERIMAGE
+    RTEXT           "Y Radius",IDC_STATIC,99,61,30,8,SS_CENTERIMAGE
+    GROUPBOX        "Fill Properties",IDC_STATIC,7,121,172,30
+    RTEXT           "Colour",IDC_STATIC,11,135,21,8,SS_CENTERIMAGE
+    RTEXT           "Style",IDC_STATIC,63,135,16,8,SS_CENTERIMAGE
+    COMBOBOX        IDC_EDGE_THICKNESS_UNITS,88,102,89,46,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    RTEXT           "Thickness Units",IDC_STATIC,20,105,66,8,SS_CENTERIMAGE
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_RECTANGLE_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 182
+    END
+
+    IDD_POLYGON_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 184
+    END
+
+    IDD_POLYLINE_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 149
+    END
+
+    IDD_SYMBOL_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 149
+    END
+
+    IDD_TEXT_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 263
+    END
+
+    IDD_ARC_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 152
+    END
+
+    IDD_ELLIPSE_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 168
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\GeometryCreation.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_TEXT_DIALOG DLGINIT
+BEGIN
+    IDC_HORIZONTAL_ALIGNMENT, 0x403, 5, 0
+0x654c, 0x7466, "\000" 
+    IDC_HORIZONTAL_ALIGNMENT, 0x403, 7, 0
+0x6543, 0x746e, 0x6572, "\000" 
+    IDC_HORIZONTAL_ALIGNMENT, 0x403, 6, 0
+0x6952, 0x6867, 0x0074, 
+    IDC_HORIZONTAL_ALIGNMENT, 0x403, 10, 0
+0x6e55, 0x6564, 0x6966, 0x656e, 0x0064, 
+    IDC_VERTICAL_ALIGNMENT, 0x403, 12, 0
+0x7546, 0x6c6c, 0x4220, 0x746f, 0x6f74, 0x006d, 
+    IDC_VERTICAL_ALIGNMENT, 0x403, 9, 0
+0x6142, 0x6573, 0x696c, 0x656e, "\000" 
+    IDC_VERTICAL_ALIGNMENT, 0x403, 7, 0
+0x694d, 0x6464, 0x656c, "\000" 
+    IDC_VERTICAL_ALIGNMENT, 0x403, 12, 0
+0x6143, 0x6970, 0x6174, 0x206c, 0x6f54, 0x0070, 
+    IDC_VERTICAL_ALIGNMENT, 0x403, 9, 0
+0x7546, 0x6c6c, 0x5420, 0x706f, "\000" 
+    IDC_VERTICAL_ALIGNMENT, 0x403, 10, 0
+0x6e55, 0x6564, 0x6966, 0x656e, 0x0064, 
+    IDC_BACKGROUND_MODE, 0x403, 10, 0
+0x6e55, 0x6564, 0x6966, 0x656e, 0x0064, 
+    IDC_BACKGROUND_MODE, 0x403, 5, 0
+0x6f4e, 0x656e, "\000" 
+    IDC_BACKGROUND_MODE, 0x403, 5, 0
+0x6148, 0x6f6c, "\000" 
+    IDC_BACKGROUND_MODE, 0x403, 10, 0
+0x6552, 0x7463, 0x6e61, 0x6c67, 0x0065, 
+    IDC_OFFSET_UNITS, 0x403, 10, 0
+0x6e55, 0x6564, 0x6966, 0x656e, 0x0064, 
+    IDC_OFFSET_UNITS, 0x403, 7, 0
+0x6950, 0x6578, 0x736c, "\000" 
+    IDC_OFFSET_UNITS, 0x403, 10, 0
+0x614d, 0x2070, 0x6e55, 0x7469, 0x0073, 
+    IDC_SIZE_FACTOR_UNITS, 0x403, 10, 0
+0x6e55, 0x6564, 0x6966, 0x656e, 0x0064, 
+    IDC_SIZE_FACTOR_UNITS, 0x403, 7, 0
+0x6950, 0x6578, 0x736c, "\000" 
+    IDC_SIZE_FACTOR_UNITS, 0x403, 10, 0
+0x614d, 0x2070, 0x6e55, 0x7469, 0x0073, 
+    IDC_SIZE_FACTOR_UNITS, 0x403, 13, 0
+0x6353, 0x6c61, 0x2065, 0x6146, 0x7463, 0x726f, "\000" 
+    IDC_SIZE_FACTOR_UNITS, 0x403, 5, 0
+0x4d54, 0x7343, "\000" 
+    IDC_SIZE_FACTOR_UNITS, 0x403, 7, 0
+0x6f50, 0x6e69, 0x7374, "\000" 
+    0
+END
+
+IDD_SYMBOL_DIALOG DLGINIT
+BEGIN
+    IDC_ROTATABLE, 0x403, 10, 0
+0x6e55, 0x6564, 0x6966, 0x656e, 0x0064, 
+    IDC_ROTATABLE, 0x403, 17, 0
+0x6544, 0x6166, 0x6c75, 0x2074, 0x6f52, 0x6174, 0x6974, 0x6e6f, "\000" 
+    IDC_ROTATABLE, 0x403, 18, 0
+0x6f52, 0x6174, 0x6974, 0x6e6f, 0x4420, 0x7369, 0x6261, 0x656c, 0x0064, 
+
+    IDC_ROTATABLE, 0x403, 17, 0
+0x6f52, 0x6174, 0x6974, 0x6e6f, 0x4520, 0x616e, 0x6c62, 0x6465, "\000" 
+    IDC_SIZE_FACTOR_UNITS, 0x403, 10, 0
+0x6e55, 0x6564, 0x6966, 0x656e, 0x0064, 
+    IDC_SIZE_FACTOR_UNITS, 0x403, 7, 0
+0x6950, 0x6578, 0x736c, "\000" 
+    IDC_SIZE_FACTOR_UNITS, 0x403, 10, 0
+0x614d, 0x2070, 0x6e55, 0x7469, 0x0073, 
+    IDC_SIZE_FACTOR_UNITS, 0x403, 13, 0
+0x6353, 0x6c61, 0x2065, 0x6146, 0x7463, 0x726f, "\000" 
+    0
+END
+
+IDD_ARC_DIALOG DLGINIT
+BEGIN
+    IDC_EDGE_THICKNESS_UNITS, 0x403, 10, 0
+0x6e55, 0x6564, 0x6966, 0x656e, 0x0064, 
+    IDC_EDGE_THICKNESS_UNITS, 0x403, 7, 0
+0x6950, 0x6578, 0x736c, "\000" 
+    IDC_EDGE_THICKNESS_UNITS, 0x403, 10, 0
+0x614d, 0x2070, 0x6e55, 0x7469, 0x0073, 
+    0
+END
+
+IDD_ELLIPSE_DIALOG DLGINIT
+BEGIN
+    IDC_EDGE_THICKNESS_UNITS, 0x403, 10, 0
+0x6e55, 0x6564, 0x6966, 0x656e, 0x0064, 
+    IDC_EDGE_THICKNESS_UNITS, 0x403, 7, 0
+0x6950, 0x6578, 0x736c, "\000" 
+    IDC_EDGE_THICKNESS_UNITS, 0x403, 10, 0
+0x614d, 0x2070, 0x6e55, 0x7469, 0x0073, 
+    0
+END
+
+IDD_POLYGON_DIALOG DLGINIT
+BEGIN
+    IDC_EDGE_THICKNESS_UNITS, 0x403, 10, 0
+0x6e55, 0x6564, 0x6966, 0x656e, 0x0064, 
+    IDC_EDGE_THICKNESS_UNITS, 0x403, 7, 0
+0x6950, 0x6578, 0x736c, "\000" 
+    IDC_EDGE_THICKNESS_UNITS, 0x403, 10, 0
+0x614d, 0x2070, 0x6e55, 0x7469, 0x0073, 
+    IDC_EDGE_THICKNESS_UNITS, 0x403, 13, 0
+0x6353, 0x6c61, 0x2065, 0x6146, 0x7463, 0x726f, "\000" 
+    IDC_EDGE_THICKNESS_UNITS, 0x403, 4, 0
+0x4d54, 0x0043, 
+    IDC_EDGE_THICKNESS_UNITS, 0x403, 7, 0
+0x6f50, 0x6e69, 0x7374, "\000" 
+    0
+END
+
+IDD_POLYLINE_DIALOG DLGINIT
+BEGIN
+    IDC_EDGE_THICKNESS_UNITS, 0x403, 10, 0
+0x6e55, 0x6564, 0x6966, 0x656e, 0x0064, 
+    IDC_EDGE_THICKNESS_UNITS, 0x403, 7, 0
+0x6950, 0x6578, 0x736c, "\000" 
+    IDC_EDGE_THICKNESS_UNITS, 0x403, 10, 0
+0x614d, 0x2070, 0x6e55, 0x7469, 0x0073, 
+    IDC_EDGE_THICKNESS_UNITS, 0x403, 13, 0
+0x6353, 0x6c61, 0x2065, 0x6146, 0x7463, 0x726f, "\000" 
+    IDC_EDGE_THICKNESS_UNITS, 0x403, 4, 0
+0x4d54, 0x0043, 
+    IDC_EDGE_THICKNESS_UNITS, 0x403, 7, 0
+0x6f50, 0x6e69, 0x7374, "\000" 
+    0
+END
+
+IDD_RECTANGLE_DIALOG DLGINIT
+BEGIN
+    IDC_EDGE_THICKNESS_UNITS, 0x403, 10, 0
+0x6e55, 0x6564, 0x6966, 0x656e, 0x0064, 
+    IDC_EDGE_THICKNESS_UNITS, 0x403, 7, 0
+0x6950, 0x6578, 0x736c, "\000" 
+    IDC_EDGE_THICKNESS_UNITS, 0x403, 10, 0
+0x614d, 0x2070, 0x6e55, 0x7469, 0x0073, 
+    0
+END
+
+#endif    // English (United Kingdom) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif //_WIN32
+#include "res\GeometryCreation.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

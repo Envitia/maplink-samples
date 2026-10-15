@@ -1,0 +1,30 @@
+﻿<Window x:Class="CSharpCustomPanel_WPF_Sample.AboutBox"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CSharpCustomPanel_WPF_Sample"
+        mc:Ignorable="d"
+        Title="About CSharpCustomPanel_WPF_Sample" Height="200" Width="420" Icon="ProgramIcon.ico" WindowStartupLocation="CenterScreen">
+    <StackPanel Orientation="Vertical">
+        <DockPanel Margin="10,5">
+            <Image Source="AboutBoxImage.bmp" Width="175" Height="41" DockPanel.Dock="Left"/>
+            <Button IsDefault="True" Content="OK" Width="55" Height="20" HorizontalAlignment="Right" Margin="5,0" Click="Button_Click"/>
+        </DockPanel>
+        
+        <TextBlock Margin="10,10">
+            CSharpCustomPanel_WPF_Sample Version 1.0
+        </TextBlock>
+
+        <TextBlock Margin="10,0">
+            Copyright © 1998-2017 Envitia Group PLC. All rights reserved.
+        </TextBlock>
+        
+        <TextBlock Margin="10,15,10,0" HorizontalAlignment="Center" Foreground="Gray">
+            Portions developed using LEADTOOLS,
+        </TextBlock>
+        <TextBlock Margin="10,0" HorizontalAlignment="Center"  Foreground="Gray">
+            Copyright © 1991-2025 LEAD Technologies, Inc. ALL RIGHTS RESERVED
+        </TextBlock>
+    </StackPanel>
+</Window>

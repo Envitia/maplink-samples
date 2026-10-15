@@ -1,0 +1,77 @@
+// ActiveXCPP.idl : IDL source for ActiveXCPP.dll
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (ActiveXCPP.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+#include "olectl.h"
+
+
+[
+  object,
+  uuid(2839D343-1310-11D5-BD3A-00C04FA1120D),
+  dual,
+  helpstring("IActiveXCPP Interface"),
+  pointer_default(unique)
+]
+interface IActiveXCPP : IDispatch
+{
+  [propget, id(1), helpstring("Specifies the map file to use")] HRESULT mapName([out, retval] BSTR *pVal);
+  [propput, id(1), helpstring("Specifies the map file to use")] HRESULT mapName([in] BSTR newVal);
+  [propget, id(2), helpstring("Specifies the location of map files on the server")] HRESULT serverMapPath([out, retval] BSTR *pVal);
+  [propput, id(2), helpstring("Specifies the location of map files on the server")] HRESULT serverMapPath([in] BSTR newVal);
+  [propget, id(3), helpstring("Specifies the directory on the server containing the config files")] HRESULT serverConfigPath([out, retval] BSTR *pVal);
+  [propput, id(3), helpstring("Specifies the directory on the server containing the config files")] HRESULT serverConfigPath([in] BSTR newVal);
+
+  [propget, id(4), helpstring("The user interaction mode. Set to \"zoom\", \"pan\" or \"grab\" modes. Any other string sets no mode")]
+  HRESULT interactionMode([out, retval] BSTR *pVal);
+  [propput, id(4), helpstring("The user interaction mode. Set to \"zoom\", \"pan\" or \"grab\" modes. Any other string sets no mode")]
+  HRESULT interactionMode([in] BSTR newVal);
+
+  [propget, id(5), helpstring("Amount to zoom in or out by when calling zoomIn and zoomOut methods. Specified as percentage of viewable area.")]
+  HRESULT zoomPercentage([out, retval] short *pVal);
+  [propput, id(5), helpstring("Amount to zoom in or out by when calling zoomIn and zoomOut methods. Specified as percentage of viewable area.")]
+  HRESULT zoomPercentage([in] short newVal);
+
+  [id(6), helpstring("Reset the viewable to area to the whole map")] HRESULT resetView([out, retval] VARIANT_BOOL *rslt);
+  [id(7), helpstring("Zoom in by current zoomPercentage value")] HRESULT zoomIn([out, retval] VARIANT_BOOL *rslt);
+  [id(8), helpstring("Zoom out by current zoomPercentage value")] HRESULT zoomOut([out, retval] VARIANT_BOOL *rslt);
+  [id(9), helpstring("Zoom to specified location (in map units) showing specified width of map (also map units)")] HRESULT setView([in] double x, [in] double y, [in] double width, [out, retval] VARIANT_BOOL *rslt);
+
+  [propget, id(10), helpstring("Specifies the size of the memory cache in KB")]
+  HRESULT memoryCacheSize([out, retval] long *pVal);
+  [propput, id(10), helpstring("Specifies the size of the memory cache in KB")]
+  HRESULT memoryCacheSize([in] long newVal);
+
+  [propget, id(11), helpstring("Read-only property returns the DrawingSurface handle for use with Feature Rendering Dialog")]
+  HRESULT drawingSurfacePtr([out, retval] long *pVal);
+  [propget, id(12), helpstring("Read-only property returns the map layer name for use with the Feature Rendering Dialog")]
+  HRESULT mapLayerName([out, retval] BSTR *pVal);
+  [propget, id(13), helpstring("property persistentCacheDirectory")] HRESULT persistentCacheDirectory([out, retval] BSTR *pVal);
+  [propput, id(13), helpstring("property persistentCacheDirectory")] HRESULT persistentCacheDirectory([in] BSTR newVal);
+  [propget, id(14), helpstring("Maximum size of the persistent cache (in MB)")] HRESULT persistentCacheMaxSize([out, retval] long *pVal);
+  [propput, id(14), helpstring("Maximum size of the persistent cache (in MB)")] HRESULT persistentCacheMaxSize([in] long newVal);
+  [id(15), helpstring("method print")] HRESULT print();
+};
+
+[
+  uuid(18CA2572-13A7-11D5-BD3A-00C04FA1120D),
+  version(7.6),
+  helpstring("MapLink ActiveX C++ Sample")
+]
+library ACTIVEXCPPLib
+{
+  importlib("stdole32.tlb");
+  importlib("stdole2.tlb");
+
+  [
+    uuid(2839D344-1310-11D5-BD3A-00C04FA1120D),
+    helpstring("MapLink ActiveX C++ Sample")
+  ]
+  coclass ActiveXCPP
+  {
+    [default] interface IActiveXCPP;
+  };
+};

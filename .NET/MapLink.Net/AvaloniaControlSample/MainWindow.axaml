@@ -1,0 +1,42 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:ctrl="clr-namespace:Envitia.MapLink.TSLNSkiaDrawingSurfaceControl;assembly=Envitia.MapLink.TSLNSkiaDrawingSurfaceAvaloniaControl"
+        x:Class="AvaloniaControlSample.MainWindow"
+        Width="900" Height="600"
+        Title="Avalonia Control Sample">
+
+  <DockPanel>
+    <!-- Control Panel -->
+    <Border DockPanel.Dock="Bottom"
+            Background="#F0F0F0"
+            BorderBrush="#CCCCCC"
+            BorderThickness="0,1,0,0"
+            Padding="10">
+      <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Spacing="5">
+        <Button Content="Reset View"
+                MinWidth="120"
+                Foreground="Black"
+                Click="ResetButton_Click"
+                ToolTip.Tip="Reset the map to the full extent"/>
+        <Button Content="Zoom In"
+                MinWidth="120"
+                Foreground="Black"
+                Click="ZoomInButton_Click"
+                ToolTip.Tip="Zoom in 30%"/>
+        <Button Content="Zoom Out"
+                MinWidth="120"
+                Foreground="Black"
+                Click="ZoomOutButton_Click"
+                ToolTip.Tip="Zoom out 30%"/>
+      </StackPanel>
+    </Border>
+
+    <!-- Drawing Surface -->
+    <Panel>
+      <ctrl:TSLNSkiaDrawingSurfaceAvaloniaControl x:Name="MapControl"
+                                          HorizontalAlignment="Stretch"
+                                          VerticalAlignment="Stretch"
+                                          BaseMap="C:\Program Files\Envitia\MapLink Pro\11.3\Maps\NaturalEarthBasic\NaturalEarthBasic.map"/>
+    </Panel>
+  </DockPanel>
+</Window>

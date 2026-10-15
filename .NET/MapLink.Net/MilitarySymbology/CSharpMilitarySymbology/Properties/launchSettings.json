@@ -1,0 +1,11 @@
+{
+  "profiles": {
+    "CSharpMilitarySymbology": {
+      "commandName": "Project",
+      "workingDirectory": "..\\..\\..\\..\\..\\..\\MapLink\\bin64",
+      "environmentVariables": {
+        "MAPL_HOME_OVERRIDE": "..\\..\\MapLink\\"
+      }
+    }
+  }
+}

@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34714.143
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DrawingSurfacePanel", "DrawingSurfacePanel.csproj", "{95CFB164-3FC3-4A71-8E6F-0258DA7E678C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{95CFB164-3FC3-4A71-8E6F-0258DA7E678C}.Debug|x64.ActiveCfg = Debug|x64
+		{95CFB164-3FC3-4A71-8E6F-0258DA7E678C}.Debug|x64.Build.0 = Debug|x64
+		{95CFB164-3FC3-4A71-8E6F-0258DA7E678C}.Release|x64.ActiveCfg = Release|x64
+		{95CFB164-3FC3-4A71-8E6F-0258DA7E678C}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5D55117A-BE0D-4EAC-85F6-3B35B7293A36}
+	EndGlobalSection
+EndGlobal

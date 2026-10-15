@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35931.197 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "EarthSample", "EarthSample.vcxproj", "{8F0967A2-70B4-4293-B7FF-12BBB3AAFAAA}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MapLinkEarth", "..\..\..\..\SDK\3DEarth\earth.vcxproj", "{9DEC38F9-7039-44C1-BCC2-0684B07FB360}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Pseudo Debug|x64 = Pseudo Debug|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8F0967A2-70B4-4293-B7FF-12BBB3AAFAAA}.Pseudo Debug|x64.ActiveCfg = Pseudo Debug|x64
+		{8F0967A2-70B4-4293-B7FF-12BBB3AAFAAA}.Pseudo Debug|x64.Build.0 = Pseudo Debug|x64
+		{8F0967A2-70B4-4293-B7FF-12BBB3AAFAAA}.Release|x64.ActiveCfg = Release|x64
+		{8F0967A2-70B4-4293-B7FF-12BBB3AAFAAA}.Release|x64.Build.0 = Release|x64
+		{9DEC38F9-7039-44C1-BCC2-0684B07FB360}.Pseudo Debug|x64.ActiveCfg = Release|x64
+		{9DEC38F9-7039-44C1-BCC2-0684B07FB360}.Pseudo Debug|x64.Build.0 = Release|x64
+		{9DEC38F9-7039-44C1-BCC2-0684B07FB360}.Release|x64.ActiveCfg = Release|x64
+		{9DEC38F9-7039-44C1-BCC2-0684B07FB360}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {57151C9D-92EE-482E-B88A-CB81A38015FC}
+	EndGlobalSection
+EndGlobal

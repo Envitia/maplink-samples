@@ -1,0 +1,771 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\NITFDirectImportSample.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDR_MAINFRAME           BITMAP                  "res\\Toolbar.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDR_MAINFRAME TOOLBAR  24, 24
+BEGIN
+    BUTTON      ID_FILE_OPEN
+    BUTTON      ID_FILE_PRINT
+    SEPARATOR
+    BUTTON      ID_EDIT_COPY
+    SEPARATOR
+    BUTTON      ID_TOOLS_ZOOMIN
+    BUTTON      ID_TOOLS_ZOOMOUT
+    BUTTON      ID_TOOLS_RESET
+    SEPARATOR
+    BUTTON      ID_TOOLS_ZOOM
+    BUTTON      ID_TOOLS_PAN
+    BUTTON      ID_TOOLS_MAGNIFY
+    BUTTON      ID_TOOLS_GRAB
+    SEPARATOR
+    BUTTON      ID_VIEWSTACK_PREVIOUSVIEW
+    BUTTON      ID_VIEWSTACK_NEXTVIEW
+    SEPARATOR
+    BUTTON      ID_SAVEDVIEWS_GOTO1
+    BUTTON      ID_SAVEDVIEWS_GOTO2
+    BUTTON      ID_SAVEDVIEWS_GOTO3
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&Open NITF File...\tCtrl+O",  ID_FILE_OPEN
+        MENUITEM "Save Display Item",           ID_FILE_SAVEITEM
+        MENUITEM "Save All...",                 ID_FILE_SAVE_ALL
+        MENUITEM "&Print...\tCtrl+P",           ID_FILE_PRINT
+        MENUITEM "Print Pre&view",              ID_FILE_PRINT_PREVIEW
+        MENUITEM "P&rint Setup...",             ID_FILE_PRINT_SETUP
+        MENUITEM SEPARATOR
+        MENUITEM "Recent File",                 ID_FILE_MRU_FILE1, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       ID_APP_EXIT
+    END
+    POPUP "&Edit"
+    BEGIN
+        MENUITEM "&Copy\tCtrl+C",               ID_EDIT_COPY
+    END
+    POPUP "&View"
+    BEGIN
+        MENUITEM "&Toolbar",                    ID_VIEW_TOOLBAR
+        MENUITEM "&Status Bar",                 ID_VIEW_STATUS_BAR
+        MENUITEM "Progress",                    ID_VIEW_PROGRESS
+        MENUITEM "Metadata Info",               ID_VIEW_METADATAINFO
+        MENUITEM "Display Item Settings Before Process", ID_VIEW_DISPLAYITEMSETTINGSBEFOREPROCESS
+    END
+    POPUP "&Tools"
+    BEGIN
+        MENUITEM "Zoom &In",                    ID_TOOLS_ZOOMIN
+        MENUITEM "Zoom &Out",                   ID_TOOLS_ZOOMOUT
+        MENUITEM "&Reset",                      ID_TOOLS_RESET
+        MENUITEM SEPARATOR
+        MENUITEM "&Zoom",                       ID_TOOLS_ZOOM
+        MENUITEM "&Pan",                        ID_TOOLS_PAN
+        MENUITEM "&Grab",                       ID_TOOLS_GRAB
+        MENUITEM "&Magnify",                    ID_TOOLS_MAGNIFY
+        MENUITEM SEPARATOR
+        POPUP "Saved Views"
+        BEGIN
+            MENUITEM "Goto 1",                      ID_SAVEDVIEWS_GOTO1
+            MENUITEM "Goto 2",                      ID_SAVEDVIEWS_GOTO2
+            MENUITEM "Goto 3",                      ID_SAVEDVIEWS_GOTO3
+            MENUITEM SEPARATOR
+            MENUITEM "Set 1",                       ID_SAVEDVIEWS_SET1
+            MENUITEM "Set 2",                       ID_SAVEDVIEWS_SET2
+            MENUITEM "Set 3",                       ID_SAVEDVIEWS_SET3
+            MENUITEM SEPARATOR
+            MENUITEM "Reset",                       ID_SAVEDVIEWS_RESET
+        END
+        POPUP "View Stack"
+        BEGIN
+            MENUITEM "Previous View",               ID_VIEWSTACK_PREVIOUSVIEW
+            MENUITEM "Next View",                   ID_VIEWSTACK_NEXTVIEW
+        END
+    END
+    POPUP "Settings"
+    BEGIN
+        MENUITEM "Settings",                    ID_TOOLS_SETTINGS
+        MENUITEM "Display Item Settings",       ID_TOOLS_DISPLAYITEMSETTINGS
+        MENUITEM "Directories",                 ID_TOOLS_DIRECTORIES
+        MENUITEM "Pyramiding Settings",         ID_SETTINGS_PYRAMIDINGSETTINGS
+        MENUITEM SEPARATOR
+        MENUITEM "Pyramid Rasters",             ID_SETTINGS_PYRAMIDRASTERS
+    END
+    POPUP "Clipping"
+    BEGIN
+        MENUITEM "Geodetic Clipping",           ID_CLIPPING_GEODETICCLIPPING
+        MENUITEM "Output Clipping",             ID_CLIPPING_OUTPUTCLIPPING
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&About NITFDirectImportSample...", ID_APP_ABOUT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAINFRAME ACCELERATORS 
+BEGIN
+    "C",            ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
+    "N",            ID_FILE_NEW,            VIRTKEY, CONTROL, NOINVERT
+    "O",            ID_FILE_OPEN,           VIRTKEY, CONTROL, NOINVERT
+    "P",            ID_FILE_PRINT,          VIRTKEY, CONTROL, NOINVERT
+    "V",            ID_EDIT_PASTE,          VIRTKEY, CONTROL, NOINVERT
+    VK_ADD,         ID_TOOLS_ZOOMIN,        VIRTKEY, NOINVERT
+    VK_BACK,        ID_EDIT_UNDO,           VIRTKEY, ALT, NOINVERT
+    VK_DELETE,      ID_EDIT_CUT,            VIRTKEY, SHIFT, NOINVERT
+    VK_F6,          ID_NEXT_PANE,           VIRTKEY, NOINVERT
+    VK_F6,          ID_PREV_PANE,           VIRTKEY, SHIFT, NOINVERT
+    VK_INSERT,      ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
+    VK_INSERT,      ID_EDIT_PASTE,          VIRTKEY, SHIFT, NOINVERT
+    VK_SUBTRACT,    ID_TOOLS_ZOOMOUT,       VIRTKEY, NOINVERT
+    "X",            ID_EDIT_CUT,            VIRTKEY, CONTROL, NOINVERT
+    "Z",            ID_EDIT_UNDO,           VIRTKEY, CONTROL, NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 257, 90
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About NITFDirectImportSample"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    LTEXT           "NITFDirectImportSample Version 1.0",IDC_APP,7,42,212,9,SS_NOPREFIX
+    CTEXT           "Portions developed using LEADTOOLS,\nCopyright © 1991-2025 LEAD Technologies, Inc. ALL RIGHTS RESERVED",IDC_THIRDPARTY,7,65,243,17
+    DEFPUSHBUTTON   "OK",IDOK,205,7,45,14,WS_GROUP
+    CONTROL         "",IDC_LOGO,"Static",SS_OWNERDRAW,8,9,136,25
+    LTEXT           "Copyright © 1998-2026 Envitia Group PLC. All rights reserved.",IDC_COPYRIGHT,7,51,215,8
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 11,3,3,0
+ PRODUCTVERSION 11,3,3,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "CompanyName", "Envitia Group PLC"
+            VALUE "FileDescription", "Envitia NITF  Direct Import Sample Application 11.3"
+            VALUE "FileVersion", "11.3.3.0"
+            VALUE "InternalName", "NITFDirectImportSample"
+            VALUE "LegalCopyright", "Copyright © 1998-2026 Envitia Group PLC. All rights reserved."
+            VALUE "OriginalFilename", "NITFDirectImportSample.EXE"
+            VALUE "ProductName", "NITF Direct Import Sample Application"
+            VALUE "ProductVersion", "11.3.3.0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 250
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 82
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDR_MAINFRAME           "NITFDirectImportSample\n\nNITFDirectImportSample\nNITF files (*.ntf)\n.ntf\nNITFDirectImportSample.Document\nNITFDirectImportSample Document"
+    ID_LAT_STR              "Latitude"
+    ID_LON_STR              "Longitude"
+    ID_NO_OF_DISP_ITEMS     "Num DisplayItems"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_APP_TITLE       "NITFDirectImportSample"
+    AFX_IDS_IDLEMESSAGE     "Ready"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_INDICATOR_EXT        "EXT"
+    ID_INDICATOR_CAPS       "CAP"
+    ID_INDICATOR_NUM        "NUM"
+    ID_INDICATOR_SCRL       "SCRL"
+    ID_INDICATOR_OVR        "OVR"
+    ID_INDICATOR_REC        "REC"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_FILE_OPEN            "Open a NITF File\nOpen"
+    ID_FILE_PAGE_SETUP      "Change the printing options\nPage Setup"
+    ID_FILE_PRINT_SETUP     "Change the printer and printing options\nPrint Setup"
+    ID_FILE_PRINT           "Print the active document\nPrint"
+    ID_FILE_PRINT_PREVIEW   "Display full pages\nPrint Preview"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_APP_ABOUT            "Display program information, version number and copyright\nAbout"
+    ID_APP_EXIT             "Quit the application; prompts to save documents\nExit"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_FILE_MRU_FILE1       "Open this document"
+    ID_FILE_MRU_FILE2       "Open this document"
+    ID_FILE_MRU_FILE3       "Open this document"
+    ID_FILE_MRU_FILE4       "Open this document"
+    ID_FILE_MRU_FILE5       "Open this document"
+    ID_FILE_MRU_FILE6       "Open this document"
+    ID_FILE_MRU_FILE7       "Open this document"
+    ID_FILE_MRU_FILE8       "Open this document"
+    ID_FILE_MRU_FILE9       "Open this document"
+    ID_FILE_MRU_FILE10      "Open this document"
+    ID_FILE_MRU_FILE11      "Open this document"
+    ID_FILE_MRU_FILE12      "Open this document"
+    ID_FILE_MRU_FILE13      "Open this document"
+    ID_FILE_MRU_FILE14      "Open this document"
+    ID_FILE_MRU_FILE15      "Open this document"
+    ID_FILE_MRU_FILE16      "Open this document"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_EDIT_COPY            "Copy the current view and put it on the Clipboard\nCopy"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_VIEW_TOOLBAR         "Show or hide the toolbar\nToggle ToolBar"
+    ID_VIEW_STATUS_BAR      "Show or hide the status bar\nToggle StatusBar"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_SCSIZE          "Change the window size"
+    AFX_IDS_SCMOVE          "Change the window position"
+    AFX_IDS_SCMINIMIZE      "Reduce the window to an icon"
+    AFX_IDS_SCMAXIMIZE      "Enlarge the window to full size"
+    AFX_IDS_SCNEXTWINDOW    "Switch to the next document window"
+    AFX_IDS_SCPREVWINDOW    "Switch to the previous document window"
+    AFX_IDS_SCCLOSE         "Close the active window and prompts to save the documents"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_SCRESTORE       "Restore the window to normal size"
+    AFX_IDS_SCTASKLIST      "Activate Task List"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_PREVIEW_CLOSE   "Close print preview mode\nCancel Preview"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_TOOLS_ZOOMIN         "Zoom In\nZoom In"
+    ID_TOOLS_ZOOMOUT        "Zoom Out\nZoom Out"
+    ID_TOOLS_RESET          "View whole map\nReset"
+    ID_TOOLS_ZOOM           "Zoom\nZoom"
+    ID_TOOLS_PAN            "Pan to point\nPan"
+    ID_TOOLS_ZOOMPAN        "Combined Zoom/Pan to point\nZoom/Pan"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_TOOLS_GRAB           "Grab and drag the map\nGrab"
+    ID_TOOLS_MAGNIFY        "Magnify to Area around cursor\nMagnify"
+    ID_SAVEDVIEWS_GOTO1     "Goto Saved View 1\nView 1"
+    ID_SAVEDVIEWS_GOTO2     "Goto Saved View 2\nView 2"
+    ID_SAVEDVIEWS_GOTO3     "Goto Saved View 3\nView 3"
+    ID_VIEWSTACK_PREVIOUSVIEW 
+                            "Goto Previous View in View Stack\nPrevious View"
+    ID_VIEWSTACK_NEXTVIEW   "Goto Next View in View Stack\nNext View"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.K.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENG)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_UK
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_TOOLBAR_ENABLED     BITMAP                  "Res\\Toolbar_enabled.bmp"
+IDB_TOOLBAR_DISABLED    BITMAP                  "Res\\Toolbar_disabled.bmp"
+IDB_ABOUT_BOX_IMG       BITMAP                  "Res\\AboutBoxImage.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_PROGRESS_DIALOG DIALOGEX 0, 0, 186, 59
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_CAPTION
+EXSTYLE WS_EX_TOOLWINDOW
+CAPTION "Progress.."
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_PROGRESS1,"msctls_progress32",WS_BORDER,7,18,172,11
+    CONTROL         "",IDC_PROGRESS2,"msctls_progress32",WS_BORDER,7,41,172,11
+    LTEXT           "Loading",IDC_STATIC,7,7,51,9
+    LTEXT           "Processing",IDC_STATIC,7,30,51,9
+END
+
+IDD_METADATA_DLG DIALOGEX 0, 0, 186, 90
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_TOOLWINDOW
+CAPTION "Metadata"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LISTBOX         IDC_LIST1,7,7,172,76,LBS_NOINTEGRALHEIGHT | LBS_NOSEL | WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_DIS_ITEM_SETTINGS DIALOGEX 0, 0, 394, 250
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Display Item Settings"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,77,228,50,15
+    PUSHBUTTON      "Cancel",IDCANCEL,149,228,50,15
+    CONTROL         "",IDC_TREE1,"SysTreeView32",TVS_HASBUTTONS | TVS_HASLINES | TVS_LINESATROOT | TVS_SHOWSELALWAYS | WS_BORDER | WS_TABSTOP,7,7,193,215
+    COMBOBOX        IDC_VISIBILITY,274,18,105,38,CBS_DROPDOWNLIST | WS_DISABLED | WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "Item Settings",IDC_STATIC,207,7,180,236
+    LTEXT           "Visible:",IDC_STATIC,214,20,27,8
+    GROUPBOX        "Advance Settings",IDC_ADV_STATIC,213,132,165,82
+    LTEXT           "Description:",IDC_STATIC,214,33,39,8
+    EDITTEXT        IDC_DESCRIPTION,274,31,104,12,ES_AUTOHSCROLL | ES_READONLY | WS_DISABLED
+    LTEXT           "Geolocated:",IDC_STATIC,213,45,51,8
+    EDITTEXT        IDC_GEOLOCATED,274,43,104,12,ES_AUTOHSCROLL | ES_READONLY | WS_DISABLED
+    LTEXT           "User defined:",IDC_STATIC,213,57,44,8
+    EDITTEXT        IDC_USER_DEFINED,274,55,104,12,ES_AUTOHSCROLL | ES_READONLY | WS_DISABLED
+    LTEXT           "Min X:",IDC_STATIC,213,69,61,8
+    EDITTEXT        IDC_MIN_X,274,67,104,12,ES_AUTOHSCROLL | ES_READONLY | WS_DISABLED
+    LTEXT           "Min Y:",IDC_STATIC,213,81,61,8
+    EDITTEXT        IDC_MIN_Y,274,79,104,12,ES_AUTOHSCROLL | ES_READONLY | WS_DISABLED
+    LTEXT           "Max X:",IDC_STATIC,213,93,61,8
+    EDITTEXT        IDC_MAX_X,274,91,104,12,ES_AUTOHSCROLL | ES_READONLY | WS_DISABLED
+    LTEXT           "Max Y:",IDC_STATIC,213,105,61,8
+    EDITTEXT        IDC_MAX_Y,274,103,104,12,ES_AUTOHSCROLL | ES_READONLY | WS_DISABLED
+    PUSHBUTTON      "Clear",ID_ADV_CLEAR,237,194,50,15
+    PUSHBUTTON      "Apply",ID_ADV_APPLY,301,194,50,15
+    LTEXT           "Min X:",IDC_STATIC,220,145,47,8
+    EDITTEXT        IDC_U_MIN_X,274,142,95,12,ES_AUTOHSCROLL | WS_DISABLED
+    LTEXT           "Min Y:",IDC_STATIC,220,156,40,8
+    EDITTEXT        IDC_U_MIN_Y,274,154,95,12,ES_AUTOHSCROLL | WS_DISABLED
+    LTEXT           "Max X:",IDC_STATIC,220,169,45,8
+    EDITTEXT        IDC_U_MAX_X,274,166,95,12,ES_AUTOHSCROLL | WS_DISABLED
+    LTEXT           "Max Y:",IDC_STATIC,220,180,45,8
+    EDITTEXT        IDC_U_MAX_Y,274,178,95,12,ES_AUTOHSCROLL | WS_DISABLED
+    LTEXT           "Process Status:",IDC_STATIC,213,117,61,8
+    EDITTEXT        IDC_PROCESS_STATUS,274,115,104,12,ES_AUTOHSCROLL | ES_READONLY | WS_DISABLED
+    PUSHBUTTON      "Process All",ID_PROCESS_ALL,7,228,50,15
+    PUSHBUTTON      "Force Process Item",ID_PROCESS_ITEM,305,222,74,15,WS_DISABLED
+    PUSHBUTTON      "Clipping",ID_CLIPPING,213,222,74,15,WS_DISABLED
+END
+
+IDD_DIR_DLG DIALOGEX 0, 0, 186, 110
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Dialog"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,74,89,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,129,89,50,14
+    EDITTEXT        IDC_ATTACHMENTS_DIR,7,18,172,14,ES_AUTOHSCROLL
+    LTEXT           "Attachments Directory:",IDC_STATIC,7,7,78,10
+    EDITTEXT        IDC_OUTPUT_DIR,7,44,172,14,ES_AUTOHSCROLL
+    LTEXT           "Output Directory:",IDC_STATIC,7,33,78,10
+    EDITTEXT        IDC_TEMP_DIR,7,70,172,14,ES_AUTOHSCROLL
+    LTEXT           "Temporary Directory:",IDC_STATIC,7,59,78,10
+END
+
+IDD_SAVE_DLG DIALOGEX 0, 0, 227, 145
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Save..."
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,109,124,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,170,124,50,14
+    GROUPBOX        "Display Item",IDC_STATIC,7,7,213,32
+    COMBOBOX        IDC_SEL_DIS_ITEM,137,20,61,36,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Display Item To Save:",IDC_STATIC,17,20,104,13
+    GROUPBOX        "Directory to save data to:",IDC_STATIC,7,78,213,42
+    EDITTEXT        IDC_SAVE,16,94,192,15,ES_AUTOHSCROLL
+    GROUPBOX        "Raster Options",IDC_STATIC,7,41,213,35
+    COMBOBOX        IDC_RASTER_FORMAT,47,54,61,36,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Format:",IDC_STATIC,14,57,34,8
+END
+
+IDD_SETTINGS_DLG DIALOGEX 0, 0, 186, 100
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Settings"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,75,79,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,129,79,50,14
+    EDITTEXT        IDC_DLL_NAME,7,17,172,12,ES_AUTOHSCROLL
+    LTEXT           "Filter DLL Name",IDC_STATIC,7,7,55,9
+    EDITTEXT        IDC_UNLOCK_CODE,7,41,172,12,ES_AUTOHSCROLL
+    LTEXT           "Unlock Code",IDC_STATIC,7,31,55,9
+    EDITTEXT        IDC_SETTINGS_FILE,7,63,172,12,ES_AUTOHSCROLL
+    LTEXT           "Settings file (Leave blank for default)",IDC_STATIC,7,53,122,9
+END
+
+IDD_PYRAMID_SETTINGS DIALOGEX 0, 0, 186, 90
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Pyramiding Settings"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,72,69,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,129,69,50,14
+    COMBOBOX        IDC_INTERPOLATION,81,7,98,58,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Interpolation:",IDC_STATIC,7,9,66,8
+    CONTROL         "MultiPage",IDC_MPAGE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,17,23,131,11
+    COMBOBOX        IDC_RASTER_FORMAT,81,35,98,58,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Format: ",IDC_STATIC,7,38,66,8
+    EDITTEXT        IDC_FACTOR,118,52,61,12,ES_AUTOHSCROLL
+    LTEXT           "Compression Factor:",IDC_STATIC,7,53,66,8
+END
+
+IDD_CLIP_DLG DIALOGEX 0, 0, 136, 110
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Clipping..."
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,7,89,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,79,89,50,14
+    LTEXT           "Min X:",IDC_STATIC,15,25,47,8
+    EDITTEXT        IDC_C_MIN_X,42,22,78,12,ES_AUTOHSCROLL | WS_DISABLED
+    LTEXT           "Min Y:",IDC_STATIC,15,36,40,8
+    EDITTEXT        IDC_C_MIN_Y,42,35,78,12,ES_AUTOHSCROLL | WS_DISABLED
+    LTEXT           "Max X:",IDC_STATIC,15,49,45,8
+    EDITTEXT        IDC_C_MAX_X,42,46,78,12,ES_AUTOHSCROLL | WS_DISABLED
+    LTEXT           "Max Y:",IDC_STATIC,15,60,45,8
+    EDITTEXT        IDC_C_MAX_Y,42,59,78,12,ES_AUTOHSCROLL | WS_DISABLED
+    GROUPBOX        "",IDC_STATIC,7,7,122,74
+    CONTROL         "Apply Clipping",IDC_CLIP,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,14,7,56,10
+END
+
+IDD_GEO_CLIP_DLG DIALOGEX 0, 0, 146, 116
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Geodetic Clipping"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,7,95,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,89,95,50,14
+    LTEXT           "Min Lat:",IDC_STATIC,15,25,47,8
+    EDITTEXT        IDC_MIN_LAT,53,22,78,12,ES_AUTOHSCROLL | WS_DISABLED
+    LTEXT           "Max Lat:",IDC_STATIC,15,37,40,8
+    EDITTEXT        IDC_MAX_LAT,53,35,78,12,ES_AUTOHSCROLL | WS_DISABLED
+    LTEXT           "Ref Meridn:",IDC_STATIC,15,49,45,8
+    EDITTEXT        IDC_REF_MER,53,46,78,12,ES_AUTOHSCROLL | WS_DISABLED
+    LTEXT           "Deg West:",IDC_STATIC,15,61,45,8
+    EDITTEXT        IDC_DEG_WEST,53,59,78,12,ES_AUTOHSCROLL | WS_DISABLED
+    GROUPBOX        "",IDC_STATIC,7,7,132,82
+    CONTROL         "Apply Geodetic Clipping",IDC_CLIP,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,14,7,87,10
+    LTEXT           "Deg East:",IDC_STATIC,15,72,45,8
+    EDITTEXT        IDC_DEG_EAST,53,70,78,12,ES_AUTOHSCROLL | WS_DISABLED
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_PROGRESS_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 52
+    END
+
+    IDD_METADATA_DLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 83
+    END
+
+    IDD_DIS_ITEM_SETTINGS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 387
+        VERTGUIDE, 213
+        VERTGUIDE, 274
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 243
+        HORZGUIDE, 222
+    END
+
+    IDD_DIR_DLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 103
+    END
+
+    IDD_SAVE_DLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 220
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 138
+    END
+
+    IDD_SETTINGS_DLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 93
+    END
+
+    IDD_PYRAMID_SETTINGS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 83
+    END
+
+    IDD_CLIP_DLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 129
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 103
+    END
+
+    IDD_GEO_CLIP_DLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 139
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 109
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif\r\n"
+    "#include ""res\\NITFDirectImportSample.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#include ""afxprint.rc""       // printing/print preview resources\r\n"
+    "#endif\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_DIS_ITEM_SETTINGS DLGINIT
+BEGIN
+    IDC_VISIBILITY, 0x403, 6, 0
+0x6146, 0x736c, 0x0065, 
+    IDC_VISIBILITY, 0x403, 5, 0
+0x7254, 0x6575, "\000" 
+    0
+END
+
+IDD_SAVE_DLG DLGINIT
+BEGIN
+    IDC_RASTER_FORMAT, 0x403, 5, 0
+0x4954, 0x4646, "\000" 
+    IDC_RASTER_FORMAT, 0x403, 4, 0
+0x4d42, 0x0050, 
+    IDC_RASTER_FORMAT, 0x403, 5, 0
+0x504a, 0x4745, "\000" 
+    IDC_RASTER_FORMAT, 0x403, 4, 0
+0x4350, 0x0058, 
+    IDC_RASTER_FORMAT, 0x403, 4, 0
+0x324a, 0x004b, 
+    0
+END
+
+IDD_PYRAMID_SETTINGS DLGINIT
+BEGIN
+    IDC_INTERPOLATION, 0x403, 5, 0
+0x6f4e, 0x656e, "\000" 
+    IDC_INTERPOLATION, 0x403, 8, 0
+0x7641, 0x7265, 0x6761, 0x0065, 
+    IDC_INTERPOLATION, 0x403, 9, 0
+0x6942, 0x696c, 0x656e, 0x7261, "\000" 
+    IDC_INTERPOLATION, 0x403, 17, 0
+0x654e, 0x7261, 0x7365, 0x4e74, 0x6965, 0x6867, 0x6f62, 0x7275, "\000" 
+    IDC_INTERPOLATION, 0x403, 8, 0
+0x6150, 0x6464, 0x6e69, 0x0067, 
+    IDC_RASTER_FORMAT, 0x403, 5, 0
+0x4954, 0x4646, "\000" 
+    IDC_RASTER_FORMAT, 0x403, 4, 0
+0x4d42, 0x0050, 
+    IDC_RASTER_FORMAT, 0x403, 5, 0
+0x504a, 0x4745, "\000" 
+    IDC_RASTER_FORMAT, 0x403, 4, 0
+0x4350, 0x0058, 
+    IDC_RASTER_FORMAT, 0x403, 4, 0
+0x324a, 0x004b, 
+    0
+END
+
+#endif    // English (U.K.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif
+#include "res\NITFDirectImportSample.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#include "afxprint.rc"       // printing/print preview resources
+#endif
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

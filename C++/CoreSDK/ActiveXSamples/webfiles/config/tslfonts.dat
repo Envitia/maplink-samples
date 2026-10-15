@@ -1,0 +1,59 @@
+TSLFNT 101
+;
+56
+1;0;Arial;100;0;0
+2;0;Arial Black;100;0;0
+3;0;Arial Bold;100;0;0 
+4;0;Arial Italic;100;0;0 
+5;0;Arial Bold Italic;100;0;0 
+6;0;Times New Roman;100;0;0 
+7;0;Times New Roman Bold;100;0;0 
+8;0;Times New Roman Italic;100;0;0 
+9;0;Times New Roman Bold Italic;100;0;0
+10;0;Arial Narrow;100;0;0 
+11;0;Arial Narrow Bold;100;0;0 
+12;0;Arial Narrow Italic;100;0;0 
+13;0;Arial Narrow Bold Italic;100;0;0
+14;0;Bookman Old Style;100;0;0 
+15;0;Bookman Old Style Bold;100;0;0 
+16;0;Bookman Old Style Italic;100;0;0 
+17;0;Bookman Old Style Bold Italic;100;0;0
+18;0;Comic Sans MS;100;0;0 
+19;0;Comic Sans MS Bold;100;0;0 
+20;0;Comic Sans MS;100;1;0 
+21;0;Comic Sans MS Bold;100;1;0 
+22;0;Garamond;100;0;0 
+23;0;Garamond Bold;100;0;0 
+24;0;Garamond Italic;100;0;0 
+25;0;Garamond Bold;100;1;0
+26;0;Haettenschweiler;100;0;0 
+27;0;Haettenschweiler;800;0;0 
+28;0;Haettenschweiler;100;1;0 
+29;0;Haettenschweiler;800;1;0
+30;0;Impact;100;0;0 
+31;0;Impact;800;0;0 
+32;0;Impact;100;1;0 
+33;0;Impact;800;1;0
+34;0;Lucida Console;100;0;0 
+35;0;Lucida Console;800;0;0 
+36;0;Lucida Console;100;1;0 
+37;0;Lucida Console;800;1;0
+38;0;Lucida Sans Unicode;100;0;0 
+39;0;Lucida Sans Unicode;800;0;0 
+40;0;Lucida Sans Unicode;100;1;0 
+41;0;Lucida Sans Unicode;800;1;0
+42;0;Symbol;100;0;0 
+43;0;Symbol;800;0;0 
+44;0;Symbol;100;1;0 
+45;0;Symbol;800;1;0
+46;0;Tahoma;100;0;0 
+47;0;Tahoma Bold;100;0;0 
+48;0;Tahoma;100;1;0 
+49;0;Tahoma Bold;100;1;0
+50;0;Verdana;100;0;0 
+51;0;Verdana Bold;100;0;0 
+52;0;Verdana Italic;100;0;0 
+53;0;Verdana Bold Italic;100;0;0
+54;0;Arial;100;0;1
+55;0;Times New Roman;100;0;1
+56;1;TSLRom.thf

@@ -1,0 +1,9 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+  </Configurations>
+  <Project Path="AvaloniaControlSample.csproj">
+    <Platform Project="x64" />
+    <Build Project="false" />
+  </Project>
+</Solution>

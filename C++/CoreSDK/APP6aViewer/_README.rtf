@@ -1,0 +1,61 @@
+{\rtf1\ansi\ansicpg1252\uc1 \deff0\deflang1033\deflangfe1033{\fonttbl{\f0\froman\fcharset0\fprq2{\*\panose 02020603050405020304}Times New Roman;}{\f1\fswiss\fcharset0\fprq2{\*\panose 020b0604020202020204}Arial{\*\falt Arial};}
+{\f32\froman\fcharset238\fprq2 Times New Roman CE;}{\f33\froman\fcharset204\fprq2 Times New Roman Cyr;}{\f35\froman\fcharset161\fprq2 Times New Roman Greek;}{\f36\froman\fcharset162\fprq2 Times New Roman Tur;}
+{\f37\froman\fcharset177\fprq2 Times New Roman (Hebrew);}{\f38\froman\fcharset178\fprq2 Times New Roman (Arabic);}{\f39\froman\fcharset186\fprq2 Times New Roman Baltic;}{\f40\fswiss\fcharset238\fprq2 Arial CE{\*\falt Arial};}
+{\f41\fswiss\fcharset204\fprq2 Arial Cyr{\*\falt Arial};}{\f43\fswiss\fcharset161\fprq2 Arial Greek{\*\falt Arial};}{\f44\fswiss\fcharset162\fprq2 Arial Tur{\*\falt Arial};}{\f45\fswiss\fcharset177\fprq2 Arial (Hebrew){\*\falt Arial};}
+{\f46\fswiss\fcharset178\fprq2 Arial (Arabic){\*\falt Arial};}{\f47\fswiss\fcharset186\fprq2 Arial Baltic{\*\falt Arial};}}{\colortbl;\red0\green0\blue0;\red0\green0\blue255;\red0\green255\blue255;\red0\green255\blue0;\red255\green0\blue255;
+\red255\green0\blue0;\red255\green255\blue0;\red255\green255\blue255;\red0\green0\blue128;\red0\green128\blue128;\red0\green128\blue0;\red128\green0\blue128;\red128\green0\blue0;\red128\green128\blue0;\red128\green128\blue128;\red192\green192\blue192;}
+{\stylesheet{\ql \li0\ri0\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin0\itap0 \fs24\lang1033\langfe1033\cgrid\langnp1033\langfenp1033 \snext0 Normal;}{\*\cs10 \additive Default Paragraph Font;}}{\info
+{\title This application demonstrates how to use the MapLink APP6a Symbol Set in an application}{\author Roger Brackin}{\operator Nick Davis}{\creatim\yr2003\mo3\dy28\hr13\min57}{\revtim\yr2003\mo3\dy28\hr13\min57}{\version2}{\edmins1}{\nofpages2}
+{\nofwords435}{\nofchars2486}{\*\company  Tenet Technology Ltd}{\nofcharsws0}{\vern8269}}\widowctrl\ftnbj\aenddoc\noxlattoyen\expshrtn\noultrlspc\dntblnsbdb\nospaceforul\hyphcaps0\horzdoc\dghspace120\dgvspace120\dghorigin1701\dgvorigin1984\dghshow0
+\dgvshow3\jcompress\viewkind4\viewscale100\nolnhtadjtbl \fet0\sectd \linex0\sectdefaultcl {\*\pnseclvl1\pnucrm\pnstart1\pnindent720\pnhang{\pntxta .}}{\*\pnseclvl2\pnucltr\pnstart1\pnindent720\pnhang{\pntxta .}}{\*\pnseclvl3
+\pndec\pnstart1\pnindent720\pnhang{\pntxta .}}{\*\pnseclvl4\pnlcltr\pnstart1\pnindent720\pnhang{\pntxta )}}{\*\pnseclvl5\pndec\pnstart1\pnindent720\pnhang{\pntxtb (}{\pntxta )}}{\*\pnseclvl6\pnlcltr\pnstart1\pnindent720\pnhang{\pntxtb (}{\pntxta )}}
+{\*\pnseclvl7\pnlcrm\pnstart1\pnindent720\pnhang{\pntxtb (}{\pntxta )}}{\*\pnseclvl8\pnlcltr\pnstart1\pnindent720\pnhang{\pntxtb (}{\pntxta )}}{\*\pnseclvl9\pnlcrm\pnstart1\pnindent720\pnhang{\pntxtb (}{\pntxta )}}\pard\plain 
+\ql \li0\ri0\nowidctlpar\faauto\rin0\lin0\itap0 \fs24\lang1033\langfe1033\cgrid\langnp1033\langfenp1033 {\f1\fs20 This application demonstrates how to use the MapLink APP6a Symbol Set in an application.
+\par APP6A is aligned with the US Standard 2525B Rev1. It consists of both the symbol centre itself and surrounding text/velocity leaders etc. Only the pure symbology is demonstrated in this viewer.
+\par 
+\par The APP6A Symbol Set within MapLink consists of two component sets of symbols that are joined in the run-time application to form the symbol. These two component parts are the symbol centre, and the symbol fill/border.
+\par 
+\par The symbol centre is one of approximately 1200 symbol types representing air/land and sea. 
+\par The symbol outline defines the hostility and also the battlespace dimension (Air/Sea/Land/Equipment/SOF etc). 
+\par 
+\par The demonstration displays a tree control showing the symbol hierarchy. The symbols themselves shown on the right are the symbols displayed for each of the hostility categories.
+\par 
+\par Enabling or disabling items in the tree will fill the palette on the right with the selected symbols.
+\par Some items within Tactical Graphics are not symbols (lines etc) but can be considered examples of what to draw in that case.
+\par 
+\par The contents of the viewer (the symbology list, and the selection of the relevant background for each symbol) is defined in MAPLINK_HOME/config/app6a_symbol_config.txt
+\par 
+\par The symbols themselves are stored in MAPLINK_HOME/config/symbols/APP-6A for the symbol centres and MAPLINK_HOME/config/symbols/APP-6A FRAMES for the backgrounds.
+\par 
+\par The symbol references are defined in TSLSymbols.dat. Ensure that other symbols added for the application are not in the symbol number range 100000 to 120000 if this symbol set is to be used.
+\par The installation of this sample will also update the relevant symbol directories and files. It will:
+\par 
+\par Modify the file TSLSymbols.dat 
+\par Add the file  app6a_symbol_config.txt
+\par Add  the Symbol subdirectories APP-6A FRAMES and APP-6A
+\par 
+\par An example of how to construct the symbol programmatically can be seen in the class TSLApp6aSymbolHelper within this demonstration. The principle use of the class is:
+\par 
+\par // Create the class (Statically or Dynamically).
+\par 
+\par TSLApp6aSymbolHelper * symbols = new TSLApp6aSymbolHelper() ;
+\par 
+\par //Load the Symbol configuration file using ::Load (
+\par symbols.load() ;
+\par 
+\par // Create a symbol, which returns a TSLEntitySet containing the parts
+\par es = symbolHelper->CreateSymbol(Symbol_num, x, y, size);
+\par 
+\par // Set the Hostility of the Symbol which sets the Entity Sets background
+\par symbolHelper->SetHostility(es,PENDING);
+\par            
+\par 
+\par // Attach the entity set into the relevant location.
+\par 
+\par There are also methods to allow iteration over the App6a Symbol Set loaded.
+\par 
+\par Operations exist to modify an entity set known to be an App6a symbol.
+\par 
+\par These symbols were produced against a draft specification of APP-6A. A number of ambiguities/errors are present in the specification and so various assumptions have been made in implementation. Contact TENET Defence for more information on these.
+\par 
+\par }}

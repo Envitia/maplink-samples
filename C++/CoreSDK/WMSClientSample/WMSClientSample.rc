@@ -1,0 +1,801 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (United States) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDR_MAINFRAME           BITMAP                  "res\\Toolbar.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDR_MAINFRAME TOOLBAR 24, 24
+BEGIN
+    BUTTON      ID_FILE_OPEN
+    BUTTON      ID_FILE_PRINT
+    SEPARATOR
+    BUTTON      ID_EDIT_COPY
+    SEPARATOR
+    BUTTON      ID_TOOLS_ZOOMIN
+    BUTTON      ID_TOOLS_ZOOMOUT
+    BUTTON      ID_TOOLS_RESET
+    SEPARATOR
+    BUTTON      ID_TOOLS_ZOOM
+    BUTTON      ID_TOOLS_PAN
+    BUTTON      ID_TOOLS_MAGNIFY
+    BUTTON      ID_TOOLS_GRAB
+    SEPARATOR
+    BUTTON      ID_VIEWSTACK_PREVIOUSVIEW
+    BUTTON      ID_VIEWSTACK_NEXTVIEW
+    SEPARATOR
+    BUTTON      ID_SAVEDVIEWS_GOTO1
+    BUTTON      ID_SAVEDVIEWS_GOTO2
+    BUTTON      ID_SAVEDVIEWS_GOTO3
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&Open WMS...\tCtrl+O",        ID_FILE_OPEN
+        MENUITEM "Open WMTS...",                ID_FILE_OPENWMTS
+        MENUITEM "Add WMS...",                  ID_FILE_ADDWMS
+        MENUITEM "Add WMTS...",                 ID_FILE_ADDWMTS
+        MENUITEM "Add Background Map...",       ID_FILE_ADDBACKGROUNDMAP
+        MENUITEM SEPARATOR
+        MENUITEM "&Print...\tCtrl+P",           ID_FILE_PRINT
+        MENUITEM "Print Pre&view",              ID_FILE_PRINT_PREVIEW
+        MENUITEM "P&rint Setup...",             ID_FILE_PRINT_SETUP
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       ID_APP_EXIT
+    END
+    POPUP "&Edit"
+    BEGIN
+        MENUITEM "&Copy\tCtrl+C",               ID_EDIT_COPY
+        MENUITEM "Layer Order and Transparency", ID_EDIT_LAYERORDER
+    END
+    POPUP "&View"
+    BEGIN
+        MENUITEM "&Toolbar",                    ID_VIEW_TOOLBAR
+        MENUITEM "&Status Bar",                 ID_VIEW_STATUS_BAR
+    END
+    POPUP "&Tools"
+    BEGIN
+        MENUITEM "Zoom &In",                    ID_TOOLS_ZOOMIN
+        MENUITEM "Zoom &Out",                   ID_TOOLS_ZOOMOUT
+        MENUITEM "&Reset",                      ID_TOOLS_RESET
+        MENUITEM SEPARATOR
+        MENUITEM "&Zoom",                       ID_TOOLS_ZOOM
+        MENUITEM "&Pan",                        ID_TOOLS_PAN
+        MENUITEM "&Grab",                       ID_TOOLS_GRAB
+        MENUITEM "&Magnify",                    ID_TOOLS_MAGNIFY
+        MENUITEM SEPARATOR
+        POPUP "Saved Views"
+        BEGIN
+            MENUITEM "Goto 1",                      ID_SAVEDVIEWS_GOTO1
+            MENUITEM "Goto 2",                      ID_SAVEDVIEWS_GOTO2
+            MENUITEM "Goto 3",                      ID_SAVEDVIEWS_GOTO3
+            MENUITEM SEPARATOR
+            MENUITEM "Set 1",                       ID_SAVEDVIEWS_SET1
+            MENUITEM "Set 2",                       ID_SAVEDVIEWS_SET2
+            MENUITEM "Set 3",                       ID_SAVEDVIEWS_SET3
+            MENUITEM SEPARATOR
+            MENUITEM "Reset",                       ID_SAVEDVIEWS_RESET
+        END
+        POPUP "View Stack"
+        BEGIN
+            MENUITEM "Previous View",               ID_VIEWSTACK_PREVIOUSVIEW
+            MENUITEM "Next View",                   ID_VIEWSTACK_NEXTVIEW
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "Optio&ns",                    ID_TOOLS_OPTIONS
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&About WMSClientSample...",   ID_APP_ABOUT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAINFRAME ACCELERATORS
+BEGIN
+    "C",            ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
+    "N",            ID_FILE_NEW,            VIRTKEY, CONTROL, NOINVERT
+    "O",            ID_FILE_OPEN,           VIRTKEY, CONTROL, NOINVERT
+    "P",            ID_FILE_PRINT,          VIRTKEY, CONTROL, NOINVERT
+    "V",            ID_EDIT_PASTE,          VIRTKEY, CONTROL, NOINVERT
+    VK_ADD,         ID_TOOLS_ZOOMIN,        VIRTKEY, NOINVERT
+    VK_BACK,        ID_EDIT_UNDO,           VIRTKEY, ALT, NOINVERT
+    VK_DELETE,      ID_EDIT_CUT,            VIRTKEY, SHIFT, NOINVERT
+    VK_F6,          ID_NEXT_PANE,           VIRTKEY, NOINVERT
+    VK_F6,          ID_PREV_PANE,           VIRTKEY, SHIFT, NOINVERT
+    VK_INSERT,      ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
+    VK_INSERT,      ID_EDIT_PASTE,          VIRTKEY, SHIFT, NOINVERT
+    VK_SUBTRACT,    ID_TOOLS_ZOOMOUT,       VIRTKEY, NOINVERT
+    "X",            ID_EDIT_CUT,            VIRTKEY, CONTROL, NOINVERT
+    "Z",            ID_EDIT_UNDO,           VIRTKEY, CONTROL, NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 11,3,3,0
+ PRODUCTVERSION 11,3,3,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "CompanyName", "Envitia Group PLC"
+            VALUE "FileDescription", "Envitia WMS Client Sample Application 11.3"
+            VALUE "FileVersion", "11.3.3.0"
+            VALUE "InternalName", "WMSClientSample"
+            VALUE "LegalCopyright", "Copyright © 1998-2026 Envitia Group PLC. All rights reserved."
+            VALUE "OriginalFilename", "WMSClientSample.EXE"
+            VALUE "ProductName", "WMS Client Application"
+            VALUE "ProductVersion", "11.3.3.0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDR_MAINFRAME           "WMS/WMTS Client Sample\n\nWMSClientSample\nWMSClientSample Maps (*.map, *.mpc)\n.map;.mpc\nWMSClientSample.Document\nWMSClientSample Document"
+END
+
+STRINGTABLE
+BEGIN
+    AFX_IDS_APP_TITLE       "WMSClientSample"
+    AFX_IDS_IDLEMESSAGE     "Ready"
+END
+
+STRINGTABLE
+BEGIN
+    ID_INDICATOR_EXT        "EXT"
+    ID_INDICATOR_CAPS       "CAP"
+    ID_INDICATOR_NUM        "NUM"
+    ID_INDICATOR_SCRL       "SCRL"
+    ID_INDICATOR_OVR        "OVR"
+    ID_INDICATOR_REC        "REC"
+END
+
+STRINGTABLE
+BEGIN
+    ID_FILE_OPEN            "Open an existing document\nOpen"
+    ID_FILE_PAGE_SETUP      "Change the printing options\nPage Setup"
+    ID_FILE_PRINT_SETUP     "Change the printer and printing options\nPrint Setup"
+    ID_FILE_PRINT           "Print the active document\nPrint"
+    ID_FILE_PRINT_PREVIEW   "Display full pages\nPrint Preview"
+END
+
+STRINGTABLE
+BEGIN
+    ID_APP_ABOUT            "Display program information, version number and copyright\nAbout"
+    ID_APP_EXIT             "Quit the application; prompts to save documents\nExit"
+END
+
+STRINGTABLE
+BEGIN
+    ID_FILE_MRU_FILE1       "Open this document"
+    ID_FILE_MRU_FILE2       "Open this document"
+    ID_FILE_MRU_FILE3       "Open this document"
+    ID_FILE_MRU_FILE4       "Open this document"
+    ID_FILE_MRU_FILE5       "Open this document"
+    ID_FILE_MRU_FILE6       "Open this document"
+    ID_FILE_MRU_FILE7       "Open this document"
+    ID_FILE_MRU_FILE8       "Open this document"
+    ID_FILE_MRU_FILE9       "Open this document"
+    ID_FILE_MRU_FILE10      "Open this document"
+    ID_FILE_MRU_FILE11      "Open this document"
+    ID_FILE_MRU_FILE12      "Open this document"
+    ID_FILE_MRU_FILE13      "Open this document"
+    ID_FILE_MRU_FILE14      "Open this document"
+    ID_FILE_MRU_FILE15      "Open this document"
+    ID_FILE_MRU_FILE16      "Open this document"
+END
+
+STRINGTABLE
+BEGIN
+    ID_EDIT_COPY            "Copy the current view and put it on the Clipboard\nCopy"
+END
+
+STRINGTABLE
+BEGIN
+    ID_VIEW_TOOLBAR         "Show or hide the toolbar\nToggle ToolBar"
+    ID_VIEW_STATUS_BAR      "Show or hide the status bar\nToggle StatusBar"
+END
+
+STRINGTABLE
+BEGIN
+    AFX_IDS_SCSIZE          "Change the window size"
+    AFX_IDS_SCMOVE          "Change the window position"
+    AFX_IDS_SCMINIMIZE      "Reduce the window to an icon"
+    AFX_IDS_SCMAXIMIZE      "Enlarge the window to full size"
+    AFX_IDS_SCNEXTWINDOW    "Switch to the next document window"
+    AFX_IDS_SCPREVWINDOW    "Switch to the previous document window"
+    AFX_IDS_SCCLOSE         "Close the active window and prompts to save the documents"
+END
+
+STRINGTABLE
+BEGIN
+    AFX_IDS_SCRESTORE       "Restore the window to normal size"
+    AFX_IDS_SCTASKLIST      "Activate Task List"
+END
+
+STRINGTABLE
+BEGIN
+    AFX_IDS_PREVIEW_CLOSE   "Close print preview mode\nCancel Preview"
+END
+
+STRINGTABLE
+BEGIN
+    ID_TOOLS_ZOOMIN         "Zoom In\nZoom In"
+    ID_TOOLS_ZOOMOUT        "Zoom Out\nZoom Out"
+    ID_TOOLS_RESET          "View whole map\nReset"
+    ID_TOOLS_ZOOM           "Zoom\nZoom"
+    ID_TOOLS_PAN            "Pan to point\nPan"
+    ID_TOOLS_ZOOMPAN        "Combined Zoom/Pan to point\nZoom/Pan"
+END
+
+STRINGTABLE
+BEGIN
+    ID_TOOLS_GRAB           "Grab and drag the map\nGrab"
+    ID_TOOLS_MAGNIFY        "Magnify to Area around cursor\nMagnify"
+    ID_SAVEDVIEWS_GOTO1     "Goto Saved View 1\nView 1"
+    ID_SAVEDVIEWS_GOTO2     "Goto Saved View 2\nView 2"
+    ID_SAVEDVIEWS_GOTO3     "Goto Saved View 3\nView 3"
+    ID_VIEWSTACK_PREVIOUSVIEW 
+                            "Goto Previous View in View Stack\nPrevious View"
+    ID_VIEWSTACK_NEXTVIEW   "Goto Next View in View Stack\nNext View"
+END
+
+#endif    // English (United States) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (United Kingdom) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENG)
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_UK
+#pragma code_page(1252)
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_TOOLBAR_ENABLED     BITMAP                  "Res\\Toolbar_enabled.bmp"
+IDB_TOOLBAR_DISABLED    BITMAP                  "Res\\Toolbar_disabled.bmp"
+IDB_ABOUT_BOX_IMG       BITMAP                  "Res\\AboutBoxImage.bmp"
+IDB_CHECKBOXES          BITMAP                  "Res\\bm_checkbox.bmp"
+IDB_DOWN                BITMAP                  "Res\\down.bmp"
+IDB_TOP                 BITMAP                  "Res\\top.bmp"
+IDB_UP                  BITMAP                  "Res\\up.bmp"
+IDB_BOTTOM              BITMAP                  "Res\\bottom.bmp"
+IDB_UPD                 BITMAP                  "Res\\up_disabled.bmp"
+IDB_BOTTOMD             BITMAP                  "Res\\bottom_disabled.bmp"
+IDB_DOWND               BITMAP                  "Res\\down_disabled.bmp"
+IDB_TOPD                BITMAP                  "Res\\top_disabled.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\WMSClientSample.ico"
+IDR_WMSClientSampleTYPE ICON                    "res\\WMSClientSampleDoc.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 257, 90
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About WMS/WMTS Client Sample"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    LTEXT           "WMSClientSample Version 2.0",IDC_APP,7,42,212,9,SS_NOPREFIX
+    CTEXT           "Portions developed using LEADTOOLS,\nCopyright © 1991-2025 LEAD Technologies, Inc. ALL RIGHTS RESERVED",IDC_THIRDPARTY,7,65,243,17
+    DEFPUSHBUTTON   "OK",IDOK,205,7,45,14,WS_GROUP
+    CONTROL         "",IDC_LOGO,"Static",SS_OWNERDRAW,8,9,136,25
+    LTEXT           "Copyright © 1998-2026 Envitia Group PLC. All rights reserved.",IDC_COPYRIGHT,7,51,215,8
+END
+
+IDD_OPENSERVICEDLG DIALOGEX 0, 0, 394, 334
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION
+CAPTION "Open Web Map Service"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    COMBOBOX        IDC_ADDRESS_COMBO,15,30,329,94,CBS_DROPDOWN | CBS_AUTOHSCROLL | WS_VSCROLL | WS_TABSTOP
+    DEFPUSHBUTTON   "Go!",IDC_GOBUTTON,351,29,28,14
+    COMBOBOX        IDC_FM_ADDRESS_COMBO,116,61,228,58,CBS_DROPDOWN | CBS_AUTOHSCROLL | WS_DISABLED | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "",IDC_LAYERTREE,"SysTreeView32",TVS_HASBUTTONS | TVS_HASLINES | TVS_LINESATROOT | TVS_CHECKBOXES | WS_DISABLED | WS_BORDER | WS_HSCROLL | WS_TABSTOP,15,91,221,130
+    LISTBOX         IDC_LAYERORDER,260,91,119,114,LBS_SORT | LBS_NOINTEGRALHEIGHT | WS_DISABLED | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "",IDC_TOPBUTTON,"Button",BS_OWNERDRAW | BS_BITMAP | WS_DISABLED | WS_TABSTOP,269,206,19,14
+    CONTROL         "",IDC_UPBUTTON,"Button",BS_OWNERDRAW | BS_BITMAP | WS_DISABLED | WS_TABSTOP,296,206,19,14
+    CONTROL         "",IDC_DOWNBUTTON,"Button",BS_OWNERDRAW | BS_BITMAP | WS_DISABLED | WS_TABSTOP,323,206,19,14
+    CONTROL         "",IDC_BOTTOMBUTTON,"Button",BS_OWNERDRAW | BS_BITMAP | WS_DISABLED | WS_TABSTOP,350,206,19,14
+    CONTROL         "",IDC_LAYER_DETAILS,"SysListView32",LVS_REPORT | LVS_SINGLESEL | LVS_ALIGNLEFT | LVS_NOSORTHEADER | WS_DISABLED | WS_BORDER | WS_TABSTOP,16,243,219,71
+    CONTROL         "Only show options if required",IDC_DS_DEFAULT,"Button",BS_AUTORADIOBUTTON,263,243,109,10
+    CONTROL         "Always show options",IDC_DS_ALWAYS,"Button",BS_AUTORADIOBUTTON,263,259,82,10
+    CONTROL         "Validate GetMap requests",IDC_VALIDATE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,265,292,108,10
+    PUSHBUTTON      "OK",IDOK,263,313,50,14,WS_DISABLED
+    PUSHBUTTON      "Cancel",IDCANCEL,321,313,50,14
+    GROUPBOX        "Service Address",IDC_STATIC,7,7,380,73
+    GROUPBOX        "Service Layer Visibility",IDC_STATIC,7,80,238,149
+    GROUPBOX        "Layer Order",IDC_STATIC,252,80,135,148
+    GROUPBOX        "Dimensions And Styles",IDC_STATIC,252,230,135,47
+    GROUPBOX        "Layer Details",IDC_STATIC,7,229,238,93
+    GROUPBOX        "Validation",IDC_STATIC,252,280,135,30
+    CONTROL         "Connect using SAML v2.0 ECP Profile",IDC_ECP_CHECK,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,23,47,145,10
+    LTEXT           "Federation Metadata:",IDC_STATIC,34,63,71,8
+    LTEXT           "E.G. http://my.host.com/mywms?",IDC_STATIC,15,18,109,8
+END
+
+IDD_STYLESDIMENSIONS DIALOGEX 0, 0, 308, 257
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION
+CAPTION "Additional Service Properties"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,95,236,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,159,236,50,14
+    GROUPBOX        "Dimensions",IDC_STATIC,7,7,293,115
+    CONTROL         "",IDC_DIM_TREE,"SysTreeView32",TVS_HASBUTTONS | TVS_HASLINES | TVS_LINESATROOT | WS_BORDER | WS_HSCROLL | WS_TABSTOP,15,19,104,95
+    GROUPBOX        "Styles",IDC_STATIC,7,122,294,110
+    CONTROL         "",IDC_STYLELIST,"SysListView32",LVS_REPORT | LVS_SINGLESEL | LVS_ALIGNLEFT | LVS_NOSORTHEADER | WS_BORDER | WS_TABSTOP,16,135,277,88
+    LTEXT           "Name:",IDC_STATIC,127,20,63,8
+    LTEXT           "N/A",IDC_DIM_NAME,201,20,63,8
+    LTEXT           "Unit:",IDC_STATIC,127,30,63,8
+    LTEXT           "N/A",IDC_DIM_UNIT,201,30,63,8
+    LTEXT           "Unit Symbol:",IDC_STATIC,127,40,63,8
+    LTEXT           "N/A",IDC_DIM_UNITS,201,40,63,8
+    COMBOBOX        IDC_STYLECOMBO,17,148,70,42,CBS_DROPDOWNLIST | CBS_NOINTEGRALHEIGHT | NOT WS_VISIBLE | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Default Value:",IDC_STATIC,127,56,63,8
+    LTEXT           "N/A",IDC_DIM_DV,201,56,63,8
+    LTEXT           "Nearest Value:",IDC_STATIC,127,66,63,8
+    LTEXT           "N/A",IDC_DIM_NV,201,66,63,8
+    LTEXT           "Multiple Values:",IDC_STATIC,127,76,63,8
+    LTEXT           "N/A",IDC_DIM_MV,201,76,63,8
+    LTEXT           "Current:",IDC_STATIC,127,86,63,8
+    LTEXT           "N/A",IDC_DIM_C,201,86,63,8
+    LTEXT           "Value:",IDC_STATIC,127,103,63,8
+    COMBOBOX        IDC_VALUE_COMBO,201,101,93,100,CBS_DROPDOWN | CBS_AUTOHSCROLL | WS_DISABLED | WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_ECP_IDP_DLG DIALOGEX 0, 0, 277, 123
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION
+EXSTYLE WS_EX_CONTROLPARENT
+CAPTION "Please choose an identity provider"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    GROUPBOX        "Federation Identity Providers",IDC_STATIC,7,7,263,87
+    DEFPUSHBUTTON   "OK",IDOK,77,100,50,14,WS_DISABLED
+    PUSHBUTTON      "Cancel",IDCANCEL,136,100,50,14
+    CONTROL         "",IDC_IDP_LIST,"SysListView32",LVS_REPORT | LVS_SINGLESEL | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,15,18,247,69
+END
+
+IDD_ECP_CRED_DLG DIALOGEX 0, 0, 222, 81
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION
+CAPTION "Please enter your details"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,59,60,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,112,60,50,14
+    GROUPBOX        "User Credentials",IDC_STATIC,7,7,207,48
+    LTEXT           "Username:",IDC_STATIC,16,23,94,8
+    EDITTEXT        IDC_USERNAME,63,20,144,14,ES_AUTOHSCROLL
+    LTEXT           "Password:",IDC_STATIC,16,39,94,8
+    EDITTEXT        IDC_PASSWORD,63,36,143,14,ES_PASSWORD | ES_AUTOHSCROLL
+END
+
+IDD_OPTIONSDLG DIALOGEX 0, 0, 362, 431
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION
+CAPTION "Options"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,127,410,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,183,410,50,14
+    GROUPBOX        "Tile Cache Size",IDC_STATIC,7,7,348,54
+    LTEXT           "The WMS Data Layer maintains a cache of recently used tiles. The tile cache size denotes the amount of memory that this cache may grow to.",IDC_STATIC,15,16,331,26
+    CONTROL         "",IDC_CACHE_SLIDER,"msctls_trackbar32",WS_TABSTOP,46,33,264,15
+    LTEXT           "16 MB",IDC_STATIC,45,47,20,8
+    LTEXT           "256 MB",IDC_STATIC,292,47,24,8
+    LTEXT           "128 MB",IDC_STATIC,175,47,24,8
+    GROUPBOX        "Tile Load Order",IDC_STATIC,7,62,348,43
+    LTEXT           "It is possible to configure the order in which the tiles are loaded.",IDC_STATIC,15,73,215,12
+    COMBOBOX        IDC_TILELOADORDER,52,87,256,155,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "Pyramid Scale Factor",IDC_STATIC,7,182,348,83
+    LTEXT           "The Pyramid Scale Factor determines the level at which the WMS data layer will switch to the next detail level (assuming tile levels are in use) or WMTS data layer will switch to the next tile matrix.",IDC_STATIC,15,193,332,19
+    CONTROL         "",IDC_SCALE_FACTOR_SLIDER,"msctls_trackbar32",WS_TABSTOP,48,237,264,15
+    LTEXT           "0.5",IDC_STATIC,50,251,12,8
+    LTEXT           "2.0",IDC_STATIC,300,251,12,8
+    LTEXT           "1.5",IDC_STATIC,217,251,12,8
+    LTEXT           "1.0",IDC_STATIC,133,251,12,8
+    LTEXT           "A value of 1.0 means that the tile will, at most, only be displayed at its native resolution or smaller. A value of 2.0 means that the tile maybe displayed at up to twice its native resolution etc.",IDC_STATIC,15,215,332,21
+    GROUPBOX        "WMS SAML V2.0 ECP Options",IDC_STATIC,7,269,348,42
+    CONTROL         "Allow SSL certificates to be issued by an unknown authority",IDC_UNKNOWN_CA,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,15,281,206,10
+    CONTROL         "Allow SSL certificates to not correspond with the respondents domain name.",IDC_CERT_CN_INVALID,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,15,294,259,10
+    GROUPBOX        "WMS Tile Levels",IDC_STATIC,7,108,348,69
+    LTEXT           "By using tile levels the number of tiles requested from the server are reduced through scaling tiles beyond their native zoom scale. This can however distort images that were created from vector data.",IDC_STATIC,15,119,331,19
+    LTEXT           "It is also possible to determine whether tile levels are appropriate based upon whether the server advertises that the source of the data is vector or raster.",IDC_STATIC,15,141,331,19
+    COMBOBOX        IDC_TILELEVELS,85,160,190,52,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "Initial WMS Version Requested",IDC_STATIC,7,315,348,51
+    COMBOBOX        IDC_INITIALWMSVERSION,85,348,190,71,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "This allows the User to override the WMS version that the WMSDataLayer initially requests to start the version negotiation with the remote server.",IDC_STATIC,15,326,331,20
+    GROUPBOX        "Number of Concurrent Requests",IDC_STATIC,7,370,348,36
+    EDITTEXT        IDC_NUMBER_OF_THREADS,122,384,53,14,ES_AUTOHSCROLL
+    LTEXT           "Number of Concurrent requests",IDC_STATIC,15,386,104,8
+    LTEXT           "The number is limited by this sample to a maximum of 32 concurrent requests. The response time will be dependent upon the Server load.",IDC_STATIC,184,378,164,27
+END
+
+IDD_OPENWMTSDLG DIALOGEX 0, 0, 394, 340
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Open Web Map Tile Service"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    COMBOBOX        IDC_WMTS_ADDRESS_COMBO,8,30,329,97,CBS_DROPDOWN | CBS_AUTOHSCROLL | WS_VSCROLL | WS_TABSTOP
+    DEFPUSHBUTTON   "Go!",IDC_WMTS_GOBUTTON,348,28,28,14
+    CONTROL         "",IDC_WMTS_LAYERTREE,"SysTreeView32",TVS_HASBUTTONS | TVS_HASLINES | TVS_CHECKBOXES | WS_DISABLED | WS_BORDER | WS_HSCROLL | WS_TABSTOP,15,67,221,130
+    LISTBOX         IDC_WMTS_LAYERORDER,260,67,119,114,LBS_SORT | LBS_NOINTEGRALHEIGHT | WS_DISABLED | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "",IDC_WMTS_TOPBUTTON,"Button",BS_OWNERDRAW | BS_BITMAP | WS_DISABLED | WS_TABSTOP,269,182,19,14
+    CONTROL         "",IDC_WMTS_UPBUTTON,"Button",BS_OWNERDRAW | BS_BITMAP | WS_DISABLED | WS_TABSTOP,296,182,19,14
+    CONTROL         "",IDC_WMTS_DOWNBUTTON,"Button",BS_OWNERDRAW | BS_BITMAP | WS_DISABLED | WS_TABSTOP,323,182,19,14
+    CONTROL         "",IDC_WMTS_BOTTOMBUTTON,"Button",BS_OWNERDRAW | BS_BITMAP | WS_DISABLED | WS_TABSTOP,350,182,19,14
+    CONTROL         "",IDC_WMTS_LAYER_DETAILS,"SysListView32",LVS_REPORT | LVS_SINGLESEL | LVS_ALIGNLEFT | LVS_NOSORTHEADER | WS_DISABLED | WS_BORDER | WS_TABSTOP,16,223,219,71
+    EDITTEXT        IDC_WMTS_LAYER_TITLE,48,297,191,14,ES_AUTOHSCROLL | ES_READONLY
+    PUSHBUTTON      "OK",IDOK,266,319,50,14,WS_DISABLED
+    PUSHBUTTON      "Cancel",IDCANCEL,322,319,50,14
+    GROUPBOX        "Service Address",IDC_STATIC,0,7,387,43
+    LTEXT           "E.G. http://my.host.com/mywms?",IDC_STATIC,8,18,109,8
+    GROUPBOX        "Service Layer Visibility",IDC_STATIC,7,56,238,149
+    GROUPBOX        "Layer Order",IDC_STATIC,252,56,135,148
+    GROUPBOX        "Layer Details",IDC_WMTS_LAYERDETAILS_GROUP,7,210,239,123
+    LTEXT           "Title:",IDC_STATIC,16,301,24,8
+    EDITTEXT        IDC_WMTS_LAYER_ABSTRACT,48,313,191,14,ES_MULTILINE | ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "Abstract:",IDC_STATIC,16,316,31,8
+    CONTROL         "Show dimensions and styles options",IDC_WMTS_SHOW_DS,
+                    "Button",BS_AUTOCHECKBOX | BS_MULTILINE | WS_TABSTOP,265,226,97,22
+    GROUPBOX        "Dimensions, Parameters and Styles",IDC_STATIC,252,211,135,67
+    CONTROL         "Use additional parameters after '?' in GetTile requests",IDC_WMTS_EXTRACT_PREFIX_PARAMS,
+                    "Button",BS_AUTOCHECKBOX | BS_MULTILINE | WS_TABSTOP,265,251,106,21
+END
+
+IDD_CRS_DLG DIALOGEX 0, 0, 277, 201
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION
+EXSTYLE WS_EX_CONTROLPARENT
+CAPTION "Please choose a coordinate reference system"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_CRS_LIST,"SysListView32",LVS_REPORT | LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,15,18,247,147
+    DEFPUSHBUTTON   "OK",IDOK,77,178,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,136,178,50,14
+    GROUPBOX        "Coordinate Reference Systems",IDC_STATIC,7,7,263,165
+END
+
+IDD_LAYER_ORDER_DLG DIALOGEX 0, 0, 316, 247
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Datalayer Order and Transparency"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "Close",IDOK,131,226,50,14
+    LISTBOX         IDC_DATALAYERORDER,17,23,284,114,LBS_SORT | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "",IDC_DATALAYER_TOPBUTTON,"Button",BS_OWNERDRAW | BS_BITMAP | WS_DISABLED | WS_TABSTOP,111,142,19,14
+    CONTROL         "",IDC_DATALAYER_UPBUTTON,"Button",BS_OWNERDRAW | BS_BITMAP | WS_DISABLED | WS_TABSTOP,137,142,19,14
+    CONTROL         "",IDC_DATALAYER_DOWNBUTTON,"Button",BS_OWNERDRAW | BS_BITMAP | WS_DISABLED | WS_TABSTOP,165,142,19,14
+    CONTROL         "",IDC_DATALAYER_BOTTOMBUTTON,"Button",BS_OWNERDRAW | BS_BITMAP | WS_DISABLED | WS_TABSTOP,191,142,19,14
+    GROUPBOX        "Layer order and transparency",IDC_STATIC,7,7,302,214
+    CONTROL         "",IDC_TRANSPARENCY_SLIDER,"msctls_trackbar32",TBS_AUTOTICKS | WS_DISABLED | WS_TABSTOP,53,181,214,24
+    LTEXT           "Opaque",IDC_STATIC,245,207,26,8
+    LTEXT           "Transparent",IDC_STATIC,39,207,40,8
+    LTEXT           "Transparency of selected layer:",IDC_STATIC,18,167,103,8
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 250
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 82
+    END
+
+    IDD_OPENSERVICEDLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 387
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 327
+    END
+
+    IDD_STYLESDIMENSIONS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 301
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 250
+    END
+
+    IDD_ECP_IDP_DLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 270
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 114
+    END
+
+    IDD_ECP_CRED_DLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 215
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 74
+    END
+
+    IDD_OPTIONSDLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 355
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 424
+    END
+
+    IDD_OPENWMTSDLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 387
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 333
+    END
+
+    IDD_CRS_DLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 270
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 192
+    END
+
+    IDD_LAYER_ORDER_DLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 309
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 240
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif\r\n"
+    "#include ""res\\WMSClientSample.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#include ""afxprint.rc""       // printing/print preview resources\r\n"
+    "#endif\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_OPTIONSDLG DLGINIT
+BEGIN
+    IDC_TILELOADORDER, 0x403, 47, 0
+0x6556, 0x7472, 0x6369, 0x6c61, 0x5320, 0x6974, 0x6570, 0x2c73, 0x7320, 
+0x6174, 0x7472, 0x6e69, 0x2067, 0x7266, 0x6d6f, 0x7420, 0x6568, 0x6220, 
+0x746f, 0x6f74, 0x206d, 0x656c, 0x7466, "\000" 
+    IDC_TILELOADORDER, 0x403, 48, 0
+0x6556, 0x7472, 0x6369, 0x6c61, 0x5320, 0x6974, 0x6570, 0x2c73, 0x7320, 
+0x6174, 0x7472, 0x6e69, 0x2067, 0x7266, 0x6d6f, 0x7420, 0x6568, 0x6220, 
+0x746f, 0x6f74, 0x206d, 0x6972, 0x6867, 0x0074, 
+    IDC_TILELOADORDER, 0x403, 44, 0
+0x6556, 0x7472, 0x6369, 0x6c61, 0x5320, 0x6974, 0x6570, 0x2c73, 0x7320, 
+0x6174, 0x7472, 0x6e69, 0x2067, 0x7266, 0x6d6f, 0x7420, 0x6568, 0x7420, 
+0x706f, 0x6c20, 0x6665, 0x0074, 
+    IDC_TILELOADORDER, 0x403, 45, 0
+0x6556, 0x7472, 0x6369, 0x6c61, 0x5320, 0x6974, 0x6570, 0x2c73, 0x7320, 
+0x6174, 0x7472, 0x6e69, 0x2067, 0x7266, 0x6d6f, 0x7420, 0x6568, 0x7420, 
+0x706f, 0x7220, 0x6769, 0x7468, "\000" 
+    IDC_TILELOADORDER, 0x403, 49, 0
+0x6f48, 0x6972, 0x6f7a, 0x746e, 0x6c61, 0x5320, 0x6974, 0x6570, 0x2c73, 
+0x7320, 0x6174, 0x7472, 0x6e69, 0x2067, 0x7266, 0x6d6f, 0x7420, 0x6568, 
+0x6220, 0x746f, 0x6f74, 0x206d, 0x656c, 0x7466, "\000" 
+    IDC_TILELOADORDER, 0x403, 50, 0
+0x6f48, 0x6972, 0x6f7a, 0x746e, 0x6c61, 0x5320, 0x6974, 0x6570, 0x2c73, 
+0x7320, 0x6174, 0x7472, 0x6e69, 0x2067, 0x7266, 0x6d6f, 0x7420, 0x6568, 
+0x6220, 0x746f, 0x6f74, 0x206d, 0x6972, 0x6867, 0x0074, 
+    IDC_TILELOADORDER, 0x403, 46, 0
+0x6f48, 0x6972, 0x6f7a, 0x746e, 0x6c61, 0x5320, 0x6974, 0x6570, 0x2c73, 
+0x7320, 0x6174, 0x7472, 0x6e69, 0x2067, 0x7266, 0x6d6f, 0x7420, 0x6568, 
+0x7420, 0x706f, 0x6c20, 0x6665, 0x0074, 
+    IDC_TILELOADORDER, 0x403, 47, 0
+0x6f48, 0x6972, 0x6f7a, 0x746e, 0x6c61, 0x5320, 0x6974, 0x6570, 0x2c73, 
+0x7320, 0x6174, 0x7472, 0x6e69, 0x2067, 0x7266, 0x6d6f, 0x7420, 0x6568, 
+0x7420, 0x706f, 0x7220, 0x6769, 0x7468, "\000" 
+    IDC_TILELOADORDER, 0x403, 48, 0
+0x6c43, 0x636f, 0x776b, 0x7369, 0x2065, 0x7053, 0x7269, 0x6c61, 0x202c, 
+0x7473, 0x7261, 0x6974, 0x676e, 0x6620, 0x6f72, 0x206d, 0x6874, 0x2065, 
+0x6f62, 0x7474, 0x6d6f, 0x6c20, 0x6665, 0x0074, 
+    IDC_TILELOADORDER, 0x403, 49, 0
+0x6c43, 0x636f, 0x776b, 0x7369, 0x2065, 0x7053, 0x7269, 0x6c61, 0x202c, 
+0x7473, 0x7261, 0x6974, 0x676e, 0x6620, 0x6f72, 0x206d, 0x6874, 0x2065, 
+0x6f62, 0x7474, 0x6d6f, 0x7220, 0x6769, 0x7468, "\000" 
+    IDC_TILELOADORDER, 0x403, 45, 0
+0x6c43, 0x636f, 0x776b, 0x7369, 0x2065, 0x7053, 0x7269, 0x6c61, 0x202c, 
+0x7473, 0x7261, 0x6974, 0x676e, 0x6620, 0x6f72, 0x206d, 0x6874, 0x2065, 
+0x6f74, 0x2070, 0x656c, 0x7466, "\000" 
+    IDC_TILELOADORDER, 0x403, 46, 0
+0x6c43, 0x636f, 0x776b, 0x7369, 0x2065, 0x7053, 0x7269, 0x6c61, 0x202c, 
+0x7473, 0x7261, 0x6974, 0x676e, 0x6620, 0x6f72, 0x206d, 0x6874, 0x2065, 
+0x6f74, 0x2070, 0x6972, 0x6867, 0x0074, 
+    IDC_TILELOADORDER, 0x403, 43, 0
+0x6c43, 0x636f, 0x776b, 0x7369, 0x2065, 0x7053, 0x7269, 0x6c61, 0x202c, 
+0x7473, 0x7261, 0x6974, 0x676e, 0x6620, 0x6f72, 0x206d, 0x6874, 0x2065, 
+0x6563, 0x746e, 0x6572, "\000" 
+    IDC_TILELOADORDER, 0x403, 53, 0
+0x6e41, 0x6974, 0x432d, 0x6f6c, 0x6b63, 0x6977, 0x6573, 0x5320, 0x6970, 
+0x6172, 0x2c6c, 0x7320, 0x6174, 0x7472, 0x6e69, 0x2067, 0x7266, 0x6d6f, 
+0x7420, 0x6568, 0x6220, 0x746f, 0x6f74, 0x206d, 0x656c, 0x7466, "\000" 
+    IDC_TILELOADORDER, 0x403, 54, 0
+0x6e41, 0x6974, 0x432d, 0x6f6c, 0x6b63, 0x6977, 0x6573, 0x5320, 0x6970, 
+0x6172, 0x2c6c, 0x7320, 0x6174, 0x7472, 0x6e69, 0x2067, 0x7266, 0x6d6f, 
+0x7420, 0x6568, 0x6220, 0x746f, 0x6f74, 0x206d, 0x6972, 0x6867, 0x0074, 
+
+    IDC_TILELOADORDER, 0x403, 50, 0
+0x6e41, 0x6974, 0x432d, 0x6f6c, 0x6b63, 0x6977, 0x6573, 0x5320, 0x6970, 
+0x6172, 0x2c6c, 0x7320, 0x6174, 0x7472, 0x6e69, 0x2067, 0x7266, 0x6d6f, 
+0x7420, 0x6568, 0x7420, 0x706f, 0x6c20, 0x6665, 0x0074, 
+    IDC_TILELOADORDER, 0x403, 51, 0
+0x6e41, 0x6974, 0x432d, 0x6f6c, 0x6b63, 0x6977, 0x6573, 0x5320, 0x6970, 
+0x6172, 0x2c6c, 0x7320, 0x6174, 0x7472, 0x6e69, 0x2067, 0x7266, 0x6d6f, 
+0x7420, 0x6568, 0x7420, 0x706f, 0x7220, 0x6769, 0x7468, "\000" 
+    IDC_TILELOADORDER, 0x403, 48, 0
+0x6e41, 0x6974, 0x432d, 0x6f6c, 0x6b63, 0x6977, 0x6573, 0x5320, 0x6970, 
+0x6172, 0x2c6c, 0x7320, 0x6174, 0x7472, 0x6e69, 0x2067, 0x7266, 0x6d6f, 
+0x7420, 0x6568, 0x6320, 0x6e65, 0x7274, 0x0065, 
+    IDC_TILELEVELS, 0x403, 16, 0
+0x7355, 0x2065, 0x6974, 0x656c, 0x6c20, 0x7665, 0x6c65, 0x0073, 
+    IDC_TILELEVELS, 0x403, 22, 0
+0x6f44, 0x276e, 0x2074, 0x7375, 0x2065, 0x6974, 0x656c, 0x6c20, 0x7665, 
+0x6c65, 0x0073, 
+    IDC_TILELEVELS, 0x403, 34, 0
+0x6544, 0x6574, 0x7463, 0x7720, 0x6568, 0x6874, 0x7265, 0x7420, 0x206f, 
+0x7375, 0x2065, 0x6974, 0x656c, 0x6c20, 0x7665, 0x6c65, 0x0073, 
+    IDC_INITIALWMSVERSION, 0x403, 6, 0
+0x2e31, 0x2e31, 0x0030, 
+    IDC_INITIALWMSVERSION, 0x403, 6, 0
+0x2e31, 0x2e31, 0x0031, 
+    IDC_INITIALWMSVERSION, 0x403, 6, 0
+0x2e31, 0x2e33, 0x0030, 
+    0
+END
+
+#endif    // English (United Kingdom) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif
+#include "res\WMSClientSample.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#include "afxprint.rc"       // printing/print preview resources
+#endif
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

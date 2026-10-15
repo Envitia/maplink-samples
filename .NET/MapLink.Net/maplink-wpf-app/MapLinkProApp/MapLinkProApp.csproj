@@ -1,0 +1,73 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+	<UseWindowsForms>True</UseWindowsForms>
+    <ApplicationIcon>envitia.ico</ApplicationIcon>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="img\drop-down.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Envitia.MapLink.DirectImport64">
+      <HintPath>$(MAPL_PATH)\Envitia.MapLink.DirectImport64.dll</HintPath>
+    </Reference>
+    <Reference Include="Envitia.MapLink.NativeHelpers">
+      <HintPath>$(MAPL_PATH)\Envitia.MapLink.NativeHelpers.dll</HintPath>
+    </Reference>
+    <Reference Include="Envitia.MapLink.OpenGLSurface64">
+      <HintPath>$(MAPL_PATH)\Envitia.MapLink.OpenGLSurface64.dll</HintPath>
+    </Reference>
+    <Reference Include="Envitia.MapLink.Terrain64">
+      <HintPath>$(MAPL_PATH)\Envitia.MapLink.Terrain64.dll</HintPath>
+    </Reference>
+    <Reference Include="Envitia.MapLink64">
+      <HintPath>$(MAPL_PATH)\Envitia.MapLink64.dll</HintPath>
+    </Reference>
+    <Reference Include="Envitia.MapLinkEx64">
+      <HintPath>$(MAPL_PATH)\Envitia.MapLinkEx64.dll</HintPath>
+    </Reference>
+    <Reference Include="MapViewerPanel">
+      <HintPath>..\DrawingSurfacePanel\bin\x64\Debug\MapViewerPanel.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  
+  <ItemGroup>
+    <Resource Include="img\drop-down.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Properties\Settings.Designer.cs">
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="img\cropped-envitia_emb_transparentbg-192x192.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="img\squares.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="MapLayers.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Maps\" />
+  </ItemGroup>
+
+</Project>

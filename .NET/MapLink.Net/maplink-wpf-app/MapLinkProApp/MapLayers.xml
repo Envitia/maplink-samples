@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MapLayers>
+
+  <MapLinkMapLayer>
+    <Property>NaturalEarth</Property>
+    <DataLocation>%MAPL_PATH%\..\Maps\NaturalEarthRaster\NaturalEarthRaster.map</DataLocation>
+    <FeatureType>Raster</FeatureType>
+    <FoundationLayer />
+  </MapLinkMapLayer>
+
+	<MapLinkMapLayer>
+		<Property>Sussex</Property>
+		<DataLocation>%MAPL_PATH%\..\Maps\OpenStreetMap\OpenStreetMap.map</DataLocation>
+		<FeatureType>Vector</FeatureType>
+	</MapLinkMapLayer>
+
+  <NativeMapLayer>
+    <Property>StatesProvinces</Property>
+    <DataLocation>%MAPL_PATH%\..\data\Natural Earth\50M\50m_cultural\ne_50m_admin_1_states_provinces_shp.shp</DataLocation>
+    <FeatureType>Vector</FeatureType>
+  </NativeMapLayer>
+  <NativeMapLayer>
+    <Property>Glasgow</Property>
+    <DataLocation>..\..\..\Maps\raster\Glasgow.tif</DataLocation>
+    <FeatureType>Raster</FeatureType>
+  </NativeMapLayer>
+</MapLayers>

@@ -1,0 +1,820 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\APP6ASample.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAINFRAME ACCELERATORS 
+BEGIN
+    "C",            ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
+    "P",            ID_FILE_PRINT,          VIRTKEY, CONTROL, NOINVERT
+    "V",            ID_EDIT_PASTE,          VIRTKEY, CONTROL, NOINVERT
+    VK_ADD,         ID_TOOLS_ZOOMIN,        VIRTKEY, NOINVERT
+    VK_BACK,        ID_EDIT_UNDO,           VIRTKEY, ALT, NOINVERT
+    VK_DELETE,      ID_EDIT_CUT,            VIRTKEY, SHIFT, NOINVERT
+    VK_INSERT,      ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
+    VK_SUBTRACT,    ID_TOOLS_ZOOMOUT,       VIRTKEY, NOINVERT
+    "X",            ID_EDIT_CUT,            VIRTKEY, CONTROL, NOINVERT
+    "Z",            ID_EDIT_UNDO,           VIRTKEY, CONTROL, NOINVERT
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.K.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENG)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_UK
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_LANDLINKSAMPLETYPE  ICON                    "res\\APP6ASampleDoc.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDR_MAINFRAME           BITMAP                  "res\\Toolbar.bmp"
+IDR_PRIMITIVES          BITMAP                  "res\\primitives.bmp"
+IDR_POINT_OPERATIONS    BITMAP                  "res\\point_operations.bmp"
+IDR_TRANSFORMATIONS     BITMAP                  "res\\transformation.bmp"
+IDR_EDIT                BITMAP                  "res\\edit.bmp"
+IDR_SELECT              BITMAP                  "res\\select.bmp"
+IDR_TOOLS               BITMAP                  "res\\tools.bmp"
+IDR_CONSTRAINTS         BITMAP                  "res\\constraints.bmp"
+IDB_ABOUT_BOX_IMG       BITMAP                  "res\\AboutBoxImage.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDR_MAINFRAME TOOLBAR  16, 16
+BEGIN
+    BUTTON      ID_FILE_NEW
+    BUTTON      ID_FILE_OPEN
+    BUTTON      ID_FILE_SAVE
+    SEPARATOR
+    BUTTON      ID_FILE_PRINT
+    SEPARATOR
+    BUTTON      ID_APP_ABOUT
+END
+
+IDR_PRIMITIVES TOOLBAR  16, 16
+BEGIN
+    BUTTON      ID_PRIMITIVES_POLYGON
+    BUTTON      ID_PRIMITIVES_POLYLINE
+    BUTTON      ID_PRIMITIVES_MARKER
+    BUTTON      ID_PRIMITIVES_TEXT
+    BUTTON      ID_PRIMITIVES_CHANGETEXT
+    SEPARATOR
+    BUTTON      ID_APP6A_PALETTE
+    BUTTON      ID_APP6A_PROPERTIES
+    BUTTON      ID_APP6A_SELECTOR
+    BUTTON      ID_APP6A_DECLUTTEROPTIONS
+END
+
+IDR_POINT_OPERATIONS TOOLBAR  16, 16
+BEGIN
+    BUTTON      ID_TRANSFORMATION_ADDPOINT
+    BUTTON      ID_TRANSFORMATION_DELETEPOINT
+    BUTTON      ID_TRANSFORMATION_MOVEPOINT
+END
+
+IDR_TRANSFORMATIONS TOOLBAR  16, 16
+BEGIN
+    BUTTON      ID_TRANSFORMATION_MOVE
+    BUTTON      ID_TRANSFORMATION_SCALE
+    BUTTON      ID_TRANSFORMATION_ROTATE
+    SEPARATOR
+    BUTTON      ID_TRANSFORMATION_GROUP
+    BUTTON      ID_TRANSFORMATION_UNGROUP
+    BUTTON      ID_TRANSFORMATION_FRONT
+    BUTTON      ID_TRANSFORMATION_BACK
+END
+
+IDR_EDIT TOOLBAR  16, 16
+BEGIN
+    BUTTON      ID_EDIT_UNDO
+    BUTTON      ID_EDIT_BACKUP
+    BUTTON      ID_EDIT_DELETE
+    SEPARATOR
+    BUTTON      ID_EDIT_COPY
+END
+
+IDR_SELECT TOOLBAR  16, 16
+BEGIN
+    BUTTON      ID_SELECT_SELECTALL
+    BUTTON      ID_SELECT_SELECTBYRECTANGLE
+    BUTTON      ID_SELECT_SELECTBYPOLYGON
+END
+
+IDR_TOOLS TOOLBAR  16, 16
+BEGIN
+    BUTTON      ID_TOOLS_ZOOMIN
+    BUTTON      ID_TOOLS_ZOOMOUT
+    BUTTON      ID_TOOLS_RESET
+    SEPARATOR
+    BUTTON      ID_TOOLS_ZOOM
+    BUTTON      ID_TOOLS_PAN
+    BUTTON      ID_TOOLS_MAGNIFY
+    BUTTON      ID_TOOLS_EDIT
+END
+
+IDR_CONSTRAINTS TOOLBAR  16, 16
+BEGIN
+    BUTTON      ID_CONSTRAINT_HORIZONTAL
+    BUTTON      ID_CONSTRAINT_VERTICAL
+    BUTTON      ID_CONSTRAINT_EQUAL
+    BUTTON      ID_CONSTRAINT_UNEQUAL
+    BUTTON      ID_CONSTRAINT_ANGULAR
+    BUTTON      ID_CONSTRAINT_DISTANCE
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&Open...\tCtrl+O",            ID_FILE_OPEN
+        MENUITEM "&New\tCtrl+N",                ID_FILE_NEW
+        MENUITEM "&Save\tCtrl+S",               ID_FILE_SAVE
+        MENUITEM "Save As",                     ID_FILE_SAVE_AS
+        MENUITEM "Load &Map Underlay...",       ID_FILE_LOADMAPUNDERLAY
+        MENUITEM SEPARATOR
+        MENUITEM "&Print...\tCtrl+P",           ID_FILE_PRINT
+        MENUITEM "Print Pre&view",              ID_FILE_PRINT_PREVIEW
+        MENUITEM "P&rint Setup...",             ID_FILE_PRINT_SETUP
+        MENUITEM SEPARATOR
+        MENUITEM "Save &Layout",                ID_FILE_SAVELAYOUT
+        MENUITEM SEPARATOR
+        MENUITEM "Recent File",                 ID_FILE_MRU_FILE1, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       ID_APP_EXIT
+    END
+    POPUP "&Edit"
+    BEGIN
+        MENUITEM "Undo",                        ID_EDIT_UNDO
+        MENUITEM "Backup",                      ID_EDIT_BACKUP
+        MENUITEM "Delete",                      ID_EDIT_DELETE
+        MENUITEM "Clear",                       ID_EDIT_CLEAR
+        MENUITEM SEPARATOR
+        MENUITEM "Copy",                        ID_EDIT_COPY
+    END
+    POPUP "&View"
+    BEGIN
+        MENUITEM "&Attributes Panel",           ID_VIEW_ATTRIBUTE_PANEL
+        MENUITEM "&Preferences",                ID_VIEW_PREFERENCES
+        MENUITEM "Grid Layer",                  ID_VIEW_GRIDLAYER
+        MENUITEM "&Status Bar",                 ID_VIEW_STATUS_BAR
+        POPUP "&Toolbars"
+        BEGIN
+            MENUITEM "&Main",                       ID_VIEW_TOOLBARS_MAIN
+            MENUITEM "&Edit",                       ID_VIEW_TOOLBARS_EDIT
+            MENUITEM "&Select",                     ID_VIEW_TOOLBARS_SELECT
+            MENUITEM "Too&ls",                      ID_VIEW_TOOLBARS_TOOLS
+            MENUITEM "Constr&aints",                ID_VIEW_TOOLBARS_CONSTRAINTS
+            MENUITEM "&Primitives",                 ID_VIEW_TOOLBARS_PRIMITIVES
+            MENUITEM "&Transformations",            ID_VIEW_TOOLBARS_TRANSFORMATIONS
+            MENUITEM "Point &Operations",           ID_VIEW_TOOLBARS_POINT_OPERATIONS
+        END
+    END
+    POPUP "&Select"
+    BEGIN
+        MENUITEM "Select All",                  ID_SELECT_SELECTALL
+        MENUITEM "Select by Rectangle",         ID_SELECT_SELECTBYRECTANGLE
+        MENUITEM "Select by Polygon",           ID_SELECT_SELECTBYPOLYGON
+    END
+    POPUP "&Tools"
+    BEGIN
+        MENUITEM "Zoom &In",                    ID_TOOLS_ZOOMIN
+        MENUITEM "Zoom &Out",                   ID_TOOLS_ZOOMOUT
+        MENUITEM "&Reset",                      ID_TOOLS_RESET
+        MENUITEM SEPARATOR
+        MENUITEM "Zoom Mode",                   ID_TOOLS_ZOOM
+        MENUITEM "Pan Mode",                    ID_TOOLS_PAN
+        MENUITEM "Edit Mode",                   ID_TOOLS_EDIT
+        MENUITEM "Magnify Mode",                ID_TOOLS_MAGNIFY
+        MENUITEM SEPARATOR
+        POPUP "APP6A"
+        BEGIN
+            MENUITEM "Palette",                     ID_APP6A_PALETTE
+            MENUITEM "Properties",                  ID_APP6A_PROPERTIES
+            MENUITEM "Selector",                    ID_APP6A_SELECTOR
+            MENUITEM SEPARATOR
+            MENUITEM "Declutter Options",           ID_APP6A_DECLUTTEROPTIONS
+        END
+    END
+    POPUP "Co&nstraint"
+    BEGIN
+        MENUITEM "Equal",                       ID_CONSTRAINT_EQUAL
+        MENUITEM "Unequal",                     ID_CONSTRAINT_UNEQUAL
+        MENUITEM "Vertical",                    ID_CONSTRAINT_VERTICAL
+        MENUITEM "Horizontal",                  ID_CONSTRAINT_HORIZONTAL
+        MENUITEM "Angular",                     ID_CONSTRAINT_ANGULAR
+        MENUITEM "Distance",                    ID_CONSTRAINT_DISTANCE
+    END
+    POPUP "&Primitives"
+    BEGIN
+        MENUITEM "Polygon",                     ID_PRIMITIVES_POLYGON
+        MENUITEM "Polyline",                    ID_PRIMITIVES_POLYLINE
+        MENUITEM "Marker",                      ID_PRIMITIVES_MARKER
+        MENUITEM "Circle",                      ID_PRIMITIVES_CIRCLE
+        MENUITEM "Text",                        ID_PRIMITIVES_TEXT
+        MENUITEM "Change Text",                 ID_PRIMITIVES_CHANGETEXT
+    END
+    POPUP "T&ransformation"
+    BEGIN
+        MENUITEM "Move",                        ID_TRANSFORMATION_MOVE
+        MENUITEM "Scale",                       ID_TRANSFORMATION_SCALE
+        MENUITEM "Rotate",                      ID_TRANSFORMATION_ROTATE
+        MENUITEM SEPARATOR
+        MENUITEM "Add Point",                   ID_TRANSFORMATION_ADDPOINT
+        MENUITEM "Delete Point",                ID_TRANSFORMATION_DELETEPOINT
+        MENUITEM "Move Point",                  ID_TRANSFORMATION_MOVEPOINT
+        MENUITEM SEPARATOR
+        MENUITEM "Front",                       ID_TRANSFORMATION_FRONT
+        MENUITEM "Back",                        ID_TRANSFORMATION_BACK
+        MENUITEM SEPARATOR
+        MENUITEM "Group",                       ID_TRANSFORMATION_GROUP
+        MENUITEM "Ungroup  ",                   ID_TRANSFORMATION_UNGROUP
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&About APP6A Sample...",      ID_APP_ABOUT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 257, 90
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About APP6A Sample"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    LTEXT           "APP6A Sample Version 1.0",IDC_APP,7,42,212,9,SS_NOPREFIX
+    CTEXT           "Portions developed using LEADTOOLS,\nCopyright © 1991-2025 LEAD Technologies, Inc. ALL RIGHTS RESERVED",IDC_THIRDPARTY,7,65,243,17
+    DEFPUSHBUTTON   "OK",IDOK,205,7,45,14,WS_GROUP
+    CONTROL         "",IDC_LOGO,"Static",SS_OWNERDRAW,8,9,136,25
+    LTEXT           "Copyright © 1998-2026 Envitia Group PLC. All rights reserved.",IDC_COPYRIGHT,7,51,215,8
+END
+
+IDD_TEXT_ENTRY DIALOG  0, 0, 199, 63
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Text Entry"
+FONT 8, "MS Sans Serif"
+BEGIN
+    EDITTEXT        IDC_TEXT_ENTRY_VALUE,7,23,185,14,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,37,42,49,14
+    PUSHBUTTON      "Cancel",IDCANCEL,103,42,50,14
+    EDITTEXT        IDC_TEXT_ENTRY_PROMPT,7,7,185,14,ES_READONLY | NOT WS_BORDER
+END
+
+IDD_DIALOG DIALOG  0, 0, 221, 73
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Dialog selection"
+FONT 8, "MS Sans Serif"
+BEGIN
+    PUSHBUTTON      "Button1",IDC_DIALOG_BUTTON1,7,52,50,14
+    PUSHBUTTON      "Button2",IDC_DIALOG_BUTTON2,60,52,50,14
+    PUSHBUTTON      "Button3",IDC_DIALOG_BUTTON3,112,52,50,14
+    PUSHBUTTON      "Button4",IDC_DIALOG_BUTTON4,164,52,50,14
+    EDITTEXT        IDC_DIALOG_PROMPT,13,16,195,27,ES_READONLY | NOT WS_BORDER
+END
+
+IDD_PREFERENCES DIALOG  0, 0, 101, 81
+STYLE DS_SETFONT | WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+    GROUPBOX        "Constraint settings",IDC_STATIC,4,2,93,45
+    EDITTEXT        IDC_ANGULAR_VALUE,39,12,54,14,ES_AUTOHSCROLL
+    RTEXT           "Angle",IDC_STATIC,6,15,30,8
+    EDITTEXT        IDC_DISTANCE_VALUE,39,29,54,14,ES_AUTOHSCROLL
+    RTEXT           "Distance",IDC_STATIC,6,32,30,8
+    GROUPBOX        "Cursor Readout",IDC_STATIC,4,50,93,27
+    COMBOBOX        IDC_CURSOR_READOUT_TYPE,8,59,86,84,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_ATTRIBUTE_PANEL DIALOG  0, 0, 101, 232
+STYLE DS_SETFONT | WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+    COMBOBOX        IDC_EDGE_COLOUR,10,12,55,300,CBS_DROPDOWNLIST | CBS_OWNERDRAWFIXED | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_EDGE_STYLE,10,28,83,84,CBS_DROPDOWNLIST | CBS_OWNERDRAWFIXED | WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_EDGE_THICKNESS,67,13,13,13,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "Spin1",IDC_SPIN1,"msctls_updown32",UDS_AUTOBUDDY | UDS_ARROWKEYS,81,12,10,14
+    COMBOBOX        IDC_FILL_COLOUR,10,57,83,334,CBS_DROPDOWNLIST | CBS_OWNERDRAWFIXED | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_FILL_STYLE,10,73,83,84,CBS_DROPDOWNLIST | CBS_OWNERDRAWFIXED | WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "Edge",IDC_STATIC,3,2,94,44
+    GROUPBOX        "Fill",IDC_STATIC,3,47,94,44
+    GROUPBOX        "Text",IDC_STATIC,3,93,94,135
+    COMBOBOX        IDC_TEXT_COLOUR,10,104,55,276,CBS_DROPDOWNLIST | CBS_OWNERDRAWFIXED | WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_TEXT_HEIGHT,67,105,13,13,ES_AUTOHSCROLL
+    CONTROL         "Spin3",IDC_SPIN2,"msctls_updown32",UDS_ARROWKEYS,81,104,10,14
+    COMBOBOX        IDC_TEXT_FONT,10,119,83,84,CBS_DROPDOWNLIST | CBS_OWNERDRAWFIXED | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_TEXT_HALIGN,10,135,40,53,CBS_DROPDOWNLIST | WS_TABSTOP
+    COMBOBOX        IDC_TEXT_VALIGN,53,135,40,83,CBS_DROPDOWN | WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "Background",IDC_STATIC,11,154,77,71
+    COMBOBOX        IDC_TEXT_BACKGROUND_COLOUR,16,178,69,276,CBS_DROPDOWNLIST | CBS_OWNERDRAWFIXED | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_TEXT_BACKGROUND_STYLE,16,193,69,84,CBS_DROPDOWNLIST | CBS_OWNERDRAWFIXED | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_TEXT_BACKGROUND_EDGE_COLOUR,39,208,46,300,CBS_DROPDOWNLIST | CBS_OWNERDRAWFIXED | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_TEXT_BACKGROUND_MODE,16,163,69,53,CBS_DROPDOWNLIST | WS_TABSTOP
+    RTEXT           "Edge",IDC_STATIC,15,210,18,8,SS_CENTERIMAGE
+END
+
+IDD_DECLUTTERDLG DIALOGEX 0, 0, 227, 76
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "App6a Declutter Options"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,79,49,50,16
+    GROUPBOX        "Options",IDC_STATIC,7,7,213,39
+    CONTROL         "Hide Text",IDC_HIDE_TEXT,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,23,22,47,10
+    CONTROL         "Hide Graphics",IDC_HIDE_GRAPHICS,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,81,22,61,10
+    CONTROL         "Hide Frame",IDC_HIDE_FRAME,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,153,23,52,10
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 250
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 82
+    END
+
+    IDD_PREFERENCES, DIALOG
+    BEGIN
+        LEFTMARGIN, 4
+        RIGHTMARGIN, 97
+        TOPMARGIN, 3
+        BOTTOMMARGIN, 77
+    END
+
+    IDD_ATTRIBUTE_PANEL, DIALOG
+    BEGIN
+        LEFTMARGIN, 3
+        RIGHTMARGIN, 96
+        TOPMARGIN, 2
+        BOTTOMMARGIN, 228
+    END
+
+    IDD_DECLUTTERDLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 220
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 69
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif\r\n"
+    "#include ""res\\APP6ASample.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#include ""afxprint.rc""       // printing/print preview resources\r\n"
+    "#endif\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Cursor
+//
+
+IDC_ZOOM_CURSOR         CURSOR                  "res\\zoom_cursor.cur"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_ATTRIBUTE_PANEL DLGINIT
+BEGIN
+    IDC_TEXT_HALIGN, 0x403, 5, 0
+0x654c, 0x7466, "\000" 
+    IDC_TEXT_HALIGN, 0x403, 7, 0
+0x6543, 0x746e, 0x6572, "\000" 
+    IDC_TEXT_HALIGN, 0x403, 6, 0
+0x6952, 0x6867, 0x0074, 
+    IDC_TEXT_VALIGN, 0x403, 12, 0
+0x7546, 0x6c6c, 0x4220, 0x746f, 0x6f74, 0x006d, 
+    IDC_TEXT_VALIGN, 0x403, 9, 0
+0x6142, 0x6573, 0x696c, 0x656e, "\000" 
+    IDC_TEXT_VALIGN, 0x403, 7, 0
+0x694d, 0x6464, 0x656c, "\000" 
+    IDC_TEXT_VALIGN, 0x403, 12, 0
+0x6143, 0x6970, 0x6174, 0x206c, 0x6f54, 0x0070, 
+    IDC_TEXT_VALIGN, 0x403, 9, 0
+0x7546, 0x6c6c, 0x5420, 0x706f, "\000" 
+    IDC_TEXT_BACKGROUND_MODE, 0x403, 5, 0
+0x6f4e, 0x656e, "\000" 
+    IDC_TEXT_BACKGROUND_MODE, 0x403, 5, 0
+0x6148, 0x6f6c, "\000" 
+    IDC_TEXT_BACKGROUND_MODE, 0x403, 10, 0
+0x6552, 0x7463, 0x6e61, 0x6c67, 0x0065, 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 11,3,3,0
+ PRODUCTVERSION 11,3,3,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x40004L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080904b0"
+        BEGIN
+            VALUE "CompanyName", "Envitia Group PLC"
+            VALUE "FileDescription", "Envitia APP6A Sample 11.3"
+            VALUE "FileVersion", "11.3.3.0"
+            VALUE "InternalName", "MapLink APP6A Sample"
+            VALUE "LegalCopyright", "Copyright © 1998-2026 Envitia Group PLC. All rights reserved."
+            VALUE "OriginalFilename", "APP6ASample.exe"
+            VALUE "ProductName", "MapLink APP6A Sample"
+            VALUE "ProductVersion", "11.3.3.0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x809, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDR_MAINFRAME           "APP6A Sample\n\nAPP6A Sample\nGeometry files(*.tmf)\n.tmf\nAPP6A.Document\nAPP6A Document"
+    ID_NUM_SELECTED         "Select : "
+    ID_MOUSE_POS            "Pos :"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_APP_TITLE       "APP6ASample"
+    AFX_IDS_IDLEMESSAGE     "Ready"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_INDICATOR_EXT        "EXT"
+    ID_INDICATOR_CAPS       "CAP"
+    ID_INDICATOR_NUM        "NUM"
+    ID_INDICATOR_SCRL       "SCRL"
+    ID_INDICATOR_OVR        "OVR"
+    ID_INDICATOR_REC        "REC"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_FILE_NEW             "Create a new document\nNew"
+    ID_FILE_OPEN            "Open an existing document\nOpen"
+    ID_FILE_SAVE            "Save the current document\nSave"
+    ID_FILE_SAVE_AS         "Save the current document as a different file\nSave As"
+    ID_FILE_PAGE_SETUP      "Change the printing options\nPage Setup"
+    ID_FILE_PRINT_SETUP     "Change the printer and printing options\nPrint Setup"
+    ID_FILE_PRINT           "Print the active document\nPrint"
+    ID_FILE_PRINT_PREVIEW   "Display full pages\nPrint Preview"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_APP_ABOUT            "Display program information, version number and copyright\nAbout"
+    ID_APP_EXIT             "Quit the application; prompts to save work\nExit"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_FILE_MRU_FILE1       "Open this document"
+    ID_FILE_MRU_FILE2       "Open this document"
+    ID_FILE_MRU_FILE3       "Open this document"
+    ID_FILE_MRU_FILE4       "Open this document"
+    ID_FILE_MRU_FILE5       "Open this document"
+    ID_FILE_MRU_FILE6       "Open this document"
+    ID_FILE_MRU_FILE7       "Open this document"
+    ID_FILE_MRU_FILE8       "Open this document"
+    ID_FILE_MRU_FILE9       "Open this document"
+    ID_FILE_MRU_FILE10      "Open this document"
+    ID_FILE_MRU_FILE11      "Open this document"
+    ID_FILE_MRU_FILE12      "Open this document"
+    ID_FILE_MRU_FILE13      "Open this document"
+    ID_FILE_MRU_FILE14      "Open this document"
+    ID_FILE_MRU_FILE15      "Open this document"
+    ID_FILE_MRU_FILE16      "Open this document"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_EDIT_CLEAR           "Clear all objects\nClear"
+    ID_EDIT_COPY            "Copy selected objects\nCopy"
+    ID_EDIT_UNDO            "Undo last complete action\nUndo"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_PRIMITIVES_BOUND     "Create Polygon by Bound\nBound"
+    ID_PRIMITIVES_POLYGON   "Create a filled polygon\nPolygon"
+    ID_PRIMITIVES_POLYLINE  "Create a polyline\nPolyline"
+    ID_PRIMITIVES_MARKER    "Place a Marker Symbol\nMarker"
+    ID_PRIMITIVES_CIRCLE    "Create a circle\nCircle"
+    ID_PRIMITIVES_TEXT      "Create Text\nText"
+    ID_PRIMITIVES_LABEL     "Create Label with arrow\nLabel"
+    ID_CONSTRUCTION_PARALLEL "Create Parallel Line\nParallel"
+    ID_CONSTRUCTION_PERPENDICULAR "Create Perpendicular line\nPerpendicular"
+    ID_CONSTRUCTION_RAY     "Create Ray extent from line\nRay"
+    ID_CONSTRUCTION_CURVEEXTENSION "Extend selected polyline\nCurve Extension"
+    ID_CONSTRUCTION_GAPDETECTION 
+                            "Detect Gaps at line endpoints\nGap Detection"
+    ID_CONSTRUCTION_INTERSECTION_ARC 
+                            "Create markers at arc intersections\nArc intersection"
+    ID_CONSTRUCTION_INTERSECTION_LINELINE 
+                            "Create markers at line intersections\nLine/Line intersection"
+    ID_CONSTRUCTION_INTERSECTION_POLYGONPOLYGON 
+                            "Create polygon at polygon intersection\nPoly/Poly Intersection"
+    ID_CONSTRUCTION_INTERSECTION_LINEPOLYGON 
+                            "Create markers at line/Polygon intersections\nLine/Polygon intersection"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_VIEW_TOOLBARS_CONSTRAINTS "Toggle the constraints toolbar\nConstraints"
+    ID_FILE_LOADMAPUNDERLAY "Loads a map to underlay the current document\nLoad Map"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_CONSTRAINT_EQUAL     "Equal constraint\nEqual"
+    ID_CONSTRAINT_UNEQUAL   "Unequal constraint\nUnequal"
+    ID_CONSTRAINT_VERTICAL  "Vertical constraint\nVertical"
+    ID_CONSTRAINT_HORIZONTAL "Horizontal Constraint\nHorizontal"
+    ID_CONSTRAINT_ANGULAR   "Angular constraint\nAngular"
+    ID_CONSTRAINT_DISTANCE  "Distance constraint\nDistance"
+    ID_CONSTRAINT_FOLLOW    "Turn on line follow\nFollow"
+    ID_EDIT_BACKUP          "Backup last selected point\nBackup"
+    ID_PRIMITIVES_LASSO     "Create Polygon by Lasso\nLasso"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_FILE_SAVELAYOUT      "Save the current window layout\nSave Layout"
+    ID_TOOLS_ZOOMIN         "Zoom In\nZoom In"
+    ID_TOOLS_ZOOMOUT        "Zoom Out\nZoom Out"
+    ID_TOOLS_RESET          "View whole map\nReset"
+    ID_TOOLS_ZOOM           "Zoom\nZoom"
+    ID_TOOLS_PAN            "Pan to point\nPan"
+    ID_TOOLS_EDIT           "Edit Mode\nEdit the current drawing"
+    ID_TOOLS_MAGNIFY        "Magnify area under cursor\nMagnify"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_VIEW_PREFERENCES     "Display preferences toolbox\nPreferences"
+    ID_VIEW_ATTRIBUTE_PANEL "Show or hide the attributes panel\nToggle Attributes Panel"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_TRANSFORMATION_BACK  "Push selected objects to back\nBack"
+    ID_TRANSFORMATION_GROUP "Group selected objects\nGroup"
+    ID_TRANSFORMATION_UNGROUP "Ungroup selected objects\nUngroup"
+    ID_TRANSFORMATION_SPLIT "Split selected object\nSplit"
+    ID_TRANSFORMATION_JOIN  "Join selected objects\nJoin"
+    ID_TRANSFORMATION_HOLE  "Remove the second selected polygon from the first to create a hole\nHole"
+    ID_TRANSFORMATION_UNHOLE "Remove hole from the selected polygon\nUnhole"
+    ID_EDIT_DELETE          "Delete selected objects\nDelete"
+    ID_SELECT_SELECTALL     "Select all objects\nSelect All"
+    ID_SELECT_SELECTBYRECTANGLE 
+                            "Select objects by rectangle\nSelect by Rectangle"
+    ID_SELECT_SELECTBYPOLYGON "Select objects by polygon\nSelect by Polygon"
+    ID_PRIMITIVES_CHANGETEXT "Change text of selected objects\nChange Text"
+    ID_TOOLS_POLYGONAREA    "Display area of selected polygons\nArea"
+    ID_TOOLS_LENGTH         "Display length of selected objects\nLength"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_VIEW_TOOLBAR         "Show or hide the toolbar\nToggle ToolBar"
+    ID_VIEW_STATUS_BAR      "Show or hide the status bar\nToggle StatusBar"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_SCSIZE          "Change the window size"
+    AFX_IDS_SCMOVE          "Change the window position"
+    AFX_IDS_SCMINIMIZE      "Reduce the window to an icon"
+    AFX_IDS_SCMAXIMIZE      "Enlarge the window to full size"
+    AFX_IDS_SCNEXTWINDOW    "Switch to the next document window"
+    AFX_IDS_SCPREVWINDOW    "Switch to the previous document window"
+    AFX_IDS_SCCLOSE         "Close the active window and prompts to save the documents"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_SCRESTORE       "Restore the window to normal size"
+    AFX_IDS_SCTASKLIST      "Activate Task List"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_PREVIEW_CLOSE   "Close print preview mode\nCancel Preview"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_CONSTRUCTION_BORDER_NORMALBORDER 
+                            "Add Normal thickness border to selected Polygons\nBorder"
+    ID_CONSTRUCTION_BORDER_NOBORDER 
+                            "Remove border from selected Polygons\nNo Border"
+    ID_CONSTRUCTION_BORDER_THINBORDER 
+                            "Add thin border to selected polygons\nThin Border"
+    ID_CONSTRUCTION_BORDER_THICKBORDER 
+                            "Add thick border to selected Polygons\nThick Border"
+    ID_CONSTRUCTION_BORDER_FLIP "Flip individual border edges\nFlip"
+    ID_CONSTRUCTION_BORDER_FLIPALL 
+                            "Flip all bordered edges of selected polygons\nFlip All"
+    ID_CONSTRUCTION_BRACE   "Create a brace\nBrace"
+    ID_CONSTRUCTION_TBAR    "Create a T-Bar\nT-Bar"
+    ID_CONSTRUCTION_HBAR    "Create an H-Bar\nH-Bar"
+    ID_TRANSFORMATION_MOVE  "Move selected objects\nMove"
+    ID_TRANSFORMATION_SCALE "Scale selected objects\nScale"
+    ID_TRANSFORMATION_ROTATE "Rotate selected objects\nRotate"
+    ID_TRANSFORMATION_ADDPOINT "Add point to selected object\nAdd Point"
+    ID_TRANSFORMATION_DELETEPOINT 
+                            "Delete point from selected object\nDelete Point"
+    ID_TRANSFORMATION_MOVEPOINT "Move point of selected object\nMove point"
+    ID_TRANSFORMATION_FRONT "Bring selected objects to front\nFront"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_MAIN_TOOLBAR        "Main"
+    IDS_TOOLS_TOOLBAR       "Tools"
+    IDS_CONSTRUCTION_TOOLBAR "Construction"
+    IDS_POINT_OPERATIONS_TOOLBAR "Point Operations"
+    IDS_TRANSFORMATIONS_TOOLBAR "Transformations"
+    IDS_EDIT_TOOLBAR        "Edit"
+    IDS_PRIMITIVES_TOOLBAR  "Primitives"
+    IDS_SELECT_TOOLBAR      "Select"
+    IDS_CONSTRAINT_TOOLBAR  "Constraint"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_VIEW_TOOLBARS_CONSTRUCTION 
+                            "Toggle the construction toolbar\nConstruction"
+    ID_VIEW_TOOLBARS_EDIT   "Toggle the edit toolbar\nEdit"
+    ID_VIEW_TOOLBARS_MAIN   "Toggle the main toolbar\nMain"
+    ID_VIEW_TOOLBARS_POINT_OPERATIONS 
+                            "Toggle the point operations toolbar\nPoint Operations"
+    ID_VIEW_TOOLBARS_PRIMITIVES "Toggle the primitives toolbar\nPrimitives"
+    ID_VIEW_TOOLBARS_SELECT "Toggle the select toolbar\nSelect"
+    ID_VIEW_TOOLBARS_TRANSFORMATIONS 
+                            "Toggle the transformations toolbar\nTransformations"
+    ID_VIEW_TOOLBARS_TOOLS  "Toggle the tools toolbar\nTools"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_VIEW_GRIDLAYER       "View grid layer\nGrid"
+    ID_APP6A_PALETTE        "APP6A Symbol Palette\nSymbol Palette"
+    ID_APP6A_PROPERTIES     "APP6A Symbol Properties\nSymbol Properties"
+    ID_APP6A_SELECTOR       "APP6A Symbol Selector\nSymbol Selector"
+    ID_APP6A_DECLUTTEROPTIONS "Declutter the App6a symbols\nDeclutter Options"
+END
+
+#endif    // English (U.K.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif
+#include "res\APP6ASample.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#include "afxprint.rc"       // printing/print preview resources
+#endif
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

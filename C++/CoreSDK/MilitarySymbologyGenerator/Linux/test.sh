@@ -1,0 +1,1 @@
+MAPL_HOME=../../../../../MapLink/   LD_LIBRARY_PATH=../../../../linux-gcc/x86_64/obj/x86_64-unknown-linux-gnu/debug/CoreSDK/CustomLineStyles/stroke/:../../../../linux-gcc/x86_64/obj/x86_64-unknown-linux-gnu/debug/CoreSDK/CustomLineStyles/weatherfront/ ./example ../../../../../../MapLink/maps/countries/countries.map

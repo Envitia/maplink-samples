@@ -1,0 +1,211 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>7.0.9466</ProductVersion>
+    <SchemaVersion>1.0</SchemaVersion>
+    <ProjectGuid>{95CFB164-3FC3-4A71-8E6F-0258DA7E678C}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon />
+    <AssemblyKeyContainerName />
+    <AssemblyName>MapViewerPanel</AssemblyName>
+    <AssemblyOriginatorKeyFile />
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>DrawingSurfacePanel</RootNamespace>
+    <StartupObject />
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>0.0</OldToolsVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <BaseAddress>285212672</BaseAddress>
+    <FileAlignment>4096</FileAlignment>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <BaseAddress>285212672</BaseAddress>
+    <Optimize>true</Optimize>
+    <FileAlignment>4096</FileAlignment>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System.Design" />
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    </Reference>
+  </ItemGroup>
+  <Choose>
+    <When Condition=" '$(Platform)' == 'x86' ">
+      <ItemGroup>
+        <Reference Include="Envitia.MapLink.InteractionModes">
+          <SpecificVersion>False</SpecificVersion>
+          <Private>True</Private>
+          <HintPath>..\..\..\..\..\..\..\bin\Envitia.MapLink.InteractionModes.dll</HintPath>
+        </Reference>
+        <Reference Include="Envitia.MapLink.NativeHelpers, Version=10.0.9.0, Culture=neutral, PublicKeyToken=f6586908b95b8151, processorArchitecture=MSIL">
+          <SpecificVersion>False</SpecificVersion>
+          <Private>True</Private>
+          <HintPath>..\..\..\..\..\..\..\bin\Envitia.MapLink.NativeHelpers.dll</HintPath>
+        </Reference>
+        <Reference Include="Envitia.MapLink.OpenGLSurface">
+          <SpecificVersion>False</SpecificVersion>
+          <Private>True</Private>
+          <HintPath>..\..\..\..\..\..\..\bin\Envitia.MapLink.OpenGLSurface.dll</HintPath>
+        </Reference>
+        <Reference Include="Envitia.MapLink.OpenGLTrackHelper">
+          <SpecificVersion>False</SpecificVersion>
+          <Private>True</Private>
+          <HintPath>..\..\..\..\..\..\..\bin\Envitia.MapLink.OpenGLTrackHelper.dll</HintPath>
+        </Reference>
+        <Reference Include="Envitia.MapLink">
+          <SpecificVersion>False</SpecificVersion>
+          <Private>True</Private>
+          <HintPath>..\..\..\..\..\..\..\bin\Envitia.MapLink.dll</HintPath>
+        </Reference>
+      </ItemGroup>
+    </When>
+    <When Condition=" '$(Platform)' == 'x64' ">
+      <ItemGroup>
+        <Reference Include="Envitia.MapLink.InteractionModes64">
+          <SpecificVersion>False</SpecificVersion>
+          <Private>True</Private>
+          <HintPath>..\..\..\..\..\..\..\bin64\Envitia.MapLink.InteractionModes64.dll</HintPath>
+        </Reference>
+        <Reference Include="Envitia.MapLink.NativeHelpers, Version=10.0.9.0, Culture=neutral, PublicKeyToken=f6586908b95b8151, processorArchitecture=MSIL">
+          <SpecificVersion>False</SpecificVersion>
+          <Private>True</Private>
+          <HintPath>..\..\..\..\..\..\..\bin64\Envitia.MapLink.NativeHelpers.dll</HintPath>
+        </Reference>
+        <Reference Include="Envitia.MapLink.OpenGLSurface64">
+          <SpecificVersion>False</SpecificVersion>
+          <Private>True</Private>
+          <HintPath>..\..\..\..\..\..\..\bin64\Envitia.MapLink.OpenGLSurface64.dll</HintPath>
+        </Reference>
+        <Reference Include="Envitia.MapLink.OpenGLTrackHelper64">
+          <SpecificVersion>False</SpecificVersion>
+          <Private>True</Private>
+          <HintPath>..\..\..\..\..\..\..\bin64\Envitia.MapLink.OpenGLTrackHelper64.dll</HintPath>
+        </Reference>
+        <Reference Include="Envitia.MapLink64">
+          <SpecificVersion>False</SpecificVersion>
+          <Private>True</Private>
+          <HintPath>..\..\..\..\..\..\..\bin64\Envitia.MapLink64.dll</HintPath>
+        </Reference>
+      </ItemGroup>
+    </When>
+  </Choose>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CustomInteractionModeZoomPan.cs" />
+    <Compile Include="drawingSurfacePanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="InteractionModeRequestReceiver.cs" />
+    <Compile Include="MapViewerParentPanel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="drawingSurfacePanel.resx">
+      <DependentUpon>drawingSurfacePanel.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Choose>
+    <When Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+      <PropertyGroup>
+        <PreBuildEvent>
+        </PreBuildEvent>
+        <PostBuildEvent>
+          copy "$(TargetPath)" "$(ProjectDir)..\..\..\..\..\..\..\bin\"
+        </PostBuildEvent>
+      </PropertyGroup>
+    </When>
+    <When Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+      <PropertyGroup>
+        <PreBuildEvent>
+        </PreBuildEvent>
+        <PostBuildEvent>
+          copy "$(TargetPath)" "$(ProjectDir)..\..\..\..\..\..\..\bin\"
+        </PostBuildEvent>
+      </PropertyGroup>
+    </When>
+    <When Condition=" '$(Configuration)|$(Platform)' == 'Release|x64' ">
+      <PropertyGroup>
+        <PreBuildEvent>
+        </PreBuildEvent>
+        <PostBuildEvent>
+          copy "$(TargetPath)" "$(ProjectDir)..\..\..\..\..\..\..\bin64\"
+        </PostBuildEvent>
+      </PropertyGroup>
+    </When>
+    <When Condition=" '$(Configuration)|$(Platform)' == 'Debug|x64' ">
+      <PropertyGroup>
+        <PreBuildEvent>
+        </PreBuildEvent>
+        <PostBuildEvent>
+          copy "$(TargetPath)" "$(ProjectDir)..\..\..\..\..\..\..\bin64\"
+        </PostBuildEvent>
+      </PropertyGroup>
+    </When>
+  </Choose>
+  <PropertyGroup>
+    <PostBuildEvent>if $(Platform) == x86 goto :86
+if $(Platform) == x64 goto :64
+goto :exit
+
+:86
+if $(Configuration) == Debug goto :debug86
+if $(Configuration) == Release goto :release86
+
+:64
+if $(Configuration) == Debug goto :debug64
+if $(Configuration) == Release goto :release64
+
+:release86
+(copy "$(TargetPath)" "$(ProjectDir)..\..\..\..\..\..\..\bin\$(TargetName)$(TargetExt)" /y) 
+goto :exit
+
+:release64
+(copy "$(TargetPath)" "$(ProjectDir)..\..\..\..\..\..\..\bin64\$(TargetName)$(TargetExt)" /y) 
+goto :exit
+
+:debug86
+(copy "$(TargetPath)" "$(ProjectDir)..\..\..\..\..\..\..\bin\$(TargetName)d$(TargetExt)" /y) 
+goto :exit
+
+:debug64
+(copy "$(TargetPath)" "$(ProjectDir)..\..\..\..\..\..\..\bin64\$(TargetName)d$(TargetExt)" /y) 
+goto :exit
+
+:exit</PostBuildEvent>
+  </PropertyGroup>
+</Project>

@@ -1,0 +1,537 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\Simple3DDirectImport.ico"
+IDR_Simple3DDirectImportTYPE ICON                    "res\\Simple3DDirectImportDoc.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDR_MAINFRAME           BITMAP                  "res\\Toolbar.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&Open Map...\tCtrl+O",        ID_FILE_OPEN
+        MENUITEM "Open Terrain...",             ID_FILE_OPENTERRAIN
+        MENUITEM SEPARATOR
+        MENUITEM "Open CADRG...",               ID_FILE_CADRG
+        MENUITEM "Open WMS...",                 ID_FILE_WMS
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       ID_APP_EXIT
+    END
+    POPUP "&View"
+    BEGIN
+        MENUITEM "&Toolbar",                    ID_VIEW_TOOLBAR
+        MENUITEM "&Status Bar",                 ID_VIEW_STATUS_BAR
+        MENUITEM SEPARATOR
+        MENUITEM "CADRG on Top",                ID_VIEW_CADRGONTOP
+        MENUITEM "WMS on Top",                  ID_VIEW_WMSONTOP
+        MENUITEM SEPARATOR
+        MENUITEM "CADRG Transparent",           ID_VIEW_CADRGTRANSPARENT
+        MENUITEM "WMS Transparent",             ID_VIEW_WMSTRANSPARENT
+    END
+    POPUP "&Tools"
+    BEGIN
+        MENUITEM "Zoom &In",                    ID_TOOLS_ZOOMIN
+        MENUITEM "Zoom &Out",                   ID_TOOLS_ZOOMOUT
+        MENUITEM "&Reset",                      ID_TOOLS_RESET
+        MENUITEM SEPARATOR
+        MENUITEM "Trackball &Eyepoint Style",   ID_TOOLS_TRACKBALLEYEPOINT
+        MENUITEM "Trackball &World Style",      ID_TOOLS_TRACKBALLWORLD
+        MENUITEM SEPARATOR
+        POPUP "Saved Views"
+        BEGIN
+            MENUITEM "Goto 1",                      ID_SAVEDVIEWS_GOTO1
+            MENUITEM "Goto 2",                      ID_SAVEDVIEWS_GOTO2
+            MENUITEM "Goto 3",                      ID_SAVEDVIEWS_GOTO3
+            MENUITEM SEPARATOR
+            MENUITEM "Set 1",                       ID_SAVEDVIEWS_SET1
+            MENUITEM "Set 2",                       ID_SAVEDVIEWS_SET2
+            MENUITEM "Set 3",                       ID_SAVEDVIEWS_SET3
+            MENUITEM SEPARATOR
+            MENUITEM "Reset",                       ID_SAVEDVIEWS_RESET
+        END
+        POPUP "View Stack"
+        BEGIN
+            MENUITEM "Previous View",               ID_VIEWSTACK_PREVIOUSVIEW
+            MENUITEM "Next View",                   ID_VIEWSTACK_NEXTVIEW
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "Create Polygon",              32815
+        MENUITEM SEPARATOR
+        MENUITEM "Exaggerate Terrain",          ID_TOOLS_EXAGGERATETERRAIN
+        MENUITEM "Wireframe",                   ID_TOOLS_WIREFRAME
+        MENUITEM SEPARATOR
+        MENUITEM "Limit Camera",                ID_TOOLS_LIMITCAMERA
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&About Simple3DDirectImport...", ID_APP_ABOUT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAINFRAME ACCELERATORS 
+BEGIN
+    "O",            ID_FILE_OPEN,           VIRTKEY, CONTROL, NOINVERT
+    VK_F6,          ID_NEXT_PANE,           VIRTKEY, NOINVERT
+    VK_F6,          ID_PREV_PANE,           VIRTKEY, SHIFT, NOINVERT
+    VK_ADD,         ID_TOOLS_ZOOMIN,        VIRTKEY, NOINVERT
+    VK_SUBTRACT,    ID_TOOLS_ZOOMOUT,       VIRTKEY, NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 257, 90
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About Simple3DDirectImport"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    LTEXT           "Simple3DDirectImport Version 1.0",IDC_APP,7,42,212,9,SS_NOPREFIX
+    CTEXT           "Portions developed using LEADTOOLS,\nCopyright © 1991-2025 LEAD Technologies, Inc. ALL RIGHTS RESERVED",IDC_THIRDPARTY,7,65,243,17
+    DEFPUSHBUTTON   "OK",IDOK,205,7,45,14,WS_GROUP
+    CONTROL         "",IDC_LOGO,"Static",SS_OWNERDRAW,8,9,136,25
+    LTEXT           "Copyright © 1998-2026 Envitia Group PLC. All rights reserved.",IDC_COPYRIGHT,7,51,215,8
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 11,3,3,0
+ PRODUCTVERSION 11,3,3,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "CompanyName", "Envitia Group PLC"
+            VALUE "FileDescription", "Envitia Simple Interaction Sample Application 11.3"
+            VALUE "FileVersion", "11.3.3.0"
+            VALUE "InternalName", "Simple3DDirectImport"
+            VALUE "LegalCopyright", "Copyright © 1998-2026 Envitia Group PLC. All rights reserved."
+            VALUE "OriginalFilename", "Simple3DDirectImport.EXE"
+            VALUE "ProductName", "Simple Interaction Sample Application"
+            VALUE "ProductVersion", "11.3.3.0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 250
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 82
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDR_MAINFRAME TOOLBAR  24, 24
+BEGIN
+    BUTTON      ID_FILE_OPEN
+    SEPARATOR
+    BUTTON      ID_TOOLS_ZOOMIN
+    BUTTON      ID_TOOLS_ZOOMOUT
+    BUTTON      ID_TOOLS_RESET
+    SEPARATOR
+    BUTTON      ID_TOOLS_TRACKBALLEYEPOINT
+    BUTTON      ID_TOOLS_TRACKBALLWORLD
+    SEPARATOR
+    BUTTON      ID_VIEWSTACK_PREVIOUSVIEW
+    BUTTON      ID_VIEWSTACK_NEXTVIEW
+    SEPARATOR
+    BUTTON      ID_SAVEDVIEWS_GOTO1
+    BUTTON      ID_SAVEDVIEWS_GOTO2
+    BUTTON      ID_SAVEDVIEWS_GOTO3
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDR_MAINFRAME           "Simple3DDirectImport\n\nSimple3DDirectImport\nSimple3DDirectImport Maps(*.map, *.mpc)\n.map;.mpc\nSimple3DDirectImport.Document\nSimple3DDirectImport Document"
+    ID_INDICATOR_LAT        "Camera Latitude"
+    ID_INDICATOR_LON        "Camera Longitude"
+    ID_INDICATOR_ALT        "Camera Altitude"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_APP_TITLE       "Simple3DDirectImport"
+    AFX_IDS_IDLEMESSAGE     "Ready"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_INDICATOR_EXT        "EXT"
+    ID_INDICATOR_CAPS       "CAP"
+    ID_INDICATOR_NUM        "NUM"
+    ID_INDICATOR_SCRL       "SCRL"
+    ID_INDICATOR_OVR        "OVR"
+    ID_INDICATOR_REC        "REC"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_FILE_OPEN            "Open an existing document\nOpen"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_APP_ABOUT            "Display program information, version number and copyright\nAbout"
+    ID_APP_EXIT             "Quit the application; prompts to save documents\nExit"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_FILE_MRU_FILE1       "Open this document"
+    ID_FILE_MRU_FILE2       "Open this document"
+    ID_FILE_MRU_FILE3       "Open this document"
+    ID_FILE_MRU_FILE4       "Open this document"
+    ID_FILE_MRU_FILE5       "Open this document"
+    ID_FILE_MRU_FILE6       "Open this document"
+    ID_FILE_MRU_FILE7       "Open this document"
+    ID_FILE_MRU_FILE8       "Open this document"
+    ID_FILE_MRU_FILE9       "Open this document"
+    ID_FILE_MRU_FILE10      "Open this document"
+    ID_FILE_MRU_FILE11      "Open this document"
+    ID_FILE_MRU_FILE12      "Open this document"
+    ID_FILE_MRU_FILE13      "Open this document"
+    ID_FILE_MRU_FILE14      "Open this document"
+    ID_FILE_MRU_FILE15      "Open this document"
+    ID_FILE_MRU_FILE16      "Open this document"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_VIEW_TOOLBAR         "Show or hide the toolbar\nToggle ToolBar"
+    ID_VIEW_STATUS_BAR      "Show or hide the status bar\nToggle StatusBar"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_SCSIZE          "Change the window size"
+    AFX_IDS_SCMOVE          "Change the window position"
+    AFX_IDS_SCMINIMIZE      "Reduce the window to an icon"
+    AFX_IDS_SCMAXIMIZE      "Enlarge the window to full size"
+    AFX_IDS_SCNEXTWINDOW    "Switch to the next document window"
+    AFX_IDS_SCPREVWINDOW    "Switch to the previous document window"
+    AFX_IDS_SCCLOSE         "Close the active window and prompts to save the documents"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_SCRESTORE       "Restore the window to normal size"
+    AFX_IDS_SCTASKLIST      "Activate Task List"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_PREVIEW_CLOSE   "Close print preview mode\nCancel Preview"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_TOOLS_ZOOMIN         "Zoom In\nZoom In"
+    ID_TOOLS_ZOOMOUT        "Zoom Out\nZoom Out"
+    ID_TOOLS_RESET          "View whole map\nReset"
+    ID_TOOLS_ZOOM           "Zoom\nZoom"
+    ID_TOOLS_PAN            "Pan to point\nPan"
+    ID_TOOLS_ZOOMPAN        "Combined Zoom/Pan to point\nZoom/Pan"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_TOOLS_TRACKBALLWORLD "Trackball World Style Interaction\nTrackball World"
+    ID_TOOLS_TRACKBALLEYEPOINT 
+                            "Trackball Eyepoint Style Interaction\nTrackball Eyepoint"
+    ID_FILE_OPENTERRAIN     "Open a terrain database"
+    ID_CREATE_POLYGON       "Create Polygon"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_SAVEDVIEWS_RESET     "Reset all saved views\nReset all"
+    ID_SAVEDVIEWS_GOTO1     "Goto saved view 1\nGoto 1"
+    ID_SAVEDVIEWS_GOTO2     "Goto saved view 2\nGoto 2"
+    ID_SAVEDVIEWS_GOTO3     "Goto saved view 3\nGoto 3"
+    ID_SAVEDVIEWS_SET1      "Set saved view 1\nSet 1"
+    ID_SAVEDVIEWS_SET2      "Set saved view 2\nSet 2"
+    ID_SAVEDVIEWS_SET3      "Set saved view 3\nSet 3"
+    ID_VIEWSTACK_PREVIOUSVIEW "Goto previous view in stack\nPrevious"
+    ID_VIEWSTACK_NEXTVIEW   "Goto next view in stack\nNext"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_TOOLS_EXAGGERATETERRAIN "Exaggerate Terrain toggle"
+    ID_TOOLS_WIREFRAME      "Wireframe world"
+    ID_TOOLS_LIMITCAMERA    "Limit Camera Toggle"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.K.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENG)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_UK
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_TOOLBAR_ENABLED     BITMAP                  "Res\\Toolbar_enabled.bmp"
+IDB_TOOLBAR_DISABLED    BITMAP                  "Res\\Toolbar_disabled.bmp"
+IDB_ABOUT_BOX_IMG       BITMAP                  "Res\\AboutBoxImage.bmp"
+IDB_UPD                 BITMAP                  "Res\\up_disabled.bmp"
+IDB_UP                  BITMAP                  "Res\\up.bmp"
+IDB_TOPD                BITMAP                  "Res\\top_disabled.bmp"
+IDB_TOP                 BITMAP                  "Res\\top.bmp"
+IDB_DOWND               BITMAP                  "Res\\down_disabled.bmp"
+IDB_DOWN                BITMAP                  "Res\\down.bmp"
+IDB_CHECKBOXES          BITMAP                  "Res\\bm_checkbox.bmp"
+IDB_BOTTOMD             BITMAP                  "Res\\bottom_disabled.bmp"
+IDB_BOTTOM              BITMAP                  "Res\\bottom.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_STYLESDIMENSIONS DIALOGEX 0, 0, 308, 257
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION
+CAPTION "Addition Service Properties"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,95,236,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,159,236,50,14
+    GROUPBOX        "Dimensions",IDC_STATIC,7,7,293,115
+    CONTROL         "",IDC_DIM_TREE,"SysTreeView32",TVS_HASBUTTONS | TVS_HASLINES | TVS_LINESATROOT | WS_BORDER | WS_TABSTOP,15,19,104,95
+    GROUPBOX        "Styles",IDC_STATIC,7,122,294,110
+    CONTROL         "",IDC_STYLELIST,"SysListView32",LVS_REPORT | LVS_SINGLESEL | LVS_ALIGNLEFT | LVS_NOSORTHEADER | WS_BORDER | WS_TABSTOP,16,135,277,88
+    LTEXT           "Name:",IDC_STATIC,127,20,63,8
+    LTEXT           "N/A",IDC_DIM_NAME,201,20,63,8
+    LTEXT           "Unit:",IDC_STATIC,127,30,63,8
+    LTEXT           "N/A",IDC_DIM_UNIT,201,30,63,8
+    LTEXT           "Unit Symbol:",IDC_STATIC,127,40,63,8
+    LTEXT           "N/A",IDC_DIM_UNITS,201,40,63,8
+    COMBOBOX        IDC_STYLECOMBO,17,148,70,42,CBS_DROPDOWNLIST | CBS_NOINTEGRALHEIGHT | NOT WS_VISIBLE | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Default Value:",IDC_STATIC,127,56,63,8
+    LTEXT           "N/A",IDC_DIM_DV,201,56,63,8
+    LTEXT           "Nearest Value:",IDC_STATIC,127,66,63,8
+    LTEXT           "N/A",IDC_DIM_NV,201,66,63,8
+    LTEXT           "Multiple Values:",IDC_STATIC,127,76,63,8
+    LTEXT           "N/A",IDC_DIM_MV,201,76,63,8
+    LTEXT           "Current:",IDC_STATIC,127,86,63,8
+    LTEXT           "N/A",IDC_DIM_C,201,86,63,8
+    LTEXT           "Value:",IDC_STATIC,127,103,63,8
+    COMBOBOX        IDC_VALUE_COMBO,201,101,93,100,CBS_DROPDOWN | CBS_SORT | WS_DISABLED | WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_OPENSERVICEDLG DIALOGEX 0, 0, 394, 297
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION
+CAPTION "Open Web Map Service"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,263,276,50,14,WS_DISABLED
+    PUSHBUTTON      "Cancel",IDCANCEL,321,276,50,14
+    COMBOBOX        IDC_ADDRESS_COMBO,15,18,329,58,CBS_DROPDOWN | CBS_AUTOHSCROLL | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "Service Address",IDC_STATIC,7,7,380,31
+    GROUPBOX        "Service Layer Visibility",IDC_STATIC,7,39,238,149
+    CONTROL         "",IDC_LAYERTREE,"SysTreeView32",TVS_HASBUTTONS | TVS_HASLINES | TVS_LINESATROOT | TVS_CHECKBOXES | WS_DISABLED | WS_BORDER | WS_TABSTOP,15,50,221,130
+    GROUPBOX        "Layer Order",IDC_STATIC,252,39,135,148
+    LISTBOX         IDC_LAYERORDER,260,50,119,114,LBS_SORT | LBS_NOINTEGRALHEIGHT | WS_DISABLED | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "",IDC_TOPBUTTON,"Button",BS_OWNERDRAW | BS_BITMAP | WS_DISABLED | WS_TABSTOP,269,165,19,14
+    CONTROL         "",IDC_UPBUTTON,"Button",BS_OWNERDRAW | BS_BITMAP | WS_DISABLED | WS_TABSTOP,296,165,19,14
+    CONTROL         "",IDC_DOWNBUTTON,"Button",BS_OWNERDRAW | BS_BITMAP | WS_DISABLED | WS_TABSTOP,323,165,19,14
+    CONTROL         "",IDC_BOTTOMBUTTON,"Button",BS_OWNERDRAW | BS_BITMAP | WS_DISABLED | WS_TABSTOP,350,165,19,14
+    PUSHBUTTON      "Go!",IDC_GOBUTTON,351,17,28,14
+    GROUPBOX        "Dimensions And Styles",IDC_STATIC,252,189,135,47
+    CONTROL         "Only options if required",IDC_DS_DEFAULT,"Button",BS_AUTORADIOBUTTON,263,202,91,10
+    CONTROL         "Always show options",IDC_DS_ALWAYS,"Button",BS_AUTORADIOBUTTON,263,218,82,10
+    GROUPBOX        "Layer Details",IDC_STATIC,7,188,238,93
+    CONTROL         "",IDC_LAYER_DETAILS,"SysListView32",LVS_REPORT | LVS_SINGLESEL | LVS_ALIGNLEFT | LVS_NOSORTHEADER | WS_DISABLED | WS_BORDER | WS_TABSTOP,16,202,219,71
+    GROUPBOX        "Validation",IDC_STATIC,252,239,135,30
+    CONTROL         "Validate GetMap requests",IDC_VALIDATE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,265,251,108,10
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_STYLESDIMENSIONS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 301
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 250
+    END
+
+    IDD_OPENSERVICEDLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 387
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 290
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif\r\n"
+    "#include ""res\\Simple3DDirectImport.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#include ""afxprint.rc""       // printing/print preview resources\r\n"
+    "#endif\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+#endif    // English (U.K.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif
+#include "res\Simple3DDirectImport.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#include "afxprint.rc"       // printing/print preview resources
+#endif
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
