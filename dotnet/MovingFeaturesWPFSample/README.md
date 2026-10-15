@@ -1,1 +1,0 @@
-This sample has been deprecated. Please see [the new MovingFeaturesWPFSample](../../MovingFeaturesWPFSample/) that uses MapLink Pro's native WPF control.
