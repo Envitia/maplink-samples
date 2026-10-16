@@ -99,7 +99,7 @@ namespace CSharpMapViewer
                 throw new DirectoryNotFoundException("Cannot find the Git repository above " + AppContext.BaseDirectory);
             }
 
-            string repository = Path.Combine(repositoryRoot.FullName, "config", "symbols", "MILSTD_2525D");
+            string repository = Path.Combine("C:\\Program Files\\Envitia\\MapLink Pro\\11.4\\", "config", "symbols", "MILSTD_2525D");
             if (!Directory.Exists(repository))
             {
                 throw new DirectoryNotFoundException("Cannot find the military symbols directory: " + repository);

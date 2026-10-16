@@ -2,9 +2,9 @@
   "profiles": {
     "WPFControlMilitarySymbologySample": {
       "commandName": "Project",
-      "workingDirectory": "..\\..\\..\\..\\..\\..\\MapLink\\bin64",
+      "workingDirectory": "C:\\Program Files\\Envitia\\MapLink Pro\\11.4\\bin64",
       "environmentVariables": {
-        "MAPL_HOME_OVERRIDE": "..\\..\\MapLink\\"
+        "MAPL_HOME_OVERRIDE": "C:\\Program Files\\Envitia\\MapLink Pro\\11.4\\"
       }
     }
   }
