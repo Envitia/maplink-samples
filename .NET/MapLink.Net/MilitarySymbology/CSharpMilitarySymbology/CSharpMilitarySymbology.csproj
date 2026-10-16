@@ -11,7 +11,7 @@
 
   <ItemGroup>
     <Reference Include="Envitia.MapLink64">
-      <HintPath>..\..\..\..\..\bin64\Envitia.MapLink64.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\Program Files\Envitia\MapLink Pro\11.4\bin64\Envitia.MapLink64.dll</HintPath>
     </Reference>
   </ItemGroup>
 
