@@ -22,7 +22,7 @@ int main(int argc, char* argv[])
   std::filesystem::path src = __FILE__;
   auto samples = src.parent_path();
   auto install = samples.parent_path();
-  auto msgs = install / "config/buildererrors.msg";
+  auto msgs = install / "config/tslmapbuilderrors.msg";
   //tgm::Dbg::loadMessagesFile(msgs.string());
 
   envitia::MapLinkProject project;
